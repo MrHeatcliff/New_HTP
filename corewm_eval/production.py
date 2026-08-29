@@ -1,6 +1,7 @@
 """Production protocol freezing and immutable Wave-1 job execution."""
 
 import argparse
+import fcntl
 import hashlib
 import json
 import os
@@ -8,6 +9,7 @@ from pathlib import Path
 import platform
 import subprocess
 import sys
+import time
 
 from .config import ATARI100K_GAMES, FINAL_CHECKPOINTS, TRAINING_SEEDS
 from .phase3_prepare import PROTOCOL_ID
@@ -157,6 +159,82 @@ def run_job(protocol_path, index, attempt):
     raise SystemExit(result.returncode)
 
 
+def _verify_protocol(protocol_path):
+  require_clean_tree()
+  protocol_path = Path(protocol_path).resolve()
+  protocol = json.loads(protocol_path.read_text())
+  if protocol['protocol_id'] != PROTOCOL_ID:
+    raise RuntimeError((protocol['protocol_id'], PROTOCOL_ID))
+  if _git('rev-parse', 'HEAD') != protocol['git_commit']:
+    raise RuntimeError('Current commit differs from the frozen protocol.')
+  if _sha256(MANIFEST) != protocol['manifest_sha256']:
+    raise RuntimeError('Training manifest changed after protocol freeze.')
+  return protocol_path, protocol
+
+
+def submit_wave1_once(protocol_path, max_user_jobs=2):
+  """Fill free Slurm slots without ever exceeding the user-wide job limit."""
+  protocol_path, _ = _verify_protocol(protocol_path)
+  root = protocol_path.parent
+  ledger_path = root / 'wave1_submission_ledger.json'
+  lock_path = root / 'wave1_submission.lock'
+  lock_path.touch(exist_ok=True)
+  with lock_path.open('r+') as lock:
+    fcntl.flock(lock, fcntl.LOCK_EX)
+    ledger = ({'submitted': []} if not ledger_path.exists()
+              else json.loads(ledger_path.read_text()))
+    submitted = {int(row['job_index']) for row in ledger['submitted']}
+    jobs = json.loads(MANIFEST.read_text())
+    wave1 = [row for row in jobs if row['wave'] == 1]
+    assert len(wave1) == 36
+    user = os.environ['USER']
+    active = subprocess.check_output(
+        ['squeue', '-h', '-u', user, '-o', '%A'], text=True).splitlines()
+    slots = max(0, int(max_user_jobs) - len(active))
+    new_rows = []
+    (ROOT / 'slurm_logs').mkdir(exist_ok=True)
+    for job in (row for row in wave1 if row['job_index'] not in submitted):
+      if len(new_rows) >= slots:
+        break
+      name = f'cw1-{job["job_index"]:02d}-{job["variant"].lower().replace("-", "")}-{job["game"]}'
+      command = [
+          'sbatch', '--parsable', '--job-name', name,
+          '--export', (
+              f'ALL,COREWM_JOB_INDEX={job["job_index"]},COREWM_ATTEMPT=1'),
+          str(ROOT / 'scripts/slurm_corewm_wave1.sh')]
+      result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True)
+      if result.returncode:
+        # A concurrent user submission may consume the slot between squeue and
+        # sbatch. Leave the manifest row unclaimed so the next poll retries it.
+        if 'QOSMaxSubmitJobPerUserLimit' in result.stderr:
+          break
+        raise RuntimeError(result.stderr.strip())
+      row = {
+          'job_index': job['job_index'], 'slurm_job_id': result.stdout.strip(),
+          'variant': job['variant'], 'game': job['game'], 'seed': job['seed'],
+          'attempt': 1, 'submitted_unix_time': time.time()}
+      ledger['submitted'].append(row)
+      new_rows.append(row)
+      submitted.add(job['job_index'])
+      tmp = ledger_path.with_suffix('.tmp')
+      tmp.write_text(json.dumps(ledger, indent=2, sort_keys=True) + '\n')
+      tmp.replace(ledger_path)
+    return {
+        'active_user_jobs_before': len(active), 'available_slots': slots,
+        'new_submissions': new_rows, 'submitted_wave1': len(submitted),
+        'remaining_wave1': len(wave1) - len(submitted)}
+
+
+def supervise_wave1(protocol_path, max_user_jobs=2, poll_seconds=60):
+  """Submit the approved Wave 1 gradually, then stop before Wave 2."""
+  while True:
+    status = submit_wave1_once(protocol_path, max_user_jobs)
+    print(json.dumps(status, sort_keys=True), flush=True)
+    if status['remaining_wave1'] == 0:
+      return
+    time.sleep(poll_seconds)
+
+
 def main(argv=None):
   parser = argparse.ArgumentParser()
   sub = parser.add_subparsers(dest='command', required=True)
@@ -166,11 +244,23 @@ def main(argv=None):
   run.add_argument('--protocol', required=True)
   run.add_argument('--index', required=True, type=int)
   run.add_argument('--attempt', default=1, type=int)
+  submit = sub.add_parser('submit-wave1-once')
+  submit.add_argument('--protocol', required=True)
+  submit.add_argument('--max-user-jobs', default=2, type=int)
+  supervise = sub.add_parser('supervise-wave1')
+  supervise.add_argument('--protocol', required=True)
+  supervise.add_argument('--max-user-jobs', default=2, type=int)
+  supervise.add_argument('--poll-seconds', default=60, type=int)
   args = parser.parse_args(argv)
   if args.command == 'freeze':
     print(json.dumps(freeze_protocol(args.output), indent=2))
-  else:
+  elif args.command == 'run-job':
     run_job(args.protocol, args.index, args.attempt)
+  elif args.command == 'submit-wave1-once':
+    print(json.dumps(submit_wave1_once(
+        args.protocol, args.max_user_jobs), indent=2))
+  else:
+    supervise_wave1(args.protocol, args.max_user_jobs, args.poll_seconds)
 
 
 if __name__ == '__main__':

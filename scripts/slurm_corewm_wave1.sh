@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Submit as: sbatch --array=0-35%2 scripts/slurm_corewm_wave1.sh
-# Array task IDs are immutable job_index values in the frozen 680-run manifest.
+# Submitted one job at a time by corewm_eval.production supervise-wave1.
+# COREWM_JOB_INDEX is an immutable job_index in the frozen 680-run manifest.
 #SBATCH --job-name=corewm-v1-w1
 #SBATCH --partition=gpu_general
 #SBATCH --nodes=1
@@ -9,14 +9,16 @@
 #SBATCH --gres=gpu:nvidia_h200:1
 #SBATCH --mem=64G
 #SBATCH --time=12:00:00
-#SBATCH --output=slurm_logs/corewm-v1-w1-%A_%a.out
-#SBATCH --error=slurm_logs/corewm-v1-w1-%A_%a.err
+#SBATCH --output=slurm_logs/corewm-v1-w1-%j.out
+#SBATCH --error=slurm_logs/corewm-v1-w1-%j.err
 
 set -euo pipefail
 
 readonly REPO=/home/vn-user0101/Dat/HTS-Dreamer
 readonly PYTHON=/home/vn-user0101/.conda/envs/htp/bin/python
 readonly PROTOCOL="$REPO/production_runs/corewm_atari100k_v1/protocol.json"
+: "${COREWM_JOB_INDEX:?COREWM_JOB_INDEX must be set by the Wave-1 feeder}"
+: "${COREWM_ATTEMPT:=1}"
 
 cd "$REPO"
 export XLA_PYTHON_CLIENT_PREALLOCATE=true
@@ -26,5 +28,5 @@ mkdir -p "$WANDB_DIR"
 
 "$PYTHON" -m corewm_eval.production run-job \
   --protocol "$PROTOCOL" \
-  --index "$SLURM_ARRAY_TASK_ID" \
-  --attempt 1
+  --index "$COREWM_JOB_INDEX" \
+  --attempt "$COREWM_ATTEMPT"

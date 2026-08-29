@@ -2,6 +2,7 @@ import json
 
 from corewm_eval.config import QUALITATIVE_GAMES
 from corewm_eval.phase3_prepare import MAIN_POLICY_VARIANTS, prepare
+from corewm_eval.production import _task_game
 
 
 def test_production_matrix_is_exactly_680(tmp_path):
@@ -17,3 +18,8 @@ def test_production_matrix_is_exactly_680(tmp_path):
   assert [row['job_index'] for row in jobs] == list(range(680))
   persisted = json.loads((tmp_path / 'training_manifest.json').read_text())
   assert persisted == jobs
+
+
+def test_production_task_alias_is_explicit():
+  assert _task_game('alien') == 'alien'
+  assert _task_game('jamesbond') == 'james_bond'
