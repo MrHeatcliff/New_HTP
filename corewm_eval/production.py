@@ -172,8 +172,8 @@ def _verify_protocol(protocol_path):
   return protocol_path, protocol
 
 
-def submit_wave1_once(protocol_path, max_user_jobs=2):
-  """Fill free Slurm slots without ever exceeding the user-wide job limit."""
+def submit_wave1_once(protocol_path, max_production_jobs=2):
+  """Fill slots while leaving unrelated jobs on the shared account untouched."""
   protocol_path, _ = _verify_protocol(protocol_path)
   root = protocol_path.parent
   ledger_path = root / 'wave1_submission_ledger.json'
@@ -188,9 +188,10 @@ def submit_wave1_once(protocol_path, max_user_jobs=2):
     wave1 = [row for row in jobs if row['wave'] == 1]
     assert len(wave1) == 36
     user = os.environ['USER']
-    active = subprocess.check_output(
-        ['squeue', '-h', '-u', user, '-o', '%A'], text=True).splitlines()
-    slots = max(0, int(max_user_jobs) - len(active))
+    queue = subprocess.check_output(
+        ['squeue', '-h', '-u', user, '-o', '%A|%j'], text=True).splitlines()
+    active = [line for line in queue if line.partition('|')[2].startswith('cw1-')]
+    slots = max(0, int(max_production_jobs) - len(active))
     new_rows = []
     (ROOT / 'slurm_logs').mkdir(exist_ok=True)
     for job in (row for row in wave1 if row['job_index'] not in submitted):
@@ -199,6 +200,7 @@ def submit_wave1_once(protocol_path, max_user_jobs=2):
       name = f'cw1-{job["job_index"]:02d}-{job["variant"].lower().replace("-", "")}-{job["game"]}'
       command = [
           'sbatch', '--parsable', '--job-name', name,
+          '--partition', 'gpu_junior',
           '--export', (
               f'ALL,COREWM_JOB_INDEX={job["job_index"]},COREWM_ATTEMPT=1'),
           str(ROOT / 'scripts/slurm_corewm_wave1.sh')]
@@ -220,15 +222,17 @@ def submit_wave1_once(protocol_path, max_user_jobs=2):
       tmp.write_text(json.dumps(ledger, indent=2, sort_keys=True) + '\n')
       tmp.replace(ledger_path)
     return {
-        'active_user_jobs_before': len(active), 'available_slots': slots,
+        'active_production_jobs_before': len(active),
+        'unrelated_jobs_ignored': len(queue) - len(active),
+        'available_slots': slots,
         'new_submissions': new_rows, 'submitted_wave1': len(submitted),
         'remaining_wave1': len(wave1) - len(submitted)}
 
 
-def supervise_wave1(protocol_path, max_user_jobs=2, poll_seconds=60):
+def supervise_wave1(protocol_path, max_production_jobs=2, poll_seconds=60):
   """Submit the approved Wave 1 gradually, then stop before Wave 2."""
   while True:
-    status = submit_wave1_once(protocol_path, max_user_jobs)
+    status = submit_wave1_once(protocol_path, max_production_jobs)
     print(json.dumps(status, sort_keys=True), flush=True)
     if status['remaining_wave1'] == 0:
       return
@@ -246,10 +250,10 @@ def main(argv=None):
   run.add_argument('--attempt', default=1, type=int)
   submit = sub.add_parser('submit-wave1-once')
   submit.add_argument('--protocol', required=True)
-  submit.add_argument('--max-user-jobs', default=2, type=int)
+  submit.add_argument('--max-production-jobs', default=2, type=int)
   supervise = sub.add_parser('supervise-wave1')
   supervise.add_argument('--protocol', required=True)
-  supervise.add_argument('--max-user-jobs', default=2, type=int)
+  supervise.add_argument('--max-production-jobs', default=2, type=int)
   supervise.add_argument('--poll-seconds', default=60, type=int)
   args = parser.parse_args(argv)
   if args.command == 'freeze':
@@ -258,9 +262,10 @@ def main(argv=None):
     run_job(args.protocol, args.index, args.attempt)
   elif args.command == 'submit-wave1-once':
     print(json.dumps(submit_wave1_once(
-        args.protocol, args.max_user_jobs), indent=2))
+        args.protocol, args.max_production_jobs), indent=2))
   else:
-    supervise_wave1(args.protocol, args.max_user_jobs, args.poll_seconds)
+    supervise_wave1(
+        args.protocol, args.max_production_jobs, args.poll_seconds)
 
 
 if __name__ == '__main__':

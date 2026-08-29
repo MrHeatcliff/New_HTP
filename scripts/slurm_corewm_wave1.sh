@@ -2,7 +2,7 @@
 # Submitted one job at a time by corewm_eval.production supervise-wave1.
 # COREWM_JOB_INDEX is an immutable job_index in the frozen 680-run manifest.
 #SBATCH --job-name=corewm-v1-w1
-#SBATCH --partition=gpu_general
+#SBATCH --partition=gpu_junior
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
