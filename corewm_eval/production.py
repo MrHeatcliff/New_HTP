@@ -130,7 +130,10 @@ def run_job(protocol_path, index, attempt):
       'PAPER_CONDITION': job['variant'].lower().replace('-', '_'),
       'WANDB_ENTITY': job['wandb_entity'],
       'WANDB_PROJECT': job['wandb_project'],
-      'WANDB_MODE': 'online',
+      # Compute nodes have no reliable external DNS. Record losslessly offline;
+      # the login-node feeder syncs completed runs to the requested project.
+      'WANDB_MODE': 'offline',
+      'WANDB_RUN_ID': f'cw1j{job["job_index"]:03d}a{int(attempt):03d}',
       'WANDB_GROUP': f'{PROTOCOL_ID}-{job["game"]}',
       'WANDB_JOB_TYPE': job['variant'].lower().replace('-', '_'),
       'WANDB_RUN_NAME': (
@@ -154,6 +157,10 @@ def run_job(protocol_path, index, attempt):
     raise
   launch['exit_code'] = result.returncode
   launch['status'] = 'TRAINING_EXITED' if result.returncode == 0 else 'FAILED'
+  launch['wandb_run_id'] = env['WANDB_RUN_ID']
+  matches = sorted((ROOT / 'production_runs' / PROTOCOL_ID / 'wandb' / 'wandb').glob(
+      f'offline-run-*-{env["WANDB_RUN_ID"]}'))
+  launch['wandb_offline_directory'] = str(matches[-1]) if matches else None
   (run_dir / 'launch.json').write_text(json.dumps(launch, indent=2) + '\n')
   if result.returncode:
     raise SystemExit(result.returncode)
@@ -183,7 +190,9 @@ def submit_wave1_once(protocol_path, max_production_jobs=2):
     fcntl.flock(lock, fcntl.LOCK_EX)
     ledger = ({'submitted': []} if not ledger_path.exists()
               else json.loads(ledger_path.read_text()))
-    submitted = {int(row['job_index']) for row in ledger['submitted']}
+    submitted = {
+        int(row['job_index']) for row in ledger['submitted']
+        if row.get('active_claim', True)}
     jobs = json.loads(MANIFEST.read_text())
     wave1 = [row for row in jobs if row['wave'] == 1]
     assert len(wave1) == 36
@@ -198,11 +207,15 @@ def submit_wave1_once(protocol_path, max_production_jobs=2):
       if len(new_rows) >= slots:
         break
       name = f'cw1-{job["job_index"]:02d}-{job["variant"].lower().replace("-", "")}-{job["game"]}'
+      prior_attempts = [
+          int(row['attempt']) for row in ledger['submitted']
+          if int(row['job_index']) == int(job['job_index'])]
+      attempt = max(prior_attempts, default=0) + 1
       command = [
           'sbatch', '--parsable', '--job-name', name,
           '--partition', 'gpu_junior',
           '--export', (
-              f'ALL,COREWM_JOB_INDEX={job["job_index"]},COREWM_ATTEMPT=1'),
+              f'ALL,COREWM_JOB_INDEX={job["job_index"]},COREWM_ATTEMPT={attempt}'),
           str(ROOT / 'scripts/slurm_corewm_wave1.sh')]
       result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True)
       if result.returncode:
@@ -214,7 +227,8 @@ def submit_wave1_once(protocol_path, max_production_jobs=2):
       row = {
           'job_index': job['job_index'], 'slurm_job_id': result.stdout.strip(),
           'variant': job['variant'], 'game': job['game'], 'seed': job['seed'],
-          'attempt': 1, 'submitted_unix_time': time.time()}
+          'attempt': attempt, 'active_claim': True,
+          'submitted_unix_time': time.time()}
       ledger['submitted'].append(row)
       new_rows.append(row)
       submitted.add(job['job_index'])
@@ -229,10 +243,45 @@ def submit_wave1_once(protocol_path, max_production_jobs=2):
         'remaining_wave1': len(wave1) - len(submitted)}
 
 
+def sync_completed_wandb(protocol_path):
+  """Sync only completed offline runs from the network-enabled login node."""
+  protocol_path, _ = _verify_protocol(protocol_path)
+  root = protocol_path.parent / 'training' / 'wave1'
+  synced = []
+  failed = []
+  wandb_cli = str(Path(sys.executable).with_name('wandb'))
+  for launch_path in sorted(root.glob('**/launch.json')):
+    launch = json.loads(launch_path.read_text())
+    if launch.get('status') != 'TRAINING_EXITED':
+      continue
+    if launch.get('wandb_sync_status') == 'SYNCED':
+      continue
+    offline = launch.get('wandb_offline_directory')
+    if not offline or not Path(offline).is_dir():
+      launch['wandb_sync_status'] = 'MISSING_OFFLINE_DIRECTORY'
+      failed.append(str(launch_path))
+    else:
+      result = subprocess.run(
+          [wandb_cli, 'sync', offline], cwd=ROOT, text=True,
+          capture_output=True)
+      if result.returncode == 0:
+        launch['wandb_sync_status'] = 'SYNCED'
+        launch['wandb_synced_unix_time'] = time.time()
+        synced.append(offline)
+      else:
+        launch['wandb_sync_status'] = 'RETRY_PENDING'
+        launch['wandb_sync_error'] = result.stderr[-2000:]
+        failed.append(offline)
+    launch_path.write_text(json.dumps(launch, indent=2) + '\n')
+  return {'synced': synced, 'failed_or_pending': failed}
+
+
 def supervise_wave1(protocol_path, max_production_jobs=2, poll_seconds=60):
   """Submit the approved Wave 1 gradually, then stop before Wave 2."""
   while True:
+    sync_status = sync_completed_wandb(protocol_path)
     status = submit_wave1_once(protocol_path, max_production_jobs)
+    status['wandb_sync'] = sync_status
     print(json.dumps(status, sort_keys=True), flush=True)
     if status['remaining_wave1'] == 0:
       return
