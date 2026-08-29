@@ -71,6 +71,10 @@ class Atari(embodied.Env):
     self.prevlives = None
     self.duration = None
     self.done = True
+    # Read-only audit state. This records the values before _obs() applies the
+    # repository's legacy `is_terminal=is_last` output behavior. It is not
+    # exposed in the observation and therefore cannot affect training/replay.
+    self.last_transition_audit = None
 
   @property
   def obs_space(self):
@@ -80,6 +84,8 @@ class Atari(embodied.Env):
         'is_first': elements.Space(bool),
         'is_last': elements.Space(bool),
         'is_terminal': elements.Space(bool),
+        'log/raw_ale_frames': elements.Space(
+            np.int32, (), 0, self.repeat + 1),
     }
 
   @property
@@ -95,33 +101,59 @@ class Atari(embodied.Env):
       self.prevlives = self.ale.lives()
       self.duration = 0
       self.done = False
-      return self._obs(0.0, is_first=True)
+      self.last_transition_audit = dict(
+          kind='reset', incoming_is_last=False, incoming_is_terminal=False,
+          game_over=False, time_limit=False, life_loss_observed=False,
+          life_loss_terminal=False, life_loss_last=False)
+      return self._obs(0.0, is_first=True, raw_frames=0)
     reward = 0.0
     terminal = False
     last = False
     assert 0 <= action['action'] < len(self.actionset), action['action']
     act = self.actionset[action['action']]
+    raw_frames = 0
+    cause_game_over = False
+    cause_time_limit = False
+    life_loss_observed = False
+    cause_life_terminal = False
+    cause_life_last = False
     for repeat in range(self.repeat):
       reward += self.ale.act(act)
+      raw_frames += 1
       self.duration += 1
       if repeat >= self.repeat - self.pooling:
         self._render()
       if self.ale.game_over():
+        cause_game_over = True
         terminal = True
         last = True
       if self.duration >= self.length:
+        cause_time_limit = True
         last = True
       lives = self.ale.lives()
-      if self.lives == 'discount' and 0 < lives < self.prevlives:
+      life_lost = 0 < lives < self.prevlives
+      life_loss_observed |= life_lost
+      if self.lives == 'discount' and life_lost:
+        cause_life_terminal = True
         terminal = True
-      if self.lives == 'reset' and 0 < lives < self.prevlives:
+      if self.lives == 'reset' and life_lost:
+        cause_life_terminal = True
+        cause_life_last = True
         terminal = True
         last = True
       self.prevlives = lives
       if terminal or last:
         break
     self.done = last
-    obs = self._obs(reward, is_last=last, is_terminal=terminal)
+    self.last_transition_audit = dict(
+        kind='action', incoming_is_last=bool(last),
+        incoming_is_terminal=bool(terminal),
+        game_over=cause_game_over, time_limit=cause_time_limit,
+        life_loss_observed=life_loss_observed,
+        life_loss_terminal=cause_life_terminal,
+        life_loss_last=cause_life_last)
+    obs = self._obs(
+        reward, is_last=last, is_terminal=terminal, raw_frames=raw_frames)
     return obs
 
   def _reset(self):
@@ -150,7 +182,9 @@ class Atari(embodied.Env):
     self.buffers.appendleft(self.buffers.pop())
     self.ale.getScreenRGB(self.buffers[0])
 
-  def _obs(self, reward, is_first=False, is_last=False, is_terminal=False):
+  def _obs(
+      self, reward, is_first=False, is_last=False, is_terminal=False,
+      raw_frames=0):
     if self.clip_reward:
       reward = np.sign(reward)
     if self.aggregate == 'max':
@@ -174,4 +208,5 @@ class Atari(embodied.Env):
         is_first=is_first,
         is_last=is_last,
         is_terminal=is_last,
+        **{'log/raw_ale_frames': np.int32(raw_frames)},
     )

@@ -70,6 +70,8 @@ defaults:
     remote_envs: False
     usage: {psutil: True, nvsmi: True, gputil: False, malloc: False, gc: False}
     debug: True
+    exact_env_action_budget: false
+    action_milestones: [10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000]
 
   jax:
     platform: cuda
@@ -196,6 +198,7 @@ defaults:
       grad_to_backbone: false   # false = post-hoc (App. A.3), true = fully joint
       use_proj: true            # NEW: false → drop htp_proj + slow_htp_proj (Slim-HTP)
       use_recon: true           # NEW: false → drop htp_recon (only valid when use_proj=false)
+      use_pdyn: true            # false → do not construct or execute multi-stride loss
       use_vicreg: false         # NEW: true → add per-prefix variance regularizer
       vicreg_gamma: 1.0         # NEW: VICReg std threshold per coordinate
       vicreg_scale: 1.0         # NEW: VICReg loss scale
@@ -216,6 +219,7 @@ defaults:
       pdyn:
         dims: [ 128, 256, 512, 1024, 2048 ]   # NEW: must be declared for Slim-HTP overrides
         strides: [ 16, 8, 4, 2, 1 ]           # non-increasing: compact prefix → longer stride
+        enforce_coarse_to_fine: true
         hidden: 512
         layers: 2
         norm: rms
@@ -575,17 +579,57 @@ htp_joint:
   agent.htp.grad_to_backbone: true          # App. A.3 fully-joint regime
 
 htp_matryoshka_only:                        # drop multi-stride, keep progressive recon
-  agent.loss_scales.htp_pdyn: 0.0
+  agent.htp.use_pdyn: false
 
 htp_pdyn_only:                              # drop progressive recon, keep multi-stride
-  agent.loss_scales.htp_rec: 0.0
+  agent.htp.use_recon: false
 
 htp_reverse_strides:                        # sanity check — reverses the paper's inductive bias
   agent.htp.pdyn.strides: [1, 2, 4, 8, 16]
+  agent.htp.pdyn.enforce_coarse_to_fine: false
 
 htp_empty_projection:                       # HTP scaffold, no auxiliary supervision
-  agent.loss_scales.htp_rec: 0.0
-  agent.loss_scales.htp_pdyn: 0.0
+  agent.htp.use_recon: false
+  agent.htp.use_pdyn: false
+
+# Paper-matched CoRe-WM variants. Compose after: atari100k size12m.
+corewm_paper_protocol:
+  run.steps: 100000
+  run.save_every: 10000
+  run.eval_eps: 1  # training run does not evaluate; isolated eval jobs override this
+  run.exact_env_action_budget: true
+
+corewm_flat:
+  agent.htp.enabled: true
+  agent.htp.use_proj: true
+  agent.htp.use_recon: false
+  agent.htp.use_pdyn: false
+
+corewm_rec_only:
+  agent.htp.enabled: true
+  agent.htp.use_proj: true
+  agent.htp.use_recon: true
+  agent.htp.use_pdyn: false
+
+corewm_pdyn_only:
+  agent.htp.enabled: true
+  agent.htp.use_proj: true
+  agent.htp.use_recon: false
+  agent.htp.use_pdyn: true
+
+corewm_full:
+  agent.htp.enabled: true
+  agent.htp.use_proj: true
+  agent.htp.use_recon: true
+  agent.htp.use_pdyn: true
+
+corewm_reverse:
+  agent.htp.enabled: true
+  agent.htp.use_proj: true
+  agent.htp.use_recon: true
+  agent.htp.use_pdyn: true
+  agent.htp.pdyn.strides: [1, 2, 4, 8, 16]
+  agent.htp.pdyn.enforce_coarse_to_fine: false
 
 # ============================================================================
 # Slim-HTP presets

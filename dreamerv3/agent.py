@@ -82,6 +82,7 @@ class Agent(embodied.jax.Agent):
     scales.update({k: rec for k in dec_space})
     scales.pop('htp_rec', None)  # ← ADD
     scales.pop('htp_pdyn', None)  # ← ADD
+    scales.pop('htp_vicreg', None)
     self.scales = scales
 
   @property

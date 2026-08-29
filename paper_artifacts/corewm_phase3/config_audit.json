@@ -1,0 +1,512 @@
+[
+  {
+    "variant": "Backbone",
+    "base_config": "atari100k size12m corewm_paper_protocol wandb",
+    "HTP_enabled": false,
+    "projection_enabled": false,
+    "D": null,
+    "prefix_dims": null,
+    "lambda_rec": 0.0,
+    "lambda_pdyn": 0.0,
+    "stride_assignment": null,
+    "actor_input": "backbone_h_2560",
+    "critic_input": "backbone_h_2560",
+    "world_model_backbone": "DreamerV3 size12m RSSM deter=2048 stoch=32x16",
+    "optimizer_config": {
+      "lr": 4e-05,
+      "agc": 0.3,
+      "eps": 1e-20,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "momentum": true,
+      "wd": 0.0,
+      "schedule": "const",
+      "warmup": 1000,
+      "anneal": 0
+    },
+    "replay_config": {
+      "size": 5000000.0,
+      "online": true,
+      "fracs": {
+        "uniform": 1.0,
+        "priority": 0.0,
+        "recency": 0.0
+      },
+      "prio": {
+        "exponent": 0.8,
+        "maxfrac": 0.5,
+        "initial": "inf",
+        "zero_on_sample": true
+      },
+      "priosignal": "model",
+      "recexp": 1.0,
+      "chunksize": 1024
+    },
+    "environment_config": {
+      "size": [
+        64,
+        64
+      ],
+      "repeat": 4,
+      "sticky": false,
+      "gray": false,
+      "actions": "needed",
+      "lives": "unused",
+      "noops": 30,
+      "autostart": false,
+      "resize": "pillow",
+      "clip_reward": false,
+      "use_seed": false
+    },
+    "training_budget": 100000,
+    "checkpoint_schedule": [
+      10000,
+      20000,
+      30000,
+      40000,
+      50000,
+      60000,
+      70000,
+      80000,
+      90000,
+      100000
+    ],
+    "evaluation_schedule": {
+      "10k_to_90k_episodes": 10,
+      "100k_episodes": 100
+    }
+  },
+  {
+    "variant": "Flat",
+    "base_config": "atari100k size12m corewm_paper_protocol wandb",
+    "HTP_enabled": true,
+    "projection_enabled": true,
+    "D": 2048,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "lambda_rec": 0.0,
+    "lambda_pdyn": 0.0,
+    "stride_assignment": null,
+    "actor_input": "full_z_2048",
+    "critic_input": "full_z_2048",
+    "world_model_backbone": "DreamerV3 size12m RSSM deter=2048 stoch=32x16",
+    "optimizer_config": {
+      "lr": 4e-05,
+      "agc": 0.3,
+      "eps": 1e-20,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "momentum": true,
+      "wd": 0.0,
+      "schedule": "const",
+      "warmup": 1000,
+      "anneal": 0
+    },
+    "replay_config": {
+      "size": 5000000.0,
+      "online": true,
+      "fracs": {
+        "uniform": 1.0,
+        "priority": 0.0,
+        "recency": 0.0
+      },
+      "prio": {
+        "exponent": 0.8,
+        "maxfrac": 0.5,
+        "initial": "inf",
+        "zero_on_sample": true
+      },
+      "priosignal": "model",
+      "recexp": 1.0,
+      "chunksize": 1024
+    },
+    "environment_config": {
+      "size": [
+        64,
+        64
+      ],
+      "repeat": 4,
+      "sticky": false,
+      "gray": false,
+      "actions": "needed",
+      "lives": "unused",
+      "noops": 30,
+      "autostart": false,
+      "resize": "pillow",
+      "clip_reward": false,
+      "use_seed": false
+    },
+    "training_budget": 100000,
+    "checkpoint_schedule": [
+      10000,
+      20000,
+      30000,
+      40000,
+      50000,
+      60000,
+      70000,
+      80000,
+      90000,
+      100000
+    ],
+    "evaluation_schedule": {
+      "10k_to_90k_episodes": 10,
+      "100k_episodes": 100
+    }
+  },
+  {
+    "variant": "Rec-only",
+    "base_config": "atari100k size12m corewm_paper_protocol wandb",
+    "HTP_enabled": true,
+    "projection_enabled": true,
+    "D": 2048,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "lambda_rec": 1.0,
+    "lambda_pdyn": 0.0,
+    "stride_assignment": null,
+    "actor_input": "full_z_2048",
+    "critic_input": "full_z_2048",
+    "world_model_backbone": "DreamerV3 size12m RSSM deter=2048 stoch=32x16",
+    "optimizer_config": {
+      "lr": 4e-05,
+      "agc": 0.3,
+      "eps": 1e-20,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "momentum": true,
+      "wd": 0.0,
+      "schedule": "const",
+      "warmup": 1000,
+      "anneal": 0
+    },
+    "replay_config": {
+      "size": 5000000.0,
+      "online": true,
+      "fracs": {
+        "uniform": 1.0,
+        "priority": 0.0,
+        "recency": 0.0
+      },
+      "prio": {
+        "exponent": 0.8,
+        "maxfrac": 0.5,
+        "initial": "inf",
+        "zero_on_sample": true
+      },
+      "priosignal": "model",
+      "recexp": 1.0,
+      "chunksize": 1024
+    },
+    "environment_config": {
+      "size": [
+        64,
+        64
+      ],
+      "repeat": 4,
+      "sticky": false,
+      "gray": false,
+      "actions": "needed",
+      "lives": "unused",
+      "noops": 30,
+      "autostart": false,
+      "resize": "pillow",
+      "clip_reward": false,
+      "use_seed": false
+    },
+    "training_budget": 100000,
+    "checkpoint_schedule": [
+      10000,
+      20000,
+      30000,
+      40000,
+      50000,
+      60000,
+      70000,
+      80000,
+      90000,
+      100000
+    ],
+    "evaluation_schedule": {
+      "10k_to_90k_episodes": 10,
+      "100k_episodes": 100
+    }
+  },
+  {
+    "variant": "Pdyn-only",
+    "base_config": "atari100k size12m corewm_paper_protocol wandb",
+    "HTP_enabled": true,
+    "projection_enabled": true,
+    "D": 2048,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "lambda_rec": 0.0,
+    "lambda_pdyn": 1.0,
+    "stride_assignment": [
+      16,
+      8,
+      4,
+      2,
+      1
+    ],
+    "actor_input": "full_z_2048",
+    "critic_input": "full_z_2048",
+    "world_model_backbone": "DreamerV3 size12m RSSM deter=2048 stoch=32x16",
+    "optimizer_config": {
+      "lr": 4e-05,
+      "agc": 0.3,
+      "eps": 1e-20,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "momentum": true,
+      "wd": 0.0,
+      "schedule": "const",
+      "warmup": 1000,
+      "anneal": 0
+    },
+    "replay_config": {
+      "size": 5000000.0,
+      "online": true,
+      "fracs": {
+        "uniform": 1.0,
+        "priority": 0.0,
+        "recency": 0.0
+      },
+      "prio": {
+        "exponent": 0.8,
+        "maxfrac": 0.5,
+        "initial": "inf",
+        "zero_on_sample": true
+      },
+      "priosignal": "model",
+      "recexp": 1.0,
+      "chunksize": 1024
+    },
+    "environment_config": {
+      "size": [
+        64,
+        64
+      ],
+      "repeat": 4,
+      "sticky": false,
+      "gray": false,
+      "actions": "needed",
+      "lives": "unused",
+      "noops": 30,
+      "autostart": false,
+      "resize": "pillow",
+      "clip_reward": false,
+      "use_seed": false
+    },
+    "training_budget": 100000,
+    "checkpoint_schedule": [
+      10000,
+      20000,
+      30000,
+      40000,
+      50000,
+      60000,
+      70000,
+      80000,
+      90000,
+      100000
+    ],
+    "evaluation_schedule": {
+      "10k_to_90k_episodes": 10,
+      "100k_episodes": 100
+    }
+  },
+  {
+    "variant": "Full",
+    "base_config": "atari100k size12m corewm_paper_protocol wandb",
+    "HTP_enabled": true,
+    "projection_enabled": true,
+    "D": 2048,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "lambda_rec": 1.0,
+    "lambda_pdyn": 1.0,
+    "stride_assignment": [
+      16,
+      8,
+      4,
+      2,
+      1
+    ],
+    "actor_input": "full_z_2048",
+    "critic_input": "full_z_2048",
+    "world_model_backbone": "DreamerV3 size12m RSSM deter=2048 stoch=32x16",
+    "optimizer_config": {
+      "lr": 4e-05,
+      "agc": 0.3,
+      "eps": 1e-20,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "momentum": true,
+      "wd": 0.0,
+      "schedule": "const",
+      "warmup": 1000,
+      "anneal": 0
+    },
+    "replay_config": {
+      "size": 5000000.0,
+      "online": true,
+      "fracs": {
+        "uniform": 1.0,
+        "priority": 0.0,
+        "recency": 0.0
+      },
+      "prio": {
+        "exponent": 0.8,
+        "maxfrac": 0.5,
+        "initial": "inf",
+        "zero_on_sample": true
+      },
+      "priosignal": "model",
+      "recexp": 1.0,
+      "chunksize": 1024
+    },
+    "environment_config": {
+      "size": [
+        64,
+        64
+      ],
+      "repeat": 4,
+      "sticky": false,
+      "gray": false,
+      "actions": "needed",
+      "lives": "unused",
+      "noops": 30,
+      "autostart": false,
+      "resize": "pillow",
+      "clip_reward": false,
+      "use_seed": false
+    },
+    "training_budget": 100000,
+    "checkpoint_schedule": [
+      10000,
+      20000,
+      30000,
+      40000,
+      50000,
+      60000,
+      70000,
+      80000,
+      90000,
+      100000
+    ],
+    "evaluation_schedule": {
+      "10k_to_90k_episodes": 10,
+      "100k_episodes": 100
+    }
+  },
+  {
+    "variant": "Reverse",
+    "base_config": "atari100k size12m corewm_paper_protocol wandb",
+    "HTP_enabled": true,
+    "projection_enabled": true,
+    "D": 2048,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "lambda_rec": 1.0,
+    "lambda_pdyn": 1.0,
+    "stride_assignment": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "actor_input": "full_z_2048",
+    "critic_input": "full_z_2048",
+    "world_model_backbone": "DreamerV3 size12m RSSM deter=2048 stoch=32x16",
+    "optimizer_config": {
+      "lr": 4e-05,
+      "agc": 0.3,
+      "eps": 1e-20,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "momentum": true,
+      "wd": 0.0,
+      "schedule": "const",
+      "warmup": 1000,
+      "anneal": 0
+    },
+    "replay_config": {
+      "size": 5000000.0,
+      "online": true,
+      "fracs": {
+        "uniform": 1.0,
+        "priority": 0.0,
+        "recency": 0.0
+      },
+      "prio": {
+        "exponent": 0.8,
+        "maxfrac": 0.5,
+        "initial": "inf",
+        "zero_on_sample": true
+      },
+      "priosignal": "model",
+      "recexp": 1.0,
+      "chunksize": 1024
+    },
+    "environment_config": {
+      "size": [
+        64,
+        64
+      ],
+      "repeat": 4,
+      "sticky": false,
+      "gray": false,
+      "actions": "needed",
+      "lives": "unused",
+      "noops": 30,
+      "autostart": false,
+      "resize": "pillow",
+      "clip_reward": false,
+      "use_seed": false
+    },
+    "training_budget": 100000,
+    "checkpoint_schedule": [
+      10000,
+      20000,
+      30000,
+      40000,
+      50000,
+      60000,
+      70000,
+      80000,
+      90000,
+      100000
+    ],
+    "evaluation_schedule": {
+      "10k_to_90k_episodes": 10,
+      "100k_episodes": 100
+    }
+  }
+]

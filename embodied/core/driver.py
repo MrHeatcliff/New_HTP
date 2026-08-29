@@ -58,6 +58,13 @@ class Driver:
     assert all(len(x) == self.length for x in acts.values())
     assert all(isinstance(v, np.ndarray) for v in acts.values())
     acts = [{k: v[i] for k, v in acts.items()} for i in range(self.length)]
+    # A paper interaction is an agent action that advances the environment.
+    # Reset-control calls do not count, even though this wrapper routes them
+    # through an env.step-style API to obtain the initial observation. Record
+    # the distinction here and increment the canonical counter only after this
+    # call returns successfully and emits a Driver transition.
+    action_executed = np.asarray([
+        not bool(act.get('reset', False)) for act in acts], dtype=bool)
     if self.parallel:
       [pipe.send(('step', act)) for pipe, act in zip(self.pipes, acts)]
       obs = [self._receive(pipe) for pipe in self.pipes]
@@ -74,7 +81,10 @@ class Driver:
       mask = ~obs['is_last']
       acts = {k: self._mask(v, mask) for k, v in acts.items()}
     self.acts = {**acts, 'reset': obs['is_last'].copy()}
-    trans = {**obs, **acts, **outs, **logs}
+    trans = {
+        **obs, **acts, **outs, **logs,
+        'log/action_executed': action_executed,
+    }
     for i in range(self.length):
       trn = elements.tree.map(lambda x: x[i], trans)
       [fn(trn, i, **self.kwargs) for fn in self.callbacks]

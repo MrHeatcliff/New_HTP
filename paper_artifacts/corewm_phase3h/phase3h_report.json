@@ -1,0 +1,138 @@
+{
+  "canonical_games": [
+    "alien",
+    "amidar",
+    "assault",
+    "asterix",
+    "bank_heist",
+    "battle_zone",
+    "boxing",
+    "breakout",
+    "chopper_command",
+    "crazy_climber",
+    "demon_attack",
+    "freeway",
+    "frostbite",
+    "gopher",
+    "hero",
+    "jamesbond",
+    "kangaroo",
+    "krull",
+    "kung_fu_master",
+    "ms_pacman",
+    "pong",
+    "private_eye",
+    "qbert",
+    "road_runner",
+    "seaquest",
+    "up_n_down"
+  ],
+  "canonical_interaction": "one action-bearing call to env.step; reset excluded",
+  "implementation": {
+    "counter": "embodied/run/train.py:train env_action_steps",
+    "marker": "embodied/core/driver.py:Driver._step log/action_executed",
+    "milestone": "embodied/run/train.py:milestonefn"
+  },
+  "multi_env_policy": "exact paper mode rejects envs != 1 rather than crossing milestones",
+  "paper_milestones": [
+    10000,
+    20000,
+    30000,
+    40000,
+    50000,
+    60000,
+    70000,
+    80000,
+    90000,
+    100000
+  ],
+  "paper_scale_jobs_launched": 0,
+  "resume_comparison": {
+    "continuous_agent_counters": {
+      "actions": 1322,
+      "batches": 61,
+      "updates": 59
+    },
+    "driver_callbacks.pkl": {
+      "byte_equal": true
+    },
+    "env_action_steps.pkl": {
+      "byte_equal": true
+    },
+    "model_state": {
+      "exact_equal": false,
+      "keys_compared": 104,
+      "max_abs_difference": 16.0,
+      "unequal_keys": 104
+    },
+    "optimizer_state": {
+      "exact_equal": false,
+      "keys_compared": 184,
+      "max_abs_difference": 16.0,
+      "unequal_keys": 184
+    },
+    "raw_ale_frames.pkl": {
+      "byte_equal": false
+    },
+    "replay.pkl": {
+      "byte_equal": true
+    },
+    "replay_insertions.pkl": {
+      "byte_equal": true
+    },
+    "resumed_agent_counters": {
+      "actions": 1322,
+      "batches": 45,
+      "updates": 43
+    }
+  },
+  "resume_reason": "Environment/ALE and Driver policy carry are not checkpointed. The replay writer/selector and prefetched stream are not serialized as live process state; after reload the first update occurred at callback 1152 rather than 1088. The continuous run executed 59 updates versus 43 after resume, so model and optimizer states necessarily diverged.",
+  "resume_status": "FAIL_NOT_DETERMINISTIC",
+  "smoke_milestone": {
+    "checkpoint": "/tmp/corewm-phase3h-milestone-backbone/ckpt/env_action_steps_000001320",
+    "checkpoint_reload_eval_episodes": 1,
+    "checkpoint_reload_eval_status": "complete",
+    "driver_callbacks": 1322,
+    "env_action_steps": 1320,
+    "loss_metrics": {},
+    "milestone": 1320,
+    "milestones": [
+      660,
+      1320
+    ],
+    "optimizer_updates": 59,
+    "raw_ale_frames": 5279,
+    "replay_insertions": 1322,
+    "status": "PASS",
+    "variant": "Backbone"
+  },
+  "train_ratio": {
+    "action_counter_used": false,
+    "replay_insertions_per_callback": 1,
+    "reset_callbacks_can_trigger_updates": true,
+    "scheduler_counter": "Driver callbacks via logger.step"
+  },
+  "verification": {
+    "alien_integration_smoke": "PASS",
+    "compileall": "PASS",
+    "git_diff_check": "PASS",
+    "legacy_embodied_tests": {
+      "failed": 60,
+      "passed": 141
+    },
+    "legacy_test_note": "The bundled Embodied tests target older APIs (Replay.dataset, old train/parallel signatures, and reset in Driver transition); these failures predate the Phase-3H counter and were not fixed because doing so would broaden or change training semantics.",
+    "phase2_phase3h_tests": {
+      "failed": 0,
+      "passed": 26
+    },
+    "pip_check": "PASS",
+    "six_checkpoint_reload_evals": {
+      "failed": 0,
+      "passed": 6
+    },
+    "six_installation_smokes": {
+      "failed": 0,
+      "passed": 6
+    }
+  }
+}

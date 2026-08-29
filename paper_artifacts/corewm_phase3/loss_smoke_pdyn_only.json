@@ -1,0 +1,8 @@
+{
+  "losses": {
+    "htp_pdyn": 0.6171875
+  },
+  "read_only": true,
+  "replay": "/tmp/corewm-phase3-smoke-pdyn_only/replay/20260829T001043F031576-1-2-1024.npz",
+  "root": "/tmp/corewm-phase3-smoke-pdyn_only"
+}

@@ -1,0 +1,232 @@
+[
+  {
+    "approximate_raw_frames": 5272,
+    "checkpoint": "/tmp/corewm-phase3-smoke-backbone-v2/ckpt/20260829T000614F823087",
+    "checkpoint_reloaded_and_eval_ran": true,
+    "checkpoint_saved": true,
+    "driver_rows": 1320,
+    "environment_ran": true,
+    "eval_episodes": 1,
+    "htp_parameter_namespaces": [],
+    "lambda_pdyn": 0.0,
+    "lambda_rec": 0.0,
+    "measured_readonly_losses": {},
+    "model_and_actor_critic_updates_ran": true,
+    "model_built": true,
+    "optimizer_updates": 59,
+    "prediction_loss_code_path_executed": false,
+    "prefix_dims": null,
+    "reconstruction_loss_code_path_executed": false,
+    "replay_inserted": true,
+    "reported_agent_actions": 1320,
+    "reset_observations": 2,
+    "status": "PASS",
+    "strides": null,
+    "true_action_bearing_transitions": 1318,
+    "variant": "Backbone"
+  },
+  {
+    "approximate_raw_frames": 5268,
+    "checkpoint": "/tmp/corewm-phase3-smoke-flat/ckpt/20260829T000820F224368",
+    "checkpoint_reloaded_and_eval_ran": true,
+    "checkpoint_saved": true,
+    "driver_rows": 1320,
+    "environment_ran": true,
+    "eval_episodes": 1,
+    "htp_parameter_namespaces": [
+      "htp_proj"
+    ],
+    "lambda_pdyn": 0.0,
+    "lambda_rec": 0.0,
+    "measured_readonly_losses": {},
+    "model_and_actor_critic_updates_ran": true,
+    "model_built": true,
+    "optimizer_updates": 59,
+    "prediction_loss_code_path_executed": false,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "reconstruction_loss_code_path_executed": false,
+    "replay_inserted": true,
+    "reported_agent_actions": 1320,
+    "reset_observations": 3,
+    "status": "PASS",
+    "strides": null,
+    "true_action_bearing_transitions": 1317,
+    "variant": "Flat"
+  },
+  {
+    "approximate_raw_frames": 5272,
+    "checkpoint": "/tmp/corewm-phase3-smoke-rec_only/ckpt/20260829T000931F173412",
+    "checkpoint_reloaded_and_eval_ran": true,
+    "checkpoint_saved": true,
+    "driver_rows": 1320,
+    "environment_ran": true,
+    "eval_episodes": 1,
+    "htp_parameter_namespaces": [
+      "htp_proj",
+      "htp_recon"
+    ],
+    "lambda_pdyn": 0.0,
+    "lambda_rec": 1.0,
+    "measured_readonly_losses": {
+      "htp_rec": 1.0
+    },
+    "model_and_actor_critic_updates_ran": true,
+    "model_built": true,
+    "optimizer_updates": 59,
+    "prediction_loss_code_path_executed": false,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "reconstruction_loss_code_path_executed": true,
+    "replay_inserted": true,
+    "reported_agent_actions": 1320,
+    "reset_observations": 2,
+    "status": "PASS",
+    "strides": null,
+    "true_action_bearing_transitions": 1318,
+    "variant": "Rec-only"
+  },
+  {
+    "approximate_raw_frames": 5268,
+    "checkpoint": "/tmp/corewm-phase3-smoke-pdyn_only/ckpt/20260829T001048F939104",
+    "checkpoint_reloaded_and_eval_ran": true,
+    "checkpoint_saved": true,
+    "driver_rows": 1320,
+    "environment_ran": true,
+    "eval_episodes": 1,
+    "htp_parameter_namespaces": [
+      "htp_pdyn",
+      "htp_proj"
+    ],
+    "lambda_pdyn": 1.0,
+    "lambda_rec": 0.0,
+    "measured_readonly_losses": {
+      "htp_pdyn": 0.6171875
+    },
+    "model_and_actor_critic_updates_ran": true,
+    "model_built": true,
+    "optimizer_updates": 59,
+    "prediction_loss_code_path_executed": true,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "reconstruction_loss_code_path_executed": false,
+    "replay_inserted": true,
+    "reported_agent_actions": 1320,
+    "reset_observations": 3,
+    "status": "PASS",
+    "strides": [
+      16,
+      8,
+      4,
+      2,
+      1
+    ],
+    "true_action_bearing_transitions": 1317,
+    "variant": "Pdyn-only"
+  },
+  {
+    "approximate_raw_frames": 5268,
+    "checkpoint": "/tmp/corewm-phase3-smoke-full/ckpt/20260829T001214F522113",
+    "checkpoint_reloaded_and_eval_ran": true,
+    "checkpoint_saved": true,
+    "driver_rows": 1320,
+    "environment_ran": true,
+    "eval_episodes": 1,
+    "htp_parameter_namespaces": [
+      "htp_pdyn",
+      "htp_proj",
+      "htp_recon"
+    ],
+    "lambda_pdyn": 1.0,
+    "lambda_rec": 1.0,
+    "measured_readonly_losses": {
+      "htp_pdyn": 0.6328125,
+      "htp_rec": 1.015625
+    },
+    "model_and_actor_critic_updates_ran": true,
+    "model_built": true,
+    "optimizer_updates": 59,
+    "prediction_loss_code_path_executed": true,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "reconstruction_loss_code_path_executed": true,
+    "replay_inserted": true,
+    "reported_agent_actions": 1320,
+    "reset_observations": 3,
+    "status": "PASS",
+    "strides": [
+      16,
+      8,
+      4,
+      2,
+      1
+    ],
+    "true_action_bearing_transitions": 1317,
+    "variant": "Full"
+  },
+  {
+    "approximate_raw_frames": 5272,
+    "checkpoint": "/tmp/corewm-phase3-smoke-reverse/ckpt/20260829T001345F096346",
+    "checkpoint_reloaded_and_eval_ran": true,
+    "checkpoint_saved": true,
+    "driver_rows": 1320,
+    "environment_ran": true,
+    "eval_episodes": 1,
+    "htp_parameter_namespaces": [
+      "htp_pdyn",
+      "htp_proj",
+      "htp_recon"
+    ],
+    "lambda_pdyn": 1.0,
+    "lambda_rec": 1.0,
+    "measured_readonly_losses": {
+      "htp_pdyn": 0.62109375,
+      "htp_rec": 1.0078125
+    },
+    "model_and_actor_critic_updates_ran": true,
+    "model_built": true,
+    "optimizer_updates": 59,
+    "prediction_loss_code_path_executed": true,
+    "prefix_dims": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "reconstruction_loss_code_path_executed": true,
+    "replay_inserted": true,
+    "reported_agent_actions": 1320,
+    "reset_observations": 2,
+    "status": "PASS",
+    "strides": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "true_action_bearing_transitions": 1318,
+    "variant": "Reverse"
+  }
+]

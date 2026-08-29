@@ -76,12 +76,19 @@ esac
 
 # ---------------------------------------------------- W&B labels (match the tracker)
 RUN_NAME="${ARM}_${TASK}_seed${SEED}"
-export WANDB_PROJECT="${WANDB_PROJECT:-HTS-Dreamer}"
+GAME="${TASK#atari100k_}"
+# The canonical config calls this game "jamesbond", while the existing W&B
+# project uses "james_bond". Keep that alias explicit rather than silently
+# creating a second project.
+[ "$GAME" = "jamesbond" ] && GAME="james_bond"
+export WANDB_ENTITY="${WANDB_ENTITY:-ttdat170703-ho-chi-minh-city-university-of-technology}"
+export WANDB_PROJECT="${WANDB_PROJECT:-dreamv3-${GAME}}"
+export WANDB_MODE="${WANDB_MODE:-online}"
 export WANDB_GROUP="${WANDB_GROUP:-${TASK}-ablation}"
 export WANDB_JOB_TYPE="$ARM"
 export WANDB_RUN_NAME="$RUN_NAME"
 export WANDB_TAGS="ablation,${ARM},${TASK},seed${SEED},${SIZE}"
-# WANDB_ENTITY / WANDB_MODE: set in your shell profile if you need them.
+# Explicit environment variables still override these per-game defaults.
 
 # ---------------------------------------------------- log setup
 LOGDIR="runlogs"

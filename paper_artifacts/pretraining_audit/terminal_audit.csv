@@ -1,0 +1,7 @@
+game,seed,action_steps,episodes_ended,num_is_last,num_true_terminal,num_is_last_not_terminal,num_terminal_not_last,num_game_over,num_time_limit,num_life_loss_observed,mismatch_categories,paper_lives_setting,configured_episode_ale_frame_limit,action_repeat,paper_config_use_seed,audit_seed_override,sufficient_endings_reached
+alien,0,1965,3,3,3,0,0,3,0,6,[],unused,108000,4,False,0,True
+bank_heist,0,1771,3,3,3,0,0,3,0,9,[],unused,108000,4,False,0,True
+frostbite,0,1175,3,3,3,0,0,3,0,9,[],unused,108000,4,False,0,True
+kangaroo,0,1450,3,3,3,0,0,3,0,6,[],unused,108000,4,False,0,True
+ms_pacman,0,1508,3,3,3,0,0,3,0,6,[],unused,108000,4,False,0,True
+seaquest,0,2240,3,3,3,0,0,3,0,9,[],unused,108000,4,False,0,True

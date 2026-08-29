@@ -1,0 +1,5 @@
+event,invokes_env_step,invokes_env_reset,reset_code_path,driver_callback,increments_legacy_global_step,replay_insert,model_actor_critic_update,advances_policy_rng,advances_optimizer_lr_ema,train_ratio_accounting,exact_action_milestone_eligible,isolated_evaluation_trigger
+initial reset observation,True,True,Atari._reset,True,True,True,possible after prefill,True,only if update executes (possible after prefill),True,False,False
+normal action transition,True,False,,True,True,True,possible after prefill,True,only if update executes (possible after prefill),True,True,False
+terminal action transition,True,False,,True,True,True,possible after prefill,True,only if update executes (possible after prefill),True,True,False
+post-terminal reset observation,True,True,Atari._reset,True,True,True,possible after prefill,True,only if update executes (possible after prefill),True,False,False

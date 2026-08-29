@@ -1,0 +1,166 @@
+[
+  {
+    "checkpoint": "/tmp/corewm-phase3h-milestone-backbone/ckpt/env_action_steps_000001320",
+    "checkpoint_reload_eval_episodes": 1,
+    "checkpoint_reload_eval_status": "complete",
+    "driver_callbacks": 1322,
+    "env_action_steps": 1320,
+    "loss_metrics": {},
+    "milestone": 1320,
+    "milestones": [
+      660,
+      1320
+    ],
+    "optimizer_updates": 59,
+    "raw_ale_frames": 5279,
+    "replay_insertions": 1322,
+    "status": "PASS",
+    "variant": "Backbone"
+  },
+  {
+    "checkpoint": "/tmp/corewm-phase3h-smoke-flat-v2/ckpt/env_action_steps_000001320",
+    "checkpoint_reload_eval_episodes": 1,
+    "checkpoint_reload_eval_status": "complete",
+    "driver_callbacks": 1323,
+    "env_action_steps": 1320,
+    "loss_metrics": {
+      "train/htp/lambda_pdyn": 0.0,
+      "train/htp/lambda_rec": 0.0,
+      "train/htp/pdyn_branch_executed": false,
+      "train/htp/raw_pdyn_loss": 0.0,
+      "train/htp/raw_rec_loss": 0.0,
+      "train/htp/rec_branch_executed": false,
+      "train/htp/weighted_pdyn_loss": 0.0,
+      "train/htp/weighted_rec_loss": 0.0,
+      "train/htp/weighted_total": 0.0
+    },
+    "milestone": 1320,
+    "milestones": [
+      660,
+      1320
+    ],
+    "optimizer_updates": 59,
+    "raw_ale_frames": 5277,
+    "replay_insertions": 1323,
+    "status": "PASS",
+    "variant": "Flat"
+  },
+  {
+    "checkpoint": "/tmp/corewm-phase3h-smoke-rec_only-v2/ckpt/env_action_steps_000001320",
+    "checkpoint_reload_eval_episodes": 1,
+    "checkpoint_reload_eval_status": "complete",
+    "driver_callbacks": 1323,
+    "env_action_steps": 1320,
+    "loss_metrics": {
+      "train/htp/lambda_pdyn": 0.0,
+      "train/htp/lambda_rec": 1.0,
+      "train/htp/pdyn_branch_executed": false,
+      "train/htp/raw_pdyn_loss": 0.0,
+      "train/htp/raw_rec_loss": 1.0078125,
+      "train/htp/rec_branch_executed": true,
+      "train/htp/weighted_pdyn_loss": 0.0,
+      "train/htp/weighted_rec_loss": 1.0078125,
+      "train/htp/weighted_total": 1.0078125,
+      "train/loss/htp_rec": 1.0078125
+    },
+    "milestone": 1320,
+    "milestones": [
+      660,
+      1320
+    ],
+    "optimizer_updates": 59,
+    "raw_ale_frames": 5277,
+    "replay_insertions": 1323,
+    "status": "PASS",
+    "variant": "Rec-only"
+  },
+  {
+    "checkpoint": "/tmp/corewm-phase3h-smoke-pdyn_only-v2/ckpt/env_action_steps_000001320",
+    "checkpoint_reload_eval_episodes": 1,
+    "checkpoint_reload_eval_status": "complete",
+    "driver_callbacks": 1322,
+    "env_action_steps": 1320,
+    "loss_metrics": {
+      "train/htp/lambda_pdyn": 1.0,
+      "train/htp/lambda_rec": 0.0,
+      "train/htp/pdyn_branch_executed": true,
+      "train/htp/raw_pdyn_loss": 0.625,
+      "train/htp/raw_rec_loss": 0.0,
+      "train/htp/rec_branch_executed": false,
+      "train/htp/weighted_pdyn_loss": 0.625,
+      "train/htp/weighted_rec_loss": 0.0,
+      "train/htp/weighted_total": 0.625,
+      "train/loss/htp_pdyn": 0.625
+    },
+    "milestone": 1320,
+    "milestones": [
+      660,
+      1320
+    ],
+    "optimizer_updates": 59,
+    "raw_ale_frames": 5277,
+    "replay_insertions": 1322,
+    "status": "PASS",
+    "variant": "Pdyn-only"
+  },
+  {
+    "checkpoint": "/tmp/corewm-phase3h-smoke-full-v2/ckpt/env_action_steps_000001320",
+    "checkpoint_reload_eval_episodes": 1,
+    "checkpoint_reload_eval_status": "complete",
+    "driver_callbacks": 1323,
+    "env_action_steps": 1320,
+    "loss_metrics": {
+      "train/htp/lambda_pdyn": 1.0,
+      "train/htp/lambda_rec": 1.0,
+      "train/htp/pdyn_branch_executed": true,
+      "train/htp/raw_pdyn_loss": 0.63671875,
+      "train/htp/raw_rec_loss": 1.015625,
+      "train/htp/rec_branch_executed": true,
+      "train/htp/weighted_pdyn_loss": 0.63671875,
+      "train/htp/weighted_rec_loss": 1.015625,
+      "train/htp/weighted_total": 1.65625,
+      "train/loss/htp_pdyn": 0.63671875,
+      "train/loss/htp_rec": 1.015625
+    },
+    "milestone": 1320,
+    "milestones": [
+      660,
+      1320
+    ],
+    "optimizer_updates": 59,
+    "raw_ale_frames": 5277,
+    "replay_insertions": 1323,
+    "status": "PASS",
+    "variant": "Full"
+  },
+  {
+    "checkpoint": "/tmp/corewm-phase3h-smoke-reverse-v2/ckpt/env_action_steps_000001320",
+    "checkpoint_reload_eval_episodes": 1,
+    "checkpoint_reload_eval_status": "complete",
+    "driver_callbacks": 1323,
+    "env_action_steps": 1320,
+    "loss_metrics": {
+      "train/htp/lambda_pdyn": 1.0,
+      "train/htp/lambda_rec": 1.0,
+      "train/htp/pdyn_branch_executed": true,
+      "train/htp/raw_pdyn_loss": 0.62109375,
+      "train/htp/raw_rec_loss": 1.015625,
+      "train/htp/rec_branch_executed": true,
+      "train/htp/weighted_pdyn_loss": 0.62109375,
+      "train/htp/weighted_rec_loss": 1.015625,
+      "train/htp/weighted_total": 1.640625,
+      "train/loss/htp_pdyn": 0.62109375,
+      "train/loss/htp_rec": 1.015625
+    },
+    "milestone": 1320,
+    "milestones": [
+      660,
+      1320
+    ],
+    "optimizer_updates": 59,
+    "raw_ale_frames": 5277,
+    "replay_insertions": 1323,
+    "status": "PASS",
+    "variant": "Reverse"
+  }
+]

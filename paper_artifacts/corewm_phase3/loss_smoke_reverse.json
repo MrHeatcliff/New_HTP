@@ -1,0 +1,9 @@
+{
+  "losses": {
+    "htp_pdyn": 0.62109375,
+    "htp_rec": 1.0078125
+  },
+  "read_only": true,
+  "replay": "/tmp/corewm-phase3-smoke-reverse/replay/20260829T001341F387879-2-3-296.npz",
+  "root": "/tmp/corewm-phase3-smoke-reverse"
+}

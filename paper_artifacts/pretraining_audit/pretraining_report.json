@@ -1,0 +1,62 @@
+{
+  "auc_action_milestones": [
+    10000,
+    20000,
+    30000,
+    40000,
+    50000,
+    60000,
+    70000,
+    80000,
+    90000,
+    100000
+  ],
+  "canonical_budget_counter": "env_action_steps",
+  "deterministic_resume_required": false,
+  "failed_job_policy": "restart seed from initialization",
+  "legacy_differential": {
+    "acceptance_new_failures_empty": true,
+    "base_commit": "133c3c3a6075e63a678553c40917fe2ae6e5a6df",
+    "baseline_failed_count": 60,
+    "baseline_passed_count": 141,
+    "baseline_total": 201,
+    "current_failed_count": 60,
+    "current_passed_count": 141,
+    "current_total": 201,
+    "newly_failing_node_ids": [],
+    "previously_failing_now_passing_node_ids": []
+  },
+  "paper_axis": "env_action_steps",
+  "paper_scale_training_launched": false,
+  "remaining_blockers": [],
+  "reset_observations_remain_in_replay": true,
+  "status": "PASS",
+  "terminal_audit": {
+    "all_requested_endings_reached": true,
+    "decision": "INERT",
+    "games": [
+      "alien",
+      "bank_heist",
+      "frostbite",
+      "kangaroo",
+      "ms_pacman",
+      "seaquest"
+    ],
+    "max_action_steps_per_game": 30000,
+    "mismatch_count": 0,
+    "requested_endings_per_game": 3,
+    "seed": 0,
+    "total_action_steps": 10109,
+    "total_is_last": 18,
+    "total_is_last_not_terminal": 0,
+    "total_terminal_not_last": 0,
+    "total_true_terminal": 18
+  },
+  "train_ratio_counter": "Driver callbacks/replay insertions (unchanged)",
+  "training_manifest": {
+    "backbone_projection_fields_explicit_na": true,
+    "jobs": 780,
+    "required_fields_valid": true
+  },
+  "uninterrupted_training_required": true
+}

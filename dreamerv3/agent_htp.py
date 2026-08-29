@@ -95,6 +95,7 @@ class Agent_HTP(embodied.jax.Agent):
     self.htp_enabled  = bool(htp_cfg.enabled)
     self.htp_use_proj = bool(htp_cfg.get('use_proj',  True))
     self.htp_use_recon = bool(htp_cfg.get('use_recon', True))
+    self.htp_use_pdyn = bool(htp_cfg.get('use_pdyn', True))
     self.htp_use_vicreg = bool(htp_cfg.get('use_vicreg', False))
     self.htp_vicreg_gamma = float(htp_cfg.get('vicreg_gamma', 1.0))
     self.htp_vicreg_scale = float(htp_cfg.get('vicreg_scale', 1.0))
@@ -132,8 +133,8 @@ class Agent_HTP(embodied.jax.Agent):
       # When use_proj=false, pdyn.dims must sum-boundary-wise fit inside
       # feat_dim rather than proj.output_dim. The user is responsible for
       # setting agent.htp.pdyn.dims accordingly in configs.yaml.
-      self.htp_pdyn = htp_mod.MultiStridePDyn(
-          **htp_cfg.pdyn, name='htp_pdyn')
+      self.htp_pdyn = (htp_mod.MultiStridePDyn(
+          **htp_cfg.pdyn, name='htp_pdyn') if self.htp_use_pdyn else None)
 
       # Sanity check on pdyn.dims when there's no projection.
       if not self.htp_use_proj:
@@ -174,7 +175,7 @@ class Agent_HTP(embodied.jax.Agent):
     modules = [self.dyn, self.enc, self.dec, self.rew, self.con,
                self.pol, self.val]
     if self.htp_enabled:
-      modules.append(self.htp_pdyn)
+      if self.htp_use_pdyn: modules.append(self.htp_pdyn)
       if self.htp_use_proj:  modules.append(self.htp_proj)
       if self.htp_use_recon: modules.append(self.htp_recon)
     self.modules = modules
@@ -192,7 +193,10 @@ class Agent_HTP(embodied.jax.Agent):
         scales.setdefault('htp_rec', 1.0)
       else:
         scales.pop('htp_rec', None)
-      scales.setdefault('htp_pdyn', 1.0)
+      if self.htp_use_pdyn:
+        scales.setdefault('htp_pdyn', 1.0)
+      else:
+        scales.pop('htp_pdyn', None)
       if self.htp_use_vicreg:
         scales.setdefault('htp_vicreg', self.htp_vicreg_scale)
       else:
@@ -350,23 +354,15 @@ class Agent_HTP(embodied.jax.Agent):
           metrics[f'htp_rec_l{ell}'] = err.mean()
 
       # ---- Multi-stride prefix dynamics ----
-      act_flat_full = htp_mod.flatten_action_dict(prevact, self.act_space)
-      pad_last = jnp.zeros_like(act_flat_full[:, :1])
-      act_seq_full = jnp.concatenate(
-          [act_flat_full[:, 1:], pad_last], axis=1)    # (B, T, A)
-
-      # DIAGNOSTIC — remove after debugging
-      print(f'[DIAG] htp_use_proj={self.htp_use_proj}')
-      print(f'[DIAG] h_t.shape={h_t.shape}')
-      print(f'[DIAG] z_t.shape={z_t.shape}')
-      print(f'[DIAG] z_slow.shape={z_slow.shape}')
-      print(f'[DIAG] htp_pdyn.dims={self.htp_pdyn.dims}')
-      print(f'[DIAG] repr_dim={self.repr_dim}')
-
-      pdyn_loss, pdyn_per_level = self.htp_pdyn(z_t, z_slow, act_seq_full)
-      losses['htp_pdyn'] = pdyn_loss
-      for info in pdyn_per_level:
-        metrics[f'htp_pdyn_delta{int(info["stride"])}'] = info['err_mean']
+      if self.htp_use_pdyn:
+        act_flat_full = htp_mod.flatten_action_dict(prevact, self.act_space)
+        pad_last = jnp.zeros_like(act_flat_full[:, :1])
+        act_seq_full = jnp.concatenate(
+            [act_flat_full[:, 1:], pad_last], axis=1)    # (B, T, A)
+        pdyn_loss, pdyn_per_level = self.htp_pdyn(z_t, z_slow, act_seq_full)
+        losses['htp_pdyn'] = pdyn_loss
+        for info in pdyn_per_level:
+          metrics[f'htp_pdyn_delta{int(info["stride"])}'] = info['err_mean']
 
       # ---- VICReg-style variance regularizer (Slim-HTP anti-collapse) ----
       if self.htp_use_vicreg:
@@ -457,6 +453,27 @@ class Agent_HTP(embodied.jax.Agent):
     assert set(losses.keys()) == set(self.scales.keys()), (
         sorted(losses.keys()), sorted(self.scales.keys()))
     metrics.update({f'loss/{k}': v.mean() for k, v in losses.items()})
+
+    # Keep coefficients, raw losses, and weighted contributions distinct in
+    # installation-smoke logs. Disabled branches are not executed and report
+    # an exact zero contribution rather than a fabricated raw loss.
+    rec_lambda = float(self.scales.get('htp_rec', 0.0))
+    pdyn_lambda = float(self.scales.get('htp_pdyn', 0.0))
+    rec_raw = losses['htp_rec'].mean() if 'htp_rec' in losses else jnp.array(0.0)
+    pdyn_raw = losses['htp_pdyn'].mean() if 'htp_pdyn' in losses else jnp.array(0.0)
+    rec_weighted = rec_lambda * rec_raw
+    pdyn_weighted = pdyn_lambda * pdyn_raw
+    metrics.update({
+        'htp/lambda_rec': jnp.asarray(rec_lambda),
+        'htp/raw_rec_loss': rec_raw,
+        'htp/weighted_rec_loss': rec_weighted,
+        'htp/rec_branch_executed': jnp.asarray('htp_rec' in losses),
+        'htp/lambda_pdyn': jnp.asarray(pdyn_lambda),
+        'htp/raw_pdyn_loss': pdyn_raw,
+        'htp/weighted_pdyn_loss': pdyn_weighted,
+        'htp/pdyn_branch_executed': jnp.asarray('htp_pdyn' in losses),
+        'htp/weighted_total': rec_weighted + pdyn_weighted,
+    })
     loss = sum([v.mean() * self.scales[k] for k, v in losses.items()])
 
     carry = (enc_carry, dyn_carry, dec_carry)

@@ -1,0 +1,21 @@
+{
+  "all_requested_endings_reached": true,
+  "decision": "INERT",
+  "games": [
+    "alien",
+    "bank_heist",
+    "frostbite",
+    "kangaroo",
+    "ms_pacman",
+    "seaquest"
+  ],
+  "max_action_steps_per_game": 30000,
+  "mismatch_count": 0,
+  "requested_endings_per_game": 3,
+  "seed": 0,
+  "total_action_steps": 10109,
+  "total_is_last": 18,
+  "total_is_last_not_terminal": 0,
+  "total_terminal_not_last": 0,
+  "total_true_terminal": 18
+}

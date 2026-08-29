@@ -220,11 +220,26 @@ nvidia-smi --query-gpu=index,name,memory.used,memory.total,utilization.gpu --for
 Check W&B before online runs:
 
 ```bash
-/mnt/disk1/backup_user/dat.tt2/xuance/.venv/bin/python - <<'PY'
-import wandb
-api = wandb.Api(timeout=20)
-print("entity:", api.viewer.entity)
-PY
+conda run -n htp python scripts/wandb_preflight.py
+```
+
+Paper runs use entity
+`ttdat170703-ho-chi-minh-city-university-of-technology` and one existing
+project per game (`dreamv3-alien`, ..., `dreamv3-up_n_down`). `run_arm.sh`
+selects this project automatically from its Atari task. For a direct launch,
+load `wandb.env.example` and set the matching `WANDB_PROJECT` explicitly.
+W&B credentials remain in `~/.netrc`; do not add an API key to repository
+files. To validate an actual online log write, run:
+
+```bash
+source wandb.env.example
+conda run -n htp python scripts/wandb_preflight.py --game alien --smoke
+```
+
+To validate routing without creating a run, for example:
+
+```bash
+conda run -n htp python scripts/wandb_preflight.py --game up_n_down
 ```
 
 ## Atari100K Protocol

@@ -1,0 +1,13 @@
+{
+  "agent_actions_actual": 1317,
+  "checkpoint_keyed_to_driver_counter": true,
+  "checkpoint_keyed_to_exact_agent_actions": false,
+  "driver_callback_rows": 1320,
+  "logger_counter_reported_as_agent_actions": 1320,
+  "minimal_change": "Maintain a separate action counter incremented only when is_first is false; drive termination and exact 10k checkpoint triggers from that counter, and run evaluations as isolated checkpoint-based jobs.",
+  "optimizer_updates": 59,
+  "raw_frames_nominal_upper_bound": 5268,
+  "reason": "Driver callback counter includes reset observations that execute no ALE action.",
+  "reset_observation_rows": 3,
+  "status": "FAIL_FOR_PAPER_SCHEDULE"
+}

@@ -42,6 +42,16 @@ f32 = jnp.float32
 sg = jax.lax.stop_gradient
 
 
+def cumulative_residual_reconstruction(residuals, template):
+    """Apply the exact training recurrence h_l = sg(h_{l-1}) + G_l."""
+    current = jnp.zeros_like(template)
+    outputs = []
+    for residual in residuals:
+        current = sg(current) + residual
+        outputs.append(current)
+    return tuple(outputs)
+
+
 # ---------------------------------------------------------------------------
 # Building blocks
 # ---------------------------------------------------------------------------
@@ -216,6 +226,24 @@ class ProgressiveRecon(nj.Module):
         hi = self.dims[ell]
         return z[..., lo:hi]
 
+    def reconstruct(self, z, h_template):
+        """Return cumulative reconstructions without computing a loss.
+
+        This is the read-only evaluation path. Numerically it is identical to
+        the training reconstruction recurrence, including the stop-gradient
+        between cumulative levels, but it does not consume a target.
+        """
+        residuals = []
+        for ell in range(self.num_levels):
+            block = self._block(z, ell)
+            head = self.sub(
+                f'head{ell}', ResidualReconHead,
+                out_dim=self.feat_dim, hidden=self.hidden,
+                layers=self.layers, norm=self.norm, act=self.act,
+                outscale=self.outscale, **self.kw)
+            residuals.append(head(block))
+        return cumulative_residual_reconstruction(residuals, h_template)
+
     def __call__(self, z, h_target):
         """
         z        : (B, T, D)          online ordered representation
@@ -223,19 +251,10 @@ class ProgressiveRecon(nj.Module):
         """
         L = self.num_levels
         beta = 1.0 / L  # uniform level weights
-        h_recon = jnp.zeros_like(h_target)
+        cumulative = self.reconstruct(z, h_target)
         per_level = []
         total = jnp.zeros(h_target.shape[:-1], dtype=h_target.dtype)
-        for ell in range(L):
-            block = self._block(z, ell)
-            head = self.sub(
-                f'head{ell}', ResidualReconHead,
-                out_dim=self.feat_dim, hidden=self.hidden,
-                layers=self.layers, norm=self.norm, act=self.act,
-                outscale=self.outscale, **self.kw)
-            delta = head(block)
-            # Progressive reconstruction with residual stop-gradient (Eq. 4/26).
-            h_recon = sg(h_recon) + delta
+        for h_recon in cumulative:
             err = ((h_target - h_recon) ** 2).mean(-1)  # (B, T); ||·||^2 / d_h
             per_level.append(err)
             total = total + beta * err
@@ -269,6 +288,7 @@ class MultiStridePDyn(nj.Module):
     norm: str = 'rms'
     act: str = 'gelu'
     outscale: float = 1.0
+    enforce_coarse_to_fine: bool = True
 
     def __init__(self, **kw):
         assert len(self.dims) == len(self.strides), (
@@ -276,9 +296,10 @@ class MultiStridePDyn(nj.Module):
             % (self.dims, self.strides))
         assert all(s >= 1 for s in self.strides), self.strides
         # Compact prefixes should be assigned longer strides.
-        assert all(a >= b for a, b in zip(self.strides[:-1], self.strides[1:])), (
-            'strides must be non-increasing (compact prefix -> longer stride): %s'
-            % (self.strides,))
+        if self.enforce_coarse_to_fine:
+            assert all(a >= b for a, b in zip(self.strides[:-1], self.strides[1:])), (
+                'strides must be non-increasing (compact prefix -> longer stride): %s'
+                % (self.strides,))
         # NOTE: act_flat_dim is inferred lazily by nn.Linear at first call,
         # so we don't need to know it here.
         self.kw = kw
@@ -294,6 +315,22 @@ class MultiStridePDyn(nj.Module):
         prev = sg(z[..., :self.dims[ell - 1]])
         curr = z[..., self.dims[ell - 1]:self.dims[ell]]
         return jnp.concatenate([prev, curr], -1)
+
+    @staticmethod
+    def temporal_indices(length, stride):
+        """Indices used by the real prediction-loss path for one level."""
+        valid = int(length) - int(stride)
+        if valid <= 0:
+            return (
+                jnp.zeros((0,), jnp.int32),
+                jnp.zeros((0, int(stride)), jnp.int32),
+                jnp.zeros((0,), jnp.int32),
+            )
+        source = jnp.arange(valid, dtype=jnp.int32)
+        offsets = jnp.arange(int(stride), dtype=jnp.int32)
+        actions = source[:, None] + offsets[None, :]
+        targets = source + int(stride)
+        return source, actions, targets
 
     def __call__(self, z_online, z_target_slow, action_seq_full):
         """
@@ -326,9 +363,7 @@ class MultiStridePDyn(nj.Module):
             prefix_in = prefix_all[:, :T_valid]          # (B, T_valid, d_ell)
 
             # Sliding action windows a_{t:t+Δ-1}.
-            k_idx = jnp.arange(Delta)
-            t_idx = jnp.arange(T_valid)
-            gather = t_idx[:, None] + k_idx[None, :]                    # (T_valid, Δ)
+            t_idx, gather, target_idx = self.temporal_indices(T, Delta)
             actions_windowed = action_seq_full[:, gather]                # (B, T_valid, Δ, act_flat_dim)
 
             predictor = self.sub(
@@ -338,7 +373,7 @@ class MultiStridePDyn(nj.Module):
             pred = predictor(prefix_in, actions_windowed)                 # (B, T_valid, d_ell)
 
             # Slow-target prefix at time t + Δ (sg applied to be safe).
-            target = sg(z_target_slow[:, Delta:T, :d_ell])                # (B, T_valid, d_ell)
+            target = sg(z_target_slow[:, target_idx, :d_ell])             # (B, T_valid, d_ell)
 
             err = ((pred - target) ** 2).mean(-1)                          # (B, T_valid)
             per_level.append({'stride': Delta, 'err_mean': err.mean()})

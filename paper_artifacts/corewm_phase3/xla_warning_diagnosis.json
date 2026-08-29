@@ -1,0 +1,12 @@
+{
+  "SOURCE": "JAX/XLA CUDA compilation of a bfloat16 concatenate primitive",
+  "CODE_PATH": "Dreamer RSSM bfloat16 block concatenation; independently reproduced by jnp.concatenate([bfloat16[1,8,256], bfloat16[1,8,768]], axis=-1)",
+  "WHY_THE_INTEGER_EXCEEDS_SUPPORTED_RANGE": "XLA's HLO lexer attempts to parse the internally emitted 70-bit decimal literal 936300721122945432094 using an integer representation. The value exceeds both signed and unsigned 64-bit ranges. This is an XLA compiler diagnostic specific to the bfloat16 CUDA concatenate compilation path; the equivalent float32 concatenate does not emit it.",
+  "WHETHER_IT_REACHES_JAX_XLA_COMPUTATION": "It reaches XLA compilation as an internal compiler/lexer diagnostic, but it is not an input value or PRNG seed and is not present in the computed tensor. Compilation completes and results are reproducible.",
+  "FIX_IF_REQUIRED": "No repository fix is required. Changing bfloat16/JAX/XLA solely to silence it would alter an approved core dependency or compute dtype. Keep the warning visible and monitor it. Evaluation PRNG keys are explicitly uint32[2].",
+  "minimal_reproducer_result": "warning reproduced outside CoRe-WM, checkpoint loading, hashing, SeedSequence, replay, and model code",
+  "float32_control_warning_absent": true,
+  "integer_bit_length": 70,
+  "larger_than_uint64": true,
+  "alien_smoke_two_process_reports_byte_identical": true
+}

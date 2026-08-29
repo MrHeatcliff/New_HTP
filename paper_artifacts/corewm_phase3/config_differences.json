@@ -1,0 +1,63 @@
+[
+  {
+    "variant": "Backbone",
+    "field": "agent.htp.enabled",
+    "value": false,
+    "full_value": true,
+    "intentional": true
+  },
+  {
+    "variant": "Flat",
+    "field": "agent.htp.use_pdyn",
+    "value": false,
+    "full_value": true,
+    "intentional": true
+  },
+  {
+    "variant": "Flat",
+    "field": "agent.htp.use_recon",
+    "value": false,
+    "full_value": true,
+    "intentional": true
+  },
+  {
+    "variant": "Rec-only",
+    "field": "agent.htp.use_pdyn",
+    "value": false,
+    "full_value": true,
+    "intentional": true
+  },
+  {
+    "variant": "Pdyn-only",
+    "field": "agent.htp.use_recon",
+    "value": false,
+    "full_value": true,
+    "intentional": true
+  },
+  {
+    "variant": "Reverse",
+    "field": "agent.htp.pdyn.enforce_coarse_to_fine",
+    "value": false,
+    "full_value": true,
+    "intentional": true
+  },
+  {
+    "variant": "Reverse",
+    "field": "agent.htp.pdyn.strides",
+    "value": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "full_value": [
+      16,
+      8,
+      4,
+      2,
+      1
+    ],
+    "intentional": true
+  }
+]

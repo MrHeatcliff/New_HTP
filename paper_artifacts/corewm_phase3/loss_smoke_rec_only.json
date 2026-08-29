@@ -1,0 +1,8 @@
+{
+  "losses": {
+    "htp_rec": 1.0
+  },
+  "read_only": true,
+  "replay": "/tmp/corewm-phase3-smoke-rec_only/replay/20260829T000927F602116-2-3-296.npz",
+  "root": "/tmp/corewm-phase3-smoke-rec_only"
+}

@@ -1,0 +1,16 @@
+consumer,current_counter,intended_semantics,change_to_action_counter,code_location
+Driver local step,Driver callback count,driver loop only,NO,embodied/core/driver.py:Driver._step
+logger.step,Driver callback count,logging x-axis,NO,embodied/run/train.py:train callbacks
+legacy stop condition,Driver callback count,legacy budget,NO,embodied/run/train.py:train non-exact branch
+paper stop condition,env_action_steps,paper interaction budget,YES,embodied/run/train.py:budget_counter
+exact milestones,env_action_steps,checkpoint scheduling,YES,embodied/run/train.py:milestonefn
+periodic legacy checkpoint,wall clock; logger step in name,checkpoint scheduling,NO,embodied/run/train.py:should_save
+report/log clocks,wall clock,logging/report scheduling,NO,embodied/run/train.py:should_log/should_report
+prefill threshold,replay length,random exploration/prefill,NO,embodied/run/train.py:trainfn
+train ratio,Driver callback logger.step,train-ratio scheduling,NO,embodied/run/train.py:TraceableRatio
+replay insertion,one per Driver callback,replay accounting,NO,embodied/run/train.py:replayfn
+policy RNG/exploration,batched policy calls including reset callbacks,policy RNG and exploration,NO,embodied/jax/agent.py:Agent.policy
+optimizer and LR,optimizer update state,optimizer/LR scheduling,NO,embodied/jax/opt.py:Optimizer
+EMA/slow targets,training updates,target/EMA scheduling,NO,embodied/jax/utils.py:SlowModel.update
+evaluation episode termination,completed eval episodes,isolated evaluation,NO,embodied/run/eval_only.py:eval_only
+parallel trainer counters,parallel callback/insertion counters,non-paper execution mode,NEEDS SEPARATE IMPLEMENTATION,embodied/run/parallel.py

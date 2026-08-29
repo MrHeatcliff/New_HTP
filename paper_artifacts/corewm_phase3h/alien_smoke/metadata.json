@@ -1,0 +1,28 @@
+{
+  "SMOKE_ONLY": true,
+  "block_dims": [
+    128,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "checkpoint": "/tmp/htp-atari100k-alien-smoke-20260828/ckpt/20260828T211831F954560",
+  "checkpoint_hash": "683767458f82f75af5f9f9d7203487ba659faf9ecd00a03c9f8b2f7abafd40c7",
+  "config": "/tmp/htp-atari100k-alien-smoke-20260828/config.yaml",
+  "env_steps": 1320,
+  "evaluation_code_version": "phase2-v1",
+  "evaluation_timestamp": "2026-08-28T19:31:44.207883+00:00",
+  "game": "alien",
+  "git_commit": "133c3c3a6075e63a678553c40917fe2ae6e5a6df",
+  "prefix_dims": [
+    128,
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "probe_config": "not_run_phase2",
+  "seed": 0,
+  "split_definition": "not_applicable_phase2_integration"
+}

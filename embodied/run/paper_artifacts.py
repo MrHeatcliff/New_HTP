@@ -238,10 +238,12 @@ class PaperArtifactWriter:
     self.args = args
     self.task = _task_name(str(args.task))
     self.suite = _suite(str(args.task))
-    self.method = os.environ.get("PAPER_METHOD", "DreamerV3")
+    self.method = self._method_name()
     self.condition = os.environ.get("PAPER_CONDITION", "official")
     self.experiment_id = os.environ.get(
         "PAPER_EXPERIMENT_ID", "official_dreamerv3")
+    self.protocol_id = os.environ.get("PAPER_PROTOCOL_ID", "")
+    self.attempt_id = os.environ.get("PAPER_ATTEMPT_ID", "")
     self.action_repeat = self._action_repeat()
     self.latent_anchor = self._latent_anchor()
     self.config_hash = _config_hash(args)
@@ -250,7 +252,61 @@ class PaperArtifactWriter:
     self.first_update_step = None
     self.first_post_prefill_step = None
     self.episode_index = 0
+    self.env_action_steps = None
+    self.reset_callbacks = None
+    self.replay_insertions = None
+    self.raw_ale_frames = None
+    self.optimizer_updates = None
     self._write_meta()
+
+  def _method_name(self):
+    explicit = os.environ.get("PAPER_METHOD", "")
+    if explicit:
+      return explicit
+    try:
+      htp = self.args.agent.htp
+      if not bool(htp.enabled):
+        return 'Backbone'
+      rec, pdyn = bool(htp.use_recon), bool(htp.use_pdyn)
+      if not rec and not pdyn:
+        return 'Flat'
+      if rec and not pdyn:
+        return 'Rec-only'
+      if pdyn and not rec:
+        return 'Pdyn-only'
+      return ('Reverse' if list(htp.pdyn.strides) == [1, 2, 4, 8, 16]
+              else 'Full')
+    except Exception:
+      return 'DreamerV3'
+
+  def bind_runtime_counters(
+      self, env_action_steps, reset_callbacks, replay_insertions,
+      raw_ale_frames, optimizer_updates):
+    """Bind diagnostics without changing callback-based training semantics."""
+    self.env_action_steps = env_action_steps
+    self.reset_callbacks = reset_callbacks
+    self.replay_insertions = replay_insertions
+    self.raw_ale_frames = raw_ale_frames
+    self.optimizer_updates = optimizer_updates
+
+  def htp_metadata(self):
+    try:
+      htp = self.args.agent.htp
+      enabled = bool(htp.enabled)
+      projected = bool(enabled and htp.use_proj)
+      return {
+          'htp_enabled': enabled,
+          'projection_enabled': projected,
+          'use_recon': bool(htp.use_recon) if enabled else 'N/A',
+          'use_pdyn': bool(htp.use_pdyn) if enabled else 'N/A',
+          'prefix_dims': list(htp.proj.dims) if projected else 'N/A',
+          'strides': list(htp.pdyn.strides) if enabled else 'N/A',
+      }
+    except Exception:
+      return {
+          'htp_enabled': False, 'projection_enabled': False,
+          'use_recon': 'N/A', 'use_pdyn': 'N/A',
+          'prefix_dims': 'N/A', 'strides': 'N/A'}
 
   def _action_repeat(self):
     envkey = str(self.args.task).split("_")[0]
@@ -279,24 +335,52 @@ class PaperArtifactWriter:
 
   def _base(self, step):
     step = int(step)
-    updates = self.last_train.get("train/opt/updates", "")
+    exact = bool(getattr(self.args, "exact_env_action_budget", False))
+    action_steps = (
+        int(self.env_action_steps)
+        if exact and self.env_action_steps is not None else step)
+    raw_frames = (
+        int(self.raw_ale_frames)
+        if exact and self.raw_ale_frames is not None
+        else action_steps * self.action_repeat)
+    reset_callbacks = (
+        int(self.reset_callbacks) if self.reset_callbacks is not None else 0)
+    replay_insertions = (
+        int(self.replay_insertions) if self.replay_insertions is not None
+        else step)
+    updates = (
+        int(self.optimizer_updates()) if self.optimizer_updates is not None
+        else self.last_train.get("train/opt/updates", ""))
     batch_size = int(getattr(self.args, "batch_size", 0))
     batch_length = int(getattr(self.args, "batch_length", 0))
     minibatch_steps = batch_size * batch_length
     train_ratio = float(getattr(self.args, "train_ratio", 0.0))
-    expected_updates_per_agent_action = (
+    expected_updates_per_driver_callback = (
         train_ratio / minibatch_steps if minibatch_steps else 0.0)
+    callbacks_per_action = step / action_steps if action_steps else 0.0
+    expected_updates_per_agent_action = (
+        expected_updates_per_driver_callback * callbacks_per_action
+        if exact else expected_updates_per_driver_callback)
     return {
         "experiment_id": self.experiment_id,
+        "protocol_id": self.protocol_id,
+        "attempt_id": self.attempt_id,
         "suite": self.suite,
         "task": self.task,
         "condition": self.condition,
         "method": self.method,
         "seed": int(self.args.seed),
-        "step": step,
-        "env_steps": step,
-        "agent_actions": step,
-        "frames": step * self.action_repeat,
+        # Paper-facing rows use action interactions on their primary x-axis.
+        # The callback counter remains explicit for compatibility diagnostics.
+        "step": action_steps if exact else step,
+        "legacy_logger_step": step,
+        "driver_callbacks": step,
+        "env_action_steps": action_steps,
+        "reset_callbacks": reset_callbacks,
+        "replay_insertions": replay_insertions,
+        "env_steps": action_steps,
+        "agent_actions": action_steps,
+        "frames": raw_frames,
         "action_repeat": self.action_repeat,
         "batch_size": batch_size,
         "batch_length": batch_length,
@@ -307,14 +391,23 @@ class PaperArtifactWriter:
             "latent_anchor_source_module"],
         "latent_anchor_dim": self.latent_anchor["latent_anchor_dim"],
         "optimizer_updates": updates,
-        "train_ratio_replayed_steps_per_agent_action": train_ratio,
+        "train_ratio_replayed_steps_per_agent_action": (
+            None if exact else train_ratio),
+        "train_ratio_replayed_steps_per_driver_callback": train_ratio,
         "expected_updates_per_agent_action": expected_updates_per_agent_action,
+        "expected_updates_per_driver_callback": (
+            expected_updates_per_driver_callback),
         "realized_optimizer_updates": updates,
-        "realized_agent_actions": step,
+        "realized_agent_actions": action_steps,
         "expected_updates_per_raw_frame": (
             expected_updates_per_agent_action / self.action_repeat
             if self.action_repeat else 0.0),
-        "realized_frames": step * self.action_repeat,
+        "realized_frames": raw_frames,
+        "reset_callbacks_per_env_action": (
+            reset_callbacks / action_steps if action_steps else None),
+        "optimizer_updates_per_env_action": (
+            float(updates) / action_steps
+            if action_steps and updates != '' else None),
         "param_count": self.last_train.get("train/opt/param_count", ""),
         "fps_policy": self.last_train.get("fps/policy", ""),
         "fps_train": self.last_train.get("fps/train", ""),
@@ -326,8 +419,11 @@ class PaperArtifactWriter:
     }
 
   def _write_meta(self):
+    exact = bool(getattr(self.args, "exact_env_action_budget", False))
     meta = {
         "experiment_id": self.experiment_id,
+        "protocol_id": self.protocol_id,
+        "attempt_id": self.attempt_id,
         "suite": self.suite,
         "task": self.task,
         "condition": self.condition,
@@ -344,8 +440,11 @@ class PaperArtifactWriter:
         "batch_size": int(self.args.batch_size),
         "batch_length": int(self.args.batch_length),
         "minibatch_steps": int(self.args.batch_size) * int(self.args.batch_length),
-        "train_ratio_replayed_steps_per_agent_action": float(self.args.train_ratio),
-        "expected_updates_per_agent_action": (
+        "train_ratio_replayed_steps_per_agent_action": (
+            None if exact else float(self.args.train_ratio)),
+        "train_ratio_replayed_steps_per_driver_callback": (
+            float(self.args.train_ratio)),
+        "expected_updates_per_driver_callback": (
             float(self.args.train_ratio) /
             (int(self.args.batch_size) * int(self.args.batch_length))),
         "expected_updates_per_raw_frame": (
@@ -354,13 +453,18 @@ class PaperArtifactWriter:
             self.action_repeat),
         "replay_semantics": {
             "configured_train_ratio_units": (
-                "replayed environment timesteps per agent action"),
+                "replayed timesteps per Driver callback/replay insertion"
+                if exact else "replayed environment timesteps per logger step"),
             "expected_update_rate_units": (
-                "optimizer minibatch updates per agent action"),
+                "optimizer minibatch updates per Driver callback"
+                if exact else "optimizer minibatch updates per logger step"),
+            "canonical_paper_budget": (
+                "env_action_steps" if exact else "legacy logger step"),
             "initial_prefill_excluded_from_consistency_check": True,
             "compilation_steps_excluded_from_consistency_check": True,
         },
         "sequence_length": int(self.args.batch_length),
+        **self.htp_metadata(),
         **self.latent_anchor,
         "wandb": {
             "project": os.environ.get("WANDB_PROJECT", ""),
@@ -449,8 +553,9 @@ class PaperArtifactWriter:
         "" if self.first_post_prefill_step is None or is_prefill
         else int(step) - int(self.first_post_prefill_step) + 1)
     row.update({
-        "agent_action_index": int(step),
-        "post_prefill_agent_action_index": post_prefill,
+        "agent_action_index": int(row['env_action_steps']),
+        "driver_callback_index": int(step),
+        "post_prefill_driver_callback_index": post_prefill,
         "is_prefill": bool(is_prefill),
         "is_compile_only": bool(is_compile_only),
         "ratio_scheduler_requested_updates": int(requested_updates),
@@ -492,6 +597,38 @@ class PaperArtifactWriter:
     })
     _append_jsonl(self.root / "determinism" / "action_trace.jsonl", row)
 
+  def write_env_action_event(
+      self, step, tran, worker, env_action_steps, reset_callbacks,
+      replay_insertions,
+      optimizer_updates_before, optimizer_updates_after):
+    if os.environ.get("PAPER_ACTION_SEMANTICS_TRACE", "0") != "1":
+      return
+    delta = int(optimizer_updates_after) - int(optimizer_updates_before)
+    row = self._base(step)
+    row.update({
+        "event_index": int(step),
+        "worker": int(worker),
+        "is_first": bool(tran["is_first"]),
+        "is_last": bool(tran["is_last"]),
+        "action_executed": bool(tran["log/action_executed"]),
+        "env_action_steps": int(env_action_steps),
+        "driver_callbacks": int(step),
+        "reset_callbacks": int(reset_callbacks),
+        "replay_insertions": int(replay_insertions),
+        "model_updates": int(optimizer_updates_after),
+        "actor_updates": int(optimizer_updates_after),
+        "critic_updates": int(optimizer_updates_after),
+        "updates_this_event": delta,
+        "reset_callbacks_per_env_action": (
+            int(reset_callbacks) / int(env_action_steps)
+            if int(env_action_steps) else None),
+        "optimizer_updates_per_env_action": (
+            int(optimizer_updates_after) / int(env_action_steps)
+            if int(env_action_steps) else None),
+    })
+    _append_jsonl(
+        self.root / "env_action_semantics" / "event_trace.jsonl", row)
+
   def write_batch_trace(
       self, step, update_index, batch, optimizer_updates_before,
       optimizer_updates_after=None, metrics=None):
@@ -526,7 +663,7 @@ class PaperArtifactWriter:
       row.update({
           key: compact[key]
           for key in compact
-          if key.startswith("train/loss/") or key in (
+          if key.startswith(("train/loss/", "train/htp/")) or key in (
               "train/opt/loss", "train/opt/updates",
               "train/opt/grad_norm", "train/opt/update_rms")
       })
@@ -534,7 +671,7 @@ class PaperArtifactWriter:
 
   def _write_replay_consistency(self, step, status=None):
     base = self._base(step)
-    expected = float(base["expected_updates_per_agent_action"])
+    expected = float(base["expected_updates_per_driver_callback"])
     try:
       updates = float(base["realized_optimizer_updates"])
     except Exception:
@@ -555,8 +692,8 @@ class PaperArtifactWriter:
         **base,
         "status": status,
         "first_update_step": start,
-        "realized_agent_actions_excluding_prefill": denom,
-        "realized_updates_per_agent_action_excluding_prefill": realized,
+        "driver_callbacks_excluding_prefill": denom,
+        "realized_updates_per_driver_callback_excluding_prefill": realized,
         "absolute_error": abs_error,
         "tolerance": tolerance,
         "initial_prefill_excluded": True,
@@ -578,7 +715,8 @@ class PaperArtifactWriter:
         "status": "not_run",
         "reason": "final evaluator has not been launched for this run",
         "checkpoint_path": str(checkpoint_path or ""),
-        "global_step": int(step),
+        "global_step": int(self._base(step)['env_action_steps']),
+        "legacy_global_step": int(step),
         "eval_episodes": 0,
         "sequence_length": int(getattr(self.args, "batch_length", 0)),
         "peak_memory_mb": self.last_train.get("usage/gpu_mem", ""),
@@ -592,7 +730,8 @@ class PaperArtifactWriter:
         "status": "training_finished",
         "checkpoint_rule": "latest_checkpoint_after_train_loop",
         "checkpoint_path": str(checkpoint_path or ""),
-        "global_step": int(step),
+        "global_step": int(self._base(step)['env_action_steps']),
+        "legacy_global_step": int(step),
         "logdir": str(self.logdir),
         "ckpt_dir": str(self.logdir / "ckpt"),
     }
@@ -605,7 +744,8 @@ class PaperArtifactWriter:
     final_eval = {
         "status": "complete",
         "checkpoint_path": str(checkpoint_path or ""),
-        "global_step": int(step),
+        "global_step": int(self._base(step)['env_action_steps']),
+        "legacy_global_step": int(step),
         "eval_episodes": int(eval_episodes),
         "eval_score_mean": float(np.mean(scores)) if scores else None,
         "eval_score_std": float(np.std(scores)) if scores else None,

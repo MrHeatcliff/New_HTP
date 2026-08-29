@@ -7,6 +7,9 @@ MUJOCO_LOG.TXT
 
 # Local experiment outputs and caches.
 wandb/
+.venv/
+production_runs/
+slurm_logs/
 
 # Paper artifacts: commit small scripts, manifests, reports, CSV summaries, and
 # figures by default. Ignore bulky generated payloads and raw event streams.
