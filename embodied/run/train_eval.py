@@ -83,8 +83,8 @@ def train_eval(
   driver_eval.on_step(lambda tran, _: policy_fps.step())
 
   stream_train = iter(agent.stream(make_stream(replay_train, 'train')))
-  stream_report = iter(agent.stream(make_stream(replay_train, 'report')))
-  stream_eval = iter(agent.stream(make_stream(replay_eval, 'eval')))
+  stream_report = iter(agent.report_stream(make_stream(replay_train, 'report')))
+  stream_eval = iter(agent.report_stream(make_stream(replay_eval, 'eval')))
 
   carry_train = [agent.init_train(args.batch_size)]
   carry_report = agent.init_report(args.batch_size)

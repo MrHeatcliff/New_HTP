@@ -23,6 +23,13 @@ class Replay:
     self.name = name
 
     self.sampler = selector or selectors.Uniform(seed)
+    # Report/evaluation sampling is diagnostic. It must not advance the RNG of
+    # the training selector, because wall-time logger cadence would then alter
+    # subsequent training batches. These selectors mirror the same item set.
+    self.report_samplers = {
+        'report': selectors.Uniform(seed + 1),
+        'eval': selectors.Uniform(seed + 2),
+    }
 
     self.chunks = {}
     self.refs = {}
@@ -160,7 +167,8 @@ class Replay:
           is_online = True
         else:
           with elements.timer.section('sample'):
-            itemid = self.sampler()
+            sampler = self.sampler if mode == 'train' else self.report_samplers[mode]
+            itemid = sampler()
           chunkid, index = self.items[itemid]
           is_online = False
         seq = self._getseq(chunkid, index, concat=False)
@@ -176,11 +184,15 @@ class Replay:
     self.items[itemid] = (chunkid, index)
     stepids = self._getseq(chunkid, index, ['stepid'])['stepid']
     self.sampler[itemid] = stepids
+    for sampler in self.report_samplers.values():
+      sampler[itemid] = stepids
     self.fifo.append(itemid)
 
   def _remove(self):
     itemid = self.fifo.popleft()
     del self.sampler[itemid]
+    for sampler in self.report_samplers.values():
+      del sampler[itemid]
     chunkid, index = self.items.pop(itemid)
     with self.refs_lock:
       self.refs[chunkid] -= 1

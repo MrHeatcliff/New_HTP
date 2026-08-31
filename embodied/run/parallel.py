@@ -174,9 +174,9 @@ def parallel_learner(agent, barrier, args):
 
   stream_train = iter(agent.stream(
       embodied.streams.Stateless(parallel_stream('train'))))
-  stream_report = iter(agent.stream(
+  stream_report = iter(agent.report_stream(
       embodied.streams.Stateless(parallel_stream('report'))))
-  stream_eval = iter(agent.stream(
+  stream_eval = iter(agent.report_stream(
       embodied.streams.Stateless(parallel_stream('eval'))))
   carry = agent.init_train(args.batch_size)
 

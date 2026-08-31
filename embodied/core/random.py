@@ -32,6 +32,9 @@ class RandomAgent:
   def stream(self, st):
     return st
 
+  def report_stream(self, st):
+    return st
+
   def save(self):
     return None
 

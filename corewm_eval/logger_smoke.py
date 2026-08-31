@@ -36,6 +36,8 @@ def run(kind, variant='Full'):
   definitions = {
       'equivalence_local': (1320, (660, 1320), True, False),
       'equivalence_scalar': (1320, (660, 1320), True, True),
+      'equivalence_local_isolated': (1320, (660, 1320), True, False),
+      'equivalence_scalar_isolated': (1320, (660, 1320), True, True),
       'first_flush_12k': (12000, (10000, 12000), False, True),
       'config_flush': (1320, (660, 1320), True, True),
   }
@@ -90,8 +92,7 @@ def run(kind, variant='Full'):
         logdir / 'paper_artifacts/action_checkpoints_manifest.json').read_text())
     status['checkpoint_steps'] = [x['env_action_steps'] for x in manifest]
     status['final_checkpoint_hash'] = manifest[-1]['checkpoint_hash']
-    final = json.loads((
-        logdir / 'paper_artifacts/latest_train_summary.json').read_text())
+    final = manifest[-1]
     status['env_action_steps'] = final['env_action_steps']
     status['driver_callbacks'] = final['driver_callbacks']
     status['optimizer_updates'] = final['optimizer_updates']
@@ -110,7 +111,8 @@ def run(kind, variant='Full'):
 def compare_equivalence():
   roots = {
       name: REMEDIATION_ROOT / name / 'full_alien'
-      for name in ('equivalence_local', 'equivalence_scalar')}
+      for name in (
+          'equivalence_local_isolated', 'equivalence_scalar_isolated')}
   for path in roots.values():
     if not path.exists():
       raise FileNotFoundError(path)
@@ -185,6 +187,7 @@ def main():
   execute = sub.add_parser('run')
   execute.add_argument('--kind', required=True, choices=(
       'equivalence_local', 'equivalence_scalar', 'first_flush_12k',
+      'equivalence_local_isolated', 'equivalence_scalar_isolated',
       'config_flush'))
   execute.add_argument('--variant', default='Full', choices=tuple(VARIANTS))
   sub.add_parser('compare-equivalence')

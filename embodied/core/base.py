@@ -24,6 +24,10 @@ class Agent:
   def stream(self, st):
     raise NotImplementedError('stream(st) -> st')
 
+  def report_stream(self, st):
+    """Wrap diagnostic/report data without perturbing the training stream."""
+    return self.stream(st)
+
   def save(self):
     raise NotImplementedError('save() -> data')
 

@@ -159,6 +159,7 @@ class Agent(embodied.Agent):
     self.train_lock = threading.Lock()
     self.n_updates = elements.Counter()
     self.n_batches = elements.Counter()
+    self.n_report_batches = elements.Counter()
     self.n_actions = elements.Counter()
 
     self.pending_outs = None
@@ -325,15 +326,25 @@ class Agent(embodied.Agent):
     return carry, mets
 
   def stream(self, st):
+    return self._stream(st, self.n_batches, seed_namespace=0)
+
+  def report_stream(self, st):
+    return self._stream(st, self.n_report_batches, seed_namespace=1)
+
+  def _stream(self, st, counter_obj, seed_namespace):
     def fn(data):
       for key, value in data.items():
         if np.issubdtype(value.dtype, np.floating):
           assert not np.isnan(value).any(), (key, value)
       data = internal.device_put(data, self.train_sharded)
-      with self.n_batches.lock:
-        counter = self.n_batches.value
-        self.n_batches.value += 1
-      seed = self._seeds(counter, self.train_mirrored)
+      with counter_obj.lock:
+        counter = counter_obj.value
+        counter_obj.value += 1
+      seed = (
+          self._seeds(counter, self.train_mirrored)
+          if seed_namespace == 0 else
+          self._namespaced_seeds(
+              counter, seed_namespace, self.train_mirrored))
       return {**data, 'seed': seed}
     if os.environ.get('PAPER_DISABLE_STREAM_PREFETCH', '0') == '1':
       return embodied.streams.Map(st, fn)
@@ -407,6 +418,12 @@ class Agent(embodied.Agent):
 
   def _seeds(self, counter, sharding):
     rng = np.random.default_rng(seed=[self.config.seed, int(counter)])
+    seeds = rng.integers(0, np.iinfo(np.uint32).max, (2,), np.uint32)
+    return internal.device_put(seeds, sharding)
+
+  def _namespaced_seeds(self, counter, namespace, sharding):
+    rng = np.random.default_rng(
+        seed=[self.config.seed, int(counter), int(namespace)])
     seeds = rng.integers(0, np.iinfo(np.uint32).max, (2,), np.uint32)
     return internal.device_put(seeds, sharding)
 
