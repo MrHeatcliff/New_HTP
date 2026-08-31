@@ -244,6 +244,8 @@ class PaperArtifactWriter:
         "PAPER_EXPERIMENT_ID", "official_dreamerv3")
     self.protocol_id = os.environ.get("PAPER_PROTOCOL_ID", "")
     self.attempt_id = os.environ.get("PAPER_ATTEMPT_ID", "")
+    self.logger_fix_revision = int(os.environ.get(
+        "PAPER_LOGGER_FIX_REVISION", "0"))
     self.action_repeat = self._action_repeat()
     self.latent_anchor = self._latent_anchor()
     self.config_hash = _config_hash(args)
@@ -365,6 +367,7 @@ class PaperArtifactWriter:
         "experiment_id": self.experiment_id,
         "protocol_id": self.protocol_id,
         "attempt_id": self.attempt_id,
+        "logger_fix_revision": self.logger_fix_revision,
         "suite": self.suite,
         "task": self.task,
         "condition": self.condition,
@@ -424,6 +427,7 @@ class PaperArtifactWriter:
         "experiment_id": self.experiment_id,
         "protocol_id": self.protocol_id,
         "attempt_id": self.attempt_id,
+        "logger_fix_revision": self.logger_fix_revision,
         "suite": self.suite,
         "task": self.task,
         "condition": self.condition,

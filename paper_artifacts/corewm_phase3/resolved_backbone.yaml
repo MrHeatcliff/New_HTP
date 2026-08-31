@@ -243,6 +243,7 @@ logger:
   outputs: [jsonl, scope, wandb]
   timer: true
   user: ''
+  wandb_media: false
 method: name
 random_agent: false
 replay:
@@ -274,7 +275,7 @@ run:
   from_checkpoint: ''
   from_checkpoint_regex: .*
   log_every: 120
-  log_policy_video: true
+  log_policy_video: false
   logger_addr: localhost:{auto}
   remote_envs: false
   remote_replay: false

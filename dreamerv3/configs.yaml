@@ -21,6 +21,7 @@ defaults:
 
   logger:
     outputs: [jsonl, scope]
+    wandb_media: true
     filter: 'score|length|fps|ratio|train/loss/|train/rand/'
     timer: True
     fps: 15
@@ -598,6 +599,8 @@ corewm_paper_protocol:
   run.save_every: 10000
   run.eval_eps: 1  # training run does not evaluate; isolated eval jobs override this
   run.exact_env_action_budget: true
+  run.log_policy_video: false
+  logger.wandb_media: false
 
 corewm_flat:
   agent.htp.enabled: true

@@ -61,6 +61,7 @@ def freeze_protocol(output):
   packages = {row['name']: row['version'] for row in conda}
   record = {
       'protocol_id': PROTOCOL_ID,
+      'logger_fix_revision': 1,
       'git_commit': _git('rev-parse', 'HEAD'),
       'dirty_worktree': False,
       'python': platform.python_version(),
@@ -126,6 +127,7 @@ def run_job(protocol_path, index, attempt):
       'PAPER_PROTOCOL_ID': PROTOCOL_ID,
       'PAPER_EXPERIMENT_ID': PROTOCOL_ID,
       'PAPER_ATTEMPT_ID': attempt_id,
+      'PAPER_LOGGER_FIX_REVISION': '1',
       'PAPER_METHOD': job['variant'],
       'PAPER_CONDITION': job['variant'].lower().replace('-', '_'),
       'WANDB_ENTITY': job['wandb_entity'],

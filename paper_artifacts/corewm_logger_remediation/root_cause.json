@@ -1,0 +1,52 @@
+{
+  "classification": "TECHNICAL LOGGING FAILURE",
+  "protocol_id": "corewm_atari100k_v1",
+  "representative_run": "Full/alien/seed_0/attempt_001",
+  "wandb_version": "0.29.0",
+  "elements_version": "3.22.0",
+  "call_site": {
+    "training_flush": "embodied/run/train.py:296 logger.write()",
+    "logger_dispatch": "elements/logger.py:77 output(tuple(self._metrics))",
+    "wandb_adapter": "elements/logger.py:325 wandb.Video(value)",
+    "wandb_exception": "wandb/sdk/data_types/video.py:93"
+  },
+  "source_metric": "report/openloop/image",
+  "payload_before_adapter": {
+    "python_type": "numpy.ndarray",
+    "shape": [42, 196, 408, 3],
+    "dtype": "uint8",
+    "layout": "THWC"
+  },
+  "payload_passed_to_wandb_video": {
+    "shape": [42, 3, 196, 408],
+    "dtype": "uint8",
+    "layout": "TCHW",
+    "format_argument": null
+  },
+  "expected_video_layout": "wandb.Video accepts a NumPy video in TCHW layout but W&B 0.29.0 additionally requires an explicit format argument",
+  "exception": "ValueError: wandb.Video requires a `format` argument when initializing with a numpy array.",
+  "shape_derivation": {
+    "report_batch": 6,
+    "report_length": 32,
+    "image_shape": [64, 64, 3],
+    "ground_truth_prediction_error_height": 192,
+    "padded_single_panel_shape": [196, 68, 3],
+    "grid_width": 408,
+    "padded_time_frames": 10,
+    "total_time_frames": 42
+  },
+  "ordering_evidence": {
+    "training_update_completed_before_failure": true,
+    "local_paper_metrics_written_before_logger_write": true,
+    "representative_last_local_env_action_steps": 8775,
+    "representative_last_local_optimizer_updates": 1926,
+    "local_scalar_and_htp_metrics_present": true,
+    "failing_operation": "optional W&B media serialization only"
+  },
+  "training_rng_assessment": {
+    "report_computation_remains_enabled": true,
+    "only_wandb_media_serialization_is_filtered": true,
+    "run_log_policy_video_false_effect": "skips stacking already-observed uint8 frames; it performs no model/environment call and consumes no RNG",
+    "offline_qualitative_evaluation_affected": false
+  }
+}

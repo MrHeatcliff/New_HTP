@@ -1,7 +1,7 @@
 import json
 
 from corewm_eval.config import QUALITATIVE_GAMES
-from corewm_eval.phase3_prepare import MAIN_POLICY_VARIANTS, prepare
+from corewm_eval.phase3_prepare import MAIN_POLICY_VARIANTS, prepare, resolve
 from corewm_eval.production import _task_game
 
 
@@ -23,3 +23,10 @@ def test_production_matrix_is_exactly_680(tmp_path):
 def test_production_task_alias_is_explicit():
   assert _task_game('alien') == 'alien'
   assert _task_game('jamesbond') == 'james_bond'
+
+
+def test_production_disables_training_media_only():
+  config = resolve('Full')
+  assert tuple(config.logger.outputs) == ('jsonl', 'scope', 'wandb')
+  assert config.logger.wandb_media is False
+  assert config.run.log_policy_video is False

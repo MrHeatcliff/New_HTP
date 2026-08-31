@@ -15,6 +15,8 @@ import numpy as np
 import portal
 import ruamel.yaml as yaml
 
+from .wandb_output import WandBOutput
+
 
 def main(argv=None):
   from .agent import Agent
@@ -192,7 +194,8 @@ def make_logger(config):
         kwargs['tags'] = [
             tag.strip() for tag in os.environ['WANDB_TAGS'].split(',')
             if tag.strip()]
-      outputs.append(elements.logger.WandBOutput(name, **kwargs))
+      outputs.append(WandBOutput(
+          name, media_enabled=config.logger.wandb_media, **kwargs))
     elif output == 'scope':
       outputs.append(elements.logger.ScopeOutput(elements.Path(logdir)))
     else:
