@@ -40,6 +40,8 @@ def run(kind, variant='Full'):
       'equivalence_scalar_isolated': (1320, (660, 1320), True, True),
       'equivalence_local_seeded': (1320, (660, 1320), True, False),
       'equivalence_scalar_seeded': (1320, (660, 1320), True, True),
+      'equivalence_local_deterministic': (1320, (660, 1320), True, False),
+      'equivalence_scalar_deterministic': (1320, (660, 1320), True, True),
       'first_flush_12k': (12000, (10000, 12000), False, True),
       'config_flush': (1320, (660, 1320), True, True),
   }
@@ -84,6 +86,8 @@ def run(kind, variant='Full'):
           'SMOKE_ONLY', 'logger_fix_revision_1')),
       'WANDB_DIR': str(REMEDIATION_ROOT / 'wandb'),
   })
+  if kind.endswith('_deterministic'):
+    env['PAPER_DISABLE_STREAM_PREFETCH'] = '1'
   (logdir.parent / f'{suffix}_command.json').write_text(
       json.dumps(command, indent=2) + '\n')
   result = subprocess.run(command, cwd=ROOT, env=env, check=False)
@@ -118,7 +122,8 @@ def compare_equivalence():
   roots = {
       name: REMEDIATION_ROOT / name / 'full_alien'
       for name in (
-          'equivalence_local_seeded', 'equivalence_scalar_seeded')}
+          'equivalence_local_deterministic',
+          'equivalence_scalar_deterministic')}
   for path in roots.values():
     if not path.exists():
       raise FileNotFoundError(path)
@@ -195,6 +200,8 @@ def main():
       'equivalence_local', 'equivalence_scalar', 'first_flush_12k',
       'equivalence_local_isolated', 'equivalence_scalar_isolated',
       'equivalence_local_seeded', 'equivalence_scalar_seeded',
+      'equivalence_local_deterministic',
+      'equivalence_scalar_deterministic',
       'config_flush'))
   execute.add_argument('--variant', default='Full', choices=tuple(VARIANTS))
   sub.add_parser('compare-equivalence')
