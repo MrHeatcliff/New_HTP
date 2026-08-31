@@ -38,6 +38,8 @@ def run(kind, variant='Full'):
       'equivalence_scalar': (1320, (660, 1320), True, True),
       'equivalence_local_isolated': (1320, (660, 1320), True, False),
       'equivalence_scalar_isolated': (1320, (660, 1320), True, True),
+      'equivalence_local_seeded': (1320, (660, 1320), True, False),
+      'equivalence_scalar_seeded': (1320, (660, 1320), True, True),
       'first_flush_12k': (12000, (10000, 12000), False, True),
       'config_flush': (1320, (660, 1320), True, True),
   }
@@ -53,6 +55,10 @@ def run(kind, variant='Full'):
       '--task', 'atari100k_alien', '--seed', '0', '--logdir', str(logdir),
       '--run.steps', str(steps), '--run.action_milestones',
       *(str(x) for x in milestones)]
+  if kind.startswith('equivalence_'):
+    # The paper Atari config intentionally leaves emulator seeding disabled.
+    # This override is restricted to the controlled A/B equivalence test.
+    command += ['--env.atari100k.use_seed', 'True']
   if fast_flush:
     command += ['--run.log_every', '1', '--run.report_every', '1']
   if not wandb_enabled:
@@ -112,7 +118,7 @@ def compare_equivalence():
   roots = {
       name: REMEDIATION_ROOT / name / 'full_alien'
       for name in (
-          'equivalence_local_isolated', 'equivalence_scalar_isolated')}
+          'equivalence_local_seeded', 'equivalence_scalar_seeded')}
   for path in roots.values():
     if not path.exists():
       raise FileNotFoundError(path)
@@ -188,6 +194,7 @@ def main():
   execute.add_argument('--kind', required=True, choices=(
       'equivalence_local', 'equivalence_scalar', 'first_flush_12k',
       'equivalence_local_isolated', 'equivalence_scalar_isolated',
+      'equivalence_local_seeded', 'equivalence_scalar_seeded',
       'config_flush'))
   execute.add_argument('--variant', default='Full', choices=tuple(VARIANTS))
   sub.add_parser('compare-equivalence')
