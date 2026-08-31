@@ -1,0 +1,65 @@
+{
+  "protocol_id": "corewm_atari100k_v1",
+  "logger_fix_revision": 1,
+  "implementation_commit": "e28abcfb502f152f21764b01f401d85b0c007002",
+  "wandb_version": "0.29.0",
+  "unit_tests": {
+    "passed": 36,
+    "failed": 0,
+    "logger_regression_tests_passed": 4
+  },
+  "training_equivalence": {
+    "status": "PASS",
+    "env_action_steps": 1320,
+    "controlled_test_settings": {
+      "atari_environment_seeded": true,
+      "stream_prefetch_disabled": true,
+      "reason": "exercise the repository's deterministic guarantee while removing asynchronous replay timing from the controlled A/B comparison"
+    },
+    "model_optimizer_rng_checkpoint_sha256": "4d54de111c39f9b600ce108579d7f8719decc207496ddffbe9dc40fce3e82904",
+    "action_trace_sha256": "83b51b5feb9f4295d0581dc3d83f59e50a45aa6ce1fc0f75b7e7a70c187ce8e9",
+    "batch_trace_sha256": "897d8a884000109ec172bda88c4b4d9ce8f771e04a91848204993b0d7b3eef72",
+    "event_trace_sha256": "c37afedb6acb725dc4d22fa5a36a935c9e8b244fa2474b167cb6097595b5d6a7",
+    "mismatches": {}
+  },
+  "first_flush_12k": {
+    "status": "PASS",
+    "slurm_job_id": 2480,
+    "variant": "Full",
+    "game": "alien",
+    "scientific_seed": 0,
+    "smoke_only": true,
+    "env_action_steps": 12000,
+    "driver_callbacks": 12018,
+    "reset_callbacks": 18,
+    "optimizer_updates": 2733,
+    "checkpoint_steps": [10000, 12000],
+    "final_checkpoint_hash": "695a089870447cc19828e6aacfd701df3f3624a2f2b0883dc2e546bd47a38144",
+    "normal_scalar_flush_action_step": 7114,
+    "wandb_video_exception_count": 0,
+    "nonfinite_local_metric_count": 0
+  },
+  "six_config_logger_smoke": [
+    {"variant": "Backbone", "slurm_job_id": 2482, "status": "PASS", "scalar_flush_rows": 7, "env_action_steps": 1320, "nonfinite_count": 0},
+    {"variant": "Flat", "slurm_job_id": 2481, "status": "PASS", "scalar_flush_rows": 8, "env_action_steps": 1320, "nonfinite_count": 0},
+    {"variant": "Rec-only", "slurm_job_id": 2484, "status": "PASS", "scalar_flush_rows": 8, "env_action_steps": 1320, "nonfinite_count": 0},
+    {"variant": "Pdyn-only", "slurm_job_id": 2483, "status": "PASS", "scalar_flush_rows": 8, "env_action_steps": 1320, "nonfinite_count": 0},
+    {"variant": "Full", "slurm_job_id": 2485, "status": "PASS", "scalar_flush_rows": 8, "env_action_steps": 1320, "nonfinite_count": 0},
+    {"variant": "Reverse", "slurm_job_id": 2486, "status": "PASS", "scalar_flush_rows": 8, "env_action_steps": 1320, "nonfinite_count": 0}
+  ],
+  "production_media_policy": {
+    "wandb_media": false,
+    "log_policy_video": false,
+    "scalar_wandb": true,
+    "local_jsonl": true,
+    "local_scope": true,
+    "offline_evaluation_qualitative_generation_changed": false
+  },
+  "failed_attempt_accounting": {
+    "technical_failed_attempts": 36,
+    "reason": "wandb_video_logger_format",
+    "invalid_backbone_10k_checkpoints": 5,
+    "preserved": true,
+    "scientific_seed_counted": false
+  }
+}
