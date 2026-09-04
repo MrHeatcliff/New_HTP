@@ -1,0 +1,3874 @@
+method,game,seed,bin,return,agent_steps
+DreamerV3,alien,0,0.0,191.42857142857142,
+DreamerV3,alien,0,1.0,196.25,
+DreamerV3,alien,0,2.0,245.55555555555554,
+DreamerV3,alien,0,3.0,185.55555555555554,
+DreamerV3,alien,0,4.0,272.5,
+DreamerV3,alien,0,5.0,521.4285714285714,
+DreamerV3,alien,0,6.0,318.75,
+DreamerV3,alien,0,7.0,408.75,
+DreamerV3,alien,0,8.0,408.57142857142856,
+DreamerV3,alien,0,9.0,482.5,
+DreamerV3,alien,0,10.0,611.4285714285714,
+DreamerV3,alien,0,11.0,606.6666666666666,
+DreamerV3,alien,0,12.0,627.1428571428571,
+DreamerV3,alien,0,13.0,572.8571428571429,
+DreamerV3,alien,0,14.0,664.2857142857143,
+DreamerV3,alien,0,15.0,477.14285714285717,
+DreamerV3,alien,0,16.0,666.6666666666666,
+DreamerV3,alien,0,17.0,711.4285714285714,
+DreamerV3,alien,0,18.0,825.0,
+DreamerV3,alien,0,19.0,925.7142857142857,
+DreamerV3,alien,1,0.0,172.5,
+DreamerV3,alien,1,1.0,161.25,
+DreamerV3,alien,1,2.0,221.25,
+DreamerV3,alien,1,3.0,304.44444444444446,
+DreamerV3,alien,1,4.0,329.0,
+DreamerV3,alien,1,5.0,396.0,
+DreamerV3,alien,1,6.0,566.25,
+DreamerV3,alien,1,7.0,478.8888888888889,
+DreamerV3,alien,1,8.0,475.0,
+DreamerV3,alien,1,9.0,583.3333333333334,
+DreamerV3,alien,1,10.0,537.5,
+DreamerV3,alien,1,11.0,481.8181818181818,
+DreamerV3,alien,1,12.0,544.4444444444445,
+DreamerV3,alien,1,13.0,690.0,
+DreamerV3,alien,1,14.0,653.75,
+DreamerV3,alien,1,15.0,655.0,
+DreamerV3,alien,1,16.0,614.2857142857143,
+DreamerV3,alien,1,17.0,710.0,
+DreamerV3,alien,1,18.0,612.5,
+DreamerV3,alien,1,19.0,804.2857142857143,
+DreamerV3,alien,2,0.0,336.6666666666667,
+DreamerV3,alien,2,1.0,183.75,
+DreamerV3,alien,2,2.0,181.25,
+DreamerV3,alien,2,3.0,388.75,
+DreamerV3,alien,2,4.0,366.25,
+DreamerV3,alien,2,5.0,452.5,
+DreamerV3,alien,2,6.0,422.0,
+DreamerV3,alien,2,7.0,610.0,
+DreamerV3,alien,2,8.0,701.25,
+DreamerV3,alien,2,9.0,490.0,
+DreamerV3,alien,2,10.0,581.25,
+DreamerV3,alien,2,11.0,585.7142857142857,
+DreamerV3,alien,2,12.0,697.1428571428571,
+DreamerV3,alien,2,13.0,1048.5714285714287,
+DreamerV3,alien,2,14.0,688.3333333333334,
+DreamerV3,alien,2,15.0,1078.0,
+DreamerV3,alien,2,16.0,1373.3333333333333,
+DreamerV3,alien,2,17.0,833.75,
+DreamerV3,alien,2,18.0,723.75,
+DreamerV3,alien,2,19.0,807.1428571428571,
+DreamerV3,alien,3,0.0,207.14285714285714,
+DreamerV3,alien,3,1.0,257.14285714285717,
+DreamerV3,alien,3,2.0,200.0,
+DreamerV3,alien,3,3.0,266.25,
+DreamerV3,alien,3,4.0,247.77777777777777,
+DreamerV3,alien,3,5.0,330.0,
+DreamerV3,alien,3,6.0,326.25,
+DreamerV3,alien,3,7.0,405.0,
+DreamerV3,alien,3,8.0,461.25,
+DreamerV3,alien,3,9.0,417.77777777777777,
+DreamerV3,alien,3,10.0,460.0,
+DreamerV3,alien,3,11.0,466.6666666666667,
+DreamerV3,alien,3,12.0,530.0,
+DreamerV3,alien,3,13.0,561.4285714285714,
+DreamerV3,alien,3,14.0,458.75,
+DreamerV3,alien,3,15.0,572.5,
+DreamerV3,alien,3,16.0,512.8571428571429,
+DreamerV3,alien,3,17.0,565.0,
+DreamerV3,alien,3,18.0,495.0,
+DreamerV3,alien,3,19.0,617.5,
+DreamerV3,alien,4,0.0,228.57142857142858,
+DreamerV3,alien,4,1.0,195.71428571428572,
+DreamerV3,alien,4,2.0,190.0,
+DreamerV3,alien,4,3.0,391.6666666666667,
+DreamerV3,alien,4,4.0,361.25,
+DreamerV3,alien,4,5.0,481.42857142857144,
+DreamerV3,alien,4,6.0,557.5,
+DreamerV3,alien,4,7.0,515.0,
+DreamerV3,alien,4,8.0,735.0,
+DreamerV3,alien,4,9.0,510.0,
+DreamerV3,alien,4,10.0,692.5,
+DreamerV3,alien,4,11.0,600.0,
+DreamerV3,alien,4,12.0,620.0,
+DreamerV3,alien,4,13.0,582.8571428571429,
+DreamerV3,alien,4,14.0,676.6666666666666,
+DreamerV3,alien,4,15.0,915.0,
+DreamerV3,alien,4,16.0,753.3333333333334,
+DreamerV3,alien,4,17.0,1161.6666666666667,
+DreamerV3,alien,4,18.0,748.3333333333334,
+DreamerV3,alien,4,19.0,943.3333333333334,
+DreamerV3,amidar,0,0.0,2.375,
+DreamerV3,amidar,0,1.0,2.625,
+DreamerV3,amidar,0,2.0,4.555555555555555,
+DreamerV3,amidar,0,3.0,22.0,
+DreamerV3,amidar,0,4.0,29.2,
+DreamerV3,amidar,0,5.0,75.14285714285714,
+DreamerV3,amidar,0,6.0,60.0,
+DreamerV3,amidar,0,7.0,153.28571428571428,
+DreamerV3,amidar,0,8.0,111.6,
+DreamerV3,amidar,0,9.0,120.14285714285714,
+DreamerV3,amidar,0,10.0,132.4,
+DreamerV3,amidar,0,11.0,102.16666666666667,
+DreamerV3,amidar,0,12.0,143.0,
+DreamerV3,amidar,0,13.0,138.16666666666666,
+DreamerV3,amidar,0,14.0,141.28571428571428,
+DreamerV3,amidar,0,15.0,151.14285714285714,
+DreamerV3,amidar,0,16.0,148.0,
+DreamerV3,amidar,0,17.0,154.71428571428572,
+DreamerV3,amidar,0,18.0,164.0,
+DreamerV3,amidar,0,19.0,137.85714285714286,
+DreamerV3,amidar,1,0.0,2.25,
+DreamerV3,amidar,1,1.0,1.4444444444444444,
+DreamerV3,amidar,1,2.0,17.88888888888889,
+DreamerV3,amidar,1,3.0,33.0,
+DreamerV3,amidar,1,4.0,34.125,
+DreamerV3,amidar,1,5.0,38.875,
+DreamerV3,amidar,1,6.0,53.857142857142854,
+DreamerV3,amidar,1,7.0,44.875,
+DreamerV3,amidar,1,8.0,42.857142857142854,
+DreamerV3,amidar,1,9.0,54.625,
+DreamerV3,amidar,1,10.0,75.28571428571429,
+DreamerV3,amidar,1,11.0,74.0,
+DreamerV3,amidar,1,12.0,94.33333333333333,
+DreamerV3,amidar,1,13.0,73.85714285714286,
+DreamerV3,amidar,1,14.0,108.16666666666667,
+DreamerV3,amidar,1,15.0,107.16666666666667,
+DreamerV3,amidar,1,16.0,123.4,
+DreamerV3,amidar,1,17.0,93.16666666666667,
+DreamerV3,amidar,1,18.0,103.0,
+DreamerV3,amidar,1,19.0,105.16666666666667,
+DreamerV3,amidar,2,0.0,5.0,
+DreamerV3,amidar,2,1.0,0.8888888888888888,
+DreamerV3,amidar,2,2.0,6.0,
+DreamerV3,amidar,2,3.0,38.5,
+DreamerV3,amidar,2,4.0,52.25,
+DreamerV3,amidar,2,5.0,47.125,
+DreamerV3,amidar,2,6.0,36.5,
+DreamerV3,amidar,2,7.0,46.55555555555556,
+DreamerV3,amidar,2,8.0,50.77777777777778,
+DreamerV3,amidar,2,9.0,51.5,
+DreamerV3,amidar,2,10.0,55.77777777777778,
+DreamerV3,amidar,2,11.0,64.71428571428571,
+DreamerV3,amidar,2,12.0,68.625,
+DreamerV3,amidar,2,13.0,70.14285714285714,
+DreamerV3,amidar,2,14.0,72.5,
+DreamerV3,amidar,2,15.0,72.42857142857143,
+DreamerV3,amidar,2,16.0,68.375,
+DreamerV3,amidar,2,17.0,88.85714285714286,
+DreamerV3,amidar,2,18.0,72.71428571428571,
+DreamerV3,amidar,2,19.0,78.88888888888889,
+DreamerV3,amidar,3,0.0,3.125,
+DreamerV3,amidar,3,1.0,3.3333333333333335,
+DreamerV3,amidar,3,2.0,32.625,
+DreamerV3,amidar,3,3.0,47.857142857142854,
+DreamerV3,amidar,3,4.0,34.25,
+DreamerV3,amidar,3,5.0,37.625,
+DreamerV3,amidar,3,6.0,46.0,
+DreamerV3,amidar,3,7.0,48.875,
+DreamerV3,amidar,3,8.0,64.5,
+DreamerV3,amidar,3,9.0,62.75,
+DreamerV3,amidar,3,10.0,68.875,
+DreamerV3,amidar,3,11.0,71.875,
+DreamerV3,amidar,3,12.0,73.625,
+DreamerV3,amidar,3,13.0,69.77777777777777,
+DreamerV3,amidar,3,14.0,103.33333333333333,
+DreamerV3,amidar,3,15.0,95.83333333333333,
+DreamerV3,amidar,3,16.0,101.8,
+DreamerV3,amidar,3,17.0,88.33333333333333,
+DreamerV3,amidar,3,18.0,96.57142857142857,
+DreamerV3,amidar,3,19.0,92.0,
+DreamerV3,amidar,4,0.0,1.875,
+DreamerV3,amidar,4,1.0,3.6666666666666665,
+DreamerV3,amidar,4,2.0,31.875,
+DreamerV3,amidar,4,3.0,33.0,
+DreamerV3,amidar,4,4.0,33.77777777777778,
+DreamerV3,amidar,4,5.0,35.625,
+DreamerV3,amidar,4,6.0,55.857142857142854,
+DreamerV3,amidar,4,7.0,50.111111111111114,
+DreamerV3,amidar,4,8.0,55.5,
+DreamerV3,amidar,4,9.0,70.625,
+DreamerV3,amidar,4,10.0,54.875,
+DreamerV3,amidar,4,11.0,89.85714285714286,
+DreamerV3,amidar,4,12.0,94.5,
+DreamerV3,amidar,4,13.0,85.0,
+DreamerV3,amidar,4,14.0,56.77777777777778,
+DreamerV3,amidar,4,15.0,78.5,
+DreamerV3,amidar,4,16.0,97.14285714285714,
+DreamerV3,amidar,4,17.0,119.14285714285714,
+DreamerV3,amidar,4,18.0,116.5,
+DreamerV3,amidar,4,19.0,121.57142857142857,
+DreamerV3,assault,0,0.0,276.0,
+DreamerV3,assault,0,1.0,307.125,
+DreamerV3,assault,0,2.0,488.25,
+DreamerV3,assault,0,3.0,415.8,
+DreamerV3,assault,0,4.0,428.4,
+DreamerV3,assault,0,5.0,560.0,
+DreamerV3,assault,0,6.0,420.0,
+DreamerV3,assault,0,7.0,453.6,
+DreamerV3,assault,0,8.0,420.0,
+DreamerV3,assault,0,9.0,462.0,
+DreamerV3,assault,0,10.0,541.8,
+DreamerV3,assault,0,11.0,468.0,
+DreamerV3,assault,0,12.0,596.4,
+DreamerV3,assault,0,13.0,575.4,
+DreamerV3,assault,0,14.0,462.0,
+DreamerV3,assault,0,15.0,571.2,
+DreamerV3,assault,0,16.0,570.5,
+DreamerV3,assault,0,17.0,504.0,
+DreamerV3,assault,0,18.0,638.4,
+DreamerV3,assault,0,19.0,595.0,
+DreamerV3,assault,1,0.0,212.33333333333334,
+DreamerV3,assault,1,1.0,201.0,
+DreamerV3,assault,1,2.0,432.6,
+DreamerV3,assault,1,3.0,437.5,
+DreamerV3,assault,1,4.0,504.0,
+DreamerV3,assault,1,5.0,635.25,
+DreamerV3,assault,1,6.0,527.5,
+DreamerV3,assault,1,7.0,613.2,
+DreamerV3,assault,1,8.0,458.5,
+DreamerV3,assault,1,9.0,602.0,
+DreamerV3,assault,1,10.0,584.5,
+DreamerV3,assault,1,11.0,520.8,
+DreamerV3,assault,1,12.0,546.0,
+DreamerV3,assault,1,13.0,663.6,
+DreamerV3,assault,1,14.0,651.0,
+DreamerV3,assault,1,15.0,533.6666666666666,
+DreamerV3,assault,1,16.0,592.2,
+DreamerV3,assault,1,17.0,684.6,
+DreamerV3,assault,1,18.0,640.5,
+DreamerV3,assault,1,19.0,577.5,
+DreamerV3,assault,2,0.0,255.0,
+DreamerV3,assault,2,1.0,210.0,
+DreamerV3,assault,2,2.0,420.0,
+DreamerV3,assault,2,3.0,495.6,
+DreamerV3,assault,2,4.0,559.0,
+DreamerV3,assault,2,5.0,388.4,
+DreamerV3,assault,2,6.0,590.5,
+DreamerV3,assault,2,7.0,546.0,
+DreamerV3,assault,2,8.0,552.2,
+DreamerV3,assault,2,9.0,577.4,
+DreamerV3,assault,2,10.0,590.5,
+DreamerV3,assault,2,11.0,529.2,
+DreamerV3,assault,2,12.0,611.5,
+DreamerV3,assault,2,13.0,556.4,
+DreamerV3,assault,2,14.0,661.4,
+DreamerV3,assault,2,15.0,621.1666666666666,
+DreamerV3,assault,2,16.0,713.8,
+DreamerV3,assault,2,17.0,571.2,
+DreamerV3,assault,2,18.0,626.5,
+DreamerV3,assault,2,19.0,701.4,
+DreamerV3,assault,3,0.0,225.75,
+DreamerV3,assault,3,1.0,252.0,
+DreamerV3,assault,3,2.0,343.875,
+DreamerV3,assault,3,3.0,322.875,
+DreamerV3,assault,3,4.0,457.8,
+DreamerV3,assault,3,5.0,352.8,
+DreamerV3,assault,3,6.0,424.2,
+DreamerV3,assault,3,7.0,382.2,
+DreamerV3,assault,3,8.0,540.75,
+DreamerV3,assault,3,9.0,613.2,
+DreamerV3,assault,3,10.0,570.3333333333334,
+DreamerV3,assault,3,11.0,554.4,
+DreamerV3,assault,3,12.0,629.75,
+DreamerV3,assault,3,13.0,590.0,
+DreamerV3,assault,3,14.0,630.0,
+DreamerV3,assault,3,15.0,656.25,
+DreamerV3,assault,3,16.0,686.6,
+DreamerV3,assault,3,17.0,661.5,
+DreamerV3,assault,3,18.0,454.42857142857144,
+DreamerV3,assault,3,19.0,669.8,
+DreamerV3,assault,4,0.0,249.66666666666666,
+DreamerV3,assault,4,1.0,236.25,
+DreamerV3,assault,4,2.0,385.0,
+DreamerV3,assault,4,3.0,435.75,
+DreamerV3,assault,4,4.0,414.75,
+DreamerV3,assault,4,5.0,326.6666666666667,
+DreamerV3,assault,4,6.0,329.7,
+DreamerV3,assault,4,7.0,328.125,
+DreamerV3,assault,4,8.0,399.0,
+DreamerV3,assault,4,9.0,424.2,
+DreamerV3,assault,4,10.0,588.0,
+DreamerV3,assault,4,11.0,516.6,
+DreamerV3,assault,4,12.0,567.0,
+DreamerV3,assault,4,13.0,659.4,
+DreamerV3,assault,4,14.0,516.6,
+DreamerV3,assault,4,15.0,651.0,
+DreamerV3,assault,4,16.0,646.8,
+DreamerV3,assault,4,17.0,614.25,
+DreamerV3,assault,4,18.0,680.4,
+DreamerV3,assault,4,19.0,542.5,
+DreamerV3,asterix,0,0.0,222.5,
+DreamerV3,asterix,0,1.0,346.42857142857144,
+DreamerV3,asterix,0,2.0,200.0,
+DreamerV3,asterix,0,3.0,187.5,
+DreamerV3,asterix,0,4.0,311.53846153846155,
+DreamerV3,asterix,0,5.0,388.8888888888889,
+DreamerV3,asterix,0,6.0,362.5,
+DreamerV3,asterix,0,7.0,392.85714285714283,
+DreamerV3,asterix,0,8.0,400.0,
+DreamerV3,asterix,0,9.0,440.0,
+DreamerV3,asterix,0,10.0,440.625,
+DreamerV3,asterix,0,11.0,450.0,
+DreamerV3,asterix,0,12.0,453.84615384615387,
+DreamerV3,asterix,0,13.0,350.0,
+DreamerV3,asterix,0,14.0,520.8333333333334,
+DreamerV3,asterix,0,15.0,538.4615384615385,
+DreamerV3,asterix,0,16.0,595.4545454545455,
+DreamerV3,asterix,0,17.0,525.0,
+DreamerV3,asterix,0,18.0,478.125,
+DreamerV3,asterix,0,19.0,528.125,
+DreamerV3,asterix,1,0.0,286.8421052631579,
+DreamerV3,asterix,1,1.0,226.47058823529412,
+DreamerV3,asterix,1,2.0,235.71428571428572,
+DreamerV3,asterix,1,3.0,254.16666666666666,
+DreamerV3,asterix,1,4.0,365.38461538461536,
+DreamerV3,asterix,1,5.0,315.625,
+DreamerV3,asterix,1,6.0,300.0,
+DreamerV3,asterix,1,7.0,383.3333333333333,
+DreamerV3,asterix,1,8.0,369.2307692307692,
+DreamerV3,asterix,1,9.0,469.2307692307692,
+DreamerV3,asterix,1,10.0,347.22222222222223,
+DreamerV3,asterix,1,11.0,491.6666666666667,
+DreamerV3,asterix,1,12.0,381.25,
+DreamerV3,asterix,1,13.0,435.7142857142857,
+DreamerV3,asterix,1,14.0,579.1666666666666,
+DreamerV3,asterix,1,15.0,425.0,
+DreamerV3,asterix,1,16.0,425.0,
+DreamerV3,asterix,1,17.0,554.5454545454545,
+DreamerV3,asterix,1,18.0,554.5454545454545,
+DreamerV3,asterix,1,19.0,761.1111111111111,
+DreamerV3,asterix,2,0.0,252.5,
+DreamerV3,asterix,2,1.0,281.25,
+DreamerV3,asterix,2,2.0,233.33333333333334,
+DreamerV3,asterix,2,3.0,381.25,
+DreamerV3,asterix,2,4.0,233.33333333333334,
+DreamerV3,asterix,2,5.0,303.57142857142856,
+DreamerV3,asterix,2,6.0,284.2105263157895,
+DreamerV3,asterix,2,7.0,261.7647058823529,
+DreamerV3,asterix,2,8.0,269.44444444444446,
+DreamerV3,asterix,2,9.0,312.5,
+DreamerV3,asterix,2,10.0,260.0,
+DreamerV3,asterix,2,11.0,352.94117647058823,
+DreamerV3,asterix,2,12.0,323.3333333333333,
+DreamerV3,asterix,2,13.0,385.7142857142857,
+DreamerV3,asterix,2,14.0,319.44444444444446,
+DreamerV3,asterix,2,15.0,362.5,
+DreamerV3,asterix,2,16.0,314.70588235294116,
+DreamerV3,asterix,2,17.0,457.6923076923077,
+DreamerV3,asterix,2,18.0,355.88235294117646,
+DreamerV3,asterix,2,19.0,328.94736842105266,
+DreamerV3,asterix,3,0.0,255.55555555555554,
+DreamerV3,asterix,3,1.0,206.25,
+DreamerV3,asterix,3,2.0,490.0,
+DreamerV3,asterix,3,3.0,530.0,
+DreamerV3,asterix,3,4.0,387.5,
+DreamerV3,asterix,3,5.0,315.38461538461536,
+DreamerV3,asterix,3,6.0,400.0,
+DreamerV3,asterix,3,7.0,325.0,
+DreamerV3,asterix,3,8.0,342.85714285714283,
+DreamerV3,asterix,3,9.0,284.375,
+DreamerV3,asterix,3,10.0,206.25,
+DreamerV3,asterix,3,11.0,242.85714285714286,
+DreamerV3,asterix,3,12.0,450.0,
+DreamerV3,asterix,3,13.0,531.25,
+DreamerV3,asterix,3,14.0,446.15384615384613,
+DreamerV3,asterix,3,15.0,462.5,
+DreamerV3,asterix,3,16.0,438.46153846153845,
+DreamerV3,asterix,3,17.0,528.5714285714286,
+DreamerV3,asterix,3,18.0,523.0769230769231,
+DreamerV3,asterix,3,19.0,705.5555555555555,
+DreamerV3,asterix,4,0.0,263.1578947368421,
+DreamerV3,asterix,4,1.0,297.36842105263156,
+DreamerV3,asterix,4,2.0,203.57142857142858,
+DreamerV3,asterix,4,3.0,381.25,
+DreamerV3,asterix,4,4.0,291.6666666666667,
+DreamerV3,asterix,4,5.0,234.21052631578948,
+DreamerV3,asterix,4,6.0,311.7647058823529,
+DreamerV3,asterix,4,7.0,275.0,
+DreamerV3,asterix,4,8.0,355.88235294117646,
+DreamerV3,asterix,4,9.0,406.6666666666667,
+DreamerV3,asterix,4,10.0,525.0,
+DreamerV3,asterix,4,11.0,376.47058823529414,
+DreamerV3,asterix,4,12.0,406.6666666666667,
+DreamerV3,asterix,4,13.0,592.3076923076923,
+DreamerV3,asterix,4,14.0,523.3333333333334,
+DreamerV3,asterix,4,15.0,600.0,
+DreamerV3,asterix,4,16.0,592.3076923076923,
+DreamerV3,asterix,4,17.0,607.1428571428571,
+DreamerV3,asterix,4,18.0,490.625,
+DreamerV3,asterix,4,19.0,654.1666666666666,
+DreamerV3,bank_heist,0,0.0,14.444444444444445,
+DreamerV3,bank_heist,0,1.0,23.333333333333332,
+DreamerV3,bank_heist,0,2.0,12.857142857142858,
+DreamerV3,bank_heist,0,3.0,5.0,
+DreamerV3,bank_heist,0,4.0,15.0,
+DreamerV3,bank_heist,0,5.0,14.285714285714286,
+DreamerV3,bank_heist,0,6.0,21.25,
+DreamerV3,bank_heist,0,7.0,15.0,
+DreamerV3,bank_heist,0,8.0,16.666666666666668,
+DreamerV3,bank_heist,0,9.0,18.571428571428573,
+DreamerV3,bank_heist,0,10.0,20.0,
+DreamerV3,bank_heist,0,11.0,20.0,
+DreamerV3,bank_heist,0,12.0,26.25,
+DreamerV3,bank_heist,0,13.0,22.22222222222222,
+DreamerV3,bank_heist,0,14.0,30.0,
+DreamerV3,bank_heist,0,15.0,30.0,
+DreamerV3,bank_heist,0,16.0,43.75,
+DreamerV3,bank_heist,0,17.0,34.0,
+DreamerV3,bank_heist,0,18.0,27.77777777777778,
+DreamerV3,bank_heist,0,19.0,27.77777777777778,
+DreamerV3,bank_heist,1,0.0,17.77777777777778,
+DreamerV3,bank_heist,1,1.0,13.333333333333334,
+DreamerV3,bank_heist,1,2.0,13.75,
+DreamerV3,bank_heist,1,3.0,11.428571428571429,
+DreamerV3,bank_heist,1,4.0,16.666666666666668,
+DreamerV3,bank_heist,1,5.0,23.333333333333332,
+DreamerV3,bank_heist,1,6.0,13.75,
+DreamerV3,bank_heist,1,7.0,20.0,
+DreamerV3,bank_heist,1,8.0,33.75,
+DreamerV3,bank_heist,1,9.0,40.0,
+DreamerV3,bank_heist,1,10.0,37.5,
+DreamerV3,bank_heist,1,11.0,37.5,
+DreamerV3,bank_heist,1,12.0,58.57142857142857,
+DreamerV3,bank_heist,1,13.0,81.42857142857143,
+DreamerV3,bank_heist,1,14.0,52.857142857142854,
+DreamerV3,bank_heist,1,15.0,48.75,
+DreamerV3,bank_heist,1,16.0,50.0,
+DreamerV3,bank_heist,1,17.0,57.142857142857146,
+DreamerV3,bank_heist,1,18.0,66.25,
+DreamerV3,bank_heist,1,19.0,60.0,
+DreamerV3,bank_heist,2,0.0,17.77777777777778,
+DreamerV3,bank_heist,2,1.0,15.555555555555555,
+DreamerV3,bank_heist,2,2.0,16.666666666666668,
+DreamerV3,bank_heist,2,3.0,14.285714285714286,
+DreamerV3,bank_heist,2,4.0,22.5,
+DreamerV3,bank_heist,2,5.0,11.25,
+DreamerV3,bank_heist,2,6.0,11.11111111111111,
+DreamerV3,bank_heist,2,7.0,10.0,
+DreamerV3,bank_heist,2,8.0,14.444444444444445,
+DreamerV3,bank_heist,2,9.0,13.333333333333334,
+DreamerV3,bank_heist,2,10.0,20.0,
+DreamerV3,bank_heist,2,11.0,22.5,
+DreamerV3,bank_heist,2,12.0,32.857142857142854,
+DreamerV3,bank_heist,2,13.0,44.285714285714285,
+DreamerV3,bank_heist,2,14.0,41.25,
+DreamerV3,bank_heist,2,15.0,47.142857142857146,
+DreamerV3,bank_heist,2,16.0,30.0,
+DreamerV3,bank_heist,2,17.0,30.0,
+DreamerV3,bank_heist,2,18.0,37.5,
+DreamerV3,bank_heist,2,19.0,35.55555555555556,
+DreamerV3,bank_heist,3,0.0,14.444444444444445,
+DreamerV3,bank_heist,3,1.0,13.0,
+DreamerV3,bank_heist,3,2.0,11.25,
+DreamerV3,bank_heist,3,3.0,13.333333333333334,
+DreamerV3,bank_heist,3,4.0,11.11111111111111,
+DreamerV3,bank_heist,3,5.0,16.666666666666668,
+DreamerV3,bank_heist,3,6.0,14.0,
+DreamerV3,bank_heist,3,7.0,18.75,
+DreamerV3,bank_heist,3,8.0,35.0,
+DreamerV3,bank_heist,3,9.0,25.555555555555557,
+DreamerV3,bank_heist,3,10.0,28.75,
+DreamerV3,bank_heist,3,11.0,28.571428571428573,
+DreamerV3,bank_heist,3,12.0,40.0,
+DreamerV3,bank_heist,3,13.0,42.5,
+DreamerV3,bank_heist,3,14.0,33.75,
+DreamerV3,bank_heist,3,15.0,35.0,
+DreamerV3,bank_heist,3,16.0,40.0,
+DreamerV3,bank_heist,3,17.0,42.5,
+DreamerV3,bank_heist,3,18.0,41.25,
+DreamerV3,bank_heist,3,19.0,43.333333333333336,
+DreamerV3,bank_heist,4,0.0,15.555555555555555,
+DreamerV3,bank_heist,4,1.0,16.0,
+DreamerV3,bank_heist,4,2.0,12.857142857142858,
+DreamerV3,bank_heist,4,3.0,15.714285714285714,
+DreamerV3,bank_heist,4,4.0,22.857142857142858,
+DreamerV3,bank_heist,4,5.0,12.857142857142858,
+DreamerV3,bank_heist,4,6.0,24.444444444444443,
+DreamerV3,bank_heist,4,7.0,46.25,
+DreamerV3,bank_heist,4,8.0,52.22222222222222,
+DreamerV3,bank_heist,4,9.0,35.0,
+DreamerV3,bank_heist,4,10.0,51.666666666666664,
+DreamerV3,bank_heist,4,11.0,53.75,
+DreamerV3,bank_heist,4,12.0,33.75,
+DreamerV3,bank_heist,4,13.0,42.5,
+DreamerV3,bank_heist,4,14.0,74.28571428571429,
+DreamerV3,bank_heist,4,15.0,58.57142857142857,
+DreamerV3,bank_heist,4,16.0,53.333333333333336,
+DreamerV3,bank_heist,4,17.0,38.333333333333336,
+DreamerV3,bank_heist,4,18.0,65.0,
+DreamerV3,bank_heist,4,19.0,35.55555555555556,
+DreamerV3,battle_zone,0,0.0,1000.0,
+DreamerV3,battle_zone,0,1.0,800.0,
+DreamerV3,battle_zone,0,2.0,1750.0,
+DreamerV3,battle_zone,0,3.0,5666.666666666667,
+DreamerV3,battle_zone,0,4.0,1500.0,
+DreamerV3,battle_zone,0,5.0,3250.0,
+DreamerV3,battle_zone,0,6.0,1333.3333333333333,
+DreamerV3,battle_zone,0,7.0,2000.0,
+DreamerV3,battle_zone,0,8.0,1666.6666666666667,
+DreamerV3,battle_zone,0,9.0,2500.0,
+DreamerV3,battle_zone,0,10.0,3000.0,
+DreamerV3,battle_zone,0,11.0,3333.3333333333335,
+DreamerV3,battle_zone,0,12.0,8000.0,
+DreamerV3,battle_zone,0,13.0,3600.0,
+DreamerV3,battle_zone,0,14.0,4500.0,
+DreamerV3,battle_zone,0,15.0,2000.0,
+DreamerV3,battle_zone,0,16.0,2000.0,
+DreamerV3,battle_zone,0,17.0,7000.0,
+DreamerV3,battle_zone,0,18.0,4000.0,
+DreamerV3,battle_zone,0,19.0,12000.0,
+DreamerV3,battle_zone,1,0.0,2666.6666666666665,
+DreamerV3,battle_zone,1,1.0,1600.0,
+DreamerV3,battle_zone,1,2.0,1800.0,
+DreamerV3,battle_zone,1,3.0,1750.0,
+DreamerV3,battle_zone,1,4.0,6000.0,
+DreamerV3,battle_zone,1,5.0,2333.3333333333335,
+DreamerV3,battle_zone,1,6.0,5250.0,
+DreamerV3,battle_zone,1,7.0,3000.0,
+DreamerV3,battle_zone,1,8.0,2500.0,
+DreamerV3,battle_zone,1,9.0,3500.0,
+DreamerV3,battle_zone,1,10.0,6000.0,
+DreamerV3,battle_zone,1,11.0,2500.0,
+DreamerV3,battle_zone,1,12.0,3000.0,
+DreamerV3,battle_zone,1,13.0,8666.666666666666,
+DreamerV3,battle_zone,1,14.0,3750.0,
+DreamerV3,battle_zone,1,15.0,8500.0,
+DreamerV3,battle_zone,1,16.0,8000.0,
+DreamerV3,battle_zone,1,17.0,8333.333333333334,
+DreamerV3,battle_zone,1,18.0,10500.0,
+DreamerV3,battle_zone,1,19.0,12000.0,
+DreamerV3,battle_zone,2,0.0,2000.0,
+DreamerV3,battle_zone,2,1.0,2333.3333333333335,
+DreamerV3,battle_zone,2,2.0,9000.0,
+DreamerV3,battle_zone,2,3.0,3600.0,
+DreamerV3,battle_zone,2,4.0,2333.3333333333335,
+DreamerV3,battle_zone,2,5.0,2000.0,
+DreamerV3,battle_zone,2,6.0,4000.0,
+DreamerV3,battle_zone,2,7.0,3666.6666666666665,
+DreamerV3,battle_zone,2,8.0,2500.0,
+DreamerV3,battle_zone,2,9.0,3333.3333333333335,
+DreamerV3,battle_zone,2,10.0,2333.3333333333335,
+DreamerV3,battle_zone,2,11.0,6500.0,
+DreamerV3,battle_zone,2,12.0,3333.3333333333335,
+DreamerV3,battle_zone,2,13.0,4000.0,
+DreamerV3,battle_zone,2,14.0,6000.0,
+DreamerV3,battle_zone,2,15.0,5250.0,
+DreamerV3,battle_zone,2,16.0,7400.0,
+DreamerV3,battle_zone,2,17.0,7250.0,
+DreamerV3,battle_zone,2,18.0,10666.666666666666,
+DreamerV3,battle_zone,2,19.0,10000.0,
+DreamerV3,battle_zone,3,0.0,1000.0,
+DreamerV3,battle_zone,3,1.0,2500.0,
+DreamerV3,battle_zone,3,2.0,4000.0,
+DreamerV3,battle_zone,3,3.0,1750.0,
+DreamerV3,battle_zone,3,4.0,3333.3333333333335,
+DreamerV3,battle_zone,3,5.0,3250.0,
+DreamerV3,battle_zone,3,6.0,3250.0,
+DreamerV3,battle_zone,3,7.0,4333.333333333333,
+DreamerV3,battle_zone,3,8.0,4333.333333333333,
+DreamerV3,battle_zone,3,9.0,2000.0,
+DreamerV3,battle_zone,3,10.0,3200.0,
+DreamerV3,battle_zone,3,11.0,4800.0,
+DreamerV3,battle_zone,3,12.0,2333.3333333333335,
+DreamerV3,battle_zone,3,13.0,2200.0,
+DreamerV3,battle_zone,3,14.0,2333.3333333333335,
+DreamerV3,battle_zone,3,15.0,5250.0,
+DreamerV3,battle_zone,3,16.0,9333.333333333334,
+DreamerV3,battle_zone,3,17.0,11500.0,
+DreamerV3,battle_zone,3,18.0,10666.666666666666,
+DreamerV3,battle_zone,3,19.0,9333.333333333334,
+DreamerV3,battle_zone,4,0.0,1600.0,
+DreamerV3,battle_zone,4,1.0,2750.0,
+DreamerV3,battle_zone,4,2.0,4000.0,
+DreamerV3,battle_zone,4,3.0,2333.3333333333335,
+DreamerV3,battle_zone,4,4.0,750.0,
+DreamerV3,battle_zone,4,5.0,4400.0,
+DreamerV3,battle_zone,4,6.0,4666.666666666667,
+DreamerV3,battle_zone,4,7.0,2250.0,
+DreamerV3,battle_zone,4,8.0,2600.0,
+DreamerV3,battle_zone,4,9.0,3500.0,
+DreamerV3,battle_zone,4,10.0,7250.0,
+DreamerV3,battle_zone,4,11.0,7333.333333333333,
+DreamerV3,battle_zone,4,12.0,8666.666666666666,
+DreamerV3,battle_zone,4,13.0,4000.0,
+DreamerV3,battle_zone,4,14.0,3000.0,
+DreamerV3,battle_zone,4,15.0,4000.0,
+DreamerV3,battle_zone,4,16.0,6750.0,
+DreamerV3,battle_zone,4,17.0,8000.0,
+DreamerV3,battle_zone,4,18.0,13250.0,
+DreamerV3,battle_zone,4,19.0,11000.0,
+DreamerV3,boxing,0,0.0,-17.5,
+DreamerV3,boxing,0,1.0,-22.333333333333332,
+DreamerV3,boxing,0,2.0,-1.6666666666666667,
+DreamerV3,boxing,0,3.0,2.6666666666666665,
+DreamerV3,boxing,0,4.0,11.0,
+DreamerV3,boxing,0,5.0,29.5,
+DreamerV3,boxing,0,6.0,8.666666666666666,
+DreamerV3,boxing,0,7.0,18.666666666666668,
+DreamerV3,boxing,0,8.0,37.0,
+DreamerV3,boxing,0,9.0,52.666666666666664,
+DreamerV3,boxing,0,10.0,67.25,
+DreamerV3,boxing,0,11.0,73.75,
+DreamerV3,boxing,0,12.0,72.0,
+DreamerV3,boxing,0,13.0,72.75,
+DreamerV3,boxing,0,14.0,82.8,
+DreamerV3,boxing,0,15.0,73.25,
+DreamerV3,boxing,0,16.0,76.0,
+DreamerV3,boxing,0,17.0,81.0,
+DreamerV3,boxing,0,18.0,81.0,
+DreamerV3,boxing,0,19.0,80.4,
+DreamerV3,boxing,1,0.0,3.0,
+DreamerV3,boxing,1,1.0,0.0,
+DreamerV3,boxing,1,2.0,13.333333333333334,
+DreamerV3,boxing,1,3.0,44.0,
+DreamerV3,boxing,1,4.0,29.333333333333332,
+DreamerV3,boxing,1,5.0,61.0,
+DreamerV3,boxing,1,6.0,43.0,
+DreamerV3,boxing,1,7.0,41.333333333333336,
+DreamerV3,boxing,1,8.0,35.333333333333336,
+DreamerV3,boxing,1,9.0,47.333333333333336,
+DreamerV3,boxing,1,10.0,45.5,
+DreamerV3,boxing,1,11.0,55.0,
+DreamerV3,boxing,1,12.0,62.666666666666664,
+DreamerV3,boxing,1,13.0,60.666666666666664,
+DreamerV3,boxing,1,14.0,46.0,
+DreamerV3,boxing,1,15.0,43.5,
+DreamerV3,boxing,1,16.0,56.0,
+DreamerV3,boxing,1,17.0,49.666666666666664,
+DreamerV3,boxing,1,18.0,76.0,
+DreamerV3,boxing,1,19.0,64.66666666666667,
+DreamerV3,boxing,2,0.0,-1.0,
+DreamerV3,boxing,2,1.0,-5.333333333333333,
+DreamerV3,boxing,2,2.0,15.0,
+DreamerV3,boxing,2,3.0,15.0,
+DreamerV3,boxing,2,4.0,45.333333333333336,
+DreamerV3,boxing,2,5.0,54.5,
+DreamerV3,boxing,2,6.0,60.666666666666664,
+DreamerV3,boxing,2,7.0,44.0,
+DreamerV3,boxing,2,8.0,61.333333333333336,
+DreamerV3,boxing,2,9.0,51.333333333333336,
+DreamerV3,boxing,2,10.0,66.33333333333333,
+DreamerV3,boxing,2,11.0,57.333333333333336,
+DreamerV3,boxing,2,12.0,55.0,
+DreamerV3,boxing,2,13.0,56.5,
+DreamerV3,boxing,2,14.0,64.33333333333333,
+DreamerV3,boxing,2,15.0,69.66666666666667,
+DreamerV3,boxing,2,16.0,65.66666666666667,
+DreamerV3,boxing,2,17.0,66.0,
+DreamerV3,boxing,2,18.0,67.33333333333333,
+DreamerV3,boxing,2,19.0,70.0,
+DreamerV3,boxing,3,0.0,3.5,
+DreamerV3,boxing,3,1.0,-2.6666666666666665,
+DreamerV3,boxing,3,2.0,2.3333333333333335,
+DreamerV3,boxing,3,3.0,5.666666666666667,
+DreamerV3,boxing,3,4.0,16.666666666666668,
+DreamerV3,boxing,3,5.0,14.0,
+DreamerV3,boxing,3,6.0,15.0,
+DreamerV3,boxing,3,7.0,32.0,
+DreamerV3,boxing,3,8.0,38.0,
+DreamerV3,boxing,3,9.0,40.5,
+DreamerV3,boxing,3,10.0,46.0,
+DreamerV3,boxing,3,11.0,56.0,
+DreamerV3,boxing,3,12.0,56.0,
+DreamerV3,boxing,3,13.0,64.8,
+DreamerV3,boxing,3,14.0,68.75,
+DreamerV3,boxing,3,15.0,73.25,
+DreamerV3,boxing,3,16.0,76.77777777777777,
+DreamerV3,boxing,3,17.0,81.6,
+DreamerV3,boxing,3,18.0,73.22222222222223,
+DreamerV3,boxing,3,19.0,75.44444444444444,
+DreamerV3,boxing,4,0.0,-3.0,
+DreamerV3,boxing,4,1.0,1.6666666666666667,
+DreamerV3,boxing,4,2.0,-10.666666666666666,
+DreamerV3,boxing,4,3.0,7.0,
+DreamerV3,boxing,4,4.0,22.666666666666668,
+DreamerV3,boxing,4,5.0,22.0,
+DreamerV3,boxing,4,6.0,38.25,
+DreamerV3,boxing,4,7.0,50.5,
+DreamerV3,boxing,4,8.0,50.0,
+DreamerV3,boxing,4,9.0,58.4,
+DreamerV3,boxing,4,10.0,62.8,
+DreamerV3,boxing,4,11.0,65.5,
+DreamerV3,boxing,4,12.0,60.833333333333336,
+DreamerV3,boxing,4,13.0,59.4,
+DreamerV3,boxing,4,14.0,65.0,
+DreamerV3,boxing,4,15.0,62.0,
+DreamerV3,boxing,4,16.0,75.85714285714286,
+DreamerV3,boxing,4,17.0,73.375,
+DreamerV3,boxing,4,18.0,57.8,
+DreamerV3,boxing,4,19.0,63.714285714285715,
+DreamerV3,breakout,0,0.0,1.7826086956521738,
+DreamerV3,breakout,0,1.0,2.090909090909091,
+DreamerV3,breakout,0,2.0,1.7777777777777777,
+DreamerV3,breakout,0,3.0,2.4375,
+DreamerV3,breakout,0,4.0,2.2,
+DreamerV3,breakout,0,5.0,4.9,
+DreamerV3,breakout,0,6.0,4.428571428571429,
+DreamerV3,breakout,0,7.0,3.2142857142857144,
+DreamerV3,breakout,0,8.0,3.933333333333333,
+DreamerV3,breakout,0,9.0,3.764705882352941,
+DreamerV3,breakout,0,10.0,4.411764705882353,
+DreamerV3,breakout,0,11.0,5.928571428571429,
+DreamerV3,breakout,0,12.0,4.5,
+DreamerV3,breakout,0,13.0,5.2,
+DreamerV3,breakout,0,14.0,5.785714285714286,
+DreamerV3,breakout,0,15.0,5.0,
+DreamerV3,breakout,0,16.0,5.6875,
+DreamerV3,breakout,0,17.0,4.75,
+DreamerV3,breakout,0,18.0,5.8,
+DreamerV3,breakout,0,19.0,6.0,
+DreamerV3,breakout,1,0.0,1.5833333333333333,
+DreamerV3,breakout,1,1.0,1.28,
+DreamerV3,breakout,1,2.0,1.3,
+DreamerV3,breakout,1,3.0,3.2,
+DreamerV3,breakout,1,4.0,4.555555555555555,
+DreamerV3,breakout,1,5.0,3.8095238095238093,
+DreamerV3,breakout,1,6.0,4.947368421052632,
+DreamerV3,breakout,1,7.0,8.153846153846153,
+DreamerV3,breakout,1,8.0,6.5625,
+DreamerV3,breakout,1,9.0,6.25,
+DreamerV3,breakout,1,10.0,6.923076923076923,
+DreamerV3,breakout,1,11.0,6.5625,
+DreamerV3,breakout,1,12.0,7.3076923076923075,
+DreamerV3,breakout,1,13.0,6.333333333333333,
+DreamerV3,breakout,1,14.0,6.588235294117647,
+DreamerV3,breakout,1,15.0,7.933333333333334,
+DreamerV3,breakout,1,16.0,7.357142857142857,
+DreamerV3,breakout,1,17.0,6.875,
+DreamerV3,breakout,1,18.0,8.066666666666666,
+DreamerV3,breakout,1,19.0,9.384615384615385,
+DreamerV3,breakout,2,0.0,1.1111111111111112,
+DreamerV3,breakout,2,1.0,1.2272727272727273,
+DreamerV3,breakout,2,2.0,2.6666666666666665,
+DreamerV3,breakout,2,3.0,2.090909090909091,
+DreamerV3,breakout,2,4.0,2.0,
+DreamerV3,breakout,2,5.0,2.55,
+DreamerV3,breakout,2,6.0,2.736842105263158,
+DreamerV3,breakout,2,7.0,2.764705882352941,
+DreamerV3,breakout,2,8.0,3.090909090909091,
+DreamerV3,breakout,2,9.0,5.2,
+DreamerV3,breakout,2,10.0,6.3076923076923075,
+DreamerV3,breakout,2,11.0,6.666666666666667,
+DreamerV3,breakout,2,12.0,7.166666666666667,
+DreamerV3,breakout,2,13.0,6.714285714285714,
+DreamerV3,breakout,2,14.0,7.363636363636363,
+DreamerV3,breakout,2,15.0,7.833333333333333,
+DreamerV3,breakout,2,16.0,10.0,
+DreamerV3,breakout,2,17.0,10.333333333333334,
+DreamerV3,breakout,2,18.0,9.1,
+DreamerV3,breakout,2,19.0,9.0,
+DreamerV3,breakout,3,0.0,1.56,
+DreamerV3,breakout,3,1.0,1.2083333333333333,
+DreamerV3,breakout,3,2.0,0.6666666666666666,
+DreamerV3,breakout,3,3.0,1.3076923076923077,
+DreamerV3,breakout,3,4.0,2.7142857142857144,
+DreamerV3,breakout,3,5.0,2.4615384615384617,
+DreamerV3,breakout,3,6.0,2.6,
+DreamerV3,breakout,3,7.0,2.6842105263157894,
+DreamerV3,breakout,3,8.0,3.6153846153846154,
+DreamerV3,breakout,3,9.0,6.153846153846154,
+DreamerV3,breakout,3,10.0,5.285714285714286,
+DreamerV3,breakout,3,11.0,4.222222222222222,
+DreamerV3,breakout,3,12.0,7.5,
+DreamerV3,breakout,3,13.0,6.25,
+DreamerV3,breakout,3,14.0,6.75,
+DreamerV3,breakout,3,15.0,8.5,
+DreamerV3,breakout,3,16.0,5.642857142857143,
+DreamerV3,breakout,3,17.0,6.461538461538462,
+DreamerV3,breakout,3,18.0,6.785714285714286,
+DreamerV3,breakout,3,19.0,6.0,
+DreamerV3,breakout,4,0.0,1.1923076923076923,
+DreamerV3,breakout,4,1.0,1.8571428571428572,
+DreamerV3,breakout,4,2.0,1.2,
+DreamerV3,breakout,4,3.0,2.2666666666666666,
+DreamerV3,breakout,4,4.0,3.090909090909091,
+DreamerV3,breakout,4,5.0,2.55,
+DreamerV3,breakout,4,6.0,2.8,
+DreamerV3,breakout,4,7.0,2.75,
+DreamerV3,breakout,4,8.0,3.2941176470588234,
+DreamerV3,breakout,4,9.0,4.1875,
+DreamerV3,breakout,4,10.0,3.3125,
+DreamerV3,breakout,4,11.0,4.857142857142857,
+DreamerV3,breakout,4,12.0,4.3125,
+DreamerV3,breakout,4,13.0,4.0588235294117645,
+DreamerV3,breakout,4,14.0,5.615384615384615,
+DreamerV3,breakout,4,15.0,4.642857142857143,
+DreamerV3,breakout,4,16.0,5.357142857142857,
+DreamerV3,breakout,4,17.0,5.8,
+DreamerV3,breakout,4,18.0,4.538461538461538,
+DreamerV3,breakout,4,19.0,5.916666666666667,
+DreamerV3,chopper_command,0,0.0,875.0,
+DreamerV3,chopper_command,0,1.0,537.5,
+DreamerV3,chopper_command,0,2.0,512.5,
+DreamerV3,chopper_command,0,3.0,700.0,
+DreamerV3,chopper_command,0,4.0,675.0,
+DreamerV3,chopper_command,0,5.0,671.4285714285714,
+DreamerV3,chopper_command,0,6.0,887.5,
+DreamerV3,chopper_command,0,7.0,928.5714285714286,
+DreamerV3,chopper_command,0,8.0,985.7142857142857,
+DreamerV3,chopper_command,0,9.0,930.0,
+DreamerV3,chopper_command,0,10.0,888.8888888888889,
+DreamerV3,chopper_command,0,11.0,1000.0,
+DreamerV3,chopper_command,0,12.0,1000.0,
+DreamerV3,chopper_command,0,13.0,890.0,
+DreamerV3,chopper_command,0,14.0,1325.0,
+DreamerV3,chopper_command,0,15.0,1042.857142857143,
+DreamerV3,chopper_command,0,16.0,1214.2857142857142,
+DreamerV3,chopper_command,0,17.0,1185.7142857142858,
+DreamerV3,chopper_command,0,18.0,1200.0,
+DreamerV3,chopper_command,0,19.0,1485.7142857142858,
+DreamerV3,chopper_command,1,0.0,1000.0,
+DreamerV3,chopper_command,1,1.0,750.0,
+DreamerV3,chopper_command,1,2.0,625.0,
+DreamerV3,chopper_command,1,3.0,412.5,
+DreamerV3,chopper_command,1,4.0,671.4285714285714,
+DreamerV3,chopper_command,1,5.0,500.0,
+DreamerV3,chopper_command,1,6.0,725.0,
+DreamerV3,chopper_command,1,7.0,633.3333333333334,
+DreamerV3,chopper_command,1,8.0,728.5714285714286,
+DreamerV3,chopper_command,1,9.0,900.0,
+DreamerV3,chopper_command,1,10.0,942.8571428571429,
+DreamerV3,chopper_command,1,11.0,758.3333333333334,
+DreamerV3,chopper_command,1,12.0,900.0,
+DreamerV3,chopper_command,1,13.0,1300.0,
+DreamerV3,chopper_command,1,14.0,1171.4285714285713,
+DreamerV3,chopper_command,1,15.0,1766.6666666666667,
+DreamerV3,chopper_command,1,16.0,1340.0,
+DreamerV3,chopper_command,1,17.0,1450.0,
+DreamerV3,chopper_command,1,18.0,1375.0,
+DreamerV3,chopper_command,1,19.0,1860.0,
+DreamerV3,chopper_command,2,0.0,933.3333333333334,
+DreamerV3,chopper_command,2,1.0,650.0,
+DreamerV3,chopper_command,2,2.0,625.0,
+DreamerV3,chopper_command,2,3.0,675.0,
+DreamerV3,chopper_command,2,4.0,783.3333333333334,
+DreamerV3,chopper_command,2,5.0,566.6666666666666,
+DreamerV3,chopper_command,2,6.0,466.6666666666667,
+DreamerV3,chopper_command,2,7.0,614.2857142857143,
+DreamerV3,chopper_command,2,8.0,566.6666666666666,
+DreamerV3,chopper_command,2,9.0,783.3333333333334,
+DreamerV3,chopper_command,2,10.0,1075.0,
+DreamerV3,chopper_command,2,11.0,900.0,
+DreamerV3,chopper_command,2,12.0,983.3333333333334,
+DreamerV3,chopper_command,2,13.0,900.0,
+DreamerV3,chopper_command,2,14.0,971.4285714285714,
+DreamerV3,chopper_command,2,15.0,1000.0,
+DreamerV3,chopper_command,2,16.0,1090.909090909091,
+DreamerV3,chopper_command,2,17.0,1318.1818181818182,
+DreamerV3,chopper_command,2,18.0,1058.3333333333333,
+DreamerV3,chopper_command,2,19.0,1046.1538461538462,
+DreamerV3,chopper_command,3,0.0,1150.0,
+DreamerV3,chopper_command,3,1.0,925.0,
+DreamerV3,chopper_command,3,2.0,675.0,
+DreamerV3,chopper_command,3,3.0,762.5,
+DreamerV3,chopper_command,3,4.0,700.0,
+DreamerV3,chopper_command,3,5.0,766.6666666666666,
+DreamerV3,chopper_command,3,6.0,980.0,
+DreamerV3,chopper_command,3,7.0,1100.0,
+DreamerV3,chopper_command,3,8.0,1100.0,
+DreamerV3,chopper_command,3,9.0,828.5714285714286,
+DreamerV3,chopper_command,3,10.0,1416.6666666666667,
+DreamerV3,chopper_command,3,11.0,977.7777777777778,
+DreamerV3,chopper_command,3,12.0,1083.3333333333333,
+DreamerV3,chopper_command,3,13.0,1750.0,
+DreamerV3,chopper_command,3,14.0,1466.6666666666667,
+DreamerV3,chopper_command,3,15.0,1000.0,
+DreamerV3,chopper_command,3,16.0,1128.5714285714287,
+DreamerV3,chopper_command,3,17.0,1283.3333333333333,
+DreamerV3,chopper_command,3,18.0,1520.0,
+DreamerV3,chopper_command,3,19.0,1400.0,
+DreamerV3,chopper_command,4,0.0,900.0,
+DreamerV3,chopper_command,4,1.0,1100.0,
+DreamerV3,chopper_command,4,2.0,642.8571428571429,
+DreamerV3,chopper_command,4,3.0,720.0,
+DreamerV3,chopper_command,4,4.0,712.5,
+DreamerV3,chopper_command,4,5.0,690.0,
+DreamerV3,chopper_command,4,6.0,887.5,
+DreamerV3,chopper_command,4,7.0,1120.0,
+DreamerV3,chopper_command,4,8.0,950.0,
+DreamerV3,chopper_command,4,9.0,1220.0,
+DreamerV3,chopper_command,4,10.0,1412.5,
+DreamerV3,chopper_command,4,11.0,1500.0,
+DreamerV3,chopper_command,4,12.0,1271.4285714285713,
+DreamerV3,chopper_command,4,13.0,1428.5714285714287,
+DreamerV3,chopper_command,4,14.0,1044.4444444444443,
+DreamerV3,chopper_command,4,15.0,1387.5,
+DreamerV3,chopper_command,4,16.0,1000.0,
+DreamerV3,chopper_command,4,17.0,1314.2857142857142,
+DreamerV3,chopper_command,4,18.0,1200.0,
+DreamerV3,chopper_command,4,19.0,1125.0,
+DreamerV3,crazy_climber,0,0.0,11000.0,
+DreamerV3,crazy_climber,0,1.0,3400.0,
+DreamerV3,crazy_climber,0,2.0,10900.0,
+DreamerV3,crazy_climber,0,3.0,19900.0,
+DreamerV3,crazy_climber,0,4.0,19200.0,
+DreamerV3,crazy_climber,0,5.0,39750.0,
+DreamerV3,crazy_climber,0,6.0,47300.0,
+DreamerV3,crazy_climber,0,7.0,28800.0,
+DreamerV3,crazy_climber,0,8.0,65100.0,
+DreamerV3,crazy_climber,0,9.0,76300.0,
+DreamerV3,crazy_climber,0,10.0,96700.0,
+DreamerV3,crazy_climber,0,11.0,100600.0,
+DreamerV3,crazy_climber,0,12.0,77300.0,
+DreamerV3,crazy_climber,0,13.0,90700.0,
+DreamerV3,crazy_climber,0,14.0,65300.0,
+DreamerV3,crazy_climber,0,15.0,75150.0,
+DreamerV3,crazy_climber,0,16.0,78600.0,
+DreamerV3,crazy_climber,0,17.0,75800.0,
+DreamerV3,crazy_climber,0,18.0,95700.0,
+DreamerV3,crazy_climber,0,19.0,67950.0,
+DreamerV3,crazy_climber,1,0.0,11500.0,
+DreamerV3,crazy_climber,1,1.0,5700.0,
+DreamerV3,crazy_climber,1,2.0,14900.0,
+DreamerV3,crazy_climber,1,3.0,27100.0,
+DreamerV3,crazy_climber,1,4.0,23300.0,
+DreamerV3,crazy_climber,1,5.0,33300.0,
+DreamerV3,crazy_climber,1,6.0,38600.0,
+DreamerV3,crazy_climber,1,7.0,34800.0,
+DreamerV3,crazy_climber,1,8.0,76800.0,
+DreamerV3,crazy_climber,1,9.0,74100.0,
+DreamerV3,crazy_climber,1,10.0,61950.0,
+DreamerV3,crazy_climber,1,11.0,39300.0,
+DreamerV3,crazy_climber,1,12.0,59800.0,
+DreamerV3,crazy_climber,1,13.0,95600.0,
+DreamerV3,crazy_climber,1,14.0,69850.0,
+DreamerV3,crazy_climber,1,15.0,53050.0,
+DreamerV3,crazy_climber,1,16.0,37700.0,
+DreamerV3,crazy_climber,1,17.0,93750.0,
+DreamerV3,crazy_climber,1,18.0,55350.0,
+DreamerV3,crazy_climber,1,19.0,51700.0,
+DreamerV3,crazy_climber,2,0.0,10900.0,
+DreamerV3,crazy_climber,2,1.0,6600.0,
+DreamerV3,crazy_climber,2,2.0,18300.0,
+DreamerV3,crazy_climber,2,3.0,28400.0,
+DreamerV3,crazy_climber,2,4.0,25800.0,
+DreamerV3,crazy_climber,2,5.0,28100.0,
+DreamerV3,crazy_climber,2,6.0,32450.0,
+DreamerV3,crazy_climber,2,7.0,32400.0,
+DreamerV3,crazy_climber,2,8.0,37400.0,
+DreamerV3,crazy_climber,2,9.0,32600.0,
+DreamerV3,crazy_climber,2,10.0,47700.0,
+DreamerV3,crazy_climber,2,11.0,44550.0,
+DreamerV3,crazy_climber,2,12.0,74200.0,
+DreamerV3,crazy_climber,2,13.0,63950.0,
+DreamerV3,crazy_climber,2,14.0,53800.0,
+DreamerV3,crazy_climber,2,15.0,56350.0,
+DreamerV3,crazy_climber,2,16.0,41000.0,
+DreamerV3,crazy_climber,2,17.0,40700.0,
+DreamerV3,crazy_climber,2,18.0,56100.0,
+DreamerV3,crazy_climber,2,19.0,73200.0,
+DreamerV3,crazy_climber,3,0.0,7000.0,
+DreamerV3,crazy_climber,3,1.0,8200.0,
+DreamerV3,crazy_climber,3,2.0,11700.0,
+DreamerV3,crazy_climber,3,3.0,20300.0,
+DreamerV3,crazy_climber,3,4.0,31500.0,
+DreamerV3,crazy_climber,3,5.0,43300.0,
+DreamerV3,crazy_climber,3,6.0,33700.0,
+DreamerV3,crazy_climber,3,7.0,71600.0,
+DreamerV3,crazy_climber,3,8.0,40050.0,
+DreamerV3,crazy_climber,3,9.0,49650.0,
+DreamerV3,crazy_climber,3,10.0,61300.0,
+DreamerV3,crazy_climber,3,11.0,47150.0,
+DreamerV3,crazy_climber,3,12.0,33300.0,
+DreamerV3,crazy_climber,3,13.0,74400.0,
+DreamerV3,crazy_climber,3,14.0,52900.0,
+DreamerV3,crazy_climber,3,15.0,106600.0,
+DreamerV3,crazy_climber,3,16.0,66800.0,
+DreamerV3,crazy_climber,3,17.0,98000.0,
+DreamerV3,crazy_climber,3,18.0,38450.0,
+DreamerV3,crazy_climber,3,19.0,36133.333333333336,
+DreamerV3,crazy_climber,4,0.0,6600.0,
+DreamerV3,crazy_climber,4,1.0,6400.0,
+DreamerV3,crazy_climber,4,2.0,11000.0,
+DreamerV3,crazy_climber,4,3.0,25000.0,
+DreamerV3,crazy_climber,4,4.0,26850.0,
+DreamerV3,crazy_climber,4,5.0,11000.0,
+DreamerV3,crazy_climber,4,6.0,72900.0,
+DreamerV3,crazy_climber,4,7.0,31950.0,
+DreamerV3,crazy_climber,4,8.0,70200.0,
+DreamerV3,crazy_climber,4,9.0,67000.0,
+DreamerV3,crazy_climber,4,10.0,103400.0,
+DreamerV3,crazy_climber,4,11.0,53350.0,
+DreamerV3,crazy_climber,4,12.0,129700.0,
+DreamerV3,crazy_climber,4,13.0,62800.0,
+DreamerV3,crazy_climber,4,14.0,101900.0,
+DreamerV3,crazy_climber,4,15.0,83150.0,
+DreamerV3,crazy_climber,4,16.0,57900.0,
+DreamerV3,crazy_climber,4,17.0,68100.0,
+DreamerV3,crazy_climber,4,18.0,32950.0,
+DreamerV3,crazy_climber,4,19.0,78100.0,
+DreamerV3,demon_attack,0,0.0,126.25,
+DreamerV3,demon_attack,0,2.0,140.0,
+DreamerV3,demon_attack,0,3.0,160.0,
+DreamerV3,demon_attack,0,4.0,145.0,
+DreamerV3,demon_attack,0,5.0,321.6666666666667,
+DreamerV3,demon_attack,0,6.0,222.0,
+DreamerV3,demon_attack,0,7.0,226.0,
+DreamerV3,demon_attack,0,8.0,272.0,
+DreamerV3,demon_attack,0,9.0,255.0,
+DreamerV3,demon_attack,0,10.0,360.0,
+DreamerV3,demon_attack,0,11.0,125.625,
+DreamerV3,demon_attack,0,12.0,176.25,
+DreamerV3,demon_attack,0,13.0,272.0,
+DreamerV3,demon_attack,0,14.0,331.0,
+DreamerV3,demon_attack,0,15.0,211.66666666666666,
+DreamerV3,demon_attack,0,16.0,278.0,
+DreamerV3,demon_attack,0,17.0,216.66666666666666,
+DreamerV3,demon_attack,0,18.0,293.3333333333333,
+DreamerV3,demon_attack,0,19.0,210.83333333333334,
+DreamerV3,demon_attack,1,0.0,141.66666666666666,
+DreamerV3,demon_attack,1,1.0,140.0,
+DreamerV3,demon_attack,1,2.0,202.5,
+DreamerV3,demon_attack,1,3.0,150.0,
+DreamerV3,demon_attack,1,4.0,210.0,
+DreamerV3,demon_attack,1,5.0,235.0,
+DreamerV3,demon_attack,1,6.0,246.0,
+DreamerV3,demon_attack,1,7.0,166.25,
+DreamerV3,demon_attack,1,8.0,264.1666666666667,
+DreamerV3,demon_attack,1,9.0,292.5,
+DreamerV3,demon_attack,1,10.0,229.0,
+DreamerV3,demon_attack,1,11.0,199.28571428571428,
+DreamerV3,demon_attack,1,12.0,190.0,
+DreamerV3,demon_attack,1,13.0,208.125,
+DreamerV3,demon_attack,1,14.0,188.57142857142858,
+DreamerV3,demon_attack,1,15.0,310.0,
+DreamerV3,demon_attack,1,16.0,219.28571428571428,
+DreamerV3,demon_attack,1,17.0,187.5,
+DreamerV3,demon_attack,1,18.0,198.57142857142858,
+DreamerV3,demon_attack,1,19.0,242.5,
+DreamerV3,demon_attack,2,0.0,141.0,
+DreamerV3,demon_attack,2,1.0,105.0,
+DreamerV3,demon_attack,2,2.0,371.25,
+DreamerV3,demon_attack,2,3.0,890.0,
+DreamerV3,demon_attack,2,4.0,688.3333333333334,
+DreamerV3,demon_attack,2,5.0,633.3333333333334,
+DreamerV3,demon_attack,2,6.0,720.0,
+DreamerV3,demon_attack,2,7.0,259.1666666666667,
+DreamerV3,demon_attack,2,8.0,346.6666666666667,
+DreamerV3,demon_attack,2,9.0,518.75,
+DreamerV3,demon_attack,2,10.0,228.75,
+DreamerV3,demon_attack,2,11.0,236.66666666666666,
+DreamerV3,demon_attack,2,12.0,267.0,
+DreamerV3,demon_attack,2,13.0,960.0,
+DreamerV3,demon_attack,2,14.0,310.0,
+DreamerV3,demon_attack,2,15.0,253.0,
+DreamerV3,demon_attack,2,16.0,130.0,
+DreamerV3,demon_attack,2,17.0,231.0,
+DreamerV3,demon_attack,2,18.0,269.0,
+DreamerV3,demon_attack,2,19.0,343.0,
+DreamerV3,demon_attack,3,0.0,136.0,
+DreamerV3,demon_attack,3,1.0,112.5,
+DreamerV3,demon_attack,3,2.0,149.0,
+DreamerV3,demon_attack,3,3.0,83.75,
+DreamerV3,demon_attack,3,4.0,163.33333333333334,
+DreamerV3,demon_attack,3,5.0,376.6666666666667,
+DreamerV3,demon_attack,3,6.0,343.3333333333333,
+DreamerV3,demon_attack,3,7.0,290.0,
+DreamerV3,demon_attack,3,8.0,238.0,
+DreamerV3,demon_attack,3,9.0,480.0,
+DreamerV3,demon_attack,3,10.0,296.25,
+DreamerV3,demon_attack,3,11.0,203.0,
+DreamerV3,demon_attack,3,12.0,284.0,
+DreamerV3,demon_attack,3,13.0,248.0,
+DreamerV3,demon_attack,3,14.0,343.0,
+DreamerV3,demon_attack,3,15.0,175.83333333333334,
+DreamerV3,demon_attack,3,16.0,430.0,
+DreamerV3,demon_attack,3,17.0,286.0,
+DreamerV3,demon_attack,3,18.0,265.0,
+DreamerV3,demon_attack,3,19.0,216.66666666666666,
+DreamerV3,demon_attack,4,0.0,140.0,
+DreamerV3,demon_attack,4,1.0,125.0,
+DreamerV3,demon_attack,4,2.0,250.0,
+DreamerV3,demon_attack,4,3.0,487.5,
+DreamerV3,demon_attack,4,4.0,265.0,
+DreamerV3,demon_attack,4,5.0,243.0,
+DreamerV3,demon_attack,4,6.0,365.0,
+DreamerV3,demon_attack,4,7.0,231.25,
+DreamerV3,demon_attack,4,8.0,244.0,
+DreamerV3,demon_attack,4,9.0,213.33333333333334,
+DreamerV3,demon_attack,4,10.0,205.83333333333334,
+DreamerV3,demon_attack,4,11.0,137.14285714285714,
+DreamerV3,demon_attack,4,12.0,227.0,
+DreamerV3,demon_attack,4,13.0,263.0,
+DreamerV3,demon_attack,4,14.0,199.16666666666666,
+DreamerV3,demon_attack,4,15.0,170.0,
+DreamerV3,demon_attack,4,16.0,176.0,
+DreamerV3,demon_attack,4,17.0,570.0,
+DreamerV3,demon_attack,4,18.0,215.83333333333334,
+DreamerV3,demon_attack,4,19.0,192.5,
+DreamerV3,freeway,0,0.0,0.0,
+DreamerV3,freeway,0,1.0,0.0,
+DreamerV3,freeway,0,2.0,0.0,
+DreamerV3,freeway,0,3.0,0.0,
+DreamerV3,freeway,0,4.0,0.0,
+DreamerV3,freeway,0,5.0,0.0,
+DreamerV3,freeway,0,6.0,0.0,
+DreamerV3,freeway,0,7.0,0.0,
+DreamerV3,freeway,0,8.0,0.0,
+DreamerV3,freeway,0,9.0,0.0,
+DreamerV3,freeway,0,10.0,0.0,
+DreamerV3,freeway,0,11.0,0.0,
+DreamerV3,freeway,0,12.0,0.0,
+DreamerV3,freeway,0,13.0,0.0,
+DreamerV3,freeway,0,14.0,0.0,
+DreamerV3,freeway,0,15.0,0.0,
+DreamerV3,freeway,0,16.0,0.0,
+DreamerV3,freeway,0,17.0,0.0,
+DreamerV3,freeway,0,18.0,0.0,
+DreamerV3,freeway,0,19.0,0.0,
+DreamerV3,freeway,1,0.0,0.0,
+DreamerV3,freeway,1,1.0,0.0,
+DreamerV3,freeway,1,2.0,0.0,
+DreamerV3,freeway,1,3.0,0.0,
+DreamerV3,freeway,1,4.0,0.0,
+DreamerV3,freeway,1,5.0,0.0,
+DreamerV3,freeway,1,6.0,0.0,
+DreamerV3,freeway,1,7.0,0.0,
+DreamerV3,freeway,1,8.0,0.0,
+DreamerV3,freeway,1,9.0,0.0,
+DreamerV3,freeway,1,10.0,0.0,
+DreamerV3,freeway,1,11.0,0.0,
+DreamerV3,freeway,1,12.0,0.0,
+DreamerV3,freeway,1,13.0,0.0,
+DreamerV3,freeway,1,14.0,0.0,
+DreamerV3,freeway,1,15.0,0.0,
+DreamerV3,freeway,1,16.0,0.0,
+DreamerV3,freeway,1,17.0,0.0,
+DreamerV3,freeway,1,18.0,0.0,
+DreamerV3,freeway,1,19.0,0.0,
+DreamerV3,freeway,2,0.0,0.0,
+DreamerV3,freeway,2,1.0,0.0,
+DreamerV3,freeway,2,2.0,0.0,
+DreamerV3,freeway,2,3.0,0.0,
+DreamerV3,freeway,2,4.0,0.0,
+DreamerV3,freeway,2,5.0,0.0,
+DreamerV3,freeway,2,6.0,0.0,
+DreamerV3,freeway,2,7.0,0.0,
+DreamerV3,freeway,2,8.0,0.0,
+DreamerV3,freeway,2,9.0,0.0,
+DreamerV3,freeway,2,10.0,0.0,
+DreamerV3,freeway,2,11.0,0.0,
+DreamerV3,freeway,2,12.0,0.0,
+DreamerV3,freeway,2,13.0,0.0,
+DreamerV3,freeway,2,14.0,0.0,
+DreamerV3,freeway,2,15.0,0.0,
+DreamerV3,freeway,2,16.0,0.0,
+DreamerV3,freeway,2,17.0,0.0,
+DreamerV3,freeway,2,18.0,0.0,
+DreamerV3,freeway,2,19.0,0.0,
+DreamerV3,freeway,3,0.0,0.0,
+DreamerV3,freeway,3,1.0,0.0,
+DreamerV3,freeway,3,2.0,0.0,
+DreamerV3,freeway,3,3.0,0.0,
+DreamerV3,freeway,3,4.0,0.0,
+DreamerV3,freeway,3,5.0,0.0,
+DreamerV3,freeway,3,6.0,0.0,
+DreamerV3,freeway,3,7.0,0.0,
+DreamerV3,freeway,3,8.0,0.0,
+DreamerV3,freeway,3,9.0,0.0,
+DreamerV3,freeway,3,10.0,0.0,
+DreamerV3,freeway,3,11.0,0.0,
+DreamerV3,freeway,3,12.0,0.0,
+DreamerV3,freeway,3,13.0,0.0,
+DreamerV3,freeway,3,14.0,0.0,
+DreamerV3,freeway,3,15.0,0.0,
+DreamerV3,freeway,3,16.0,0.0,
+DreamerV3,freeway,3,17.0,0.0,
+DreamerV3,freeway,3,18.0,0.0,
+DreamerV3,freeway,3,19.0,0.0,
+DreamerV3,freeway,4,0.0,0.0,
+DreamerV3,freeway,4,1.0,0.0,
+DreamerV3,freeway,4,2.0,0.0,
+DreamerV3,freeway,4,3.0,0.0,
+DreamerV3,freeway,4,4.0,0.0,
+DreamerV3,freeway,4,5.0,0.0,
+DreamerV3,freeway,4,6.0,0.0,
+DreamerV3,freeway,4,7.0,0.0,
+DreamerV3,freeway,4,8.0,0.0,
+DreamerV3,freeway,4,9.0,0.0,
+DreamerV3,freeway,4,10.0,0.0,
+DreamerV3,freeway,4,11.0,0.0,
+DreamerV3,freeway,4,12.0,0.0,
+DreamerV3,freeway,4,13.0,0.0,
+DreamerV3,freeway,4,14.0,0.0,
+DreamerV3,freeway,4,15.0,0.0,
+DreamerV3,freeway,4,16.0,0.0,
+DreamerV3,freeway,4,17.0,0.0,
+DreamerV3,freeway,4,18.0,0.0,
+DreamerV3,freeway,4,19.0,0.0,
+DreamerV3,frostbite,0,0.0,74.61538461538461,
+DreamerV3,frostbite,0,1.0,63.333333333333336,
+DreamerV3,frostbite,0,2.0,146.66666666666666,
+DreamerV3,frostbite,0,3.0,174.16666666666666,
+DreamerV3,frostbite,0,4.0,422.22222222222223,
+DreamerV3,frostbite,0,5.0,265.0,
+DreamerV3,frostbite,0,6.0,503.0,
+DreamerV3,frostbite,0,7.0,1246.6666666666667,
+DreamerV3,frostbite,0,8.0,1074.2857142857142,
+DreamerV3,frostbite,0,9.0,1424.2857142857142,
+DreamerV3,frostbite,0,10.0,1308.0,
+DreamerV3,frostbite,0,11.0,1640.0,
+DreamerV3,frostbite,0,12.0,1838.0,
+DreamerV3,frostbite,0,13.0,1742.0,
+DreamerV3,frostbite,0,14.0,1684.0,
+DreamerV3,frostbite,0,15.0,1831.6666666666667,
+DreamerV3,frostbite,0,16.0,2148.0,
+DreamerV3,frostbite,0,17.0,2447.5,
+DreamerV3,frostbite,0,18.0,2202.0,
+DreamerV3,frostbite,0,19.0,1984.0,
+DreamerV3,frostbite,1,0.0,70.0,
+DreamerV3,frostbite,1,1.0,73.84615384615384,
+DreamerV3,frostbite,1,2.0,139.0909090909091,
+DreamerV3,frostbite,1,3.0,172.5,
+DreamerV3,frostbite,1,4.0,205.0,
+DreamerV3,frostbite,1,5.0,198.0,
+DreamerV3,frostbite,1,6.0,209.0909090909091,
+DreamerV3,frostbite,1,7.0,218.1818181818182,
+DreamerV3,frostbite,1,8.0,211.0,
+DreamerV3,frostbite,1,9.0,208.1818181818182,
+DreamerV3,frostbite,1,10.0,216.0,
+DreamerV3,frostbite,1,11.0,304.2857142857143,
+DreamerV3,frostbite,1,12.0,708.3333333333334,
+DreamerV3,frostbite,1,13.0,1291.6666666666667,
+DreamerV3,frostbite,1,14.0,1404.0,
+DreamerV3,frostbite,1,15.0,957.1428571428571,
+DreamerV3,frostbite,1,16.0,946.0,
+DreamerV3,frostbite,1,17.0,1808.0,
+DreamerV3,frostbite,1,18.0,2190.0,
+DreamerV3,frostbite,1,19.0,2108.0,
+DreamerV3,frostbite,2,0.0,90.0,
+DreamerV3,frostbite,2,1.0,85.38461538461539,
+DreamerV3,frostbite,2,2.0,153.07692307692307,
+DreamerV3,frostbite,2,3.0,79.28571428571429,
+DreamerV3,frostbite,2,4.0,189.16666666666666,
+DreamerV3,frostbite,2,5.0,901.4285714285714,
+DreamerV3,frostbite,2,6.0,1710.0,
+DreamerV3,frostbite,2,7.0,2135.0,
+DreamerV3,frostbite,2,8.0,1700.0,
+DreamerV3,frostbite,2,9.0,1446.6666666666667,
+DreamerV3,frostbite,2,10.0,1075.7142857142858,
+DreamerV3,frostbite,2,11.0,1521.6666666666667,
+DreamerV3,frostbite,2,12.0,2194.0,
+DreamerV3,frostbite,2,13.0,1493.3333333333333,
+DreamerV3,frostbite,2,14.0,1858.3333333333333,
+DreamerV3,frostbite,2,15.0,1810.0,
+DreamerV3,frostbite,2,16.0,2502.0,
+DreamerV3,frostbite,2,17.0,2932.0,
+DreamerV3,frostbite,2,18.0,2862.0,
+DreamerV3,frostbite,2,19.0,2623.3333333333335,
+DreamerV3,frostbite,3,0.0,75.83333333333333,
+DreamerV3,frostbite,3,1.0,75.33333333333333,
+DreamerV3,frostbite,3,2.0,153.33333333333334,
+DreamerV3,frostbite,3,3.0,193.63636363636363,
+DreamerV3,frostbite,3,4.0,220.0,
+DreamerV3,frostbite,3,5.0,223.63636363636363,
+DreamerV3,frostbite,3,6.0,223.0,
+DreamerV3,frostbite,3,7.0,228.0,
+DreamerV3,frostbite,3,8.0,242.0,
+DreamerV3,frostbite,3,9.0,240.0,
+DreamerV3,frostbite,3,10.0,240.0,
+DreamerV3,frostbite,3,11.0,240.0,
+DreamerV3,frostbite,3,12.0,240.0,
+DreamerV3,frostbite,3,13.0,240.0,
+DreamerV3,frostbite,3,14.0,244.0,
+DreamerV3,frostbite,3,15.0,261.0,
+DreamerV3,frostbite,3,16.0,257.0,
+DreamerV3,frostbite,3,17.0,260.0,
+DreamerV3,frostbite,3,18.0,257.0,
+DreamerV3,frostbite,3,19.0,250.0,
+DreamerV3,frostbite,4,0.0,70.83333333333333,
+DreamerV3,frostbite,4,1.0,95.0,
+DreamerV3,frostbite,4,2.0,152.72727272727272,
+DreamerV3,frostbite,4,3.0,163.33333333333334,
+DreamerV3,frostbite,4,4.0,309.09090909090907,
+DreamerV3,frostbite,4,5.0,764.2857142857143,
+DreamerV3,frostbite,4,6.0,922.8571428571429,
+DreamerV3,frostbite,4,7.0,634.2857142857143,
+DreamerV3,frostbite,4,8.0,1225.7142857142858,
+DreamerV3,frostbite,4,9.0,2000.0,
+DreamerV3,frostbite,4,10.0,1693.3333333333333,
+DreamerV3,frostbite,4,11.0,1570.0,
+DreamerV3,frostbite,4,12.0,1861.6666666666667,
+DreamerV3,frostbite,4,13.0,2420.0,
+DreamerV3,frostbite,4,14.0,2418.3333333333335,
+DreamerV3,frostbite,4,15.0,2468.0,
+DreamerV3,frostbite,4,16.0,2726.6666666666665,
+DreamerV3,frostbite,4,17.0,2742.0,
+DreamerV3,frostbite,4,18.0,2498.3333333333335,
+DreamerV3,frostbite,4,19.0,2585.0,
+DreamerV3,gopher,0,0.0,308.0,
+DreamerV3,gopher,0,1.0,325.0,
+DreamerV3,gopher,0,2.0,226.66666666666666,
+DreamerV3,gopher,0,3.0,380.0,
+DreamerV3,gopher,0,4.0,528.0,
+DreamerV3,gopher,0,5.0,548.0,
+DreamerV3,gopher,0,6.0,432.0,
+DreamerV3,gopher,0,7.0,308.0,
+DreamerV3,gopher,0,8.0,696.0,
+DreamerV3,gopher,0,9.0,660.0,
+DreamerV3,gopher,0,10.0,700.0,
+DreamerV3,gopher,0,11.0,848.0,
+DreamerV3,gopher,0,12.0,653.3333333333334,
+DreamerV3,gopher,0,13.0,960.0,
+DreamerV3,gopher,0,14.0,590.0,
+DreamerV3,gopher,0,15.0,704.0,
+DreamerV3,gopher,0,16.0,632.0,
+DreamerV3,gopher,0,17.0,910.0,
+DreamerV3,gopher,0,18.0,1353.3333333333333,
+DreamerV3,gopher,0,19.0,532.0,
+DreamerV3,gopher,1,0.0,155.0,
+DreamerV3,gopher,1,1.0,580.0,
+DreamerV3,gopher,1,2.0,240.0,
+DreamerV3,gopher,1,3.0,323.3333333333333,
+DreamerV3,gopher,1,4.0,324.0,
+DreamerV3,gopher,1,5.0,540.0,
+DreamerV3,gopher,1,6.0,290.0,
+DreamerV3,gopher,1,7.0,244.0,
+DreamerV3,gopher,1,8.0,420.0,
+DreamerV3,gopher,1,9.0,432.0,
+DreamerV3,gopher,1,10.0,765.0,
+DreamerV3,gopher,1,11.0,744.0,
+DreamerV3,gopher,1,12.0,828.0,
+DreamerV3,gopher,1,13.0,920.0,
+DreamerV3,gopher,1,14.0,1945.0,
+DreamerV3,gopher,1,15.0,1575.0,
+DreamerV3,gopher,1,16.0,816.0,
+DreamerV3,gopher,1,17.0,1135.0,
+DreamerV3,gopher,1,18.0,1160.0,
+DreamerV3,gopher,1,19.0,1286.6666666666667,
+DreamerV3,gopher,2,0.0,380.0,
+DreamerV3,gopher,2,1.0,408.0,
+DreamerV3,gopher,2,2.0,340.0,
+DreamerV3,gopher,2,3.0,210.0,
+DreamerV3,gopher,2,4.0,216.66666666666666,
+DreamerV3,gopher,2,5.0,310.0,
+DreamerV3,gopher,2,6.0,906.6666666666666,
+DreamerV3,gopher,2,7.0,463.3333333333333,
+DreamerV3,gopher,2,8.0,364.0,
+DreamerV3,gopher,2,9.0,656.0,
+DreamerV3,gopher,2,10.0,1040.0,
+DreamerV3,gopher,2,11.0,875.0,
+DreamerV3,gopher,2,12.0,304.0,
+DreamerV3,gopher,2,13.0,664.0,
+DreamerV3,gopher,2,14.0,728.0,
+DreamerV3,gopher,2,15.0,1115.0,
+DreamerV3,gopher,2,16.0,1165.0,
+DreamerV3,gopher,2,17.0,672.0,
+DreamerV3,gopher,2,18.0,705.0,
+DreamerV3,gopher,2,19.0,935.0,
+DreamerV3,gopher,3,0.0,370.0,
+DreamerV3,gopher,3,1.0,372.0,
+DreamerV3,gopher,3,2.0,456.0,
+DreamerV3,gopher,3,3.0,203.33333333333334,
+DreamerV3,gopher,3,4.0,488.0,
+DreamerV3,gopher,3,5.0,475.0,
+DreamerV3,gopher,3,6.0,675.0,
+DreamerV3,gopher,3,7.0,660.0,
+DreamerV3,gopher,3,8.0,885.0,
+DreamerV3,gopher,3,9.0,973.3333333333334,
+DreamerV3,gopher,3,10.0,835.0,
+DreamerV3,gopher,3,11.0,788.0,
+DreamerV3,gopher,3,12.0,715.0,
+DreamerV3,gopher,3,13.0,775.0,
+DreamerV3,gopher,3,14.0,836.0,
+DreamerV3,gopher,3,15.0,600.0,
+DreamerV3,gopher,3,16.0,1273.3333333333333,
+DreamerV3,gopher,3,17.0,706.6666666666666,
+DreamerV3,gopher,3,18.0,905.0,
+DreamerV3,gopher,3,19.0,1220.0,
+DreamerV3,gopher,4,0.0,230.0,
+DreamerV3,gopher,4,1.0,336.6666666666667,
+DreamerV3,gopher,4,2.0,340.0,
+DreamerV3,gopher,4,3.0,300.0,
+DreamerV3,gopher,4,4.0,404.0,
+DreamerV3,gopher,4,5.0,660.0,
+DreamerV3,gopher,4,6.0,280.0,
+DreamerV3,gopher,4,7.0,565.0,
+DreamerV3,gopher,4,8.0,496.0,
+DreamerV3,gopher,4,9.0,483.3333333333333,
+DreamerV3,gopher,4,10.0,880.0,
+DreamerV3,gopher,4,11.0,865.0,
+DreamerV3,gopher,4,12.0,504.0,
+DreamerV3,gopher,4,13.0,680.0,
+DreamerV3,gopher,4,14.0,1360.0,
+DreamerV3,gopher,4,15.0,955.0,
+DreamerV3,gopher,4,16.0,985.0,
+DreamerV3,gopher,4,17.0,660.0,
+DreamerV3,gopher,4,18.0,1125.0,
+DreamerV3,gopher,4,19.0,1170.0,
+DreamerV3,hero,0,0.0,18.75,
+DreamerV3,hero,0,1.0,302.22222222222223,
+DreamerV3,hero,0,2.0,2612.0,
+DreamerV3,hero,0,3.0,2920.8333333333335,
+DreamerV3,hero,0,4.0,3398.0,
+DreamerV3,hero,0,5.0,3046.3636363636365,
+DreamerV3,hero,0,6.0,3427.9166666666665,
+DreamerV3,hero,0,7.0,3080.8333333333335,
+DreamerV3,hero,0,8.0,3184.4444444444443,
+DreamerV3,hero,0,9.0,7430.0,
+DreamerV3,hero,0,10.0,7473.888888888889,
+DreamerV3,hero,0,11.0,7506.666666666667,
+DreamerV3,hero,0,12.0,7565.0,
+DreamerV3,hero,0,13.0,7626.666666666667,
+DreamerV3,hero,0,14.0,7526.25,
+DreamerV3,hero,0,15.0,7568.75,
+DreamerV3,hero,0,16.0,7561.25,
+DreamerV3,hero,0,17.0,7555.0,
+DreamerV3,hero,0,18.0,7546.428571428572,
+DreamerV3,hero,0,19.0,7585.0,
+DreamerV3,hero,1,0.0,805.8333333333334,
+DreamerV3,hero,1,1.0,244.44444444444446,
+DreamerV3,hero,1,2.0,2175.0,
+DreamerV3,hero,1,3.0,2479.285714285714,
+DreamerV3,hero,1,4.0,3002.5,
+DreamerV3,hero,1,5.0,3088.5,
+DreamerV3,hero,1,6.0,3071.25,
+DreamerV3,hero,1,7.0,3606.25,
+DreamerV3,hero,1,8.0,3113.5,
+DreamerV3,hero,1,9.0,4942.777777777777,
+DreamerV3,hero,1,10.0,4915.0,
+DreamerV3,hero,1,11.0,7410.714285714285,
+DreamerV3,hero,1,12.0,7491.666666666667,
+DreamerV3,hero,1,13.0,7413.333333333333,
+DreamerV3,hero,1,14.0,6780.714285714285,
+DreamerV3,hero,1,15.0,7564.375,
+DreamerV3,hero,1,16.0,7543.333333333333,
+DreamerV3,hero,1,17.0,7563.75,
+DreamerV3,hero,1,18.0,7502.5,
+DreamerV3,hero,1,19.0,8267.857142857143,
+DreamerV3,hero,2,0.0,793.3333333333334,
+DreamerV3,hero,2,1.0,350.0,
+DreamerV3,hero,2,2.0,785.5,
+DreamerV3,hero,2,3.0,2944.5,
+DreamerV3,hero,2,4.0,3082.5,
+DreamerV3,hero,2,5.0,3111.25,
+DreamerV3,hero,2,6.0,3458.6363636363635,
+DreamerV3,hero,2,7.0,3565.5,
+DreamerV3,hero,2,8.0,4206.25,
+DreamerV3,hero,2,9.0,5262.142857142857,
+DreamerV3,hero,2,10.0,6382.5,
+DreamerV3,hero,2,11.0,7434.285714285715,
+DreamerV3,hero,2,12.0,7412.142857142857,
+DreamerV3,hero,2,13.0,7412.5,
+DreamerV3,hero,2,14.0,7532.5,
+DreamerV3,hero,2,15.0,7376.0,
+DreamerV3,hero,2,16.0,7523.333333333333,
+DreamerV3,hero,2,17.0,7547.142857142857,
+DreamerV3,hero,2,18.0,8208.57142857143,
+DreamerV3,hero,2,19.0,8219.285714285714,
+DreamerV3,hero,3,0.0,375.7142857142857,
+DreamerV3,hero,3,1.0,219.6153846153846,
+DreamerV3,hero,3,2.0,808.3333333333334,
+DreamerV3,hero,3,3.0,2740.0,
+DreamerV3,hero,3,4.0,3908.125,
+DreamerV3,hero,3,5.0,3098.6363636363635,
+DreamerV3,hero,3,6.0,3093.3333333333335,
+DreamerV3,hero,3,7.0,3125.625,
+DreamerV3,hero,3,8.0,3140.5555555555557,
+DreamerV3,hero,3,9.0,3773.5714285714284,
+DreamerV3,hero,3,10.0,6778.75,
+DreamerV3,hero,3,11.0,4898.75,
+DreamerV3,hero,3,12.0,6261.25,
+DreamerV3,hero,3,13.0,7565.0,
+DreamerV3,hero,3,14.0,6226.666666666667,
+DreamerV3,hero,3,15.0,7566.25,
+DreamerV3,hero,3,16.0,7516.0,
+DreamerV3,hero,3,17.0,8519.166666666666,
+DreamerV3,hero,3,18.0,9228.75,
+DreamerV3,hero,3,19.0,13161.666666666666,
+DreamerV3,hero,4,0.0,466.6666666666667,
+DreamerV3,hero,4,1.0,335.38461538461536,
+DreamerV3,hero,4,2.0,1431.6666666666667,
+DreamerV3,hero,4,3.0,2888.0,
+DreamerV3,hero,4,4.0,2988.5,
+DreamerV3,hero,4,5.0,3000.0,
+DreamerV3,hero,4,6.0,2519.5454545454545,
+DreamerV3,hero,4,7.0,3481.0,
+DreamerV3,hero,4,8.0,2780.625,
+DreamerV3,hero,4,9.0,3149.285714285714,
+DreamerV3,hero,4,10.0,3155.4545454545455,
+DreamerV3,hero,4,11.0,3177.8571428571427,
+DreamerV3,hero,4,12.0,3231.6666666666665,
+DreamerV3,hero,4,13.0,6132.857142857143,
+DreamerV3,hero,4,14.0,4684.375,
+DreamerV3,hero,4,15.0,6332.5,
+DreamerV3,hero,4,16.0,7490.714285714285,
+DreamerV3,hero,4,17.0,7568.75,
+DreamerV3,hero,4,18.0,7530.0,
+DreamerV3,hero,4,19.0,7595.833333333333,
+DreamerV3,jamesbond,0,0.0,44.44444444444444,
+DreamerV3,jamesbond,0,1.0,30.0,
+DreamerV3,jamesbond,0,2.0,43.75,
+DreamerV3,jamesbond,0,3.0,28.571428571428573,
+DreamerV3,jamesbond,0,4.0,60.0,
+DreamerV3,jamesbond,0,5.0,91.66666666666667,
+DreamerV3,jamesbond,0,6.0,192.85714285714286,
+DreamerV3,jamesbond,0,7.0,175.0,
+DreamerV3,jamesbond,0,8.0,135.71428571428572,
+DreamerV3,jamesbond,0,9.0,150.0,
+DreamerV3,jamesbond,0,10.0,220.0,
+DreamerV3,jamesbond,0,11.0,280.0,
+DreamerV3,jamesbond,0,12.0,300.0,
+DreamerV3,jamesbond,0,13.0,287.5,
+DreamerV3,jamesbond,0,14.0,412.5,
+DreamerV3,jamesbond,0,15.0,340.0,
+DreamerV3,jamesbond,0,16.0,316.6666666666667,
+DreamerV3,jamesbond,0,17.0,387.5,
+DreamerV3,jamesbond,0,18.0,312.5,
+DreamerV3,jamesbond,0,19.0,325.0,
+DreamerV3,jamesbond,1,0.0,25.0,
+DreamerV3,jamesbond,1,1.0,22.22222222222222,
+DreamerV3,jamesbond,1,2.0,40.0,
+DreamerV3,jamesbond,1,3.0,71.42857142857143,
+DreamerV3,jamesbond,1,4.0,125.0,
+DreamerV3,jamesbond,1,5.0,58.333333333333336,
+DreamerV3,jamesbond,1,6.0,66.66666666666667,
+DreamerV3,jamesbond,1,7.0,87.5,
+DreamerV3,jamesbond,1,8.0,93.75,
+DreamerV3,jamesbond,1,9.0,141.66666666666666,
+DreamerV3,jamesbond,1,10.0,68.75,
+DreamerV3,jamesbond,1,11.0,128.57142857142858,
+DreamerV3,jamesbond,1,12.0,85.71428571428571,
+DreamerV3,jamesbond,1,13.0,171.42857142857142,
+DreamerV3,jamesbond,1,14.0,68.75,
+DreamerV3,jamesbond,1,15.0,191.66666666666666,
+DreamerV3,jamesbond,1,16.0,142.85714285714286,
+DreamerV3,jamesbond,1,17.0,300.0,
+DreamerV3,jamesbond,1,18.0,225.0,
+DreamerV3,jamesbond,1,19.0,216.66666666666666,
+DreamerV3,jamesbond,2,0.0,20.0,
+DreamerV3,jamesbond,2,1.0,15.0,
+DreamerV3,jamesbond,2,2.0,30.0,
+DreamerV3,jamesbond,2,3.0,8.333333333333334,
+DreamerV3,jamesbond,2,4.0,100.0,
+DreamerV3,jamesbond,2,5.0,80.0,
+DreamerV3,jamesbond,2,6.0,150.0,
+DreamerV3,jamesbond,2,7.0,212.5,
+DreamerV3,jamesbond,2,8.0,140.0,
+DreamerV3,jamesbond,2,9.0,200.0,
+DreamerV3,jamesbond,2,10.0,250.0,
+DreamerV3,jamesbond,2,11.0,350.0,
+DreamerV3,jamesbond,2,12.0,283.3333333333333,
+DreamerV3,jamesbond,2,13.0,287.5,
+DreamerV3,jamesbond,2,14.0,362.5,
+DreamerV3,jamesbond,2,15.0,275.0,
+DreamerV3,jamesbond,2,16.0,312.5,
+DreamerV3,jamesbond,2,17.0,225.0,
+DreamerV3,jamesbond,2,18.0,320.0,
+DreamerV3,jamesbond,2,19.0,325.0,
+DreamerV3,jamesbond,3,0.0,30.0,
+DreamerV3,jamesbond,3,1.0,15.0,
+DreamerV3,jamesbond,3,2.0,27.272727272727273,
+DreamerV3,jamesbond,3,3.0,27.77777777777778,
+DreamerV3,jamesbond,3,4.0,70.0,
+DreamerV3,jamesbond,3,5.0,83.33333333333333,
+DreamerV3,jamesbond,3,6.0,105.0,
+DreamerV3,jamesbond,3,7.0,75.0,
+DreamerV3,jamesbond,3,8.0,61.111111111111114,
+DreamerV3,jamesbond,3,9.0,77.77777777777777,
+DreamerV3,jamesbond,3,10.0,111.11111111111111,
+DreamerV3,jamesbond,3,11.0,125.0,
+DreamerV3,jamesbond,3,12.0,138.88888888888889,
+DreamerV3,jamesbond,3,13.0,155.55555555555554,
+DreamerV3,jamesbond,3,14.0,112.5,
+DreamerV3,jamesbond,3,15.0,183.33333333333334,
+DreamerV3,jamesbond,3,16.0,214.28571428571428,
+DreamerV3,jamesbond,3,17.0,212.5,
+DreamerV3,jamesbond,3,18.0,200.0,
+DreamerV3,jamesbond,3,19.0,228.57142857142858,
+DreamerV3,jamesbond,4,0.0,30.0,
+DreamerV3,jamesbond,4,1.0,35.0,
+DreamerV3,jamesbond,4,2.0,25.0,
+DreamerV3,jamesbond,4,3.0,40.0,
+DreamerV3,jamesbond,4,4.0,100.0,
+DreamerV3,jamesbond,4,5.0,110.0,
+DreamerV3,jamesbond,4,6.0,140.0,
+DreamerV3,jamesbond,4,7.0,177.77777777777777,
+DreamerV3,jamesbond,4,8.0,220.0,
+DreamerV3,jamesbond,4,9.0,227.77777777777777,
+DreamerV3,jamesbond,4,10.0,250.0,
+DreamerV3,jamesbond,4,11.0,211.11111111111111,
+DreamerV3,jamesbond,4,12.0,233.33333333333334,
+DreamerV3,jamesbond,4,13.0,262.5,
+DreamerV3,jamesbond,4,14.0,275.0,
+DreamerV3,jamesbond,4,15.0,268.75,
+DreamerV3,jamesbond,4,16.0,271.42857142857144,
+DreamerV3,jamesbond,4,17.0,287.5,
+DreamerV3,jamesbond,4,18.0,264.2857142857143,
+DreamerV3,jamesbond,4,19.0,257.14285714285717,
+DreamerV3,kangaroo,0,0.0,54.54545454545455,
+DreamerV3,kangaroo,0,1.0,18.181818181818183,
+DreamerV3,kangaroo,0,2.0,33.333333333333336,
+DreamerV3,kangaroo,0,3.0,140.0,
+DreamerV3,kangaroo,0,4.0,0.0,
+DreamerV3,kangaroo,0,5.0,100.0,
+DreamerV3,kangaroo,0,6.0,222.22222222222223,
+DreamerV3,kangaroo,0,7.0,177.77777777777777,
+DreamerV3,kangaroo,0,8.0,280.0,
+DreamerV3,kangaroo,0,9.0,400.0,
+DreamerV3,kangaroo,0,10.0,555.5555555555555,
+DreamerV3,kangaroo,0,11.0,480.0,
+DreamerV3,kangaroo,0,12.0,560.0,
+DreamerV3,kangaroo,0,13.0,600.0,
+DreamerV3,kangaroo,0,14.0,600.0,
+DreamerV3,kangaroo,0,15.0,620.0,
+DreamerV3,kangaroo,0,16.0,600.0,
+DreamerV3,kangaroo,0,17.0,600.0,
+DreamerV3,kangaroo,0,18.0,640.0,
+DreamerV3,kangaroo,0,19.0,750.0,
+DreamerV3,kangaroo,1,0.0,0.0,
+DreamerV3,kangaroo,1,1.0,90.9090909090909,
+DreamerV3,kangaroo,1,2.0,90.9090909090909,
+DreamerV3,kangaroo,1,3.0,109.0909090909091,
+DreamerV3,kangaroo,1,4.0,26.666666666666668,
+DreamerV3,kangaroo,1,5.0,133.33333333333334,
+DreamerV3,kangaroo,1,6.0,138.46153846153845,
+DreamerV3,kangaroo,1,7.0,200.0,
+DreamerV3,kangaroo,1,8.0,153.84615384615384,
+DreamerV3,kangaroo,1,9.0,169.23076923076923,
+DreamerV3,kangaroo,1,10.0,500.0,
+DreamerV3,kangaroo,1,11.0,700.0,
+DreamerV3,kangaroo,1,12.0,700.0,
+DreamerV3,kangaroo,1,13.0,755.5555555555555,
+DreamerV3,kangaroo,1,14.0,822.2222222222222,
+DreamerV3,kangaroo,1,15.0,1275.0,
+DreamerV3,kangaroo,1,16.0,1275.0,
+DreamerV3,kangaroo,1,17.0,1325.0,
+DreamerV3,kangaroo,1,18.0,1375.0,
+DreamerV3,kangaroo,1,19.0,1425.0,
+DreamerV3,kangaroo,2,0.0,22.22222222222222,
+DreamerV3,kangaroo,2,1.0,18.181818181818183,
+DreamerV3,kangaroo,2,2.0,44.44444444444444,
+DreamerV3,kangaroo,2,3.0,225.0,
+DreamerV3,kangaroo,2,4.0,133.33333333333334,
+DreamerV3,kangaroo,2,5.0,280.0,
+DreamerV3,kangaroo,2,6.0,420.0,
+DreamerV3,kangaroo,2,7.0,288.8888888888889,
+DreamerV3,kangaroo,2,8.0,377.77777777777777,
+DreamerV3,kangaroo,2,9.0,580.0,
+DreamerV3,kangaroo,2,10.0,488.8888888888889,
+DreamerV3,kangaroo,2,11.0,577.7777777777778,
+DreamerV3,kangaroo,2,12.0,700.0,
+DreamerV3,kangaroo,2,13.0,688.8888888888889,
+DreamerV3,kangaroo,2,14.0,525.0,
+DreamerV3,kangaroo,2,15.0,775.0,
+DreamerV3,kangaroo,2,16.0,825.0,
+DreamerV3,kangaroo,2,17.0,850.0,
+DreamerV3,kangaroo,2,18.0,1050.0,
+DreamerV3,kangaroo,2,19.0,942.8571428571429,
+DreamerV3,kangaroo,3,0.0,40.0,
+DreamerV3,kangaroo,3,1.0,40.0,
+DreamerV3,kangaroo,3,2.0,50.0,
+DreamerV3,kangaroo,3,3.0,16.666666666666668,
+DreamerV3,kangaroo,3,4.0,0.0,
+DreamerV3,kangaroo,3,5.0,16.666666666666668,
+DreamerV3,kangaroo,3,6.0,90.9090909090909,
+DreamerV3,kangaroo,3,7.0,15.384615384615385,
+DreamerV3,kangaroo,3,8.0,183.33333333333334,
+DreamerV3,kangaroo,3,9.0,316.6666666666667,
+DreamerV3,kangaroo,3,10.0,660.0,
+DreamerV3,kangaroo,3,11.0,822.2222222222222,
+DreamerV3,kangaroo,3,12.0,900.0,
+DreamerV3,kangaroo,3,13.0,1175.0,
+DreamerV3,kangaroo,3,14.0,1025.0,
+DreamerV3,kangaroo,3,15.0,911.1111111111111,
+DreamerV3,kangaroo,3,16.0,950.0,
+DreamerV3,kangaroo,3,17.0,1222.2222222222222,
+DreamerV3,kangaroo,3,18.0,1400.0,
+DreamerV3,kangaroo,3,19.0,1425.0,
+DreamerV3,kangaroo,4,0.0,20.0,
+DreamerV3,kangaroo,4,1.0,40.0,
+DreamerV3,kangaroo,4,2.0,60.0,
+DreamerV3,kangaroo,4,3.0,20.0,
+DreamerV3,kangaroo,4,4.0,14.285714285714286,
+DreamerV3,kangaroo,4,5.0,30.76923076923077,
+DreamerV3,kangaroo,4,6.0,100.0,
+DreamerV3,kangaroo,4,7.0,400.0,
+DreamerV3,kangaroo,4,8.0,233.33333333333334,
+DreamerV3,kangaroo,4,9.0,233.33333333333334,
+DreamerV3,kangaroo,4,10.0,272.72727272727275,
+DreamerV3,kangaroo,4,11.0,425.0,
+DreamerV3,kangaroo,4,12.0,450.0,
+DreamerV3,kangaroo,4,13.0,533.3333333333334,
+DreamerV3,kangaroo,4,14.0,555.5555555555555,
+DreamerV3,kangaroo,4,15.0,575.0,
+DreamerV3,kangaroo,4,16.0,400.0,
+DreamerV3,kangaroo,4,17.0,600.0,
+DreamerV3,kangaroo,4,18.0,622.2222222222222,
+DreamerV3,kangaroo,4,19.0,622.2222222222222,
+DreamerV3,krull,0,0.0,1550.0,
+DreamerV3,krull,0,1.0,1592.5,
+DreamerV3,krull,0,2.0,1652.0,
+DreamerV3,krull,0,3.0,3053.3333333333335,
+DreamerV3,krull,0,4.0,4453.333333333333,
+DreamerV3,krull,0,5.0,5592.5,
+DreamerV3,krull,0,6.0,4712.5,
+DreamerV3,krull,0,7.0,7042.5,
+DreamerV3,krull,0,8.0,5930.0,
+DreamerV3,krull,0,9.0,7167.5,
+DreamerV3,krull,0,10.0,7273.333333333333,
+DreamerV3,krull,0,11.0,7317.5,
+DreamerV3,krull,0,12.0,7367.5,
+DreamerV3,krull,0,13.0,6690.0,
+DreamerV3,krull,0,14.0,5595.0,
+DreamerV3,krull,0,15.0,6387.5,
+DreamerV3,krull,0,16.0,10880.0,
+DreamerV3,krull,0,17.0,9763.333333333334,
+DreamerV3,krull,0,18.0,9596.666666666666,
+DreamerV3,krull,0,19.0,7862.5,
+DreamerV3,krull,1,0.0,1350.0,
+DreamerV3,krull,1,1.0,1105.0,
+DreamerV3,krull,1,2.0,2880.0,
+DreamerV3,krull,1,3.0,1667.5,
+DreamerV3,krull,1,4.0,2556.6666666666665,
+DreamerV3,krull,1,5.0,2575.0,
+DreamerV3,krull,1,6.0,3706.6666666666665,
+DreamerV3,krull,1,7.0,4250.0,
+DreamerV3,krull,1,8.0,6366.666666666667,
+DreamerV3,krull,1,9.0,6305.0,
+DreamerV3,krull,1,10.0,6092.5,
+DreamerV3,krull,1,11.0,6405.0,
+DreamerV3,krull,1,12.0,8140.0,
+DreamerV3,krull,1,13.0,8592.5,
+DreamerV3,krull,1,14.0,6820.0,
+DreamerV3,krull,1,15.0,8060.0,
+DreamerV3,krull,1,16.0,7202.5,
+DreamerV3,krull,1,17.0,8480.0,
+DreamerV3,krull,1,18.0,6910.0,
+DreamerV3,krull,1,19.0,8042.5,
+DreamerV3,krull,2,0.0,1830.0,
+DreamerV3,krull,2,1.0,2047.5,
+DreamerV3,krull,2,2.0,1442.5,
+DreamerV3,krull,2,3.0,2015.0,
+DreamerV3,krull,2,4.0,3446.6666666666665,
+DreamerV3,krull,2,5.0,3797.5,
+DreamerV3,krull,2,6.0,4472.5,
+DreamerV3,krull,2,7.0,6506.666666666667,
+DreamerV3,krull,2,8.0,5678.0,
+DreamerV3,krull,2,9.0,6233.333333333333,
+DreamerV3,krull,2,10.0,7585.0,
+DreamerV3,krull,2,11.0,6662.5,
+DreamerV3,krull,2,12.0,5897.5,
+DreamerV3,krull,2,13.0,5992.5,
+DreamerV3,krull,2,14.0,6937.5,
+DreamerV3,krull,2,15.0,6817.5,
+DreamerV3,krull,2,16.0,7585.0,
+DreamerV3,krull,2,17.0,7936.666666666667,
+DreamerV3,krull,2,18.0,7322.5,
+DreamerV3,krull,2,19.0,6297.5,
+DreamerV3,krull,3,0.0,1950.0,
+DreamerV3,krull,3,1.0,1332.5,
+DreamerV3,krull,3,2.0,2187.5,
+DreamerV3,krull,3,3.0,2532.5,
+DreamerV3,krull,3,4.0,4123.333333333333,
+DreamerV3,krull,3,5.0,5306.666666666667,
+DreamerV3,krull,3,6.0,5157.5,
+DreamerV3,krull,3,7.0,7135.0,
+DreamerV3,krull,3,8.0,4718.0,
+DreamerV3,krull,3,9.0,6853.333333333333,
+DreamerV3,krull,3,10.0,7477.5,
+DreamerV3,krull,3,11.0,7035.0,
+DreamerV3,krull,3,12.0,7335.0,
+DreamerV3,krull,3,13.0,7350.0,
+DreamerV3,krull,3,14.0,7393.333333333333,
+DreamerV3,krull,3,15.0,6955.0,
+DreamerV3,krull,3,16.0,6442.5,
+DreamerV3,krull,3,17.0,8087.5,
+DreamerV3,krull,3,18.0,7742.5,
+DreamerV3,krull,3,19.0,8556.666666666666,
+DreamerV3,krull,4,0.0,1953.3333333333333,
+DreamerV3,krull,4,1.0,2067.5,
+DreamerV3,krull,4,2.0,1992.5,
+DreamerV3,krull,4,3.0,1746.6666666666667,
+DreamerV3,krull,4,4.0,2312.0,
+DreamerV3,krull,4,5.0,3930.0,
+DreamerV3,krull,4,6.0,4015.0,
+DreamerV3,krull,4,7.0,6063.333333333333,
+DreamerV3,krull,4,8.0,6110.0,
+DreamerV3,krull,4,9.0,6382.5,
+DreamerV3,krull,4,10.0,7613.333333333333,
+DreamerV3,krull,4,11.0,6957.5,
+DreamerV3,krull,4,12.0,6990.0,
+DreamerV3,krull,4,13.0,8287.5,
+DreamerV3,krull,4,14.0,10180.0,
+DreamerV3,krull,4,15.0,8760.0,
+DreamerV3,krull,4,16.0,7956.666666666667,
+DreamerV3,krull,4,17.0,10366.666666666666,
+DreamerV3,krull,4,18.0,6885.0,
+DreamerV3,krull,4,19.0,9790.0,
+DreamerV3,kung_fu_master,0,0.0,360.0,
+DreamerV3,kung_fu_master,0,1.0,260.0,
+DreamerV3,kung_fu_master,0,2.0,416.6666666666667,
+DreamerV3,kung_fu_master,0,3.0,5566.666666666667,
+DreamerV3,kung_fu_master,0,4.0,7800.0,
+DreamerV3,kung_fu_master,0,5.0,9950.0,
+DreamerV3,kung_fu_master,0,6.0,6950.0,
+DreamerV3,kung_fu_master,0,7.0,6266.666666666667,
+DreamerV3,kung_fu_master,0,8.0,6533.333333333333,
+DreamerV3,kung_fu_master,0,9.0,7950.0,
+DreamerV3,kung_fu_master,0,10.0,14600.0,
+DreamerV3,kung_fu_master,0,11.0,7366.666666666667,
+DreamerV3,kung_fu_master,0,12.0,13100.0,
+DreamerV3,kung_fu_master,0,13.0,17300.0,
+DreamerV3,kung_fu_master,0,14.0,17750.0,
+DreamerV3,kung_fu_master,0,15.0,12400.0,
+DreamerV3,kung_fu_master,0,16.0,17900.0,
+DreamerV3,kung_fu_master,0,17.0,7650.0,
+DreamerV3,kung_fu_master,0,18.0,31000.0,
+DreamerV3,kung_fu_master,0,19.0,26600.0,
+DreamerV3,kung_fu_master,1,0.0,280.0,
+DreamerV3,kung_fu_master,1,1.0,316.6666666666667,
+DreamerV3,kung_fu_master,1,2.0,1675.0,
+DreamerV3,kung_fu_master,1,3.0,8200.0,
+DreamerV3,kung_fu_master,1,5.0,26750.0,
+DreamerV3,kung_fu_master,1,6.0,29950.0,
+DreamerV3,kung_fu_master,1,7.0,32800.0,
+DreamerV3,kung_fu_master,1,8.0,23200.0,
+DreamerV3,kung_fu_master,1,9.0,57600.0,
+DreamerV3,kung_fu_master,1,10.0,31600.0,
+DreamerV3,kung_fu_master,1,11.0,37400.0,
+DreamerV3,kung_fu_master,1,12.0,34800.0,
+DreamerV3,kung_fu_master,1,13.0,21500.0,
+DreamerV3,kung_fu_master,1,14.0,25800.0,
+DreamerV3,kung_fu_master,1,15.0,30400.0,
+DreamerV3,kung_fu_master,1,16.0,32700.0,
+DreamerV3,kung_fu_master,1,17.0,39400.0,
+DreamerV3,kung_fu_master,1,18.0,23200.0,
+DreamerV3,kung_fu_master,1,19.0,22600.0,
+DreamerV3,kung_fu_master,2,0.0,625.0,
+DreamerV3,kung_fu_master,2,1.0,516.6666666666666,
+DreamerV3,kung_fu_master,2,2.0,480.0,
+DreamerV3,kung_fu_master,2,3.0,1850.0,
+DreamerV3,kung_fu_master,2,4.0,3500.0,
+DreamerV3,kung_fu_master,2,5.0,9100.0,
+DreamerV3,kung_fu_master,2,6.0,10000.0,
+DreamerV3,kung_fu_master,2,7.0,21900.0,
+DreamerV3,kung_fu_master,2,8.0,12933.333333333334,
+DreamerV3,kung_fu_master,2,9.0,16800.0,
+DreamerV3,kung_fu_master,2,10.0,16200.0,
+DreamerV3,kung_fu_master,2,11.0,15400.0,
+DreamerV3,kung_fu_master,2,12.0,10133.333333333334,
+DreamerV3,kung_fu_master,2,13.0,24500.0,
+DreamerV3,kung_fu_master,2,14.0,11600.0,
+DreamerV3,kung_fu_master,2,15.0,24400.0,
+DreamerV3,kung_fu_master,2,16.0,14900.0,
+DreamerV3,kung_fu_master,2,17.0,17600.0,
+DreamerV3,kung_fu_master,2,18.0,21800.0,
+DreamerV3,kung_fu_master,2,19.0,14300.0,
+DreamerV3,kung_fu_master,3,0.0,280.0,
+DreamerV3,kung_fu_master,3,1.0,540.0,
+DreamerV3,kung_fu_master,3,2.0,566.6666666666666,
+DreamerV3,kung_fu_master,3,3.0,4766.666666666667,
+DreamerV3,kung_fu_master,3,4.0,9100.0,
+DreamerV3,kung_fu_master,3,5.0,22950.0,
+DreamerV3,kung_fu_master,3,6.0,19100.0,
+DreamerV3,kung_fu_master,3,7.0,20400.0,
+DreamerV3,kung_fu_master,3,8.0,32200.0,
+DreamerV3,kung_fu_master,3,9.0,32200.0,
+DreamerV3,kung_fu_master,3,10.0,28200.0,
+DreamerV3,kung_fu_master,3,11.0,38000.0,
+DreamerV3,kung_fu_master,3,12.0,24200.0,
+DreamerV3,kung_fu_master,3,13.0,19000.0,
+DreamerV3,kung_fu_master,3,14.0,20400.0,
+DreamerV3,kung_fu_master,3,15.0,19300.0,
+DreamerV3,kung_fu_master,3,16.0,29200.0,
+DreamerV3,kung_fu_master,3,17.0,21700.0,
+DreamerV3,kung_fu_master,3,18.0,14200.0,
+DreamerV3,kung_fu_master,3,19.0,18500.0,
+DreamerV3,kung_fu_master,4,0.0,320.0,
+DreamerV3,kung_fu_master,4,1.0,360.0,
+DreamerV3,kung_fu_master,4,2.0,1100.0,
+DreamerV3,kung_fu_master,4,3.0,2520.0,
+DreamerV3,kung_fu_master,4,4.0,6833.333333333333,
+DreamerV3,kung_fu_master,4,5.0,11300.0,
+DreamerV3,kung_fu_master,4,6.0,9866.666666666666,
+DreamerV3,kung_fu_master,4,7.0,15900.0,
+DreamerV3,kung_fu_master,4,8.0,13750.0,
+DreamerV3,kung_fu_master,4,9.0,13600.0,
+DreamerV3,kung_fu_master,4,10.0,16350.0,
+DreamerV3,kung_fu_master,4,11.0,16150.0,
+DreamerV3,kung_fu_master,4,12.0,18750.0,
+DreamerV3,kung_fu_master,4,13.0,26250.0,
+DreamerV3,kung_fu_master,4,14.0,37000.0,
+DreamerV3,kung_fu_master,4,15.0,28000.0,
+DreamerV3,kung_fu_master,4,16.0,26100.0,
+DreamerV3,kung_fu_master,4,17.0,22000.0,
+DreamerV3,kung_fu_master,4,18.0,19200.0,
+DreamerV3,kung_fu_master,4,19.0,23700.0,
+DreamerV3,ms_pacman,0,0.0,355.0,
+DreamerV3,ms_pacman,0,1.0,580.0,
+DreamerV3,ms_pacman,0,2.0,451.25,
+DreamerV3,ms_pacman,0,3.0,507.77777777777777,
+DreamerV3,ms_pacman,0,4.0,673.75,
+DreamerV3,ms_pacman,0,5.0,1112.857142857143,
+DreamerV3,ms_pacman,0,6.0,1081.4285714285713,
+DreamerV3,ms_pacman,0,7.0,886.6666666666666,
+DreamerV3,ms_pacman,0,8.0,1328.5714285714287,
+DreamerV3,ms_pacman,0,9.0,890.0,
+DreamerV3,ms_pacman,0,10.0,982.8571428571429,
+DreamerV3,ms_pacman,0,11.0,1715.0,
+DreamerV3,ms_pacman,0,12.0,1128.5714285714287,
+DreamerV3,ms_pacman,0,13.0,1040.0,
+DreamerV3,ms_pacman,0,14.0,2300.0,
+DreamerV3,ms_pacman,0,15.0,2125.0,
+DreamerV3,ms_pacman,0,16.0,1714.2857142857142,
+DreamerV3,ms_pacman,0,17.0,2057.1428571428573,
+DreamerV3,ms_pacman,0,18.0,1958.5714285714287,
+DreamerV3,ms_pacman,0,19.0,3266.0,
+DreamerV3,ms_pacman,1,0.0,235.0,
+DreamerV3,ms_pacman,1,1.0,383.3333333333333,
+DreamerV3,ms_pacman,1,2.0,395.0,
+DreamerV3,ms_pacman,1,3.0,983.3333333333334,
+DreamerV3,ms_pacman,1,4.0,455.55555555555554,
+DreamerV3,ms_pacman,1,5.0,463.75,
+DreamerV3,ms_pacman,1,6.0,633.75,
+DreamerV3,ms_pacman,1,7.0,802.5,
+DreamerV3,ms_pacman,1,8.0,788.5714285714286,
+DreamerV3,ms_pacman,1,9.0,728.8888888888889,
+DreamerV3,ms_pacman,1,10.0,722.8571428571429,
+DreamerV3,ms_pacman,1,11.0,757.5,
+DreamerV3,ms_pacman,1,12.0,877.1428571428571,
+DreamerV3,ms_pacman,1,13.0,995.0,
+DreamerV3,ms_pacman,1,14.0,915.7142857142857,
+DreamerV3,ms_pacman,1,15.0,1026.25,
+DreamerV3,ms_pacman,1,16.0,1301.6666666666667,
+DreamerV3,ms_pacman,1,17.0,1141.4285714285713,
+DreamerV3,ms_pacman,1,18.0,1144.2857142857142,
+DreamerV3,ms_pacman,1,19.0,1100.0,
+DreamerV3,ms_pacman,2,0.0,259.0,
+DreamerV3,ms_pacman,2,1.0,264.44444444444446,
+DreamerV3,ms_pacman,2,2.0,387.5,
+DreamerV3,ms_pacman,2,3.0,443.75,
+DreamerV3,ms_pacman,2,4.0,408.8888888888889,
+DreamerV3,ms_pacman,2,5.0,461.42857142857144,
+DreamerV3,ms_pacman,2,6.0,547.5,
+DreamerV3,ms_pacman,2,7.0,652.8571428571429,
+DreamerV3,ms_pacman,2,8.0,617.7777777777778,
+DreamerV3,ms_pacman,2,9.0,682.2222222222222,
+DreamerV3,ms_pacman,2,10.0,847.1428571428571,
+DreamerV3,ms_pacman,2,11.0,777.7777777777778,
+DreamerV3,ms_pacman,2,12.0,1488.3333333333333,
+DreamerV3,ms_pacman,2,13.0,1285.0,
+DreamerV3,ms_pacman,2,14.0,1328.3333333333333,
+DreamerV3,ms_pacman,2,15.0,1288.75,
+DreamerV3,ms_pacman,2,16.0,1301.4285714285713,
+DreamerV3,ms_pacman,2,17.0,1561.25,
+DreamerV3,ms_pacman,2,18.0,1703.3333333333333,
+DreamerV3,ms_pacman,2,19.0,1437.142857142857,
+DreamerV3,ms_pacman,3,0.0,239.0,
+DreamerV3,ms_pacman,3,1.0,361.1111111111111,
+DreamerV3,ms_pacman,3,2.0,426.6666666666667,
+DreamerV3,ms_pacman,3,3.0,396.25,
+DreamerV3,ms_pacman,3,4.0,512.5,
+DreamerV3,ms_pacman,3,5.0,350.0,
+DreamerV3,ms_pacman,3,6.0,467.14285714285717,
+DreamerV3,ms_pacman,3,7.0,308.75,
+DreamerV3,ms_pacman,3,8.0,558.5714285714286,
+DreamerV3,ms_pacman,3,9.0,962.5,
+DreamerV3,ms_pacman,3,10.0,960.0,
+DreamerV3,ms_pacman,3,11.0,871.25,
+DreamerV3,ms_pacman,3,12.0,880.0,
+DreamerV3,ms_pacman,3,13.0,830.0,
+DreamerV3,ms_pacman,3,14.0,871.1111111111111,
+DreamerV3,ms_pacman,3,15.0,990.0,
+DreamerV3,ms_pacman,3,16.0,928.5714285714286,
+DreamerV3,ms_pacman,3,17.0,968.75,
+DreamerV3,ms_pacman,3,18.0,1191.6666666666667,
+DreamerV3,ms_pacman,3,19.0,1598.3333333333333,
+DreamerV3,ms_pacman,4,0.0,215.0,
+DreamerV3,ms_pacman,4,1.0,383.75,
+DreamerV3,ms_pacman,4,2.0,401.1111111111111,
+DreamerV3,ms_pacman,4,3.0,473.75,
+DreamerV3,ms_pacman,4,4.0,452.5,
+DreamerV3,ms_pacman,4,5.0,430.0,
+DreamerV3,ms_pacman,4,6.0,523.75,
+DreamerV3,ms_pacman,4,7.0,488.0,
+DreamerV3,ms_pacman,4,8.0,1067.142857142857,
+DreamerV3,ms_pacman,4,9.0,1055.0,
+DreamerV3,ms_pacman,4,10.0,1262.857142857143,
+DreamerV3,ms_pacman,4,11.0,1268.3333333333333,
+DreamerV3,ms_pacman,4,12.0,1097.5,
+DreamerV3,ms_pacman,4,13.0,1130.0,
+DreamerV3,ms_pacman,4,14.0,1325.0,
+DreamerV3,ms_pacman,4,15.0,1226.6666666666667,
+DreamerV3,ms_pacman,4,16.0,1271.6666666666667,
+DreamerV3,ms_pacman,4,17.0,1770.0,
+DreamerV3,ms_pacman,4,18.0,1948.0,
+DreamerV3,ms_pacman,4,19.0,1428.3333333333333,
+DreamerV3,pong,0,0.0,-20.6,
+DreamerV3,pong,0,1.0,-20.5,
+DreamerV3,pong,0,2.0,-20.5,
+DreamerV3,pong,0,3.0,-21.0,
+DreamerV3,pong,0,4.0,-20.666666666666668,
+DreamerV3,pong,0,5.0,-20.833333333333332,
+DreamerV3,pong,0,6.0,-19.8,
+DreamerV3,pong,0,7.0,-19.0,
+DreamerV3,pong,0,8.0,-17.0,
+DreamerV3,pong,0,9.0,-14.666666666666666,
+DreamerV3,pong,0,10.0,-16.0,
+DreamerV3,pong,0,11.0,-14.5,
+DreamerV3,pong,0,12.0,-17.333333333333332,
+DreamerV3,pong,0,13.0,-16.0,
+DreamerV3,pong,0,14.0,-13.5,
+DreamerV3,pong,0,15.0,-13.0,
+DreamerV3,pong,0,16.0,-16.5,
+DreamerV3,pong,0,17.0,-12.0,
+DreamerV3,pong,0,18.0,-8.0,
+DreamerV3,pong,0,19.0,-9.0,
+DreamerV3,pong,1,0.0,-20.0,
+DreamerV3,pong,1,1.0,-20.333333333333332,
+DreamerV3,pong,1,2.0,-21.0,
+DreamerV3,pong,1,3.0,-21.0,
+DreamerV3,pong,1,4.0,-20.833333333333332,
+DreamerV3,pong,1,5.0,-20.333333333333332,
+DreamerV3,pong,1,6.0,-20.8,
+DreamerV3,pong,1,7.0,-19.0,
+DreamerV3,pong,1,8.0,-15.5,
+DreamerV3,pong,1,9.0,-13.5,
+DreamerV3,pong,1,10.0,-12.666666666666666,
+DreamerV3,pong,1,11.0,-10.0,
+DreamerV3,pong,1,12.0,-9.0,
+DreamerV3,pong,1,13.0,-10.0,
+DreamerV3,pong,1,14.0,-2.5,
+DreamerV3,pong,1,15.0,-5.5,
+DreamerV3,pong,1,16.0,-11.5,
+DreamerV3,pong,1,17.0,-1.5,
+DreamerV3,pong,1,18.0,-11.0,
+DreamerV3,pong,1,19.0,6.0,
+DreamerV3,pong,2,0.0,-19.8,
+DreamerV3,pong,2,1.0,-21.0,
+DreamerV3,pong,2,2.0,-21.0,
+DreamerV3,pong,2,3.0,-20.833333333333332,
+DreamerV3,pong,2,4.0,-20.5,
+DreamerV3,pong,2,5.0,-20.0,
+DreamerV3,pong,2,6.0,-20.5,
+DreamerV3,pong,2,7.0,-17.0,
+DreamerV3,pong,2,8.0,-17.333333333333332,
+DreamerV3,pong,2,9.0,-13.0,
+DreamerV3,pong,2,10.0,-14.5,
+DreamerV3,pong,2,11.0,-14.0,
+DreamerV3,pong,2,12.0,-14.0,
+DreamerV3,pong,2,13.0,-17.666666666666668,
+DreamerV3,pong,2,14.0,-16.0,
+DreamerV3,pong,2,15.0,-14.5,
+DreamerV3,pong,2,16.0,-15.333333333333334,
+DreamerV3,pong,2,17.0,-13.0,
+DreamerV3,pong,2,18.0,-12.0,
+DreamerV3,pong,2,19.0,-9.5,
+DreamerV3,pong,3,0.0,-20.25,
+DreamerV3,pong,3,1.0,-20.666666666666668,
+DreamerV3,pong,3,2.0,-20.5,
+DreamerV3,pong,3,3.0,-20.333333333333332,
+DreamerV3,pong,3,4.0,-20.5,
+DreamerV3,pong,3,5.0,-20.666666666666668,
+DreamerV3,pong,3,6.0,-19.6,
+DreamerV3,pong,3,7.0,-15.333333333333334,
+DreamerV3,pong,3,8.0,-18.333333333333332,
+DreamerV3,pong,3,9.0,-16.333333333333332,
+DreamerV3,pong,3,10.0,-16.0,
+DreamerV3,pong,3,11.0,-16.0,
+DreamerV3,pong,3,12.0,-12.0,
+DreamerV3,pong,3,13.0,-16.5,
+DreamerV3,pong,3,14.0,-13.0,
+DreamerV3,pong,3,15.0,-9.0,
+DreamerV3,pong,3,16.0,-12.5,
+DreamerV3,pong,3,17.0,-7.0,
+DreamerV3,pong,3,18.0,-5.0,
+DreamerV3,pong,3,19.0,-8.0,
+DreamerV3,pong,4,0.0,-19.6,
+DreamerV3,pong,4,1.0,-20.5,
+DreamerV3,pong,4,2.0,-21.0,
+DreamerV3,pong,4,3.0,-20.833333333333332,
+DreamerV3,pong,4,4.0,-20.714285714285715,
+DreamerV3,pong,4,5.0,-21.0,
+DreamerV3,pong,4,6.0,-19.8,
+DreamerV3,pong,4,7.0,-18.666666666666668,
+DreamerV3,pong,4,8.0,-18.666666666666668,
+DreamerV3,pong,4,9.0,-18.5,
+DreamerV3,pong,4,10.0,-15.5,
+DreamerV3,pong,4,11.0,-15.0,
+DreamerV3,pong,4,12.0,-15.333333333333334,
+DreamerV3,pong,4,13.0,-14.5,
+DreamerV3,pong,4,14.0,-11.5,
+DreamerV3,pong,4,15.0,-16.333333333333332,
+DreamerV3,pong,4,16.0,-15.0,
+DreamerV3,pong,4,17.0,-10.0,
+DreamerV3,pong,4,18.0,-14.0,
+DreamerV3,pong,4,19.0,-3.0,
+DreamerV3,private_eye,0,0.0,100.0,
+DreamerV3,private_eye,0,1.0,100.0,
+DreamerV3,private_eye,0,2.0,100.0,
+DreamerV3,private_eye,0,3.0,100.0,
+DreamerV3,private_eye,0,4.0,100.0,
+DreamerV3,private_eye,0,5.0,100.0,
+DreamerV3,private_eye,0,6.0,100.0,
+DreamerV3,private_eye,0,7.0,100.0,
+DreamerV3,private_eye,0,8.0,100.0,
+DreamerV3,private_eye,0,9.0,100.0,
+DreamerV3,private_eye,0,10.0,-450.0,
+DreamerV3,private_eye,0,11.0,100.0,
+DreamerV3,private_eye,0,12.0,100.0,
+DreamerV3,private_eye,0,13.0,100.0,
+DreamerV3,private_eye,0,14.0,100.0,
+DreamerV3,private_eye,0,15.0,100.0,
+DreamerV3,private_eye,0,16.0,100.0,
+DreamerV3,private_eye,0,17.0,100.0,
+DreamerV3,private_eye,0,18.0,100.0,
+DreamerV3,private_eye,0,19.0,100.0,
+DreamerV3,private_eye,1,0.0,100.0,
+DreamerV3,private_eye,1,1.0,100.0,
+DreamerV3,private_eye,1,2.0,50.0,
+DreamerV3,private_eye,1,3.0,100.0,
+DreamerV3,private_eye,1,4.0,100.0,
+DreamerV3,private_eye,1,5.0,100.0,
+DreamerV3,private_eye,1,6.0,100.0,
+DreamerV3,private_eye,1,7.0,100.0,
+DreamerV3,private_eye,1,8.0,100.0,
+DreamerV3,private_eye,1,9.0,100.0,
+DreamerV3,private_eye,1,10.0,100.0,
+DreamerV3,private_eye,1,11.0,100.0,
+DreamerV3,private_eye,1,12.0,100.0,
+DreamerV3,private_eye,1,13.0,-1000.0,
+DreamerV3,private_eye,1,14.0,100.0,
+DreamerV3,private_eye,1,15.0,100.0,
+DreamerV3,private_eye,1,16.0,100.0,
+DreamerV3,private_eye,1,17.0,100.0,
+DreamerV3,private_eye,1,18.0,100.0,
+DreamerV3,private_eye,1,19.0,100.0,
+DreamerV3,private_eye,2,0.0,100.0,
+DreamerV3,private_eye,2,1.0,-29.0,
+DreamerV3,private_eye,2,2.0,0.0,
+DreamerV3,private_eye,2,3.0,50.0,
+DreamerV3,private_eye,2,4.0,100.0,
+DreamerV3,private_eye,2,5.0,100.0,
+DreamerV3,private_eye,2,6.0,100.0,
+DreamerV3,private_eye,2,7.0,100.0,
+DreamerV3,private_eye,2,8.0,100.0,
+DreamerV3,private_eye,2,9.0,100.0,
+DreamerV3,private_eye,2,10.0,100.0,
+DreamerV3,private_eye,2,11.0,100.0,
+DreamerV3,private_eye,2,12.0,100.0,
+DreamerV3,private_eye,2,13.0,100.0,
+DreamerV3,private_eye,2,14.0,100.0,
+DreamerV3,private_eye,2,15.0,100.0,
+DreamerV3,private_eye,2,16.0,100.0,
+DreamerV3,private_eye,2,17.0,100.0,
+DreamerV3,private_eye,2,18.0,100.0,
+DreamerV3,private_eye,2,19.0,100.0,
+DreamerV3,private_eye,3,0.0,100.0,
+DreamerV3,private_eye,3,1.0,100.0,
+DreamerV3,private_eye,3,2.0,-500.0,
+DreamerV3,private_eye,3,3.0,50.0,
+DreamerV3,private_eye,3,4.0,100.0,
+DreamerV3,private_eye,3,5.0,100.0,
+DreamerV3,private_eye,3,6.0,100.0,
+DreamerV3,private_eye,3,7.0,100.0,
+DreamerV3,private_eye,3,8.0,100.0,
+DreamerV3,private_eye,3,9.0,100.0,
+DreamerV3,private_eye,3,10.0,100.0,
+DreamerV3,private_eye,3,11.0,100.0,
+DreamerV3,private_eye,3,12.0,100.0,
+DreamerV3,private_eye,3,13.0,100.0,
+DreamerV3,private_eye,3,14.0,100.0,
+DreamerV3,private_eye,3,15.0,100.0,
+DreamerV3,private_eye,3,16.0,100.0,
+DreamerV3,private_eye,3,17.0,100.0,
+DreamerV3,private_eye,3,18.0,100.0,
+DreamerV3,private_eye,3,19.0,100.0,
+DreamerV3,private_eye,4,0.0,100.0,
+DreamerV3,private_eye,4,1.0,65.0,
+DreamerV3,private_eye,4,2.0,1987.0,
+DreamerV3,private_eye,4,3.0,1809.0,
+DreamerV3,private_eye,4,4.0,4235.0,
+DreamerV3,private_eye,4,5.0,4629.5,
+DreamerV3,private_eye,4,6.0,-400.0,
+DreamerV3,private_eye,4,7.0,-132.0,
+DreamerV3,private_eye,4,8.0,-201.0,
+DreamerV3,private_eye,4,9.0,-253.0,
+DreamerV3,private_eye,4,10.0,-300.0,
+DreamerV3,private_eye,4,11.0,-550.0,
+DreamerV3,private_eye,4,12.0,1597.0,
+DreamerV3,private_eye,4,13.0,4100.0,
+DreamerV3,private_eye,4,14.0,4431.0,
+DreamerV3,private_eye,4,15.0,1349.5,
+DreamerV3,private_eye,4,16.0,2266.0,
+DreamerV3,private_eye,4,17.0,3826.5,
+DreamerV3,private_eye,4,18.0,4285.0,
+DreamerV3,private_eye,4,19.0,3884.0,
+DreamerV3,qbert,0,0.0,107.14285714285714,
+DreamerV3,qbert,0,1.0,158.33333333333334,
+DreamerV3,qbert,0,2.0,425.0,
+DreamerV3,qbert,0,3.0,298.0769230769231,
+DreamerV3,qbert,0,4.0,350.0,
+DreamerV3,qbert,0,5.0,542.5,
+DreamerV3,qbert,0,6.0,539.5833333333334,
+DreamerV3,qbert,0,7.0,559.0909090909091,
+DreamerV3,qbert,0,8.0,465.90909090909093,
+DreamerV3,qbert,0,9.0,564.5833333333334,
+DreamerV3,qbert,0,10.0,770.0,
+DreamerV3,qbert,0,11.0,805.5555555555555,
+DreamerV3,qbert,0,12.0,757.5,
+DreamerV3,qbert,0,13.0,800.0,
+DreamerV3,qbert,0,14.0,1119.4444444444443,
+DreamerV3,qbert,0,15.0,862.5,
+DreamerV3,qbert,0,16.0,1337.5,
+DreamerV3,qbert,0,17.0,996.875,
+DreamerV3,qbert,0,18.0,1184.375,
+DreamerV3,qbert,0,19.0,1171.875,
+DreamerV3,qbert,1,0.0,146.66666666666666,
+DreamerV3,qbert,1,1.0,226.66666666666666,
+DreamerV3,qbert,1,2.0,178.84615384615384,
+DreamerV3,qbert,1,3.0,286.3636363636364,
+DreamerV3,qbert,1,4.0,382.6923076923077,
+DreamerV3,qbert,1,5.0,481.6666666666667,
+DreamerV3,qbert,1,6.0,654.1666666666666,
+DreamerV3,qbert,1,7.0,580.3571428571429,
+DreamerV3,qbert,1,8.0,648.0769230769231,
+DreamerV3,qbert,1,9.0,619.6428571428571,
+DreamerV3,qbert,1,10.0,656.25,
+DreamerV3,qbert,1,11.0,706.8181818181819,
+DreamerV3,qbert,1,12.0,750.0,
+DreamerV3,qbert,1,13.0,770.0,
+DreamerV3,qbert,1,14.0,722.7272727272727,
+DreamerV3,qbert,1,15.0,735.0,
+DreamerV3,qbert,1,16.0,722.7272727272727,
+DreamerV3,qbert,1,17.0,735.0,
+DreamerV3,qbert,1,18.0,1072.5,
+DreamerV3,qbert,1,19.0,783.3333333333334,
+DreamerV3,qbert,2,0.0,196.42857142857142,
+DreamerV3,qbert,2,1.0,134.375,
+DreamerV3,qbert,2,2.0,276.7857142857143,
+DreamerV3,qbert,2,3.0,387.5,
+DreamerV3,qbert,2,4.0,375.0,
+DreamerV3,qbert,2,5.0,555.7692307692307,
+DreamerV3,qbert,2,6.0,620.8333333333334,
+DreamerV3,qbert,2,7.0,642.3076923076923,
+DreamerV3,qbert,2,8.0,672.9166666666666,
+DreamerV3,qbert,2,9.0,660.4166666666666,
+DreamerV3,qbert,2,10.0,662.5,
+DreamerV3,qbert,2,11.0,685.4166666666666,
+DreamerV3,qbert,2,12.0,697.7272727272727,
+DreamerV3,qbert,2,13.0,690.0,
+DreamerV3,qbert,2,14.0,772.5,
+DreamerV3,qbert,2,15.0,1172.2222222222222,
+DreamerV3,qbert,2,16.0,762.5,
+DreamerV3,qbert,2,17.0,1127.7777777777778,
+DreamerV3,qbert,2,18.0,1130.5555555555557,
+DreamerV3,qbert,2,19.0,1603.125,
+DreamerV3,qbert,3,0.0,158.92857142857142,
+DreamerV3,qbert,3,1.0,109.375,
+DreamerV3,qbert,3,2.0,210.9375,
+DreamerV3,qbert,3,3.0,257.3529411764706,
+DreamerV3,qbert,3,4.0,273.4375,
+DreamerV3,qbert,3,5.0,298.4375,
+DreamerV3,qbert,3,6.0,295.0,
+DreamerV3,qbert,3,7.0,289.0625,
+DreamerV3,qbert,3,8.0,307.8125,
+DreamerV3,qbert,3,9.0,378.3333333333333,
+DreamerV3,qbert,3,10.0,344.64285714285717,
+DreamerV3,qbert,3,11.0,609.6153846153846,
+DreamerV3,qbert,3,12.0,704.5454545454545,
+DreamerV3,qbert,3,13.0,613.6363636363636,
+DreamerV3,qbert,3,14.0,727.5,
+DreamerV3,qbert,3,15.0,713.6363636363636,
+DreamerV3,qbert,3,16.0,735.0,
+DreamerV3,qbert,3,17.0,761.3636363636364,
+DreamerV3,qbert,3,18.0,872.2222222222222,
+DreamerV3,qbert,3,19.0,1122.7272727272727,
+DreamerV3,qbert,4,0.0,207.14285714285714,
+DreamerV3,qbert,4,1.0,143.33333333333334,
+DreamerV3,qbert,4,2.0,275.0,
+DreamerV3,qbert,4,3.0,303.125,
+DreamerV3,qbert,4,4.0,367.85714285714283,
+DreamerV3,qbert,4,5.0,476.9230769230769,
+DreamerV3,qbert,4,6.0,620.8333333333334,
+DreamerV3,qbert,4,7.0,539.2857142857143,
+DreamerV3,qbert,4,8.0,681.25,
+DreamerV3,qbert,4,9.0,680.7692307692307,
+DreamerV3,qbert,4,10.0,702.2727272727273,
+DreamerV3,qbert,4,11.0,755.0,
+DreamerV3,qbert,4,12.0,735.4166666666666,
+DreamerV3,qbert,4,13.0,702.0833333333334,
+DreamerV3,qbert,4,14.0,688.6363636363636,
+DreamerV3,qbert,4,15.0,712.5,
+DreamerV3,qbert,4,16.0,720.8333333333334,
+DreamerV3,qbert,4,17.0,750.0,
+DreamerV3,qbert,4,18.0,790.9090909090909,
+DreamerV3,qbert,4,19.0,775.0,
+DreamerV3,road_runner,0,0.0,100.0,
+DreamerV3,road_runner,0,1.0,937.5,
+DreamerV3,road_runner,0,2.0,928.5714285714286,
+DreamerV3,road_runner,0,3.0,2075.0,
+DreamerV3,road_runner,0,4.0,2875.0,
+DreamerV3,road_runner,0,5.0,4857.142857142857,
+DreamerV3,road_runner,0,6.0,8150.0,
+DreamerV3,road_runner,0,7.0,10520.0,
+DreamerV3,road_runner,0,8.0,10000.0,
+DreamerV3,road_runner,0,9.0,14920.0,
+DreamerV3,road_runner,0,10.0,17525.0,
+DreamerV3,road_runner,0,11.0,16250.0,
+DreamerV3,road_runner,0,12.0,18580.0,
+DreamerV3,road_runner,0,13.0,18000.0,
+DreamerV3,road_runner,0,14.0,18650.0,
+DreamerV3,road_runner,0,15.0,16200.0,
+DreamerV3,road_runner,0,16.0,17950.0,
+DreamerV3,road_runner,0,17.0,17200.0,
+DreamerV3,road_runner,0,18.0,16760.0,
+DreamerV3,road_runner,0,19.0,18750.0,
+DreamerV3,road_runner,1,0.0,8.333333333333334,
+DreamerV3,road_runner,1,1.0,514.2857142857143,
+DreamerV3,road_runner,1,2.0,1061.5384615384614,
+DreamerV3,road_runner,1,3.0,1812.5,
+DreamerV3,road_runner,1,4.0,2875.0,
+DreamerV3,road_runner,1,5.0,2850.0,
+DreamerV3,road_runner,1,6.0,3957.1428571428573,
+DreamerV3,road_runner,1,7.0,7087.5,
+DreamerV3,road_runner,1,8.0,10960.0,
+DreamerV3,road_runner,1,9.0,11060.0,
+DreamerV3,road_runner,1,10.0,13440.0,
+DreamerV3,road_runner,1,11.0,18250.0,
+DreamerV3,road_runner,1,12.0,17125.0,
+DreamerV3,road_runner,1,13.0,18550.0,
+DreamerV3,road_runner,1,14.0,17175.0,
+DreamerV3,road_runner,1,15.0,16150.0,
+DreamerV3,road_runner,1,16.0,18125.0,
+DreamerV3,road_runner,1,17.0,17100.0,
+DreamerV3,road_runner,1,18.0,16680.0,
+DreamerV3,road_runner,1,19.0,16866.666666666668,
+DreamerV3,road_runner,2,0.0,11.11111111111111,
+DreamerV3,road_runner,2,1.0,527.2727272727273,
+DreamerV3,road_runner,2,2.0,950.0,
+DreamerV3,road_runner,2,3.0,1790.0,
+DreamerV3,road_runner,2,4.0,4842.857142857143,
+DreamerV3,road_runner,2,5.0,6916.666666666667,
+DreamerV3,road_runner,2,6.0,7050.0,
+DreamerV3,road_runner,2,7.0,7414.285714285715,
+DreamerV3,road_runner,2,8.0,10883.333333333334,
+DreamerV3,road_runner,2,9.0,13400.0,
+DreamerV3,road_runner,2,10.0,12020.0,
+DreamerV3,road_runner,2,11.0,13280.0,
+DreamerV3,road_runner,2,12.0,14383.333333333334,
+DreamerV3,road_runner,2,13.0,16375.0,
+DreamerV3,road_runner,2,14.0,17075.0,
+DreamerV3,road_runner,2,15.0,16540.0,
+DreamerV3,road_runner,2,16.0,15425.0,
+DreamerV3,road_runner,2,17.0,14416.666666666666,
+DreamerV3,road_runner,2,18.0,17450.0,
+DreamerV3,road_runner,2,19.0,16925.0,
+DreamerV3,road_runner,3,0.0,0.0,
+DreamerV3,road_runner,3,1.0,168.42105263157896,
+DreamerV3,road_runner,3,2.0,850.0,
+DreamerV3,road_runner,3,3.0,1000.0,
+DreamerV3,road_runner,3,4.0,2916.6666666666665,
+DreamerV3,road_runner,3,5.0,4883.333333333333,
+DreamerV3,road_runner,3,6.0,6133.333333333333,
+DreamerV3,road_runner,3,7.0,7760.0,
+DreamerV3,road_runner,3,8.0,7940.0,
+DreamerV3,road_runner,3,9.0,7360.0,
+DreamerV3,road_runner,3,10.0,6860.0,
+DreamerV3,road_runner,3,11.0,8900.0,
+DreamerV3,road_runner,3,12.0,7500.0,
+DreamerV3,road_runner,3,13.0,8860.0,
+DreamerV3,road_runner,3,14.0,7780.0,
+DreamerV3,road_runner,3,15.0,8950.0,
+DreamerV3,road_runner,3,16.0,7820.0,
+DreamerV3,road_runner,3,17.0,8160.0,
+DreamerV3,road_runner,3,18.0,7860.0,
+DreamerV3,road_runner,3,19.0,7640.0,
+DreamerV3,road_runner,4,0.0,16.666666666666668,
+DreamerV3,road_runner,4,1.0,238.46153846153845,
+DreamerV3,road_runner,4,2.0,1687.5,
+DreamerV3,road_runner,4,3.0,2516.6666666666665,
+DreamerV3,road_runner,4,4.0,6433.333333333333,
+DreamerV3,road_runner,4,5.0,6750.0,
+DreamerV3,road_runner,4,6.0,6750.0,
+DreamerV3,road_runner,4,7.0,6120.0,
+DreamerV3,road_runner,4,8.0,7800.0,
+DreamerV3,road_runner,4,9.0,7180.0,
+DreamerV3,road_runner,4,10.0,6100.0,
+DreamerV3,road_runner,4,11.0,6633.333333333333,
+DreamerV3,road_runner,4,12.0,6940.0,
+DreamerV3,road_runner,4,13.0,8100.0,
+DreamerV3,road_runner,4,14.0,6580.0,
+DreamerV3,road_runner,4,15.0,7433.333333333333,
+DreamerV3,road_runner,4,16.0,5980.0,
+DreamerV3,road_runner,4,17.0,7283.333333333333,
+DreamerV3,road_runner,4,18.0,7625.0,
+DreamerV3,road_runner,4,19.0,7066.666666666667,
+DreamerV3,seaquest,0,0.0,86.66666666666667,
+DreamerV3,seaquest,0,1.0,86.0,
+DreamerV3,seaquest,0,2.0,148.57142857142858,
+DreamerV3,seaquest,0,3.0,176.66666666666666,
+DreamerV3,seaquest,0,4.0,344.0,
+DreamerV3,seaquest,0,5.0,345.0,
+DreamerV3,seaquest,0,6.0,445.0,
+DreamerV3,seaquest,0,7.0,586.6666666666666,
+DreamerV3,seaquest,0,8.0,473.3333333333333,
+DreamerV3,seaquest,0,9.0,580.0,
+DreamerV3,seaquest,0,10.0,440.0,
+DreamerV3,seaquest,0,11.0,404.0,
+DreamerV3,seaquest,0,12.0,460.0,
+DreamerV3,seaquest,0,13.0,510.0,
+DreamerV3,seaquest,0,14.0,620.0,
+DreamerV3,seaquest,0,15.0,495.0,
+DreamerV3,seaquest,0,16.0,350.0,
+DreamerV3,seaquest,0,17.0,395.0,
+DreamerV3,seaquest,0,18.0,515.0,
+DreamerV3,seaquest,0,19.0,566.6666666666666,
+DreamerV3,seaquest,1,0.0,76.0,
+DreamerV3,seaquest,1,1.0,66.0,
+DreamerV3,seaquest,1,2.0,94.54545454545455,
+DreamerV3,seaquest,1,3.0,276.0,
+DreamerV3,seaquest,1,4.0,355.0,
+DreamerV3,seaquest,1,5.0,305.0,
+DreamerV3,seaquest,1,6.0,324.0,
+DreamerV3,seaquest,1,7.0,393.3333333333333,
+DreamerV3,seaquest,1,8.0,313.3333333333333,
+DreamerV3,seaquest,1,9.0,433.3333333333333,
+DreamerV3,seaquest,1,10.0,372.0,
+DreamerV3,seaquest,1,11.0,506.6666666666667,
+DreamerV3,seaquest,1,12.0,435.0,
+DreamerV3,seaquest,1,13.0,340.0,
+DreamerV3,seaquest,1,14.0,470.0,
+DreamerV3,seaquest,1,15.0,395.0,
+DreamerV3,seaquest,1,16.0,368.0,
+DreamerV3,seaquest,1,17.0,405.0,
+DreamerV3,seaquest,1,18.0,368.0,
+DreamerV3,seaquest,1,19.0,350.0,
+DreamerV3,seaquest,2,0.0,55.55555555555556,
+DreamerV3,seaquest,2,1.0,174.28571428571428,
+DreamerV3,seaquest,2,2.0,122.22222222222223,
+DreamerV3,seaquest,2,3.0,244.0,
+DreamerV3,seaquest,2,4.0,340.0,
+DreamerV3,seaquest,2,5.0,192.0,
+DreamerV3,seaquest,2,6.0,800.0,
+DreamerV3,seaquest,2,7.0,550.0,
+DreamerV3,seaquest,2,8.0,546.6666666666666,
+DreamerV3,seaquest,2,9.0,390.0,
+DreamerV3,seaquest,2,10.0,500.0,
+DreamerV3,seaquest,2,11.0,380.0,
+DreamerV3,seaquest,2,12.0,413.3333333333333,
+DreamerV3,seaquest,2,13.0,495.0,
+DreamerV3,seaquest,2,14.0,380.0,
+DreamerV3,seaquest,2,15.0,395.0,
+DreamerV3,seaquest,2,16.0,460.0,
+DreamerV3,seaquest,2,17.0,465.0,
+DreamerV3,seaquest,2,18.0,400.0,
+DreamerV3,seaquest,2,19.0,315.0,
+DreamerV3,seaquest,3,0.0,75.55555555555556,
+DreamerV3,seaquest,3,1.0,97.5,
+DreamerV3,seaquest,3,2.0,216.66666666666666,
+DreamerV3,seaquest,3,3.0,180.0,
+DreamerV3,seaquest,3,4.0,313.3333333333333,
+DreamerV3,seaquest,3,5.0,280.0,
+DreamerV3,seaquest,3,6.0,420.0,
+DreamerV3,seaquest,3,7.0,315.0,
+DreamerV3,seaquest,3,8.0,566.6666666666666,
+DreamerV3,seaquest,3,9.0,433.3333333333333,
+DreamerV3,seaquest,3,10.0,396.0,
+DreamerV3,seaquest,3,11.0,345.0,
+DreamerV3,seaquest,3,12.0,276.6666666666667,
+DreamerV3,seaquest,3,13.0,355.0,
+DreamerV3,seaquest,3,14.0,264.0,
+DreamerV3,seaquest,3,15.0,400.0,
+DreamerV3,seaquest,3,16.0,430.0,
+DreamerV3,seaquest,3,17.0,350.0,
+DreamerV3,seaquest,3,18.0,450.0,
+DreamerV3,seaquest,3,19.0,365.0,
+DreamerV3,seaquest,4,0.0,157.14285714285714,
+DreamerV3,seaquest,4,1.0,142.5,
+DreamerV3,seaquest,4,2.0,345.0,
+DreamerV3,seaquest,4,3.0,263.3333333333333,
+DreamerV3,seaquest,4,4.0,268.0,
+DreamerV3,seaquest,4,5.0,325.0,
+DreamerV3,seaquest,4,6.0,308.0,
+DreamerV3,seaquest,4,7.0,304.0,
+DreamerV3,seaquest,4,8.0,290.0,
+DreamerV3,seaquest,4,9.0,340.0,
+DreamerV3,seaquest,4,10.0,262.85714285714283,
+DreamerV3,seaquest,4,11.0,276.6666666666667,
+DreamerV3,seaquest,4,12.0,260.0,
+DreamerV3,seaquest,4,13.0,352.0,
+DreamerV3,seaquest,4,14.0,286.6666666666667,
+DreamerV3,seaquest,4,15.0,300.0,
+DreamerV3,seaquest,4,16.0,320.0,
+DreamerV3,seaquest,4,17.0,400.0,
+DreamerV3,seaquest,4,18.0,415.0,
+DreamerV3,seaquest,4,19.0,340.0,
+DreamerV3,up_n_down,0,0.0,350.0,
+DreamerV3,up_n_down,0,1.0,1390.0,
+DreamerV3,up_n_down,0,2.0,1596.6666666666667,
+DreamerV3,up_n_down,0,3.0,3466.0,
+DreamerV3,up_n_down,0,4.0,3800.0,
+DreamerV3,up_n_down,0,8.0,58370.0,
+DreamerV3,up_n_down,0,9.0,11383.333333333334,
+DreamerV3,up_n_down,0,10.0,3975.0,
+DreamerV3,up_n_down,0,11.0,18560.0,
+DreamerV3,up_n_down,0,12.0,13020.0,
+DreamerV3,up_n_down,0,14.0,18295.0,
+DreamerV3,up_n_down,0,15.0,16010.0,
+DreamerV3,up_n_down,0,16.0,14260.0,
+DreamerV3,up_n_down,0,17.0,26690.0,
+DreamerV3,up_n_down,0,18.0,23530.0,
+DreamerV3,up_n_down,0,19.0,10620.0,
+DreamerV3,up_n_down,1,0.0,501.1111111111111,
+DreamerV3,up_n_down,1,1.0,980.0,
+DreamerV3,up_n_down,1,2.0,766.25,
+DreamerV3,up_n_down,1,3.0,1566.6666666666667,
+DreamerV3,up_n_down,1,4.0,3440.0,
+DreamerV3,up_n_down,1,5.0,527.1428571428571,
+DreamerV3,up_n_down,1,6.0,3030.0,
+DreamerV3,up_n_down,1,7.0,7820.0,
+DreamerV3,up_n_down,1,13.0,46370.0,
+DreamerV3,up_n_down,1,14.0,2916.0,
+DreamerV3,up_n_down,1,15.0,1656.6666666666667,
+DreamerV3,up_n_down,1,17.0,21490.0,
+DreamerV3,up_n_down,1,18.0,23530.0,
+DreamerV3,up_n_down,2,0.0,694.4444444444445,
+DreamerV3,up_n_down,2,1.0,1146.6666666666667,
+DreamerV3,up_n_down,2,2.0,842.5,
+DreamerV3,up_n_down,2,3.0,942.2222222222222,
+DreamerV3,up_n_down,2,4.0,1685.5555555555557,
+DreamerV3,up_n_down,2,5.0,2145.0,
+DreamerV3,up_n_down,2,6.0,2427.5,
+DreamerV3,up_n_down,2,7.0,2411.4285714285716,
+DreamerV3,up_n_down,2,8.0,2242.8571428571427,
+DreamerV3,up_n_down,2,9.0,2104.285714285714,
+DreamerV3,up_n_down,2,10.0,2191.4285714285716,
+DreamerV3,up_n_down,2,11.0,2332.8571428571427,
+DreamerV3,up_n_down,2,12.0,3078.3333333333335,
+DreamerV3,up_n_down,2,13.0,3711.6666666666665,
+DreamerV3,up_n_down,2,14.0,3751.4285714285716,
+DreamerV3,up_n_down,2,15.0,3738.3333333333335,
+DreamerV3,up_n_down,2,16.0,4161.666666666667,
+DreamerV3,up_n_down,2,17.0,4544.0,
+DreamerV3,up_n_down,2,18.0,3231.25,
+DreamerV3,up_n_down,2,19.0,3826.6666666666665,
+DreamerV3,up_n_down,3,0.0,345.0,
+DreamerV3,up_n_down,3,1.0,1236.25,
+DreamerV3,up_n_down,3,2.0,1428.888888888889,
+DreamerV3,up_n_down,3,3.0,2330.0,
+DreamerV3,up_n_down,3,4.0,29670.0,
+DreamerV3,up_n_down,3,5.0,5585.0,
+DreamerV3,up_n_down,3,6.0,7970.0,
+DreamerV3,up_n_down,3,7.0,6146.666666666667,
+DreamerV3,up_n_down,3,11.0,73020.0,
+DreamerV3,up_n_down,3,12.0,4532.0,
+DreamerV3,up_n_down,3,13.0,8060.0,
+DreamerV3,up_n_down,3,14.0,16500.0,
+DreamerV3,up_n_down,3,15.0,8615.0,
+DreamerV3,up_n_down,3,17.0,46610.0,
+DreamerV3,up_n_down,3,18.0,5000.0,
+DreamerV3,up_n_down,3,19.0,31650.0,
+DreamerV3,up_n_down,4,0.0,370.0,
+DreamerV3,up_n_down,4,1.0,987.5,
+DreamerV3,up_n_down,4,2.0,1290.0,
+DreamerV3,up_n_down,4,3.0,1702.857142857143,
+DreamerV3,up_n_down,4,4.0,5264.0,
+DreamerV3,up_n_down,4,5.0,6702.5,
+DreamerV3,up_n_down,4,7.0,69460.0,
+DreamerV3,up_n_down,4,12.0,189400.0,
+DreamerV3,up_n_down,4,13.0,41040.0,
+DreamerV3,up_n_down,4,16.0,141240.0,
+Full CoRe-WM,alien,1,,201.0,10000.0
+Full CoRe-WM,alien,1,,223.0,20000.0
+Full CoRe-WM,alien,1,,281.0,30000.0
+Full CoRe-WM,alien,1,,361.0,40000.0
+Full CoRe-WM,alien,1,,514.0,50000.0
+Full CoRe-WM,alien,1,,428.0,60000.0
+Full CoRe-WM,alien,1,,394.0,70000.0
+Full CoRe-WM,alien,1,,361.0,80000.0
+Full CoRe-WM,alien,1,,518.0,90000.0
+Full CoRe-WM,alien,1,,481.1,100000.0
+Full CoRe-WM,alien,2,,193.0,10000.0
+Full CoRe-WM,alien,2,,283.0,20000.0
+Full CoRe-WM,alien,2,,289.0,30000.0
+Full CoRe-WM,alien,2,,325.0,40000.0
+Full CoRe-WM,alien,2,,359.0,50000.0
+Full CoRe-WM,alien,2,,91.0,60000.0
+Full CoRe-WM,alien,2,,514.0,70000.0
+Full CoRe-WM,alien,2,,446.0,80000.0
+Full CoRe-WM,alien,2,,400.0,90000.0
+Full CoRe-WM,alien,2,,441.8,100000.0
+Full CoRe-WM,alien,3,,208.0,10000.0
+Full CoRe-WM,alien,3,,246.0,20000.0
+Full CoRe-WM,alien,3,,201.0,30000.0
+Full CoRe-WM,alien,3,,430.0,40000.0
+Full CoRe-WM,alien,3,,188.0,50000.0
+Full CoRe-WM,alien,3,,306.0,60000.0
+Full CoRe-WM,alien,3,,529.0,70000.0
+Full CoRe-WM,alien,3,,409.0,80000.0
+Full CoRe-WM,alien,3,,417.0,90000.0
+Full CoRe-WM,alien,3,,527.3,100000.0
+Full CoRe-WM,alien,4,,194.0,10000.0
+Full CoRe-WM,alien,4,,298.0,20000.0
+Full CoRe-WM,alien,4,,110.0,30000.0
+Full CoRe-WM,alien,4,,381.0,40000.0
+Full CoRe-WM,alien,4,,415.0,50000.0
+Full CoRe-WM,alien,4,,395.0,60000.0
+Full CoRe-WM,alien,4,,512.0,70000.0
+Full CoRe-WM,alien,4,,369.0,80000.0
+Full CoRe-WM,alien,4,,374.0,90000.0
+Full CoRe-WM,alien,4,,489.5,100000.0
+Full CoRe-WM,amidar,0,,9.7,10000.0
+Full CoRe-WM,amidar,0,,31.0,20000.0
+Full CoRe-WM,amidar,0,,41.1,30000.0
+Full CoRe-WM,amidar,0,,57.8,40000.0
+Full CoRe-WM,amidar,0,,92.0,50000.0
+Full CoRe-WM,amidar,0,,62.7,60000.0
+Full CoRe-WM,amidar,0,,84.0,70000.0
+Full CoRe-WM,amidar,0,,117.2,80000.0
+Full CoRe-WM,amidar,0,,129.2,90000.0
+Full CoRe-WM,amidar,0,,131.67,100000.0
+Full CoRe-WM,amidar,1,,3.0,10000.0
+Full CoRe-WM,amidar,1,,4.5,20000.0
+Full CoRe-WM,amidar,1,,58.8,30000.0
+Full CoRe-WM,amidar,1,,49.4,40000.0
+Full CoRe-WM,amidar,1,,61.8,50000.0
+Full CoRe-WM,amidar,1,,93.5,60000.0
+Full CoRe-WM,amidar,1,,119.1,70000.0
+Full CoRe-WM,amidar,1,,92.9,80000.0
+Full CoRe-WM,amidar,1,,108.2,90000.0
+Full CoRe-WM,amidar,1,,148.54,100000.0
+Full CoRe-WM,amidar,2,,2.8,10000.0
+Full CoRe-WM,amidar,2,,32.2,20000.0
+Full CoRe-WM,amidar,2,,84.2,30000.0
+Full CoRe-WM,amidar,2,,69.3,40000.0
+Full CoRe-WM,amidar,2,,73.1,50000.0
+Full CoRe-WM,amidar,2,,68.0,60000.0
+Full CoRe-WM,amidar,2,,84.0,70000.0
+Full CoRe-WM,amidar,2,,70.3,80000.0
+Full CoRe-WM,amidar,2,,88.8,90000.0
+Full CoRe-WM,amidar,2,,77.72,100000.0
+Full CoRe-WM,amidar,3,,18.8,10000.0
+Full CoRe-WM,amidar,3,,35.0,20000.0
+Full CoRe-WM,amidar,3,,48.5,30000.0
+Full CoRe-WM,amidar,3,,53.2,40000.0
+Full CoRe-WM,amidar,3,,42.4,50000.0
+Full CoRe-WM,amidar,3,,73.5,60000.0
+Full CoRe-WM,amidar,3,,101.4,70000.0
+Full CoRe-WM,amidar,3,,81.9,80000.0
+Full CoRe-WM,amidar,3,,93.6,90000.0
+Full CoRe-WM,amidar,3,,131.02,100000.0
+Full CoRe-WM,amidar,4,,2.5,10000.0
+Full CoRe-WM,amidar,4,,42.4,20000.0
+Full CoRe-WM,amidar,4,,47.8,30000.0
+Full CoRe-WM,amidar,4,,72.7,40000.0
+Full CoRe-WM,amidar,4,,77.3,50000.0
+Full CoRe-WM,amidar,4,,64.6,60000.0
+Full CoRe-WM,amidar,4,,109.6,70000.0
+Full CoRe-WM,amidar,4,,119.9,80000.0
+Full CoRe-WM,amidar,4,,115.1,90000.0
+Full CoRe-WM,amidar,4,,73.99,100000.0
+Full CoRe-WM,assault,0,,84.0,10000.0
+Full CoRe-WM,assault,0,,394.8,20000.0
+Full CoRe-WM,assault,0,,571.2,30000.0
+Full CoRe-WM,assault,0,,384.3,40000.0
+Full CoRe-WM,assault,0,,487.2,50000.0
+Full CoRe-WM,assault,0,,501.9,60000.0
+Full CoRe-WM,assault,0,,527.1,70000.0
+Full CoRe-WM,assault,0,,606.9,80000.0
+Full CoRe-WM,assault,0,,672.0,90000.0
+Full CoRe-WM,assault,0,,648.9,100000.0
+Full CoRe-WM,assault,1,,245.7,10000.0
+Full CoRe-WM,assault,1,,445.2,20000.0
+Full CoRe-WM,assault,1,,455.7,30000.0
+Full CoRe-WM,assault,1,,541.8,40000.0
+Full CoRe-WM,assault,1,,632.1,50000.0
+Full CoRe-WM,assault,1,,529.2,60000.0
+Full CoRe-WM,assault,1,,678.3,70000.0
+Full CoRe-WM,assault,1,,585.9,80000.0
+Full CoRe-WM,assault,1,,680.4,90000.0
+Full CoRe-WM,assault,1,,652.89,100000.0
+Full CoRe-WM,assault,2,,199.5,10000.0
+Full CoRe-WM,assault,2,,333.9,20000.0
+Full CoRe-WM,assault,2,,401.1,30000.0
+Full CoRe-WM,assault,2,,546.0,40000.0
+Full CoRe-WM,assault,2,,653.1,50000.0
+Full CoRe-WM,assault,2,,655.2,60000.0
+Full CoRe-WM,assault,2,,525.0,70000.0
+Full CoRe-WM,assault,2,,573.3,80000.0
+Full CoRe-WM,assault,2,,703.5,90000.0
+Full CoRe-WM,assault,2,,598.92,100000.0
+Full CoRe-WM,assault,3,,184.8,10000.0
+Full CoRe-WM,assault,3,,386.4,20000.0
+Full CoRe-WM,assault,3,,537.6,30000.0
+Full CoRe-WM,assault,3,,462.0,40000.0
+Full CoRe-WM,assault,3,,499.8,50000.0
+Full CoRe-WM,assault,3,,592.2,60000.0
+Full CoRe-WM,assault,3,,560.7,70000.0
+Full CoRe-WM,assault,3,,615.3,80000.0
+Full CoRe-WM,assault,3,,638.4,90000.0
+Full CoRe-WM,assault,3,,643.44,100000.0
+Full CoRe-WM,assault,4,,258.3,10000.0
+Full CoRe-WM,assault,4,,415.8,20000.0
+Full CoRe-WM,assault,4,,562.8,30000.0
+Full CoRe-WM,assault,4,,529.2,40000.0
+Full CoRe-WM,assault,4,,571.2,50000.0
+Full CoRe-WM,assault,4,,514.5,60000.0
+Full CoRe-WM,assault,4,,665.7,70000.0
+Full CoRe-WM,assault,4,,535.5,80000.0
+Full CoRe-WM,assault,4,,642.6,90000.0
+Full CoRe-WM,assault,4,,588.31,100000.0
+Full CoRe-WM,asterix,0,,180.0,10000.0
+Full CoRe-WM,asterix,0,,225.0,20000.0
+Full CoRe-WM,asterix,0,,265.0,30000.0
+Full CoRe-WM,asterix,0,,305.0,40000.0
+Full CoRe-WM,asterix,0,,440.0,50000.0
+Full CoRe-WM,asterix,0,,295.0,60000.0
+Full CoRe-WM,asterix,0,,460.0,70000.0
+Full CoRe-WM,asterix,0,,370.0,80000.0
+Full CoRe-WM,asterix,0,,590.0,90000.0
+Full CoRe-WM,asterix,0,,520.5,100000.0
+Full CoRe-WM,asterix,1,,260.0,10000.0
+Full CoRe-WM,asterix,1,,205.0,20000.0
+Full CoRe-WM,asterix,1,,210.0,30000.0
+Full CoRe-WM,asterix,1,,220.0,40000.0
+Full CoRe-WM,asterix,1,,305.0,50000.0
+Full CoRe-WM,asterix,1,,365.0,60000.0
+Full CoRe-WM,asterix,1,,495.0,70000.0
+Full CoRe-WM,asterix,1,,520.0,80000.0
+Full CoRe-WM,asterix,1,,560.0,90000.0
+Full CoRe-WM,asterix,1,,531.0,100000.0
+Full CoRe-WM,asterix,2,,220.0,10000.0
+Full CoRe-WM,asterix,2,,115.0,20000.0
+Full CoRe-WM,asterix,2,,215.0,30000.0
+Full CoRe-WM,asterix,2,,245.0,40000.0
+Full CoRe-WM,asterix,2,,200.0,50000.0
+Full CoRe-WM,asterix,2,,415.0,60000.0
+Full CoRe-WM,asterix,2,,470.0,70000.0
+Full CoRe-WM,asterix,2,,430.0,80000.0
+Full CoRe-WM,asterix,2,,560.0,90000.0
+Full CoRe-WM,asterix,2,,563.0,100000.0
+Full CoRe-WM,asterix,3,,195.0,10000.0
+Full CoRe-WM,asterix,3,,235.0,20000.0
+Full CoRe-WM,asterix,3,,220.0,30000.0
+Full CoRe-WM,asterix,3,,265.0,40000.0
+Full CoRe-WM,asterix,3,,330.0,50000.0
+Full CoRe-WM,asterix,3,,435.0,60000.0
+Full CoRe-WM,asterix,3,,430.0,70000.0
+Full CoRe-WM,asterix,3,,480.0,80000.0
+Full CoRe-WM,asterix,3,,440.0,90000.0
+Full CoRe-WM,asterix,3,,563.5,100000.0
+Full CoRe-WM,asterix,4,,175.0,10000.0
+Full CoRe-WM,asterix,4,,305.0,20000.0
+Full CoRe-WM,asterix,4,,165.0,30000.0
+Full CoRe-WM,asterix,4,,195.0,40000.0
+Full CoRe-WM,asterix,4,,260.0,50000.0
+Full CoRe-WM,asterix,4,,260.0,60000.0
+Full CoRe-WM,asterix,4,,400.0,70000.0
+Full CoRe-WM,asterix,4,,500.0,80000.0
+Full CoRe-WM,asterix,4,,490.0,90000.0
+Full CoRe-WM,asterix,4,,546.5,100000.0
+Full CoRe-WM,bank_heist,0,,12.0,10000.0
+Full CoRe-WM,bank_heist,0,,19.0,20000.0
+Full CoRe-WM,bank_heist,0,,6.0,30000.0
+Full CoRe-WM,bank_heist,0,,19.0,40000.0
+Full CoRe-WM,bank_heist,0,,15.0,50000.0
+Full CoRe-WM,bank_heist,0,,29.0,60000.0
+Full CoRe-WM,bank_heist,0,,16.0,70000.0
+Full CoRe-WM,bank_heist,0,,17.0,80000.0
+Full CoRe-WM,bank_heist,0,,15.0,90000.0
+Full CoRe-WM,bank_heist,0,,28.2,100000.0
+Full CoRe-WM,bank_heist,1,,18.0,10000.0
+Full CoRe-WM,bank_heist,1,,16.0,20000.0
+Full CoRe-WM,bank_heist,1,,2.0,30000.0
+Full CoRe-WM,bank_heist,1,,23.0,40000.0
+Full CoRe-WM,bank_heist,1,,26.0,50000.0
+Full CoRe-WM,bank_heist,1,,24.0,60000.0
+Full CoRe-WM,bank_heist,1,,17.0,70000.0
+Full CoRe-WM,bank_heist,1,,24.0,80000.0
+Full CoRe-WM,bank_heist,1,,30.0,90000.0
+Full CoRe-WM,bank_heist,1,,25.9,100000.0
+Full CoRe-WM,bank_heist,2,,13.0,10000.0
+Full CoRe-WM,bank_heist,2,,8.0,20000.0
+Full CoRe-WM,bank_heist,2,,11.0,30000.0
+Full CoRe-WM,bank_heist,2,,15.0,40000.0
+Full CoRe-WM,bank_heist,2,,31.0,50000.0
+Full CoRe-WM,bank_heist,2,,13.0,60000.0
+Full CoRe-WM,bank_heist,2,,17.0,70000.0
+Full CoRe-WM,bank_heist,2,,18.0,80000.0
+Full CoRe-WM,bank_heist,2,,19.0,90000.0
+Full CoRe-WM,bank_heist,2,,28.4,100000.0
+Full CoRe-WM,bank_heist,3,,3.0,10000.0
+Full CoRe-WM,bank_heist,3,,5.0,20000.0
+Full CoRe-WM,bank_heist,3,,2.0,30000.0
+Full CoRe-WM,bank_heist,3,,9.0,40000.0
+Full CoRe-WM,bank_heist,3,,6.0,50000.0
+Full CoRe-WM,bank_heist,3,,12.0,60000.0
+Full CoRe-WM,bank_heist,3,,26.0,70000.0
+Full CoRe-WM,bank_heist,3,,19.0,80000.0
+Full CoRe-WM,bank_heist,3,,19.0,90000.0
+Full CoRe-WM,bank_heist,3,,18.6,100000.0
+Full CoRe-WM,bank_heist,4,,18.0,10000.0
+Full CoRe-WM,bank_heist,4,,11.0,20000.0
+Full CoRe-WM,bank_heist,4,,23.0,30000.0
+Full CoRe-WM,bank_heist,4,,19.0,40000.0
+Full CoRe-WM,bank_heist,4,,23.0,50000.0
+Full CoRe-WM,bank_heist,4,,24.0,60000.0
+Full CoRe-WM,bank_heist,4,,34.0,70000.0
+Full CoRe-WM,bank_heist,4,,25.0,80000.0
+Full CoRe-WM,bank_heist,4,,26.0,90000.0
+Full CoRe-WM,bank_heist,4,,34.3,100000.0
+Full CoRe-WM,battle_zone,0,,2400.0,10000.0
+Full CoRe-WM,battle_zone,0,,1600.0,20000.0
+Full CoRe-WM,battle_zone,0,,1400.0,30000.0
+Full CoRe-WM,battle_zone,0,,3300.0,40000.0
+Full CoRe-WM,battle_zone,0,,1600.0,50000.0
+Full CoRe-WM,battle_zone,0,,2200.0,60000.0
+Full CoRe-WM,battle_zone,0,,5400.0,70000.0
+Full CoRe-WM,battle_zone,0,,3700.0,80000.0
+Full CoRe-WM,battle_zone,0,,5000.0,90000.0
+Full CoRe-WM,battle_zone,0,,6020.0,100000.0
+Full CoRe-WM,battle_zone,1,,2100.0,10000.0
+Full CoRe-WM,battle_zone,1,,3900.0,20000.0
+Full CoRe-WM,battle_zone,1,,3200.0,30000.0
+Full CoRe-WM,battle_zone,1,,2800.0,40000.0
+Full CoRe-WM,battle_zone,1,,400.0,50000.0
+Full CoRe-WM,battle_zone,1,,5100.0,60000.0
+Full CoRe-WM,battle_zone,1,,5100.0,70000.0
+Full CoRe-WM,battle_zone,1,,3800.0,80000.0
+Full CoRe-WM,battle_zone,1,,15000.0,90000.0
+Full CoRe-WM,battle_zone,1,,16710.0,100000.0
+Full CoRe-WM,battle_zone,2,,2600.0,10000.0
+Full CoRe-WM,battle_zone,2,,3100.0,20000.0
+Full CoRe-WM,battle_zone,2,,4100.0,30000.0
+Full CoRe-WM,battle_zone,2,,200.0,40000.0
+Full CoRe-WM,battle_zone,2,,0.0,50000.0
+Full CoRe-WM,battle_zone,2,,2100.0,60000.0
+Full CoRe-WM,battle_zone,2,,6700.0,70000.0
+Full CoRe-WM,battle_zone,2,,3300.0,80000.0
+Full CoRe-WM,battle_zone,2,,4900.0,90000.0
+Full CoRe-WM,battle_zone,2,,12250.0,100000.0
+Full CoRe-WM,battle_zone,3,,1200.0,10000.0
+Full CoRe-WM,battle_zone,3,,2700.0,20000.0
+Full CoRe-WM,battle_zone,3,,1200.0,30000.0
+Full CoRe-WM,battle_zone,3,,2800.0,40000.0
+Full CoRe-WM,battle_zone,3,,4100.0,50000.0
+Full CoRe-WM,battle_zone,3,,3100.0,60000.0
+Full CoRe-WM,battle_zone,3,,4700.0,70000.0
+Full CoRe-WM,battle_zone,3,,2100.0,80000.0
+Full CoRe-WM,battle_zone,3,,8200.0,90000.0
+Full CoRe-WM,battle_zone,3,,13330.0,100000.0
+Full CoRe-WM,battle_zone,4,,4000.0,10000.0
+Full CoRe-WM,battle_zone,4,,2400.0,20000.0
+Full CoRe-WM,battle_zone,4,,4300.0,30000.0
+Full CoRe-WM,battle_zone,4,,3100.0,40000.0
+Full CoRe-WM,battle_zone,4,,2100.0,50000.0
+Full CoRe-WM,battle_zone,4,,5500.0,60000.0
+Full CoRe-WM,battle_zone,4,,2600.0,70000.0
+Full CoRe-WM,battle_zone,4,,4300.0,80000.0
+Full CoRe-WM,battle_zone,4,,2800.0,90000.0
+Full CoRe-WM,battle_zone,4,,6800.0,100000.0
+Full CoRe-WM,boxing,0,,-1.8,10000.0
+Full CoRe-WM,boxing,0,,14.9,20000.0
+Full CoRe-WM,boxing,0,,44.3,30000.0
+Full CoRe-WM,boxing,0,,61.1,40000.0
+Full CoRe-WM,boxing,0,,58.9,50000.0
+Full CoRe-WM,boxing,0,,43.4,60000.0
+Full CoRe-WM,boxing,0,,75.9,70000.0
+Full CoRe-WM,boxing,0,,74.7,80000.0
+Full CoRe-WM,boxing,0,,51.0,90000.0
+Full CoRe-WM,boxing,0,,78.68,100000.0
+Full CoRe-WM,boxing,1,,5.5,10000.0
+Full CoRe-WM,boxing,1,,-42.8,20000.0
+Full CoRe-WM,boxing,1,,19.7,30000.0
+Full CoRe-WM,boxing,1,,35.0,40000.0
+Full CoRe-WM,boxing,1,,46.7,50000.0
+Full CoRe-WM,boxing,1,,59.2,60000.0
+Full CoRe-WM,boxing,1,,66.8,70000.0
+Full CoRe-WM,boxing,1,,68.7,80000.0
+Full CoRe-WM,boxing,1,,77.0,90000.0
+Full CoRe-WM,boxing,1,,67.02,100000.0
+Full CoRe-WM,boxing,2,,-6.9,10000.0
+Full CoRe-WM,boxing,2,,-0.2,20000.0
+Full CoRe-WM,boxing,2,,21.3,30000.0
+Full CoRe-WM,boxing,2,,22.1,40000.0
+Full CoRe-WM,boxing,2,,36.5,50000.0
+Full CoRe-WM,boxing,2,,67.0,60000.0
+Full CoRe-WM,boxing,2,,63.7,70000.0
+Full CoRe-WM,boxing,2,,70.6,80000.0
+Full CoRe-WM,boxing,2,,73.0,90000.0
+Full CoRe-WM,boxing,2,,76.35,100000.0
+Full CoRe-WM,boxing,3,,-1.1,10000.0
+Full CoRe-WM,boxing,3,,-4.0,20000.0
+Full CoRe-WM,boxing,3,,-24.4,30000.0
+Full CoRe-WM,boxing,3,,-18.4,40000.0
+Full CoRe-WM,boxing,3,,44.5,50000.0
+Full CoRe-WM,boxing,3,,44.5,60000.0
+Full CoRe-WM,boxing,3,,68.7,70000.0
+Full CoRe-WM,boxing,3,,77.4,80000.0
+Full CoRe-WM,boxing,3,,72.9,90000.0
+Full CoRe-WM,boxing,3,,81.82,100000.0
+Full CoRe-WM,boxing,4,,-29.5,10000.0
+Full CoRe-WM,boxing,4,,33.7,20000.0
+Full CoRe-WM,boxing,4,,31.9,30000.0
+Full CoRe-WM,boxing,4,,68.5,40000.0
+Full CoRe-WM,boxing,4,,60.3,50000.0
+Full CoRe-WM,boxing,4,,63.6,60000.0
+Full CoRe-WM,boxing,4,,73.3,70000.0
+Full CoRe-WM,boxing,4,,52.9,80000.0
+Full CoRe-WM,boxing,4,,63.4,90000.0
+Full CoRe-WM,boxing,4,,79.63,100000.0
+Full CoRe-WM,breakout,0,,1.5,10000.0
+Full CoRe-WM,breakout,0,,0.9,20000.0
+Full CoRe-WM,breakout,0,,3.9,30000.0
+Full CoRe-WM,breakout,0,,3.7,40000.0
+Full CoRe-WM,breakout,0,,5.2,50000.0
+Full CoRe-WM,breakout,0,,6.0,60000.0
+Full CoRe-WM,breakout,0,,7.9,70000.0
+Full CoRe-WM,breakout,0,,6.8,80000.0
+Full CoRe-WM,breakout,0,,7.2,90000.0
+Full CoRe-WM,breakout,0,,7.99,100000.0
+Full CoRe-WM,breakout,1,,2.2,10000.0
+Full CoRe-WM,breakout,1,,1.5,20000.0
+Full CoRe-WM,breakout,1,,1.6,30000.0
+Full CoRe-WM,breakout,1,,2.0,40000.0
+Full CoRe-WM,breakout,1,,2.0,50000.0
+Full CoRe-WM,breakout,1,,2.2,60000.0
+Full CoRe-WM,breakout,1,,2.5,70000.0
+Full CoRe-WM,breakout,1,,2.2,80000.0
+Full CoRe-WM,breakout,1,,4.7,90000.0
+Full CoRe-WM,breakout,1,,4.62,100000.0
+Full CoRe-WM,breakout,2,,0.9,10000.0
+Full CoRe-WM,breakout,2,,2.8,20000.0
+Full CoRe-WM,breakout,2,,2.0,30000.0
+Full CoRe-WM,breakout,2,,5.1,40000.0
+Full CoRe-WM,breakout,2,,5.0,50000.0
+Full CoRe-WM,breakout,2,,3.6,60000.0
+Full CoRe-WM,breakout,2,,5.4,70000.0
+Full CoRe-WM,breakout,2,,6.9,80000.0
+Full CoRe-WM,breakout,2,,6.7,90000.0
+Full CoRe-WM,breakout,2,,8.11,100000.0
+Full CoRe-WM,breakout,3,,1.1,10000.0
+Full CoRe-WM,breakout,3,,1.7,20000.0
+Full CoRe-WM,breakout,3,,2.2,30000.0
+Full CoRe-WM,breakout,3,,1.4,40000.0
+Full CoRe-WM,breakout,3,,4.5,50000.0
+Full CoRe-WM,breakout,3,,4.5,60000.0
+Full CoRe-WM,breakout,3,,2.5,70000.0
+Full CoRe-WM,breakout,3,,5.1,80000.0
+Full CoRe-WM,breakout,3,,6.8,90000.0
+Full CoRe-WM,breakout,3,,6.33,100000.0
+Full CoRe-WM,breakout,4,,1.8,10000.0
+Full CoRe-WM,breakout,4,,1.9,20000.0
+Full CoRe-WM,breakout,4,,1.6,30000.0
+Full CoRe-WM,breakout,4,,2.1,40000.0
+Full CoRe-WM,breakout,4,,5.0,50000.0
+Full CoRe-WM,breakout,4,,5.3,60000.0
+Full CoRe-WM,breakout,4,,5.1,70000.0
+Full CoRe-WM,breakout,4,,5.6,80000.0
+Full CoRe-WM,breakout,4,,5.8,90000.0
+Full CoRe-WM,breakout,4,,6.0,100000.0
+Full CoRe-WM,chopper_command,0,,480.0,10000.0
+Full CoRe-WM,chopper_command,0,,510.0,20000.0
+Full CoRe-WM,chopper_command,0,,670.0,30000.0
+Full CoRe-WM,chopper_command,0,,770.0,40000.0
+Full CoRe-WM,chopper_command,0,,480.0,50000.0
+Full CoRe-WM,chopper_command,0,,1100.0,60000.0
+Full CoRe-WM,chopper_command,0,,1330.0,70000.0
+Full CoRe-WM,chopper_command,0,,1340.0,80000.0
+Full CoRe-WM,chopper_command,0,,1210.0,90000.0
+Full CoRe-WM,chopper_command,0,,1298.0,100000.0
+Full CoRe-WM,chopper_command,1,,970.0,10000.0
+Full CoRe-WM,chopper_command,1,,570.0,20000.0
+Full CoRe-WM,chopper_command,1,,730.0,30000.0
+Full CoRe-WM,chopper_command,1,,790.0,40000.0
+Full CoRe-WM,chopper_command,1,,910.0,50000.0
+Full CoRe-WM,chopper_command,1,,550.0,60000.0
+Full CoRe-WM,chopper_command,1,,1020.0,70000.0
+Full CoRe-WM,chopper_command,1,,1000.0,80000.0
+Full CoRe-WM,chopper_command,1,,720.0,90000.0
+Full CoRe-WM,chopper_command,1,,1156.0,100000.0
+Full CoRe-WM,chopper_command,2,,890.0,10000.0
+Full CoRe-WM,chopper_command,2,,880.0,20000.0
+Full CoRe-WM,chopper_command,2,,650.0,30000.0
+Full CoRe-WM,chopper_command,2,,530.0,40000.0
+Full CoRe-WM,chopper_command,2,,820.0,50000.0
+Full CoRe-WM,chopper_command,2,,980.0,60000.0
+Full CoRe-WM,chopper_command,2,,940.0,70000.0
+Full CoRe-WM,chopper_command,2,,970.0,80000.0
+Full CoRe-WM,chopper_command,2,,1010.0,90000.0
+Full CoRe-WM,chopper_command,2,,1251.0,100000.0
+Full CoRe-WM,chopper_command,3,,710.0,10000.0
+Full CoRe-WM,chopper_command,3,,260.0,20000.0
+Full CoRe-WM,chopper_command,3,,600.0,30000.0
+Full CoRe-WM,chopper_command,3,,730.0,40000.0
+Full CoRe-WM,chopper_command,3,,790.0,50000.0
+Full CoRe-WM,chopper_command,3,,940.0,60000.0
+Full CoRe-WM,chopper_command,3,,830.0,70000.0
+Full CoRe-WM,chopper_command,3,,590.0,80000.0
+Full CoRe-WM,chopper_command,3,,610.0,90000.0
+Full CoRe-WM,chopper_command,3,,864.0,100000.0
+Full CoRe-WM,chopper_command,4,,890.0,10000.0
+Full CoRe-WM,chopper_command,4,,570.0,20000.0
+Full CoRe-WM,chopper_command,4,,810.0,30000.0
+Full CoRe-WM,chopper_command,4,,910.0,40000.0
+Full CoRe-WM,chopper_command,4,,750.0,50000.0
+Full CoRe-WM,chopper_command,4,,820.0,60000.0
+Full CoRe-WM,chopper_command,4,,1040.0,70000.0
+Full CoRe-WM,chopper_command,4,,980.0,80000.0
+Full CoRe-WM,chopper_command,4,,750.0,90000.0
+Full CoRe-WM,chopper_command,4,,1139.0,100000.0
+Full CoRe-WM,crazy_climber,0,,11000.0,10000.0
+Full CoRe-WM,crazy_climber,0,,22950.0,20000.0
+Full CoRe-WM,crazy_climber,0,,19170.0,30000.0
+Full CoRe-WM,crazy_climber,0,,25880.0,40000.0
+Full CoRe-WM,crazy_climber,0,,51480.0,50000.0
+Full CoRe-WM,crazy_climber,0,,35840.0,60000.0
+Full CoRe-WM,crazy_climber,0,,47220.0,70000.0
+Full CoRe-WM,crazy_climber,0,,50480.0,80000.0
+Full CoRe-WM,crazy_climber,0,,68630.0,90000.0
+Full CoRe-WM,crazy_climber,0,,60282.0,100000.0
+Full CoRe-WM,crazy_climber,1,,3400.0,10000.0
+Full CoRe-WM,crazy_climber,1,,11000.0,20000.0
+Full CoRe-WM,crazy_climber,1,,22720.0,30000.0
+Full CoRe-WM,crazy_climber,1,,41140.0,40000.0
+Full CoRe-WM,crazy_climber,1,,44970.0,50000.0
+Full CoRe-WM,crazy_climber,1,,42390.0,60000.0
+Full CoRe-WM,crazy_climber,1,,49260.0,70000.0
+Full CoRe-WM,crazy_climber,1,,52170.0,80000.0
+Full CoRe-WM,crazy_climber,1,,48270.0,90000.0
+Full CoRe-WM,crazy_climber,1,,53256.0,100000.0
+Full CoRe-WM,crazy_climber,2,,11000.0,10000.0
+Full CoRe-WM,crazy_climber,2,,13350.0,20000.0
+Full CoRe-WM,crazy_climber,2,,24410.0,30000.0
+Full CoRe-WM,crazy_climber,2,,32750.0,40000.0
+Full CoRe-WM,crazy_climber,2,,47310.0,50000.0
+Full CoRe-WM,crazy_climber,2,,45630.0,60000.0
+Full CoRe-WM,crazy_climber,2,,40120.0,70000.0
+Full CoRe-WM,crazy_climber,2,,50980.0,80000.0
+Full CoRe-WM,crazy_climber,2,,56990.0,90000.0
+Full CoRe-WM,crazy_climber,2,,51701.0,100000.0
+Full CoRe-WM,crazy_climber,3,,12610.0,10000.0
+Full CoRe-WM,crazy_climber,3,,22640.0,20000.0
+Full CoRe-WM,crazy_climber,3,,24060.0,30000.0
+Full CoRe-WM,crazy_climber,3,,50470.0,40000.0
+Full CoRe-WM,crazy_climber,3,,58360.0,50000.0
+Full CoRe-WM,crazy_climber,3,,51870.0,60000.0
+Full CoRe-WM,crazy_climber,3,,57100.0,70000.0
+Full CoRe-WM,crazy_climber,3,,65780.0,80000.0
+Full CoRe-WM,crazy_climber,3,,71350.0,90000.0
+Full CoRe-WM,crazy_climber,3,,68620.0,100000.0
+Full CoRe-WM,crazy_climber,4,,3400.0,10000.0
+Full CoRe-WM,crazy_climber,4,,27140.0,20000.0
+Full CoRe-WM,crazy_climber,4,,43190.0,30000.0
+Full CoRe-WM,crazy_climber,4,,42720.0,40000.0
+Full CoRe-WM,crazy_climber,4,,40980.0,50000.0
+Full CoRe-WM,crazy_climber,4,,56550.0,60000.0
+Full CoRe-WM,crazy_climber,4,,44730.0,70000.0
+Full CoRe-WM,crazy_climber,4,,53260.0,80000.0
+Full CoRe-WM,crazy_climber,4,,47160.0,90000.0
+Full CoRe-WM,crazy_climber,4,,56695.0,100000.0
+Full CoRe-WM,demon_attack,0,,75.0,10000.0
+Full CoRe-WM,demon_attack,0,,185.5,20000.0
+Full CoRe-WM,demon_attack,0,,405.5,30000.0
+Full CoRe-WM,demon_attack,0,,406.5,40000.0
+Full CoRe-WM,demon_attack,0,,168.0,50000.0
+Full CoRe-WM,demon_attack,0,,291.0,60000.0
+Full CoRe-WM,demon_attack,0,,205.0,70000.0
+Full CoRe-WM,demon_attack,0,,163.5,80000.0
+Full CoRe-WM,demon_attack,0,,267.5,90000.0
+Full CoRe-WM,demon_attack,0,,273.6,100000.0
+Full CoRe-WM,demon_attack,1,,67.0,10000.0
+Full CoRe-WM,demon_attack,1,,246.5,20000.0
+Full CoRe-WM,demon_attack,1,,489.5,30000.0
+Full CoRe-WM,demon_attack,1,,285.0,40000.0
+Full CoRe-WM,demon_attack,1,,207.5,50000.0
+Full CoRe-WM,demon_attack,1,,240.5,60000.0
+Full CoRe-WM,demon_attack,1,,169.0,70000.0
+Full CoRe-WM,demon_attack,1,,349.0,80000.0
+Full CoRe-WM,demon_attack,1,,202.5,90000.0
+Full CoRe-WM,demon_attack,1,,187.45,100000.0
+Full CoRe-WM,demon_attack,2,,95.5,10000.0
+Full CoRe-WM,demon_attack,2,,420.5,20000.0
+Full CoRe-WM,demon_attack,2,,150.5,30000.0
+Full CoRe-WM,demon_attack,2,,286.0,40000.0
+Full CoRe-WM,demon_attack,2,,386.0,50000.0
+Full CoRe-WM,demon_attack,2,,205.0,60000.0
+Full CoRe-WM,demon_attack,2,,342.0,70000.0
+Full CoRe-WM,demon_attack,2,,138.0,80000.0
+Full CoRe-WM,demon_attack,2,,315.5,90000.0
+Full CoRe-WM,demon_attack,2,,284.45,100000.0
+Full CoRe-WM,demon_attack,3,,231.0,10000.0
+Full CoRe-WM,demon_attack,3,,139.0,20000.0
+Full CoRe-WM,demon_attack,3,,219.0,30000.0
+Full CoRe-WM,demon_attack,3,,183.5,40000.0
+Full CoRe-WM,demon_attack,3,,418.0,50000.0
+Full CoRe-WM,demon_attack,3,,379.0,60000.0
+Full CoRe-WM,demon_attack,3,,214.0,70000.0
+Full CoRe-WM,demon_attack,3,,181.0,80000.0
+Full CoRe-WM,demon_attack,3,,199.5,90000.0
+Full CoRe-WM,demon_attack,3,,472.35,100000.0
+Full CoRe-WM,demon_attack,4,,257.5,10000.0
+Full CoRe-WM,demon_attack,4,,381.5,20000.0
+Full CoRe-WM,demon_attack,4,,254.0,30000.0
+Full CoRe-WM,demon_attack,4,,170.5,40000.0
+Full CoRe-WM,demon_attack,4,,168.5,50000.0
+Full CoRe-WM,demon_attack,4,,264.0,60000.0
+Full CoRe-WM,demon_attack,4,,189.0,70000.0
+Full CoRe-WM,demon_attack,4,,288.0,80000.0
+Full CoRe-WM,demon_attack,4,,158.5,90000.0
+Full CoRe-WM,demon_attack,4,,204.7,100000.0
+Full CoRe-WM,freeway,0,,0.0,10000.0
+Full CoRe-WM,freeway,0,,0.0,20000.0
+Full CoRe-WM,freeway,0,,0.0,30000.0
+Full CoRe-WM,freeway,0,,0.0,40000.0
+Full CoRe-WM,freeway,0,,0.0,50000.0
+Full CoRe-WM,freeway,0,,0.0,60000.0
+Full CoRe-WM,freeway,0,,0.1,70000.0
+Full CoRe-WM,freeway,0,,0.0,80000.0
+Full CoRe-WM,freeway,0,,0.0,90000.0
+Full CoRe-WM,freeway,0,,0.0,100000.0
+Full CoRe-WM,freeway,1,,0.0,10000.0
+Full CoRe-WM,freeway,1,,0.0,20000.0
+Full CoRe-WM,freeway,1,,0.0,30000.0
+Full CoRe-WM,freeway,1,,0.0,40000.0
+Full CoRe-WM,freeway,1,,0.0,50000.0
+Full CoRe-WM,freeway,1,,0.0,60000.0
+Full CoRe-WM,freeway,1,,0.1,70000.0
+Full CoRe-WM,freeway,1,,0.0,80000.0
+Full CoRe-WM,freeway,1,,0.0,90000.0
+Full CoRe-WM,freeway,1,,0.0,100000.0
+Full CoRe-WM,freeway,2,,0.0,10000.0
+Full CoRe-WM,freeway,2,,0.0,20000.0
+Full CoRe-WM,freeway,2,,0.0,30000.0
+Full CoRe-WM,freeway,2,,0.0,40000.0
+Full CoRe-WM,freeway,2,,0.0,50000.0
+Full CoRe-WM,freeway,2,,0.0,60000.0
+Full CoRe-WM,freeway,2,,0.1,70000.0
+Full CoRe-WM,freeway,2,,0.0,80000.0
+Full CoRe-WM,freeway,2,,0.0,90000.0
+Full CoRe-WM,freeway,2,,0.0,100000.0
+Full CoRe-WM,freeway,3,,0.0,10000.0
+Full CoRe-WM,freeway,3,,0.0,20000.0
+Full CoRe-WM,freeway,3,,0.0,30000.0
+Full CoRe-WM,freeway,3,,0.0,40000.0
+Full CoRe-WM,freeway,3,,0.0,50000.0
+Full CoRe-WM,freeway,3,,0.0,60000.0
+Full CoRe-WM,freeway,3,,0.1,70000.0
+Full CoRe-WM,freeway,3,,0.0,80000.0
+Full CoRe-WM,freeway,3,,0.0,90000.0
+Full CoRe-WM,freeway,3,,0.0,100000.0
+Full CoRe-WM,freeway,4,,0.0,10000.0
+Full CoRe-WM,freeway,4,,0.0,20000.0
+Full CoRe-WM,freeway,4,,0.0,30000.0
+Full CoRe-WM,freeway,4,,0.0,40000.0
+Full CoRe-WM,freeway,4,,0.0,50000.0
+Full CoRe-WM,freeway,4,,0.0,60000.0
+Full CoRe-WM,freeway,4,,0.1,70000.0
+Full CoRe-WM,freeway,4,,0.1,80000.0
+Full CoRe-WM,freeway,4,,0.5,90000.0
+Full CoRe-WM,freeway,4,,0.0,100000.0
+Full CoRe-WM,frostbite,0,,123.0,10000.0
+Full CoRe-WM,frostbite,0,,200.0,20000.0
+Full CoRe-WM,frostbite,0,,199.0,30000.0
+Full CoRe-WM,frostbite,0,,215.0,40000.0
+Full CoRe-WM,frostbite,0,,227.0,50000.0
+Full CoRe-WM,frostbite,0,,242.0,60000.0
+Full CoRe-WM,frostbite,0,,248.0,70000.0
+Full CoRe-WM,frostbite,0,,256.0,80000.0
+Full CoRe-WM,frostbite,0,,292.0,90000.0
+Full CoRe-WM,frostbite,0,,318.1,100000.0
+Full CoRe-WM,frostbite,1,,16.0,10000.0
+Full CoRe-WM,frostbite,1,,211.0,20000.0
+Full CoRe-WM,frostbite,1,,214.0,30000.0
+Full CoRe-WM,frostbite,1,,198.0,40000.0
+Full CoRe-WM,frostbite,1,,459.0,50000.0
+Full CoRe-WM,frostbite,1,,750.0,60000.0
+Full CoRe-WM,frostbite,1,,675.0,70000.0
+Full CoRe-WM,frostbite,1,,1362.0,80000.0
+Full CoRe-WM,frostbite,1,,866.0,90000.0
+Full CoRe-WM,frostbite,1,,2189.5,100000.0
+Full CoRe-WM,frostbite,2,,73.0,10000.0
+Full CoRe-WM,frostbite,2,,1181.0,20000.0
+Full CoRe-WM,frostbite,2,,1494.0,30000.0
+Full CoRe-WM,frostbite,2,,1424.0,40000.0
+Full CoRe-WM,frostbite,2,,1223.0,50000.0
+Full CoRe-WM,frostbite,2,,1819.0,60000.0
+Full CoRe-WM,frostbite,2,,1375.0,70000.0
+Full CoRe-WM,frostbite,2,,1955.0,80000.0
+Full CoRe-WM,frostbite,2,,2362.0,90000.0
+Full CoRe-WM,frostbite,2,,2242.6,100000.0
+Full CoRe-WM,frostbite,3,,92.0,10000.0
+Full CoRe-WM,frostbite,3,,210.0,20000.0
+Full CoRe-WM,frostbite,3,,250.0,30000.0
+Full CoRe-WM,frostbite,3,,232.0,40000.0
+Full CoRe-WM,frostbite,3,,227.0,50000.0
+Full CoRe-WM,frostbite,3,,383.0,60000.0
+Full CoRe-WM,frostbite,3,,672.0,70000.0
+Full CoRe-WM,frostbite,3,,2439.0,80000.0
+Full CoRe-WM,frostbite,3,,2611.0,90000.0
+Full CoRe-WM,frostbite,3,,2773.7,100000.0
+Full CoRe-WM,frostbite,4,,129.0,10000.0
+Full CoRe-WM,frostbite,4,,100.0,20000.0
+Full CoRe-WM,frostbite,4,,217.0,30000.0
+Full CoRe-WM,frostbite,4,,221.0,40000.0
+Full CoRe-WM,frostbite,4,,252.0,50000.0
+Full CoRe-WM,frostbite,4,,241.0,60000.0
+Full CoRe-WM,frostbite,4,,272.0,70000.0
+Full CoRe-WM,frostbite,4,,300.0,80000.0
+Full CoRe-WM,frostbite,4,,345.0,90000.0
+Full CoRe-WM,frostbite,4,,329.1,100000.0
+Full CoRe-WM,gopher,0,,274.0,10000.0
+Full CoRe-WM,gopher,0,,466.0,20000.0
+Full CoRe-WM,gopher,0,,324.0,30000.0
+Full CoRe-WM,gopher,0,,524.0,40000.0
+Full CoRe-WM,gopher,0,,724.0,50000.0
+Full CoRe-WM,gopher,0,,710.0,60000.0
+Full CoRe-WM,gopher,0,,758.0,70000.0
+Full CoRe-WM,gopher,0,,956.0,80000.0
+Full CoRe-WM,gopher,0,,1076.0,90000.0
+Full CoRe-WM,gopher,0,,1248.2,100000.0
+Full CoRe-WM,gopher,1,,308.0,10000.0
+Full CoRe-WM,gopher,1,,396.0,20000.0
+Full CoRe-WM,gopher,1,,408.0,30000.0
+Full CoRe-WM,gopher,1,,522.0,40000.0
+Full CoRe-WM,gopher,1,,494.0,50000.0
+Full CoRe-WM,gopher,1,,436.0,60000.0
+Full CoRe-WM,gopher,1,,876.0,70000.0
+Full CoRe-WM,gopher,1,,1058.0,80000.0
+Full CoRe-WM,gopher,1,,1874.0,90000.0
+Full CoRe-WM,gopher,1,,1622.2,100000.0
+Full CoRe-WM,gopher,2,,294.0,10000.0
+Full CoRe-WM,gopher,2,,512.0,20000.0
+Full CoRe-WM,gopher,2,,424.0,30000.0
+Full CoRe-WM,gopher,2,,482.0,40000.0
+Full CoRe-WM,gopher,2,,504.0,50000.0
+Full CoRe-WM,gopher,2,,770.0,60000.0
+Full CoRe-WM,gopher,2,,836.0,70000.0
+Full CoRe-WM,gopher,2,,1138.0,80000.0
+Full CoRe-WM,gopher,2,,1682.0,90000.0
+Full CoRe-WM,gopher,2,,1695.8,100000.0
+Full CoRe-WM,gopher,3,,360.0,10000.0
+Full CoRe-WM,gopher,3,,344.0,20000.0
+Full CoRe-WM,gopher,3,,278.0,30000.0
+Full CoRe-WM,gopher,3,,286.0,40000.0
+Full CoRe-WM,gopher,3,,396.0,50000.0
+Full CoRe-WM,gopher,3,,490.0,60000.0
+Full CoRe-WM,gopher,3,,900.0,70000.0
+Full CoRe-WM,gopher,3,,880.0,80000.0
+Full CoRe-WM,gopher,3,,1254.0,90000.0
+Full CoRe-WM,gopher,3,,1122.0,100000.0
+Full CoRe-WM,gopher,4,,296.0,10000.0
+Full CoRe-WM,gopher,4,,402.0,20000.0
+Full CoRe-WM,gopher,4,,502.0,30000.0
+Full CoRe-WM,gopher,4,,440.0,40000.0
+Full CoRe-WM,gopher,4,,574.0,50000.0
+Full CoRe-WM,gopher,4,,506.0,60000.0
+Full CoRe-WM,gopher,4,,864.0,70000.0
+Full CoRe-WM,gopher,4,,606.0,80000.0
+Full CoRe-WM,gopher,4,,1080.0,90000.0
+Full CoRe-WM,gopher,4,,1341.0,100000.0
+Full CoRe-WM,hero,0,,0.0,10000.0
+Full CoRe-WM,hero,0,,2966.5,20000.0
+Full CoRe-WM,hero,0,,3033.0,30000.0
+Full CoRe-WM,hero,0,,3006.0,40000.0
+Full CoRe-WM,hero,0,,3140.0,50000.0
+Full CoRe-WM,hero,0,,3273.0,60000.0
+Full CoRe-WM,hero,0,,6539.0,70000.0
+Full CoRe-WM,hero,0,,5996.0,80000.0
+Full CoRe-WM,hero,0,,7484.0,90000.0
+Full CoRe-WM,hero,0,,7436.25,100000.0
+Full CoRe-WM,hero,1,,0.0,10000.0
+Full CoRe-WM,hero,1,,2533.0,20000.0
+Full CoRe-WM,hero,1,,2993.0,30000.0
+Full CoRe-WM,hero,1,,3068.0,40000.0
+Full CoRe-WM,hero,1,,3135.0,50000.0
+Full CoRe-WM,hero,1,,3143.0,60000.0
+Full CoRe-WM,hero,1,,3790.5,70000.0
+Full CoRe-WM,hero,1,,4709.0,80000.0
+Full CoRe-WM,hero,1,,7571.0,90000.0
+Full CoRe-WM,hero,1,,7410.75,100000.0
+Full CoRe-WM,hero,2,,0.0,10000.0
+Full CoRe-WM,hero,2,,2832.5,20000.0
+Full CoRe-WM,hero,2,,2973.0,30000.0
+Full CoRe-WM,hero,2,,3138.0,40000.0
+Full CoRe-WM,hero,2,,3328.5,50000.0
+Full CoRe-WM,hero,2,,5567.5,60000.0
+Full CoRe-WM,hero,2,,7427.0,70000.0
+Full CoRe-WM,hero,2,,7537.0,80000.0
+Full CoRe-WM,hero,2,,7530.0,90000.0
+Full CoRe-WM,hero,2,,7571.25,100000.0
+Full CoRe-WM,hero,3,,611.5,10000.0
+Full CoRe-WM,hero,3,,2785.5,20000.0
+Full CoRe-WM,hero,3,,2934.0,30000.0
+Full CoRe-WM,hero,3,,3057.5,40000.0
+Full CoRe-WM,hero,3,,3456.0,50000.0
+Full CoRe-WM,hero,3,,3129.0,60000.0
+Full CoRe-WM,hero,3,,3092.5,70000.0
+Full CoRe-WM,hero,3,,7474.5,80000.0
+Full CoRe-WM,hero,3,,7528.5,90000.0
+Full CoRe-WM,hero,3,,7552.5,100000.0
+Full CoRe-WM,hero,4,,829.5,10000.0
+Full CoRe-WM,hero,4,,2827.5,20000.0
+Full CoRe-WM,hero,4,,2605.0,30000.0
+Full CoRe-WM,hero,4,,3228.5,40000.0
+Full CoRe-WM,hero,4,,3137.0,50000.0
+Full CoRe-WM,hero,4,,2980.0,60000.0
+Full CoRe-WM,hero,4,,4264.0,70000.0
+Full CoRe-WM,hero,4,,7429.0,80000.0
+Full CoRe-WM,hero,4,,7543.0,90000.0
+Full CoRe-WM,hero,4,,7539.5,100000.0
+Full CoRe-WM,jamesbond,0,,0.0,10000.0
+Full CoRe-WM,jamesbond,0,,65.0,20000.0
+Full CoRe-WM,jamesbond,0,,85.0,30000.0
+Full CoRe-WM,jamesbond,0,,115.0,40000.0
+Full CoRe-WM,jamesbond,0,,70.0,50000.0
+Full CoRe-WM,jamesbond,0,,270.0,60000.0
+Full CoRe-WM,jamesbond,0,,395.0,70000.0
+Full CoRe-WM,jamesbond,0,,225.0,80000.0
+Full CoRe-WM,jamesbond,0,,515.0,90000.0
+Full CoRe-WM,jamesbond,0,,781.0,100000.0
+Full CoRe-WM,jamesbond,1,,15.0,10000.0
+Full CoRe-WM,jamesbond,1,,75.0,20000.0
+Full CoRe-WM,jamesbond,1,,155.0,30000.0
+Full CoRe-WM,jamesbond,1,,160.0,40000.0
+Full CoRe-WM,jamesbond,1,,305.0,50000.0
+Full CoRe-WM,jamesbond,1,,205.0,60000.0
+Full CoRe-WM,jamesbond,1,,285.0,70000.0
+Full CoRe-WM,jamesbond,1,,240.0,80000.0
+Full CoRe-WM,jamesbond,1,,145.0,90000.0
+Full CoRe-WM,jamesbond,1,,260.5,100000.0
+Full CoRe-WM,jamesbond,2,,25.0,10000.0
+Full CoRe-WM,jamesbond,2,,5.0,20000.0
+Full CoRe-WM,jamesbond,2,,75.0,30000.0
+Full CoRe-WM,jamesbond,2,,100.0,40000.0
+Full CoRe-WM,jamesbond,2,,105.0,50000.0
+Full CoRe-WM,jamesbond,2,,160.0,60000.0
+Full CoRe-WM,jamesbond,2,,240.0,70000.0
+Full CoRe-WM,jamesbond,2,,225.0,80000.0
+Full CoRe-WM,jamesbond,2,,210.0,90000.0
+Full CoRe-WM,jamesbond,2,,270.0,100000.0
+Full CoRe-WM,jamesbond,3,,25.0,10000.0
+Full CoRe-WM,jamesbond,3,,65.0,20000.0
+Full CoRe-WM,jamesbond,3,,55.0,30000.0
+Full CoRe-WM,jamesbond,3,,95.0,40000.0
+Full CoRe-WM,jamesbond,3,,95.0,50000.0
+Full CoRe-WM,jamesbond,3,,50.0,60000.0
+Full CoRe-WM,jamesbond,3,,110.0,70000.0
+Full CoRe-WM,jamesbond,3,,145.0,80000.0
+Full CoRe-WM,jamesbond,3,,115.0,90000.0
+Full CoRe-WM,jamesbond,3,,125.5,100000.0
+Full CoRe-WM,jamesbond,4,,30.0,10000.0
+Full CoRe-WM,jamesbond,4,,90.0,20000.0
+Full CoRe-WM,jamesbond,4,,125.0,30000.0
+Full CoRe-WM,jamesbond,4,,155.0,40000.0
+Full CoRe-WM,jamesbond,4,,150.0,50000.0
+Full CoRe-WM,jamesbond,4,,160.0,60000.0
+Full CoRe-WM,jamesbond,4,,165.0,70000.0
+Full CoRe-WM,jamesbond,4,,220.0,80000.0
+Full CoRe-WM,jamesbond,4,,175.0,90000.0
+Full CoRe-WM,jamesbond,4,,318.0,100000.0
+Full CoRe-WM,kangaroo,0,,40.0,10000.0
+Full CoRe-WM,kangaroo,0,,0.0,20000.0
+Full CoRe-WM,kangaroo,0,,160.0,30000.0
+Full CoRe-WM,kangaroo,0,,320.0,40000.0
+Full CoRe-WM,kangaroo,0,,340.0,50000.0
+Full CoRe-WM,kangaroo,0,,580.0,60000.0
+Full CoRe-WM,kangaroo,0,,760.0,70000.0
+Full CoRe-WM,kangaroo,0,,1000.0,80000.0
+Full CoRe-WM,kangaroo,0,,960.0,90000.0
+Full CoRe-WM,kangaroo,0,,992.0,100000.0
+Full CoRe-WM,kangaroo,1,,20.0,10000.0
+Full CoRe-WM,kangaroo,1,,0.0,20000.0
+Full CoRe-WM,kangaroo,1,,260.0,30000.0
+Full CoRe-WM,kangaroo,1,,40.0,40000.0
+Full CoRe-WM,kangaroo,1,,440.0,50000.0
+Full CoRe-WM,kangaroo,1,,800.0,60000.0
+Full CoRe-WM,kangaroo,1,,900.0,70000.0
+Full CoRe-WM,kangaroo,1,,2760.0,80000.0
+Full CoRe-WM,kangaroo,1,,3040.0,90000.0
+Full CoRe-WM,kangaroo,1,,2492.0,100000.0
+Full CoRe-WM,kangaroo,2,,80.0,10000.0
+Full CoRe-WM,kangaroo,2,,20.0,20000.0
+Full CoRe-WM,kangaroo,2,,0.0,30000.0
+Full CoRe-WM,kangaroo,2,,0.0,40000.0
+Full CoRe-WM,kangaroo,2,,40.0,50000.0
+Full CoRe-WM,kangaroo,2,,200.0,60000.0
+Full CoRe-WM,kangaroo,2,,380.0,70000.0
+Full CoRe-WM,kangaroo,2,,200.0,80000.0
+Full CoRe-WM,kangaroo,2,,480.0,90000.0
+Full CoRe-WM,kangaroo,2,,1004.0,100000.0
+Full CoRe-WM,kangaroo,3,,60.0,10000.0
+Full CoRe-WM,kangaroo,3,,40.0,20000.0
+Full CoRe-WM,kangaroo,3,,60.0,30000.0
+Full CoRe-WM,kangaroo,3,,20.0,40000.0
+Full CoRe-WM,kangaroo,3,,40.0,50000.0
+Full CoRe-WM,kangaroo,3,,340.0,60000.0
+Full CoRe-WM,kangaroo,3,,120.0,70000.0
+Full CoRe-WM,kangaroo,3,,200.0,80000.0
+Full CoRe-WM,kangaroo,3,,280.0,90000.0
+Full CoRe-WM,kangaroo,3,,724.0,100000.0
+Full CoRe-WM,kangaroo,4,,60.0,10000.0
+Full CoRe-WM,kangaroo,4,,160.0,20000.0
+Full CoRe-WM,kangaroo,4,,20.0,30000.0
+Full CoRe-WM,kangaroo,4,,80.0,40000.0
+Full CoRe-WM,kangaroo,4,,180.0,50000.0
+Full CoRe-WM,kangaroo,4,,560.0,60000.0
+Full CoRe-WM,kangaroo,4,,860.0,70000.0
+Full CoRe-WM,kangaroo,4,,1180.0,80000.0
+Full CoRe-WM,kangaroo,4,,1120.0,90000.0
+Full CoRe-WM,kangaroo,4,,1322.0,100000.0
+Full CoRe-WM,krull,0,,1965.0,10000.0
+Full CoRe-WM,krull,0,,3190.0,20000.0
+Full CoRe-WM,krull,0,,4967.0,30000.0
+Full CoRe-WM,krull,0,,6188.0,40000.0
+Full CoRe-WM,krull,0,,7623.0,50000.0
+Full CoRe-WM,krull,0,,6895.0,60000.0
+Full CoRe-WM,krull,0,,7118.0,70000.0
+Full CoRe-WM,krull,0,,8072.0,80000.0
+Full CoRe-WM,krull,0,,6683.0,90000.0
+Full CoRe-WM,krull,0,,7771.2,100000.0
+Full CoRe-WM,krull,1,,2680.0,10000.0
+Full CoRe-WM,krull,1,,3272.0,20000.0
+Full CoRe-WM,krull,1,,5364.0,30000.0
+Full CoRe-WM,krull,1,,6300.0,40000.0
+Full CoRe-WM,krull,1,,6302.0,50000.0
+Full CoRe-WM,krull,1,,6243.0,60000.0
+Full CoRe-WM,krull,1,,7757.0,70000.0
+Full CoRe-WM,krull,1,,7112.0,80000.0
+Full CoRe-WM,krull,1,,7593.0,90000.0
+Full CoRe-WM,krull,1,,7831.6,100000.0
+Full CoRe-WM,krull,2,,2225.0,10000.0
+Full CoRe-WM,krull,2,,2522.0,20000.0
+Full CoRe-WM,krull,2,,4786.0,30000.0
+Full CoRe-WM,krull,2,,6798.0,40000.0
+Full CoRe-WM,krull,2,,6843.0,50000.0
+Full CoRe-WM,krull,2,,7660.0,60000.0
+Full CoRe-WM,krull,2,,7634.0,70000.0
+Full CoRe-WM,krull,2,,7780.0,80000.0
+Full CoRe-WM,krull,2,,7596.0,90000.0
+Full CoRe-WM,krull,2,,8132.1,100000.0
+Full CoRe-WM,krull,3,,1526.0,10000.0
+Full CoRe-WM,krull,3,,2607.0,20000.0
+Full CoRe-WM,krull,3,,13000.0,30000.0
+Full CoRe-WM,krull,3,,6983.0,40000.0
+Full CoRe-WM,krull,3,,7220.0,50000.0
+Full CoRe-WM,krull,3,,7307.0,60000.0
+Full CoRe-WM,krull,3,,6985.0,70000.0
+Full CoRe-WM,krull,3,,7614.0,80000.0
+Full CoRe-WM,krull,3,,8875.0,90000.0
+Full CoRe-WM,krull,3,,7501.8,100000.0
+Full CoRe-WM,krull,4,,1674.0,10000.0
+Full CoRe-WM,krull,4,,1891.0,20000.0
+Full CoRe-WM,krull,4,,3427.0,30000.0
+Full CoRe-WM,krull,4,,6744.0,40000.0
+Full CoRe-WM,krull,4,,7670.0,50000.0
+Full CoRe-WM,krull,4,,7313.0,60000.0
+Full CoRe-WM,krull,4,,7404.0,70000.0
+Full CoRe-WM,krull,4,,7890.0,80000.0
+Full CoRe-WM,krull,4,,8518.0,90000.0
+Full CoRe-WM,krull,4,,8145.1,100000.0
+Full CoRe-WM,kung_fu_master,0,,480.0,10000.0
+Full CoRe-WM,kung_fu_master,0,,2470.0,20000.0
+Full CoRe-WM,kung_fu_master,0,,5540.0,30000.0
+Full CoRe-WM,kung_fu_master,0,,7890.0,40000.0
+Full CoRe-WM,kung_fu_master,0,,6850.0,50000.0
+Full CoRe-WM,kung_fu_master,0,,6230.0,60000.0
+Full CoRe-WM,kung_fu_master,0,,7820.0,70000.0
+Full CoRe-WM,kung_fu_master,0,,9300.0,80000.0
+Full CoRe-WM,kung_fu_master,0,,7780.0,90000.0
+Full CoRe-WM,kung_fu_master,0,,12519.0,100000.0
+Full CoRe-WM,kung_fu_master,1,,540.0,10000.0
+Full CoRe-WM,kung_fu_master,1,,7850.0,20000.0
+Full CoRe-WM,kung_fu_master,1,,5920.0,30000.0
+Full CoRe-WM,kung_fu_master,1,,8600.0,40000.0
+Full CoRe-WM,kung_fu_master,1,,6540.0,50000.0
+Full CoRe-WM,kung_fu_master,1,,10790.0,60000.0
+Full CoRe-WM,kung_fu_master,1,,15490.0,70000.0
+Full CoRe-WM,kung_fu_master,1,,21230.0,80000.0
+Full CoRe-WM,kung_fu_master,1,,20100.0,90000.0
+Full CoRe-WM,kung_fu_master,1,,17647.0,100000.0
+Full CoRe-WM,kung_fu_master,2,,570.0,10000.0
+Full CoRe-WM,kung_fu_master,2,,10460.0,20000.0
+Full CoRe-WM,kung_fu_master,2,,18550.0,30000.0
+Full CoRe-WM,kung_fu_master,2,,25420.0,40000.0
+Full CoRe-WM,kung_fu_master,2,,29580.0,50000.0
+Full CoRe-WM,kung_fu_master,2,,28620.0,60000.0
+Full CoRe-WM,kung_fu_master,2,,25930.0,70000.0
+Full CoRe-WM,kung_fu_master,2,,26510.0,80000.0
+Full CoRe-WM,kung_fu_master,2,,32830.0,90000.0
+Full CoRe-WM,kung_fu_master,2,,27860.0,100000.0
+Full CoRe-WM,kung_fu_master,3,,210.0,10000.0
+Full CoRe-WM,kung_fu_master,3,,3290.0,20000.0
+Full CoRe-WM,kung_fu_master,3,,9630.0,30000.0
+Full CoRe-WM,kung_fu_master,3,,9290.0,40000.0
+Full CoRe-WM,kung_fu_master,3,,9530.0,50000.0
+Full CoRe-WM,kung_fu_master,3,,10890.0,60000.0
+Full CoRe-WM,kung_fu_master,3,,9830.0,70000.0
+Full CoRe-WM,kung_fu_master,3,,15090.0,80000.0
+Full CoRe-WM,kung_fu_master,3,,19470.0,90000.0
+Full CoRe-WM,kung_fu_master,3,,13415.0,100000.0
+Full CoRe-WM,kung_fu_master,4,,500.0,10000.0
+Full CoRe-WM,kung_fu_master,4,,470.0,20000.0
+Full CoRe-WM,kung_fu_master,4,,14310.0,30000.0
+Full CoRe-WM,kung_fu_master,4,,8330.0,40000.0
+Full CoRe-WM,kung_fu_master,4,,13380.0,50000.0
+Full CoRe-WM,kung_fu_master,4,,21420.0,60000.0
+Full CoRe-WM,kung_fu_master,4,,16120.0,70000.0
+Full CoRe-WM,kung_fu_master,4,,22040.0,80000.0
+Full CoRe-WM,kung_fu_master,4,,19690.0,90000.0
+Full CoRe-WM,kung_fu_master,4,,21934.0,100000.0
+Full CoRe-WM,ms_pacman,0,,532.0,10000.0
+Full CoRe-WM,ms_pacman,0,,657.0,20000.0
+Full CoRe-WM,ms_pacman,0,,563.0,30000.0
+Full CoRe-WM,ms_pacman,0,,861.0,40000.0
+Full CoRe-WM,ms_pacman,0,,617.0,50000.0
+Full CoRe-WM,ms_pacman,0,,510.0,60000.0
+Full CoRe-WM,ms_pacman,0,,673.0,70000.0
+Full CoRe-WM,ms_pacman,0,,1096.0,80000.0
+Full CoRe-WM,ms_pacman,0,,1197.0,90000.0
+Full CoRe-WM,ms_pacman,0,,1234.6,100000.0
+Full CoRe-WM,ms_pacman,1,,461.0,10000.0
+Full CoRe-WM,ms_pacman,1,,325.0,20000.0
+Full CoRe-WM,ms_pacman,1,,540.0,30000.0
+Full CoRe-WM,ms_pacman,1,,257.0,40000.0
+Full CoRe-WM,ms_pacman,1,,648.0,50000.0
+Full CoRe-WM,ms_pacman,1,,666.0,60000.0
+Full CoRe-WM,ms_pacman,1,,773.0,70000.0
+Full CoRe-WM,ms_pacman,1,,804.0,80000.0
+Full CoRe-WM,ms_pacman,1,,932.0,90000.0
+Full CoRe-WM,ms_pacman,1,,853.6,100000.0
+Full CoRe-WM,ms_pacman,2,,520.0,10000.0
+Full CoRe-WM,ms_pacman,2,,664.0,20000.0
+Full CoRe-WM,ms_pacman,2,,611.0,30000.0
+Full CoRe-WM,ms_pacman,2,,637.0,40000.0
+Full CoRe-WM,ms_pacman,2,,623.0,50000.0
+Full CoRe-WM,ms_pacman,2,,533.0,60000.0
+Full CoRe-WM,ms_pacman,2,,706.0,70000.0
+Full CoRe-WM,ms_pacman,2,,861.0,80000.0
+Full CoRe-WM,ms_pacman,2,,777.0,90000.0
+Full CoRe-WM,ms_pacman,2,,927.7,100000.0
+Full CoRe-WM,ms_pacman,3,,300.0,10000.0
+Full CoRe-WM,ms_pacman,3,,436.0,20000.0
+Full CoRe-WM,ms_pacman,3,,402.0,30000.0
+Full CoRe-WM,ms_pacman,3,,498.0,40000.0
+Full CoRe-WM,ms_pacman,3,,636.0,50000.0
+Full CoRe-WM,ms_pacman,3,,568.0,60000.0
+Full CoRe-WM,ms_pacman,3,,698.0,70000.0
+Full CoRe-WM,ms_pacman,3,,731.0,80000.0
+Full CoRe-WM,ms_pacman,3,,738.0,90000.0
+Full CoRe-WM,ms_pacman,3,,747.6,100000.0
+Full CoRe-WM,ms_pacman,4,,337.0,10000.0
+Full CoRe-WM,ms_pacman,4,,554.0,20000.0
+Full CoRe-WM,ms_pacman,4,,482.0,30000.0
+Full CoRe-WM,ms_pacman,4,,508.0,40000.0
+Full CoRe-WM,ms_pacman,4,,588.0,50000.0
+Full CoRe-WM,ms_pacman,4,,914.0,60000.0
+Full CoRe-WM,ms_pacman,4,,686.0,70000.0
+Full CoRe-WM,ms_pacman,4,,1206.0,80000.0
+Full CoRe-WM,ms_pacman,4,,1489.0,90000.0
+Full CoRe-WM,ms_pacman,4,,717.9,100000.0
+Full CoRe-WM,pong,0,,-20.2,10000.0
+Full CoRe-WM,pong,0,,-20.6,20000.0
+Full CoRe-WM,pong,0,,-20.1,30000.0
+Full CoRe-WM,pong,0,,-20.0,40000.0
+Full CoRe-WM,pong,0,,-18.5,50000.0
+Full CoRe-WM,pong,0,,-17.7,60000.0
+Full CoRe-WM,pong,0,,-15.0,70000.0
+Full CoRe-WM,pong,0,,-10.3,80000.0
+Full CoRe-WM,pong,0,,-13.6,90000.0
+Full CoRe-WM,pong,0,,-6.23,100000.0
+Full CoRe-WM,pong,1,,-20.4,10000.0
+Full CoRe-WM,pong,1,,-20.8,20000.0
+Full CoRe-WM,pong,1,,-20.2,30000.0
+Full CoRe-WM,pong,1,,-18.3,40000.0
+Full CoRe-WM,pong,1,,-16.7,50000.0
+Full CoRe-WM,pong,1,,-15.0,60000.0
+Full CoRe-WM,pong,1,,-15.0,70000.0
+Full CoRe-WM,pong,1,,-13.7,80000.0
+Full CoRe-WM,pong,1,,-12.3,90000.0
+Full CoRe-WM,pong,1,,-7.68,100000.0
+Full CoRe-WM,pong,2,,-20.7,10000.0
+Full CoRe-WM,pong,2,,-21.0,20000.0
+Full CoRe-WM,pong,2,,-20.5,30000.0
+Full CoRe-WM,pong,2,,-16.6,40000.0
+Full CoRe-WM,pong,2,,-16.1,50000.0
+Full CoRe-WM,pong,2,,-14.7,60000.0
+Full CoRe-WM,pong,2,,-16.0,70000.0
+Full CoRe-WM,pong,2,,-10.1,80000.0
+Full CoRe-WM,pong,2,,-10.4,90000.0
+Full CoRe-WM,pong,2,,-3.79,100000.0
+Full CoRe-WM,pong,3,,-20.8,10000.0
+Full CoRe-WM,pong,3,,-20.8,20000.0
+Full CoRe-WM,pong,3,,-20.6,30000.0
+Full CoRe-WM,pong,3,,-19.9,40000.0
+Full CoRe-WM,pong,3,,-19.0,50000.0
+Full CoRe-WM,pong,3,,-16.8,60000.0
+Full CoRe-WM,pong,3,,-18.8,70000.0
+Full CoRe-WM,pong,3,,-12.1,80000.0
+Full CoRe-WM,pong,3,,-9.7,90000.0
+Full CoRe-WM,pong,3,,-6.14,100000.0
+Full CoRe-WM,pong,4,,-20.5,10000.0
+Full CoRe-WM,pong,4,,-20.2,20000.0
+Full CoRe-WM,pong,4,,-20.2,30000.0
+Full CoRe-WM,pong,4,,-19.5,40000.0
+Full CoRe-WM,pong,4,,-17.2,50000.0
+Full CoRe-WM,pong,4,,-15.7,60000.0
+Full CoRe-WM,pong,4,,-12.8,70000.0
+Full CoRe-WM,pong,4,,-10.5,80000.0
+Full CoRe-WM,pong,4,,-11.6,90000.0
+Full CoRe-WM,pong,4,,-8.22,100000.0
+Full CoRe-WM,private_eye,0,,-728.2,10000.0
+Full CoRe-WM,private_eye,0,,0.0,20000.0
+Full CoRe-WM,private_eye,0,,100.0,30000.0
+Full CoRe-WM,private_eye,0,,100.0,40000.0
+Full CoRe-WM,private_eye,0,,-2.9,50000.0
+Full CoRe-WM,private_eye,0,,0.0,60000.0
+Full CoRe-WM,private_eye,0,,100.0,70000.0
+Full CoRe-WM,private_eye,0,,0.0,80000.0
+Full CoRe-WM,private_eye,0,,-355.8,90000.0
+Full CoRe-WM,private_eye,0,,20.0,100000.0
+Full CoRe-WM,private_eye,1,,1549.4,10000.0
+Full CoRe-WM,private_eye,1,,2656.7,20000.0
+Full CoRe-WM,private_eye,1,,100.0,30000.0
+Full CoRe-WM,private_eye,1,,70.0,40000.0
+Full CoRe-WM,private_eye,1,,100.0,50000.0
+Full CoRe-WM,private_eye,1,,100.0,60000.0
+Full CoRe-WM,private_eye,1,,83.8,70000.0
+Full CoRe-WM,private_eye,1,,2718.9,80000.0
+Full CoRe-WM,private_eye,1,,0.0,90000.0
+Full CoRe-WM,private_eye,1,,-1000.0,100000.0
+Full CoRe-WM,private_eye,2,,40.0,10000.0
+Full CoRe-WM,private_eye,2,,100.0,20000.0
+Full CoRe-WM,private_eye,2,,100.0,30000.0
+Full CoRe-WM,private_eye,2,,100.0,40000.0
+Full CoRe-WM,private_eye,2,,100.0,50000.0
+Full CoRe-WM,private_eye,2,,30.0,60000.0
+Full CoRe-WM,private_eye,2,,100.0,70000.0
+Full CoRe-WM,private_eye,2,,100.0,80000.0
+Full CoRe-WM,private_eye,2,,100.0,90000.0
+Full CoRe-WM,private_eye,2,,100.0,100000.0
+Full CoRe-WM,private_eye,3,,-990.0,10000.0
+Full CoRe-WM,private_eye,3,,0.0,20000.0
+Full CoRe-WM,private_eye,3,,0.0,30000.0
+Full CoRe-WM,private_eye,3,,30.0,40000.0
+Full CoRe-WM,private_eye,3,,100.0,50000.0
+Full CoRe-WM,private_eye,3,,100.0,60000.0
+Full CoRe-WM,private_eye,3,,0.0,70000.0
+Full CoRe-WM,private_eye,3,,100.0,80000.0
+Full CoRe-WM,private_eye,3,,0.0,90000.0
+Full CoRe-WM,private_eye,3,,100.0,100000.0
+Full CoRe-WM,private_eye,4,,2027.1,10000.0
+Full CoRe-WM,private_eye,4,,0.0,20000.0
+Full CoRe-WM,private_eye,4,,76.3,30000.0
+Full CoRe-WM,private_eye,4,,4053.4,40000.0
+Full CoRe-WM,private_eye,4,,4243.3,50000.0
+Full CoRe-WM,private_eye,4,,1530.2,60000.0
+Full CoRe-WM,private_eye,4,,0.0,70000.0
+Full CoRe-WM,private_eye,4,,20.0,80000.0
+Full CoRe-WM,private_eye,4,,3560.1,90000.0
+Full CoRe-WM,private_eye,4,,2981.28,100000.0
+Full CoRe-WM,qbert,0,,205.0,10000.0
+Full CoRe-WM,qbert,0,,327.5,20000.0
+Full CoRe-WM,qbert,0,,500.0,30000.0
+Full CoRe-WM,qbert,0,,322.5,40000.0
+Full CoRe-WM,qbert,0,,695.0,50000.0
+Full CoRe-WM,qbert,0,,870.0,60000.0
+Full CoRe-WM,qbert,0,,717.5,70000.0
+Full CoRe-WM,qbert,0,,705.0,80000.0
+Full CoRe-WM,qbert,0,,712.5,90000.0
+Full CoRe-WM,qbert,0,,734.25,100000.0
+Full CoRe-WM,qbert,1,,175.0,10000.0
+Full CoRe-WM,qbert,1,,347.5,20000.0
+Full CoRe-WM,qbert,1,,257.5,30000.0
+Full CoRe-WM,qbert,1,,347.5,40000.0
+Full CoRe-WM,qbert,1,,515.0,50000.0
+Full CoRe-WM,qbert,1,,662.5,60000.0
+Full CoRe-WM,qbert,1,,710.0,70000.0
+Full CoRe-WM,qbert,1,,612.5,80000.0
+Full CoRe-WM,qbert,1,,922.5,90000.0
+Full CoRe-WM,qbert,1,,1054.75,100000.0
+Full CoRe-WM,qbert,2,,240.0,10000.0
+Full CoRe-WM,qbert,2,,312.5,20000.0
+Full CoRe-WM,qbert,2,,365.0,30000.0
+Full CoRe-WM,qbert,2,,365.0,40000.0
+Full CoRe-WM,qbert,2,,340.0,50000.0
+Full CoRe-WM,qbert,2,,365.0,60000.0
+Full CoRe-WM,qbert,2,,452.5,70000.0
+Full CoRe-WM,qbert,2,,625.0,80000.0
+Full CoRe-WM,qbert,2,,462.5,90000.0
+Full CoRe-WM,qbert,2,,783.5,100000.0
+Full CoRe-WM,qbert,3,,112.5,10000.0
+Full CoRe-WM,qbert,3,,170.0,20000.0
+Full CoRe-WM,qbert,3,,352.5,30000.0
+Full CoRe-WM,qbert,3,,277.5,40000.0
+Full CoRe-WM,qbert,3,,402.5,50000.0
+Full CoRe-WM,qbert,3,,682.5,60000.0
+Full CoRe-WM,qbert,3,,642.5,70000.0
+Full CoRe-WM,qbert,3,,637.5,80000.0
+Full CoRe-WM,qbert,3,,657.5,90000.0
+Full CoRe-WM,qbert,3,,735.5,100000.0
+Full CoRe-WM,qbert,4,,260.0,10000.0
+Full CoRe-WM,qbert,4,,292.5,20000.0
+Full CoRe-WM,qbert,4,,335.0,30000.0
+Full CoRe-WM,qbert,4,,295.0,40000.0
+Full CoRe-WM,qbert,4,,340.0,50000.0
+Full CoRe-WM,qbert,4,,407.5,60000.0
+Full CoRe-WM,qbert,4,,595.0,70000.0
+Full CoRe-WM,qbert,4,,710.0,80000.0
+Full CoRe-WM,qbert,4,,682.5,90000.0
+Full CoRe-WM,qbert,4,,740.5,100000.0
+Full CoRe-WM,road_runner,0,,1010.0,10000.0
+Full CoRe-WM,road_runner,0,,6220.0,20000.0
+Full CoRe-WM,road_runner,0,,820.0,30000.0
+Full CoRe-WM,road_runner,0,,14600.0,40000.0
+Full CoRe-WM,road_runner,0,,12540.0,50000.0
+Full CoRe-WM,road_runner,0,,14930.0,60000.0
+Full CoRe-WM,road_runner,0,,13870.0,70000.0
+Full CoRe-WM,road_runner,0,,14410.0,80000.0
+Full CoRe-WM,road_runner,0,,14520.0,90000.0
+Full CoRe-WM,road_runner,0,,14468.0,100000.0
+Full CoRe-WM,road_runner,1,,1000.0,10000.0
+Full CoRe-WM,road_runner,1,,900.0,20000.0
+Full CoRe-WM,road_runner,1,,970.0,30000.0
+Full CoRe-WM,road_runner,1,,970.0,40000.0
+Full CoRe-WM,road_runner,1,,1280.0,50000.0
+Full CoRe-WM,road_runner,1,,1310.0,60000.0
+Full CoRe-WM,road_runner,1,,1690.0,70000.0
+Full CoRe-WM,road_runner,1,,1870.0,80000.0
+Full CoRe-WM,road_runner,1,,3340.0,90000.0
+Full CoRe-WM,road_runner,1,,4925.0,100000.0
+Full CoRe-WM,road_runner,2,,540.0,10000.0
+Full CoRe-WM,road_runner,2,,5490.0,20000.0
+Full CoRe-WM,road_runner,2,,5460.0,30000.0
+Full CoRe-WM,road_runner,2,,7520.0,40000.0
+Full CoRe-WM,road_runner,2,,13360.0,50000.0
+Full CoRe-WM,road_runner,2,,12780.0,60000.0
+Full CoRe-WM,road_runner,2,,14510.0,70000.0
+Full CoRe-WM,road_runner,2,,13640.0,80000.0
+Full CoRe-WM,road_runner,2,,13830.0,90000.0
+Full CoRe-WM,road_runner,2,,14357.0,100000.0
+Full CoRe-WM,road_runner,3,,750.0,10000.0
+Full CoRe-WM,road_runner,3,,2350.0,20000.0
+Full CoRe-WM,road_runner,3,,11240.0,30000.0
+Full CoRe-WM,road_runner,3,,10480.0,40000.0
+Full CoRe-WM,road_runner,3,,13830.0,50000.0
+Full CoRe-WM,road_runner,3,,13980.0,60000.0
+Full CoRe-WM,road_runner,3,,12910.0,70000.0
+Full CoRe-WM,road_runner,3,,14050.0,80000.0
+Full CoRe-WM,road_runner,3,,14200.0,90000.0
+Full CoRe-WM,road_runner,3,,14372.0,100000.0
+Full CoRe-WM,road_runner,4,,620.0,10000.0
+Full CoRe-WM,road_runner,4,,3400.0,20000.0
+Full CoRe-WM,road_runner,4,,10430.0,30000.0
+Full CoRe-WM,road_runner,4,,13440.0,40000.0
+Full CoRe-WM,road_runner,4,,13980.0,50000.0
+Full CoRe-WM,road_runner,4,,15660.0,60000.0
+Full CoRe-WM,road_runner,4,,14810.0,70000.0
+Full CoRe-WM,road_runner,4,,14550.0,80000.0
+Full CoRe-WM,road_runner,4,,14830.0,90000.0
+Full CoRe-WM,road_runner,4,,14668.0,100000.0
+Full CoRe-WM,seaquest,0,,254.0,10000.0
+Full CoRe-WM,seaquest,0,,258.0,20000.0
+Full CoRe-WM,seaquest,0,,764.0,30000.0
+Full CoRe-WM,seaquest,0,,770.0,40000.0
+Full CoRe-WM,seaquest,0,,298.0,50000.0
+Full CoRe-WM,seaquest,0,,702.0,60000.0
+Full CoRe-WM,seaquest,0,,740.0,70000.0
+Full CoRe-WM,seaquest,0,,456.0,80000.0
+Full CoRe-WM,seaquest,0,,500.0,90000.0
+Full CoRe-WM,seaquest,0,,671.8,100000.0
+Full CoRe-WM,seaquest,1,,144.0,10000.0
+Full CoRe-WM,seaquest,1,,266.0,20000.0
+Full CoRe-WM,seaquest,1,,412.0,30000.0
+Full CoRe-WM,seaquest,1,,392.0,40000.0
+Full CoRe-WM,seaquest,1,,602.0,50000.0
+Full CoRe-WM,seaquest,1,,494.0,60000.0
+Full CoRe-WM,seaquest,1,,434.0,70000.0
+Full CoRe-WM,seaquest,1,,440.0,80000.0
+Full CoRe-WM,seaquest,1,,278.0,90000.0
+Full CoRe-WM,seaquest,1,,427.2,100000.0
+Full CoRe-WM,seaquest,2,,184.0,10000.0
+Full CoRe-WM,seaquest,2,,232.0,20000.0
+Full CoRe-WM,seaquest,2,,342.0,30000.0
+Full CoRe-WM,seaquest,2,,332.0,40000.0
+Full CoRe-WM,seaquest,2,,262.0,50000.0
+Full CoRe-WM,seaquest,2,,174.0,60000.0
+Full CoRe-WM,seaquest,2,,532.0,70000.0
+Full CoRe-WM,seaquest,2,,378.0,80000.0
+Full CoRe-WM,seaquest,2,,568.0,90000.0
+Full CoRe-WM,seaquest,2,,575.0,100000.0
+Full CoRe-WM,seaquest,3,,238.0,10000.0
+Full CoRe-WM,seaquest,3,,322.0,20000.0
+Full CoRe-WM,seaquest,3,,296.0,30000.0
+Full CoRe-WM,seaquest,3,,354.0,40000.0
+Full CoRe-WM,seaquest,3,,378.0,50000.0
+Full CoRe-WM,seaquest,3,,396.0,60000.0
+Full CoRe-WM,seaquest,3,,348.0,70000.0
+Full CoRe-WM,seaquest,3,,262.0,80000.0
+Full CoRe-WM,seaquest,3,,220.0,90000.0
+Full CoRe-WM,seaquest,3,,388.2,100000.0
+Full CoRe-WM,seaquest,4,,522.0,10000.0
+Full CoRe-WM,seaquest,4,,446.0,20000.0
+Full CoRe-WM,seaquest,4,,292.0,30000.0
+Full CoRe-WM,seaquest,4,,394.0,40000.0
+Full CoRe-WM,seaquest,4,,464.0,50000.0
+Full CoRe-WM,seaquest,4,,348.0,60000.0
+Full CoRe-WM,seaquest,4,,388.0,70000.0
+Full CoRe-WM,seaquest,4,,276.0,80000.0
+Full CoRe-WM,seaquest,4,,300.0,90000.0
+Full CoRe-WM,seaquest,4,,515.4,100000.0
+Full CoRe-WM,up_n_down,0,,2578.0,10000.0
+Full CoRe-WM,up_n_down,0,,1078.0,20000.0
+Full CoRe-WM,up_n_down,0,,1165.0,30000.0
+Full CoRe-WM,up_n_down,0,,5866.0,40000.0
+Full CoRe-WM,up_n_down,0,,73812.0,50000.0
+Full CoRe-WM,up_n_down,0,,224660.0,60000.0
+Full CoRe-WM,up_n_down,0,,30721.0,70000.0
+Full CoRe-WM,up_n_down,0,,75508.0,80000.0
+Full CoRe-WM,up_n_down,0,,178741.0,90000.0
+Full CoRe-WM,up_n_down,0,,92736.3,100000.0
+Full CoRe-WM,up_n_down,1,,1220.0,10000.0
+Full CoRe-WM,up_n_down,1,,1101.0,20000.0
+Full CoRe-WM,up_n_down,1,,1528.0,30000.0
+Full CoRe-WM,up_n_down,1,,1759.0,40000.0
+Full CoRe-WM,up_n_down,1,,2103.0,50000.0
+Full CoRe-WM,up_n_down,1,,3561.0,60000.0
+Full CoRe-WM,up_n_down,1,,72884.0,70000.0
+Full CoRe-WM,up_n_down,1,,64595.0,80000.0
+Full CoRe-WM,up_n_down,1,,55927.0,90000.0
+Full CoRe-WM,up_n_down,1,,103704.3,100000.0
+Full CoRe-WM,up_n_down,2,,601.0,10000.0
+Full CoRe-WM,up_n_down,2,,568.0,20000.0
+Full CoRe-WM,up_n_down,2,,2604.0,30000.0
+Full CoRe-WM,up_n_down,2,,2160.0,40000.0
+Full CoRe-WM,up_n_down,2,,128700.0,50000.0
+Full CoRe-WM,up_n_down,2,,112614.0,60000.0
+Full CoRe-WM,up_n_down,2,,210338.0,70000.0
+Full CoRe-WM,up_n_down,2,,240760.0,80000.0
+Full CoRe-WM,up_n_down,2,,162756.0,90000.0
+Full CoRe-WM,up_n_down,2,,86174.4,100000.0
+Full CoRe-WM,up_n_down,3,,2013.0,10000.0
+Full CoRe-WM,up_n_down,3,,1658.0,20000.0
+Full CoRe-WM,up_n_down,3,,1694.0,30000.0
+Full CoRe-WM,up_n_down,3,,3046.0,40000.0
+Full CoRe-WM,up_n_down,3,,2908.0,50000.0
+Full CoRe-WM,up_n_down,3,,4114.0,60000.0
+Full CoRe-WM,up_n_down,3,,4431.0,70000.0
+Full CoRe-WM,up_n_down,3,,4292.0,80000.0
+Full CoRe-WM,up_n_down,3,,4748.0,90000.0
+Full CoRe-WM,up_n_down,3,,4151.8,100000.0
+Full CoRe-WM,up_n_down,4,,1217.0,10000.0
+Full CoRe-WM,up_n_down,4,,1668.0,20000.0
+Full CoRe-WM,up_n_down,4,,3403.0,30000.0
+Full CoRe-WM,up_n_down,4,,2228.0,40000.0
+Full CoRe-WM,up_n_down,4,,2636.0,50000.0
+Full CoRe-WM,up_n_down,4,,3221.0,60000.0
+Full CoRe-WM,up_n_down,4,,3100.0,70000.0
+Full CoRe-WM,up_n_down,4,,3848.0,80000.0
+Full CoRe-WM,up_n_down,4,,4021.0,90000.0
+Full CoRe-WM,up_n_down,4,,3215.9,100000.0
+Full CoRe-WM,alien,0,,212.0,10000.0
+Full CoRe-WM,alien,0,,342.0,20000.0
+Full CoRe-WM,alien,0,,346.0,30000.0
+Full CoRe-WM,alien,0,,273.0,40000.0
+Full CoRe-WM,alien,0,,368.0,50000.0
+Full CoRe-WM,alien,0,,1003.0,60000.0
+Full CoRe-WM,alien,0,,791.0,70000.0
+Full CoRe-WM,alien,0,,372.0,80000.0
+Full CoRe-WM,alien,0,,463.0,90000.0
+Full CoRe-WM,alien,0,,651.5,100000.0
