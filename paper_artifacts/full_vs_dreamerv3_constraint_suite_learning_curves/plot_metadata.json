@@ -1,0 +1,43 @@
+{
+  "methods": [
+    "DreamerV3",
+    "Full CoRe-WM",
+    "Constraint suite (seed 0; training episodes)"
+  ],
+  "suite_root": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/constraint_full26_seed0_OzirkNB8",
+  "suite_manifest_sha256": "813043d2e830946fba32fd8d40552bb86e71bb9f4139a8c585633757bbaa350b",
+  "suite_status_sha256": "44aa2ffb0b937e9f7b46f7ec912e147a2c0e6812f242e1c86717073657adf581",
+  "suite_actions": 110000,
+  "suite_seed": 0,
+  "suite_method_config": "size25m; whitened persistence 0.1; isotropy 0.01; target window 1; reset mask off",
+  "comparability_note": "Purple is a single seed and training-episode returns. It is not a 5-seed estimate or isolated checkpoint evaluation; do not compare uncertainty bands or claim significance from this plot.",
+  "source_existing_figures": "/home/vn-user0101/Dat/HTS-Dreamer/paper_artifacts/full_vs_dreamerv3_learning_curves",
+  "games": [
+    "alien",
+    "amidar",
+    "assault",
+    "asterix",
+    "bank_heist",
+    "battle_zone",
+    "boxing",
+    "breakout",
+    "chopper_command",
+    "crazy_climber",
+    "demon_attack",
+    "freeway",
+    "frostbite",
+    "gopher",
+    "hero",
+    "jamesbond",
+    "kangaroo",
+    "krull",
+    "kung_fu_master",
+    "ms_pacman",
+    "pong",
+    "private_eye",
+    "qbert",
+    "road_runner",
+    "seaquest",
+    "up_n_down"
+  ]
+}
