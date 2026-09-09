@@ -97,6 +97,25 @@ class Agent_HTP(embodied.jax.Agent):
     self.htp_use_recon = bool(htp_cfg.get('use_recon', True))
     self.htp_use_pdyn = bool(htp_cfg.get('use_pdyn', True))
     self.htp_use_vicreg = bool(htp_cfg.get('use_vicreg', False))
+    experimental_scales = [float(htp_cfg.get(key, 0.0)) for key in (
+        'persistence_scale', 'persistence_isotropy', 'persistence_decorrelation',
+        'persistence_block2_rank_scale')]
+    if any(not np.isfinite(x) or x < 0 for x in experimental_scales):
+      raise ValueError('Persistence regularizer scales must be finite and nonnegative')
+    if any(experimental_scales) and not (self.htp_enabled and self.htp_use_pdyn):
+      raise ValueError('Persistence regularizers require enabled HTP prefix dynamics')
+    if float(htp_cfg.get('persistence_decorrelation', 0.0)) and len(htp_cfg.proj.dims) < 2:
+      raise ValueError('Block decorrelation requires at least two prefix blocks')
+    if float(htp_cfg.get('persistence_block2_rank_scale', 0.0)):
+      if len(htp_cfg.proj.dims) < 2:
+        raise ValueError('Second-block rank guard requires two blocks')
+      floor = float(htp_cfg.get('persistence_block2_min_rank', 8.0))
+      width = int(htp_cfg.proj.dims[1]) - int(htp_cfg.proj.dims[0])
+      if not np.isfinite(floor) or not 1 < floor <= width:
+        raise ValueError('Second-block min rank must be finite and in (1, block width]')
+    min_rank = float(htp_cfg.get('persistence_min_rank', 0.0))
+    if not np.isfinite(min_rank) or (min_rank != 0 and not 1 < min_rank <= int(htp_cfg.proj.dims[0])):
+      raise ValueError('persistence_min_rank must be zero or in (1, first prefix dimension]')
     self.htp_vicreg_gamma = float(htp_cfg.get('vicreg_gamma', 1.0))
     self.htp_vicreg_scale = float(htp_cfg.get('vicreg_scale', 1.0))
 
@@ -348,7 +367,7 @@ class Agent_HTP(embodied.jax.Agent):
 
       # ---- Progressive reconstruction (only when use_recon=true) ----
       if self.htp_use_recon:
-        rec_loss, rec_per_level = self.htp_recon(z_t, sg(h_t))
+        rec_loss, rec_per_level = self.htp_recon(z_t, sg(h_t), reset=reset)
         losses['htp_rec'] = rec_loss
         for ell, err in enumerate(rec_per_level):
           metrics[f'htp_rec_l{ell}'] = err.mean()
@@ -359,10 +378,48 @@ class Agent_HTP(embodied.jax.Agent):
         pad_last = jnp.zeros_like(act_flat_full[:, :1])
         act_seq_full = jnp.concatenate(
             [act_flat_full[:, 1:], pad_last], axis=1)    # (B, T, A)
-        pdyn_loss, pdyn_per_level = self.htp_pdyn(z_t, z_slow, act_seq_full)
+        pdyn_loss, pdyn_per_level = self.htp_pdyn(z_t, z_slow, act_seq_full, reset=reset)
         losses['htp_pdyn'] = pdyn_loss
+        metrics['htp/pdyn_prediction_only'] = pdyn_loss.mean()
+        persistence_scale = float(self.config.htp.get('persistence_scale', 0.0))
+        if persistence_scale:
+          persistence = htp_mod.prefix_persistence(
+              z_t, reset, int(self.htp_pdyn.dims[0]),
+              int(self.htp_pdyn.strides[0]),
+              all_lags=bool(self.config.htp.get('persistence_all_lags', False)),
+              metric=self.config.htp.get('persistence_metric', 'pooled'))
+          losses['htp_pdyn'] = pdyn_loss + persistence_scale * persistence
+          metrics['htp/prefix_persistence'] = persistence
+        isotropy_scale = float(self.config.htp.get('persistence_isotropy', 0.0))
+        if isotropy_scale:
+          isotropy = htp_mod.prefix_isotropy(z_t, int(self.htp_pdyn.dims[0]))
+          min_rank = float(self.config.htp.get('persistence_min_rank', 0.0))
+          diversity = (htp_mod.prefix_rank_floor(z_t, int(self.htp_pdyn.dims[0]), min_rank)
+                       if min_rank else isotropy)
+          losses['htp_pdyn'] = losses['htp_pdyn'] + isotropy_scale * diversity
+          metrics['htp/prefix_isotropy'] = isotropy
+          metrics['htp/prefix_diversity_penalty'] = diversity
+        decorrelation_scale = float(self.config.htp.get('persistence_decorrelation', 0.0))
+        if decorrelation_scale:
+          redundancy = htp_mod.prefix_block_redundancy(
+              z_t, int(self.htp_pdyn.dims[0]), int(self.htp_pdyn.dims[1]))
+          losses['htp_pdyn'] = losses['htp_pdyn'] + decorrelation_scale * redundancy
+          metrics['htp/block12_redundancy'] = redundancy
+        block2_rank_scale = float(self.config.htp.get('persistence_block2_rank_scale', 0.0))
+        if decorrelation_scale or block2_rank_scale:
+          second = z_t[..., int(self.htp_pdyn.dims[0]):int(self.htp_pdyn.dims[1])]
+          rank = htp_mod.prefix_participation_rank(second, second.shape[-1])
+          metrics['htp/block2_effective_rank'] = rank
+          if block2_rank_scale:
+            floor = float(self.config.htp.get('persistence_block2_min_rank', 8.0))
+            guard = htp_mod.prefix_rank_floor(second, second.shape[-1], floor)
+            losses['htp_pdyn'] = losses['htp_pdyn'] + block2_rank_scale * guard
+            metrics['htp/block2_rank_guard'] = guard
+            metrics['htp/block2_rank_guard_active'] = f32(rank < floor)
         for info in pdyn_per_level:
           metrics[f'htp_pdyn_delta{int(info["stride"])}'] = info['err_mean']
+          if 'cross_episode_fraction' in info:
+            metrics[f'htp/cross_episode_delta{int(info["stride"])}'] = info['cross_episode_fraction']
 
       # ---- VICReg-style variance regularizer (Slim-HTP anti-collapse) ----
       if self.htp_use_vicreg:

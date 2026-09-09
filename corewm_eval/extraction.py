@@ -30,59 +30,68 @@ def _flat_to_feat(h, spec):
   }
 
 
-def _extract_impl(model, obs, prevact, spec):
+def _extract_impl(model, obs, prevact, spec, decode=True):
   reset = obs['is_first']
   batch = reset.shape[0]
   enc_carry = model.enc.initial(batch)
   dyn_carry = model.dyn.initial(batch)
-  dec_carry = model.dec.initial(batch)
+  dec_carry = model.dec.initial(batch) if decode else None
   enc_carry, _, tokens = model.enc(
       enc_carry, obs, reset, training=False)
   dyn_carry, posterior, feat = model.dyn.observe(
       dyn_carry, tokens, prevact, reset, training=False)
   h = model.feat2h(feat)
-  z = model.htp_proj(h)
-  cumulative = model.htp_recon.reconstruct(z, h)
-  _, _, decoded_original = model.dec(
-      dec_carry, {'deter': feat['deter'], 'stoch': feat['stoch']},
-      reset, training=False)
-  recovered = _flat_to_feat(h, spec)
-  _, _, decoded_recovered = model.dec(
-      dec_carry, recovered, reset, training=False)
-  decoded_prefixes = []
-  for hhat in cumulative:
-    _, _, decoded = model.dec(
-        dec_carry, _flat_to_feat(hhat, spec), reset, training=False)
-    decoded_prefixes.append({k: v.pred() for k, v in decoded.items()})
+  z = h if model.htp_proj is None else model.htp_proj(h)
+  cumulative = (() if model.htp_recon is None else
+                model.htp_recon.reconstruct(z, h))
   dims = tuple(spec.prefix_dims)
   lows = (0, *dims[:-1])
-  return {
+  outputs = {
       'posterior': posterior,
       'h': h,
       'z': z,
       'prefixes': tuple(z[..., :d] for d in dims),
       'blocks': tuple(z[..., lo:hi] for lo, hi in zip(lows, dims)),
       'cumulative_reconstructions': cumulative,
-      'decoded_original': {k: v.pred() for k, v in decoded_original.items()},
-      'decoded_recovered': {k: v.pred() for k, v in decoded_recovered.items()},
-      'decoded_prefixes': tuple(decoded_prefixes),
   }
+  if decode:
+    _, _, decoded_original = model.dec(
+        dec_carry, {'deter': feat['deter'], 'stoch': feat['stoch']},
+        reset, training=False)
+    recovered = _flat_to_feat(h, spec)
+    _, _, decoded_recovered = model.dec(
+        dec_carry, recovered, reset, training=False)
+    decoded_prefixes = []
+    for hhat in cumulative:
+      _, _, decoded = model.dec(
+          dec_carry, _flat_to_feat(hhat, spec), reset, training=False)
+      decoded_prefixes.append({k: v.pred() for k, v in decoded.items()})
+    outputs.update(
+        decoded_original={k: v.pred() for k, v in decoded_original.items()},
+        decoded_recovered={k: v.pred() for k, v in decoded_recovered.items()},
+        decoded_prefixes=tuple(decoded_prefixes))
+  return outputs
 
 
-def extract_readonly(agent, obs, prevact, spec, seed, params=None):
+def extract_readonly(agent, obs, prevact, spec, seed, params=None, decode=True):
   """Evaluate without allowing Ninjax state creation or modification."""
   pure = nj.pure(lambda obs, prevact: _extract_impl(
-      agent.model, obs, prevact, spec))
+      agent.model, obs, prevact, spec, decode=decode))
   params = agent.save()['params'] if params is None else params
   before_keys = tuple(sorted(params))
-  returned, outputs = pure(
-      params, obs, prevact, seed=np.asarray(seed, np.uint32),
-      # Ninjax scan needs modify=True for its access pre-pass. ignore=True
-      # guarantees that any attempted state update is discarded.
-      create=False, modify=True, ignore=True)
+  # This helper intentionally bypasses Agent's compiled policy/train wrappers.
+  # Mark its host inputs and scalar carry initializers as explicit transfers so
+  # Dreamer's production transfer guard remains enabled and meaningful.
+  with jax._src.config.explicit_device_put_scope():
+    returned, outputs = pure(
+        params, obs, prevact, seed=np.asarray(seed, np.uint32),
+        # Ninjax scan needs modify=True for its access pre-pass. ignore=True
+        # guarantees that any attempted state update is discarded.
+        create=False, modify=True, ignore=True)
   if tuple(sorted(returned)) != before_keys:
     raise AssertionError('Parameter key set changed during extraction')
-  return jax.tree.map(np.asarray, outputs)
+  with jax._src.config.explicit_device_get_scope():
+    return jax.tree.map(np.asarray, outputs)
 
 
 def _open_loop_impl(model, start_state, actions, spec):
@@ -117,12 +126,14 @@ def open_loop_readonly(agent, start_state, actions, spec, seed, params=None):
   params = agent.save()['params'] if params is None else params
   pure = nj.pure(lambda state, acts: _open_loop_impl(
       agent.model, state, acts, spec))
-  returned, outputs = pure(
-      params, start_state, actions, seed=np.asarray(seed, np.uint32),
-      create=False, modify=True, ignore=True)
+  with jax._src.config.explicit_device_put_scope():
+    returned, outputs = pure(
+        params, start_state, actions, seed=np.asarray(seed, np.uint32),
+        create=False, modify=True, ignore=True)
   if tuple(sorted(returned)) != tuple(sorted(params)):
     raise AssertionError('Parameter key set changed during rollout')
-  return jax.tree.map(np.asarray, outputs)
+  with jax._src.config.explicit_device_get_scope():
+    return jax.tree.map(np.asarray, outputs)
 
 
 def previous_actions(actions, cardinality=None):

@@ -42,6 +42,116 @@ f32 = jnp.float32
 sg = jax.lax.stop_gradient
 
 
+def causal_episode_average(x, reset, window):
+    """Past-only feature average, truncated at the latest episode reset."""
+    if window < 1:
+        raise ValueError('Averaging window must be positive')
+    if window == 1 or x.shape[1] == 0:
+        return x
+    if reset is None or reset.shape != x.shape[:2]:
+        raise ValueError('Temporal reconstruction target requires matching reset flags')
+    time = jnp.arange(x.shape[1])[None, :]
+    last_reset = jax.lax.associative_scan(
+        jnp.maximum, jnp.where(reset, time, 0), axis=1)
+    start = jnp.maximum(last_reset, time - window + 1)
+    sums = jnp.concatenate([
+        jnp.zeros_like(x[:, :1], dtype=f32), jnp.cumsum(x.astype(f32), axis=1)], axis=1)
+    previous = jnp.take_along_axis(sums, start[..., None], axis=1)
+    return ((sums[:, 1:] - previous) / (time - start + 1)[..., None]).astype(x.dtype)
+
+
+def prefix_isotropy(z, dim):
+    """Scale-free covariance shape penalty; discourages dimensional collapse."""
+    x = z[..., :dim].astype(f32).reshape((-1, dim))
+    x = x - x.mean(0)
+    covariance = x.T @ x / max(x.shape[0], 1)
+    normalized = covariance / jnp.maximum(jnp.trace(covariance) / dim, 1e-8)
+    return jnp.square(normalized - jnp.eye(dim)).sum() / dim
+
+
+def prefix_participation_rank(z, dim):
+    """Covariance participation rank, including a zero for exact constants."""
+    x = z[..., :dim].astype(f32).reshape((-1, dim))
+    x = x - x.mean(0)
+    covariance = x.T @ x / max(len(x), 1)
+    covariance /= jnp.maximum(jnp.trace(covariance) / dim, 1e-8)
+    return jnp.trace(covariance) ** 2 / jnp.maximum(jnp.square(covariance).sum(), 1e-12)
+
+
+def prefix_rank_floor(z, dim, min_rank):
+    """Stop pushing covariance toward isotropy once participation rank suffices.
+
+    For nondegenerate covariance below the floor, gradients match isotropy:
+    isotropy = dim / participation_rank - 1. Constants have finite positive
+    loss but, as with covariance penalties generally, zero escape gradient.
+    """
+    if not 1 <= min_rank <= dim:
+        raise ValueError('min_rank must lie between 1 and prefix dimension')
+    rank = prefix_participation_rank(z, dim)
+    return jnp.maximum(dim / jnp.maximum(rank, 1.0) - dim / min_rank, 0.0)
+
+
+def prefix_block_redundancy(z, first_dim, second_end):
+    """Linear CKA between the first two blocks; only block 2 gets direct gradients.
+
+    Scale invariant away from numerical floors. Zero-valued blocks are a
+    degenerate minimum, so reconstruction and rank diagnostics remain needed.
+    Shared projection parameters can still indirectly change block 1.
+    """
+    if not 0 < first_dim < second_end <= z.shape[-1]:
+        raise ValueError('Require two nonempty blocks within the representation')
+    a = sg(z[..., :first_dim].astype(f32).reshape((-1, first_dim)))
+    b = z[..., first_dim:second_end].astype(f32).reshape((-1, second_end - first_dim))
+    a, b = a - a.mean(0), b - b.mean(0)
+    # Normalize RMS first to keep the covariance products well conditioned.
+    a /= jnp.sqrt(jnp.maximum(jnp.square(a).mean(), 1e-8))
+    b /= jnp.sqrt(jnp.maximum(jnp.square(b).mean(), 1e-8))
+    n = max(len(a), 1)
+    cross = a.T @ b / n
+    ca, cb = a.T @ a / n, b.T @ b / n
+    denominator = jnp.sqrt(jnp.maximum(jnp.square(ca).sum() * jnp.square(cb).sum(), 1e-12))
+    return jnp.square(cross).sum() / denominator
+
+
+def prefix_persistence(z, reset, dim, stride, all_lags=False, metric='pooled'):
+    """Scale-normalized temporal variation, excluding episode boundaries.
+
+    This is a soft slowness bias, not a semantic-invariance guarantee.
+    Use alongside information-preserving objectives; constants remain degenerate.
+    """
+    if metric not in ('pooled', 'whitened'):
+        raise ValueError(f'Unknown persistence metric: {metric}')
+    if all_lags:
+        return jnp.stack([
+            prefix_persistence(z, reset, dim, lag, metric=metric)
+            for lag in range(1, min(stride, z.shape[1] - 1) + 1)
+        ]).mean() if z.shape[1] > 1 else jnp.asarray(0.0, f32)
+    x = z[..., :dim].astype(f32)
+    if x.shape[1] <= stride:
+        return jnp.asarray(0.0, f32)
+    episode = jnp.cumsum(reset.astype(jnp.int32), axis=1)
+    valid = (episode[:, :-stride] == episode[:, stride:]).astype(f32)
+    count = valid.sum()
+    a, b = x[:, :-stride], x[:, stride:]
+    mean = ((a + b) * valid[..., None]).sum((0, 1)) / jnp.maximum(2 * count, 1)
+    if metric == 'whitened':
+        # Approximate Mahalanobis variation. Unlike a ratio of traces, this
+        # does not reward merely concentrating variance in the slowest axis.
+        # Relative ridge stabilizes solves; extreme anisotropy and exact
+        # collapse still require separate diagnostics/anti-collapse losses.
+        ac = ((a - mean) * valid[..., None]).reshape((-1, dim))
+        bc = ((b - mean) * valid[..., None]).reshape((-1, dim))
+        delta = ((a - b) * valid[..., None]).reshape((-1, dim))
+        covariance = (ac.T @ ac + bc.T @ bc) / jnp.maximum(2 * count, 1)
+        difference = delta.T @ delta / jnp.maximum(count, 1)
+        ridge = jnp.maximum(jnp.trace(covariance) / dim * 1e-4, 1e-8)
+        return jnp.trace(jnp.linalg.solve(
+            covariance + ridge * jnp.eye(dim), difference)) / (2 * dim)
+    variance = (((a - mean) ** 2 + (b - mean) ** 2) * valid[..., None]).sum()
+    variation = (((a - b) ** 2) * valid[..., None]).sum()
+    return variation / jnp.maximum(variance, 1e-8)
+
+
 def cumulative_residual_reconstruction(residuals, template):
     """Apply the exact training recurrence h_l = sg(h_{l-1}) + G_l."""
     current = jnp.zeros_like(template)
@@ -213,7 +323,11 @@ class ProgressiveRecon(nj.Module):
     act: str = 'gelu'
     outscale: float = 1.0
 
+    first_target_window: int = 1
+
     def __init__(self, feat_dim, **kw):
+        if self.first_target_window < 1:
+            raise ValueError('first_target_window must be positive')
         self.feat_dim = feat_dim
         self.kw = kw
 
@@ -244,7 +358,7 @@ class ProgressiveRecon(nj.Module):
             residuals.append(head(block))
         return cumulative_residual_reconstruction(residuals, h_template)
 
-    def __call__(self, z, h_target):
+    def __call__(self, z, h_target, reset=None):
         """
         z        : (B, T, D)          online ordered representation
         h_target : (B, T, feat_dim)   base representation (sg applied by caller)
@@ -252,10 +366,12 @@ class ProgressiveRecon(nj.Module):
         L = self.num_levels
         beta = 1.0 / L  # uniform level weights
         cumulative = self.reconstruct(z, h_target)
+        coarse_target = causal_episode_average(h_target, reset, self.first_target_window)
         per_level = []
         total = jnp.zeros(h_target.shape[:-1], dtype=h_target.dtype)
-        for h_recon in cumulative:
-            err = ((h_target - h_recon) ** 2).mean(-1)  # (B, T); ||·||^2 / d_h
+        for ell, h_recon in enumerate(cumulative):
+            target = coarse_target if ell == 0 else h_target
+            err = ((target - h_recon) ** 2).mean(-1)  # (B, T); ||·||^2 / d_h
             per_level.append(err)
             total = total + beta * err
         return total, per_level
@@ -289,6 +405,7 @@ class MultiStridePDyn(nj.Module):
     act: str = 'gelu'
     outscale: float = 1.0
     enforce_coarse_to_fine: bool = True
+    mask_episode_boundaries: bool = False  # compatibility default; explicit ablation
 
     def __init__(self, **kw):
         assert len(self.dims) == len(self.strides), (
@@ -332,7 +449,7 @@ class MultiStridePDyn(nj.Module):
         targets = source + int(stride)
         return source, actions, targets
 
-    def __call__(self, z_online, z_target_slow, action_seq_full):
+    def __call__(self, z_online, z_target_slow, action_seq_full, reset=None):
         """
         Args:
           z_online         : (B, T, D)                  online ordered representation
@@ -348,6 +465,12 @@ class MultiStridePDyn(nj.Module):
         L = self.num_levels
         alpha = 1.0 / L
         B, T, _ = z_online.shape
+        if self.mask_episode_boundaries and reset is None:
+            raise ValueError('Episode-masked dynamics requires reset flags')
+        if reset is not None and reset.shape != (B, T):
+            raise ValueError(f'Expected reset shape {(B, T)}, got {reset.shape}')
+        episode = (jnp.cumsum(reset.astype(jnp.int32), axis=1)
+                   if reset is not None else None)
         total = jnp.zeros((B, T), dtype=z_online.dtype)
         per_level = []
         for ell in range(L):
@@ -376,7 +499,15 @@ class MultiStridePDyn(nj.Module):
             target = sg(z_target_slow[:, target_idx, :d_ell])             # (B, T_valid, d_ell)
 
             err = ((pred - target) ** 2).mean(-1)                          # (B, T_valid)
-            per_level.append({'stride': Delta, 'err_mean': err.mean()})
+            valid = (episode[:, :T_valid] == episode[:, Delta:]
+                     if episode is not None else jnp.ones((B, T_valid), bool))
+            if self.mask_episode_boundaries:
+                err = jnp.where(valid, err, 0)
+                err_mean = err.astype(f32).sum() / jnp.maximum(valid.sum(), 1)
+            else:
+                err_mean = err.mean()
+            per_level.append({'stride': Delta, 'err_mean': err_mean,
+                              'cross_episode_fraction': 1 - valid.astype(f32).mean()})
 
             # Zero-pad the last Δ positions so the returned loss is (B, T).
             pad = jnp.zeros((B, Delta), dtype=err.dtype)
