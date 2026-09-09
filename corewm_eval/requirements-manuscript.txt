@@ -1,0 +1,5 @@
+# Isolated evaluator dependencies. Keep the training environment's NumPy/SciPy ABI.
+numpy==1.26.4
+scipy==1.17.1
+pandas==2.2.3
+rliable==1.2.0
