@@ -1,0 +1,10 @@
+{
+  "baseline_source": "paper_artifacts/full_vs_dreamerv3_constraint_suite_learning_curves/aggregate.csv",
+  "reborn_source": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/reborn_four_game_fx3t85mi",
+  "bin_width_actions": 5000,
+  "reborn_seeds": 1,
+  "dreamerv3_seeds": 5,
+  "aggregation": "Mean training episode return per bin per seed; mean and SEM across seeds.",
+  "gaps": "Only observed bins plotted; straight lines connect observations. No imputation or extrapolation.",
+  "x_axis": "Reborn: explicit agent_actions; bin centers for both methods."
+}

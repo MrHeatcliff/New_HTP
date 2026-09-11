@@ -22,6 +22,21 @@ Road Runner giảm 4.030 điểm, và Frostbite giảm 1.778,5 điểm. Hai run 
 
 ![Learning curves](learning_curves.png)
 
+Đường học đã đổi sang so sánh **Reborn với DreamerV3**, theo layout của
+`full_vs_dreamerv3_constraint_suite_learning_curves`: trung bình episode trong
+bin 5K action, đặt điểm tại tâm bin. DreamerV3 dùng 5 seed với dải ±1 SEM;
+Reborn dùng seed 0, không có dải bất định. Cả hai đường là training episode
+returns. Bảng final evaluation ở trên vẫn là đối chiếu constraint lịch sử,
+không phải final evaluation DreamerV3.
+
+Hình cũ bị đứt vì bin 10K không có episode kết thúc được ghi `null`, chuyển
+thành NaN khi vẽ. Hình mới nối thẳng các bin có dữ liệu, không điền score vào
+bin trống hoặc ngoại suy ra đầu/cuối budget. Marker tím chỉ bin có quan sát.
+Trục X Reborn lấy trực tiếp `agent_actions` trong `episode_scores.jsonl`, tránh
+sai lệch do reset callback trong logger step. Dữ liệu và nguồn được lưu trong
+`learning_curve_aggregate.csv`, `learning_curve_episode_rows.csv` và
+`learning_curve_metadata.json`; từng game có PNG/PDF `learning_curve_<game>`.
+
 Reborn có 49,36M trainable parameters so với 40,60M của constrained CoRe-WM.
 Vì vậy kết quả không parameter-matched. Training episode curve mô tả hành vi
 trong lúc policy thay đổi và chỉ dùng để tìm thời điểm học; final evaluation

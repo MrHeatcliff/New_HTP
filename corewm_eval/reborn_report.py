@@ -112,17 +112,59 @@ def plot_control(result, output):
 
 
 def plot_learning(result, output):
+  import pandas as pd
+  from matplotlib.ticker import MultipleLocator
+  from .full_vs_dreamerv3_curves import _binned
+  reference = Path('paper_artifacts/full_vs_dreamerv3_constraint_suite_learning_curves/aggregate.csv')
+  baseline = pd.read_csv(reference)
+  baseline = baseline[(baseline.method == 'DreamerV3') & baseline.game.isin(result['games'])].copy()
+  records = []
+  for game in result['games']:
+    path = Path(result['run_root'])/game/'full/paper_artifacts/episode_scores.jsonl'
+    for line in path.read_text().splitlines():
+      row = json.loads(line)
+      if 0 < row['agent_actions'] <= 100000:
+        records.append(dict(method='Reborn', game=game, seed=0,
+                            agent_steps=row['agent_actions'], **{'return':row['episode_score']}))
+  episodes = pd.DataFrame(records)
+  _, reborn = _binned(episodes, bin_width=5000)
+  curves = pd.concat([baseline, reborn], ignore_index=True)
+  curves.to_csv(output/'learning_curve_aggregate.csv', index=False)
+  episodes.to_csv(output/'learning_curve_episode_rows.csv', index=False)
+  (output/'learning_curve_metadata.json').write_text(json.dumps(dict(
+      baseline_source=str(reference), reborn_source=result['run_root'],
+      bin_width_actions=5000, reborn_seeds=1, dreamerv3_seeds=5,
+      aggregation='Mean training episode return per bin per seed; mean and SEM across seeds.',
+      gaps='Only observed bins plotted; straight lines connect observations. No imputation or extrapolation.',
+      x_axis='Reborn: explicit agent_actions; bin centers for both methods.'), indent=2)+'\n')
+  def draw(ax, game):
+    for method, label, color in [('DreamerV3','DreamerV3 (5 seeds)','#3B82F6'),
+                                 ('Reborn','Reborn (seed 0)','#7C3AED')]:
+      values = curves[(curves.game == game)&(curves.method == method)].sort_values('agent_steps')
+      ax.plot(values.agent_steps, values['mean'], color=color, lw=2.2, label=label,
+              marker='o' if method == 'Reborn' else None, markersize=3)
+      if method == 'DreamerV3':
+        ax.fill_between(values.agent_steps, values['mean']-values['sem'],
+                        values['mean']+values['sem'], color=color, alpha=.16, linewidth=0)
+    ax.set_xlim(0,100000)
+    ax.set_xticks([0,25000,50000,75000,100000], ['0','25k','50k','75k','100k'])
+    ax.xaxis.set_minor_locator(MultipleLocator(5000))
+    ax.grid(which='major', alpha=.25)
+    ax.grid(which='minor', axis='x', alpha=.08)
+    ax.set_title(LABELS[game])
+    ax.set_xlabel('Environment interactions (agent actions)')
+    ax.set_ylabel('Episode return')
   fig,axes=plt.subplots(2,2,figsize=(10,7),constrained_layout=True)
-  for ax,(game,row) in zip(axes.flat,result['games'].items()):
-    for key,label,color in [('prior_learning_curve','Prior constraint','#9ca3af'),
-                            ('learning_curve','Reborn','#2563eb')]:
-      curve=np.asarray(row[key],float)
-      ax.plot(curve[:,0]/1000,curve[:,1],marker='o',label=label,color=color,lw=2)
-    ax.set_title(LABELS[game]); ax.set_xlabel('Environment actions (K)')
-    ax.set_ylabel('Mean training episode return / 10K bin'); ax.grid(alpha=.22)
+  for ax,game in zip(axes.flat,result['games']):
+    draw(ax, game)
   axes[0,0].legend(frameon=False)
-  fig.suptitle('Learning behavior (seed 0; episode means are not fixed-policy evaluation)')
+  fig.suptitle('Reborn vs DreamerV3 — training episodes, 5K bins\nDreamerV3 shading: ±1 SEM across seeds; Reborn markers: observed bins', fontsize=11)
   save(fig,output,'learning_curves')
+  for game in result['games']:
+    fig,ax=plt.subplots(figsize=(7.2,4.5),constrained_layout=True)
+    draw(ax, game)
+    ax.legend(frameon=False)
+    save(fig,output,f'learning_curve_{game}')
 
 
 def plot_representation(result, output):
@@ -198,6 +240,15 @@ Road Runner giảm 4.030 điểm, và Frostbite giảm 1.778,5 điểm. Hai run 
 đây là comparison định hướng, chưa phải paired causal estimate.
 
 ![Learning curves](learning_curves.png)
+
+Đường học so sánh Reborn seed 0 với DreamerV3 5 seed, dùng training episode
+returns trong bin 5K action theo layout constraint suite. Dải DreamerV3 là
+±1 SEM; Reborn không có dải bất định. Marker tím chỉ bin có dữ liệu; nối thẳng
+các bin quan sát, không điền score vào bin trống hoặc ngoại suy. Hình cũ đứt
+do bin 10K rỗng được chuyển thành NaN. Trục X mới dùng `agent_actions` trực
+tiếp. Nguồn và dữ liệu nằm trong `learning_curve_metadata.json`,
+`learning_curve_aggregate.csv`, `learning_curve_episode_rows.csv`.
+Bảng final evaluation phía trên vẫn là đối chiếu constraint lịch sử.
 
 Reborn có 49,36M trainable parameters so với 40,60M của constrained CoRe-WM.
 Vì vậy kết quả không parameter-matched. Training episode curve mô tả hành vi
