@@ -135,6 +135,9 @@ def main(argv=None):
 
 def make_agent(config):
   from .agent_htp import Agent_HTP
+  if config.agent.get('reborn', {}).get('enabled', False):
+    from .agent_reborn import Agent_Reborn
+    Agent_HTP = Agent_Reborn
   env = make_env(config, 0)
   notlog = lambda k: not k.startswith('log/')
   obs_space = {k: v for k, v in env.obs_space.items() if notlog(k)}
