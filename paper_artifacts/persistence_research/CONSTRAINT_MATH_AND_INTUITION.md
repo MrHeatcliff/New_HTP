@@ -9,7 +9,7 @@ Tài liệu đối chiếu với code nhánh `constraint` và cấu hình thực
 World model tạo trạng thái:
 
 $$
-h_t=[h_t^{\mathrm{deter}},\operatorname{vec}(h_t^{\mathrm{stoch}})],
+h_t=[h_t^{\mathrm{deter}},\mathrm{vec}(h_t^{\mathrm{stoch}})],
 \qquad z_t=S_\psi(h_t).
 $$
 
@@ -43,10 +43,10 @@ $$
 \widehat z_{t+\Delta_\ell}^{(1:\ell)}
 =F_{\omega_\ell}(\widetilde z_t^{(1:\ell)},a_{t:t+\Delta_\ell-1}),
 \qquad
-\bar z_{t+\Delta_\ell}=\operatorname{sg}(S_{\bar\psi}(\operatorname{sg}(h_{t+\Delta_\ell}))).
+\bar z_{t+\Delta_\ell}=\mathrm{sg}(S_{\bar\psi}(\mathrm{sg}(h_{t+\Delta_\ell}))).
 $$
 
-Ở level lớn hơn 1, input dùng $[\operatorname{sg}(z^{(1:\ell-1)}),z^{(\ell)}]$: các block trước là context bị chặn gradient trực tiếp trong loss của level này. Đây là isolation ở activation, không phải cách ly hoàn toàn các tham số của shared trunk.
+Ở level lớn hơn 1, input dùng $[\mathrm{sg}(z^{(1:\ell-1)}),z^{(\ell)}]$: các block trước là context bị chặn gradient trực tiếp trong loss của level này. Đây là isolation ở activation, không phải cách ly hoàn toàn các tham số của shared trunk.
 
 Prediction tối thiểu hóa MSE trên prefix tương lai. Một tín hiệu đổi nhanh nhưng rất dễ dự đoán vẫn có thể đạt loss thấp. Ví dụ $x_t=(\cos(\omega t),\sin(\omega t))$ có thể được dự đoán bằng một phép quay dù thay đổi nhiều giữa hai thời điểm. Vì thế **predictable không đồng nghĩa persistent**.
 
@@ -93,12 +93,12 @@ $Q_k$ là second moment của sai khác; code không trừ trung bình riêng c�
 Với $d=128$, implementation dùng:
 
 $$
-\epsilon_k=\max\left(10^{-4}\frac{\operatorname{tr}(C_k)}d,10^{-8}\right),
+\epsilon_k=\max\left(10^{-4}\frac{\mathrm{tr}(C_k)}d,10^{-8}\right),
 $$
 
 $$
 \boxed{\mathcal P_k=
-\frac{1}{2d}\operatorname{tr}\left[(C_k+\epsilon_k I)^{-1}Q_k\right].}
+\frac{1}{2d}\mathrm{tr}\left[(C_k+\epsilon_k I)^{-1}Q_k\right].}
 $$
 
 Code dùng `solve(C + ridge * I, difference)`, không tạo inverse tường minh. Dạng tương đương về mặt toán học là:
@@ -121,7 +121,7 @@ Bản `pooled` cũ gần tương ứng:
 
 $$
 \mathcal P_k^{\mathrm{pooled}}=
-\frac{\operatorname{tr}(Q_k)}{2\operatorname{tr}(C_k)}.
+\frac{\mathrm{tr}(Q_k)}{2\mathrm{tr}(C_k)}.
 $$
 
 Nó có thể ưu tiên một hướng chậm có phương sai rất lớn, khiến các hướng nhanh bị che trong tổng. Nếu $C_k$ chéo với phương sai $v_i$, bản whitened có dạng:
@@ -156,7 +156,7 @@ Lấy tất cả $N=BT$ vector của prefix đầu, trừ mean và tính:
 
 $$
 C=\frac1N\sum_{n=1}^{N}(x_n-\mu)(x_n-\mu)^\top,
-\qquad s=\max\left(\frac{\operatorname{tr}(C)}d,10^{-8}\right).
+\qquad s=\max\left(\frac{\mathrm{tr}(C)}d,10^{-8}\right).
 $$
 
 Regularizer đang dùng là:
@@ -172,7 +172,7 @@ Khi không chạm floor, isotropy khuyến khích các trị riêng covariance g
 Với participation rank:
 
 $$
-r_{\mathrm{PR}}(C)=\frac{\operatorname{tr}(C)^2}{\operatorname{tr}(C^2)},
+r_{\mathrm{PR}}(C)=\frac{\mathrm{tr}(C)^2}{\mathrm{tr}(C^2)},
 $$
 
 khi $C\neq0$ và floor không kích hoạt:
@@ -227,7 +227,7 @@ agent:
 Trong nhánh auxiliary của các lượt projection hiện tại:
 
 $$
-z_t=S_\psi(\operatorname{sg}(h_t)).
+z_t=S_\psi(\mathrm{sg}(h_t)).
 $$
 
 * Persistence lấy hai endpoint từ **online $z$**. Cả hai endpoint, covariance, difference và relative ridge đều nằm trên đường gradient; không detach covariance hoặc một endpoint. Slow projection chỉ phục vụ target prediction, không phục vụ persistence.
