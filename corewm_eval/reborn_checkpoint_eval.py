@@ -24,7 +24,7 @@ def digest(path):
   return sha.hexdigest()
 
 
-def worker(root, output, game, slot):
+def worker(root, output, game, slot, arm='full'):
   (output/game).mkdir(parents=True,exist_ok=True)
   source = root/'source'
   env = dict(os.environ, CUDA_VISIBLE_DEVICES=slot['gpu'], OMP_NUM_THREADS='8',
@@ -38,7 +38,7 @@ def worker(root, output, game, slot):
     before = digest(checkpoint)
     destination = output/game/f'{step:06d}'
     episodes = 100 if step == 100000 else 10
-    cmd = command(game,destination)+['--script','eval_only','--run.from_checkpoint',
+    cmd = command(game,destination,arm)+['--script','eval_only','--run.from_checkpoint',
         str(checkpoint),'--run.envs','1','--run.eval_eps',str(episodes),
         '--run.steps','1000000000']
     atomic(output/game/'progress.json',dict(status='RUNNING',checkpoint=step,completed=rows))

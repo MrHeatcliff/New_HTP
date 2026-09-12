@@ -17,6 +17,7 @@ def command(game, output, arm='full'):
   arms = {
       'full': {}, 'no_rec': {'use_rec':False}, 'no_outcome': {'use_outcome':False},
       'no_q': {'q_weight':0.0}, 'no_rate': {'beta':0.0},
+      'low_rate': {'beta':0.000001},
       'flat_rate': {'cumulative_rate':False}, 'no_context': {'context':False},
       'deterministic': {'stochastic':False},
       'affine_control': {'use_rec':False,'use_outcome':False,'beta':0.0},

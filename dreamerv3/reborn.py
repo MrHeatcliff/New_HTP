@@ -123,12 +123,16 @@ def refinement_loss(predicted, target):
 def outcome_loss(online, target, features, reward, terminal, valid, gammas, q_weight):
   total = jnp.zeros_like(reward)
   metrics = {}
+  sf_total = jnp.zeros_like(reward)
+  q_total = jnp.zeros_like(reward)
   for i, ((psi, q), (next_psi, next_q), gamma) in enumerate(zip(online, target, gammas)):
     fixed = jnp.concatenate(features[:i+1], -1)
     yp, yq = bellman_targets(fixed, reward, terminal, next_psi, next_q.pred(), gamma)
     pe = jnp.square(psi-yp).sum(-1)/PIXELS
     qe = q.loss(yq)
     total += (pe + q_weight*qe)/len(gammas)
+    sf_total += pe/len(gammas)
+    q_total += q_weight*qe/len(gammas)
     for key, value in dict(sf_td_mse=pe, q_twohot=qe, q_td_mae=jnp.abs(q.pred()-yq),
         q_target_abs=jnp.abs(yq), sf_target_energy=jnp.square(yp).sum(-1)/PIXELS,
         sf_zero_mse=jnp.square(yp).sum(-1)/PIXELS).items():
@@ -137,4 +141,6 @@ def outcome_loss(online, target, features, reward, terminal, valid, gammas, q_we
     metrics[f'reborn/l{i+1}/q_td_mae_nonzero_reward'] = masked_mean(jnp.abs(q.pred()-yq), nonzero)
   # The agent averages B*T: normalize by actual valid pairs, then pad to B*T.
   scaled = jnp.where(valid > 0, total, 0)*valid * (valid.shape[0]*(valid.shape[1]+1))/jnp.maximum(valid.sum(), 1)
+  metrics['reborn/sf_loss_component'] = masked_mean(sf_total,valid)
+  metrics['reborn/q_loss_component'] = masked_mean(q_total,valid)
   return jnp.pad(scaled, ((0, 0), (0, 1))), metrics

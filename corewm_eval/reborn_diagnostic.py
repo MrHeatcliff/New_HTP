@@ -93,11 +93,13 @@ def extract_chunk(model, carry, obs, prevact, actions):
   policy = model.pol(z,2)['action']
   n = int(model.act_space['action'].high)
   prob = jnp.stack([policy.prob(jnp.full(z.shape[:2],a,jnp.int32)) for a in range(n)],-1)
+  voffset,vscale=model.valnorm.stats()
   return (enc,dyn), dict(mu=mu[0], z=z[0], bands=tuple(b[0] for b in bands),
       removed=tuple(b[0] for b in removed), psi=tuple(p[0] for p,q in pred),
       q=jnp.stack([q.pred()[0] for p,q in pred],-1) if pred else jnp.zeros((mu.shape[1],5)),
       reward=model.rew(z,2).pred()[0], continuation=model.con(z,2).prob(1)[0],
-      actor_entropy=policy.entropy()[0], actor_prob=prob[0])
+      actor_entropy=policy.entropy()[0], actor_prob=prob[0],
+      value=(model.val(z,2).pred()*vscale+voffset)[0])
 
 
 def main(source, output):
@@ -183,7 +185,19 @@ def main(source, output):
         band_errors.append([float(np.square(p-b[starts]).sum(-1).mean()/rb.PIXELS) for p,b in zip(data['bands'],bands)])
         removed_errors.append([float(np.square(p-b[starts]).sum(-1).mean()/rb.PIXELS) for p,b in zip(data['removed'],bands)])
       nz = ep['reward'][starts] != 0
+      # Only truly terminated clips provide an unbootstrapped complete return.
+      # Censored/time-limit clips must not be presented as exact value targets.
+      critic = dict(critic_complete_episode=bool(ep['is_terminal'][-1]),
+                    critic_complete_return_mae=None,critic_complete_return_zero_mae=None)
+      if ep['is_terminal'][-1]:
+        discount=1-1/config.agent.horizon
+        returns_complete=np.zeros(n,np.float64)
+        for t in range(n-2,-1,-1):
+          returns_complete[t]=ep['reward'][t+1]+discount*(not ep['is_terminal'][t+1])*returns_complete[t+1]
+        critic.update(critic_complete_return_mae=float(np.abs(data['value']-returns_complete[starts]).mean()),
+            critic_complete_return_zero_mae=float(np.abs(returns_complete[starts]).mean()))
       rows.append(dict(episode=eid,length=n,anchors=len(starts),
+          **critic,
           reward_mae=float(np.abs(data['reward']-ep['reward'][starts]).mean()),
           reward_zero_mae=float(np.abs(ep['reward'][starts]).mean()),
           reward_nonzero_count=int(nz.sum()),

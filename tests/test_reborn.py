@@ -100,6 +100,22 @@ def test_agent_end_to_end_and_ema():
   state, _ = nj.pure(ema)(state,seed=2,create=True)
   # Changing a later detail head may not remove earlier context gradients.
   assert any('reborn_refinement/' in k for k in state)
+  from corewm_eval.reborn_actor_audit import gradient_objective, interventions, BRANCHES
+  def audit_gradient(weights):
+    return nj.grad(lambda:gradient_objective(model,obs,act,weights),
+        [model.code,model.pol,model.val,model.rew,model.con])()[2]
+  gradfn=jax.jit(nj.pure(audit_gradient),static_argnames=('create',))
+  _,grad=gradfn(state,jnp.eye(len(BRANCHES))[0],seed=4,create=False)
+  assert all(np.isfinite(np.asarray(v)).all() for v in grad.values())
+  assert any(np.any(np.asarray(v)) for k,v in grad.items() if k.startswith('reborn_code/'))
+  assert all(not np.any(np.asarray(v)) for k,v in grad.items() if k.startswith('pol/'))
+  _,pair=jax.jit(nj.pure(lambda:interventions(model,obs,act)),
+      static_argnames=('create',))(state,seed=5,create=False)
+  assert 0 <= float(pair['resampled_noise']['actor_tv']) <= 1
+  # SF and Q components must sum to the original weighted outcome objective.
+  mets=aux[-1]
+  np.testing.assert_allclose(mets['reborn/sf_loss_component']+mets['reborn/q_loss_component'],
+      mets['loss/reborn_outcome'],rtol=1e-5)
 
 
 def test_real_rollout_targets_stop_after_terminal():

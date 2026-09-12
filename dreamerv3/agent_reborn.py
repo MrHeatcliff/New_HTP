@@ -170,6 +170,10 @@ class Agent_Reborn(Agent_HTP):
     assert set(losses) == set(self.scales), (set(losses), set(self.scales))
     metrics.update({f'loss/{k}': v.mean() for k, v in losses.items()})
     metrics.update({f'weighted_loss/{k}': v.mean()*self.scales[k] for k, v in losses.items()})
+    metrics['reborn/weighted_sf'] = self.config.reborn.lambda_outcome*metrics.get('reborn/sf_loss_component',0.)
+    metrics['reborn/weighted_q'] = self.config.reborn.lambda_outcome*metrics.get('reborn/q_loss_component',0.)
+    metrics['reborn/imag_return_raw_mean'] = imgloss_out['ret'].mean()
+    metrics['reborn/imag_return_raw_std'] = imgloss_out['ret'].std()
     loss = sum(v.mean()*self.scales[k] for k, v in losses.items())
     outs = {'tokens': tokens, 'repfeat': repfeat, 'losses': losses}
     return loss, ((enc_carry, dyn_carry, dec_carry),
