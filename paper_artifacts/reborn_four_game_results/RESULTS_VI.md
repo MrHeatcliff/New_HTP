@@ -1,5 +1,9 @@
 # Kết quả screening Reborn trên bốn game Atari 100K
 
+**Cập nhật:** đã có [evaluation riêng đủ 10 checkpoint và 100 episode cuối](../reborn_checkpoint_evaluation/RESULTS_VI.md),
+kèm [biểu đồ mới](../reborn_checkpoint_evaluation/learning_curves.png).
+Báo cáo bên dưới giữ kết quả screening 20 episode và đường training cũ để truy xuất.
+
 Job 3846 hoàn thành thành công trên hai H200 trong 1 giờ 09 phút. Mỗi game được
 train từ đầu với seed 0 và 100.000 environment actions, sau đó chạy 20 episode
 evaluation seed 0. Khoảng tin cậy dưới đây bootstrap **episode evaluation**, nên
