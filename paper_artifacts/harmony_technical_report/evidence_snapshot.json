@@ -1,0 +1,1347 @@
+{
+  "captured_at_utc": "2026-09-12T19:28:43.991726+00:00",
+  "source_root": "production_runs/reborn_harmony_2ew6wt0w",
+  "runs": [
+    {
+      "arm": "full",
+      "game": "boxing",
+      "curve": [
+        {
+          "step": 10000,
+          "mean": 0.4,
+          "episodes": 10
+        },
+        {
+          "step": 20000,
+          "mean": 16.3,
+          "episodes": 10
+        },
+        {
+          "step": 30000,
+          "mean": 10.8,
+          "episodes": 10
+        },
+        {
+          "step": 40000,
+          "mean": 22.2,
+          "episodes": 10
+        },
+        {
+          "step": 50000,
+          "mean": 5,
+          "episodes": 10
+        },
+        {
+          "step": 60000,
+          "mean": 18.3,
+          "episodes": 10
+        },
+        {
+          "step": 70000,
+          "mean": 16.8,
+          "episodes": 10
+        },
+        {
+          "step": 80000,
+          "mean": 17.6,
+          "episodes": 10
+        },
+        {
+          "step": 90000,
+          "mean": 13.4,
+          "episodes": 10
+        },
+        {
+          "step": 100000,
+          "mean": 39.95,
+          "episodes": 100
+        }
+      ],
+      "final": {
+        "game": "boxing",
+        "checkpoint": 100000,
+        "episodes": 100,
+        "mean": 39.95,
+        "checkpoint_hash": "75b02caa48c0688679bdda266993081485e50f0b80118519d3ccc0fd8ee3d3d8",
+        "training_seed": 0,
+        "evaluation_seed": 0
+      },
+      "episode_sd": 12.749628633926179,
+      "last_logged_metrics": {},
+      "train_seconds": 3617.7760739326477,
+      "diagnostic": {
+        "mu_participation_rank": [
+          5.865300339602298,
+          7.838521916117376,
+          10.062533762874581,
+          9.799119203596199,
+          9.048999752566367
+        ],
+        "mu_block_variance": [
+          0.7350719882591998,
+          0.4375751777343432,
+          0.2803875252167163,
+          0.2541493865762675,
+          0.2840856067830369
+        ],
+        "band_mse": [
+          0.0000868635449377406,
+          0.0001946260725768904,
+          0.0005733358389180568,
+          0.0007835967906026376,
+          0.0005303232956470715
+        ],
+        "band_removed_mse": [
+          0.065698232418961,
+          0.0003613836448898332,
+          0.0006487534071008364,
+          0.0008225016735701097,
+          0.0005429157392225332
+        ],
+        "sf_mse": [
+          0.00017981740820687263,
+          0.00034573501519237954,
+          0.0007572130869246192,
+          0.001538039930164814,
+          0.002626659767702222
+        ],
+        "sf_zero_mse": [
+          0.1945416337913937,
+          0.19799687531259325,
+          0.2031890829404195,
+          0.20521878533893162,
+          0.2080916768974728
+        ],
+        "q_mae": [
+          0.5892618268728256,
+          0.3892891615629196,
+          0.22850415309270222,
+          0.12601122856140137,
+          0.07237370293587446
+        ],
+        "q_zero_mae": [
+          0.6080219229062398,
+          0.3673049837350845,
+          0.20387724315126737,
+          0.11516071017831564,
+          0.06726190615445375
+        ]
+      },
+      "diagnostic_episode_count": 30,
+      "complete_critic_episodes": 0,
+      "audit_source": "production_runs/reborn_harmony_2ew6wt0w/full/boxing/actor_audit_own/audit.json",
+      "audit_rows": 6,
+      "projection_gradient_norms": {
+        "rec": 0.00042008641563976806,
+        "rate": 0.0008690984977874905,
+        "sf": 0.00010902104380268914,
+        "q": 0.024861789929370087,
+        "reward": 0.24502514054377875,
+        "continuation": 0.00019631697553753233,
+        "actor": 0.03286375508954128,
+        "critic": 0.11371114104986191,
+        "replay_critic": 0.13312652769188085
+      },
+      "projection_cosine_with_ac": {
+        "rec": 0.018168535570481766,
+        "rate": -0.08036335181381828,
+        "sf": 0.052826350011523866,
+        "q": 0.00926941911077004,
+        "reward": 0.048789204139347196,
+        "continuation": -0.027945142398559338,
+        "actor": 0.21007893665789357,
+        "critic": 0.7843196544178701,
+        "replay_critic": 0.8744663843056522
+      }
+    },
+    {
+      "arm": "full",
+      "game": "up_n_down",
+      "curve": [
+        {
+          "step": 10000,
+          "mean": 1922,
+          "episodes": 10
+        },
+        {
+          "step": 20000,
+          "mean": 6407,
+          "episodes": 10
+        },
+        {
+          "step": 30000,
+          "mean": 57499,
+          "episodes": 10
+        },
+        {
+          "step": 40000,
+          "mean": 8603,
+          "episodes": 10
+        },
+        {
+          "step": 50000,
+          "mean": 29888,
+          "episodes": 10
+        },
+        {
+          "step": 60000,
+          "mean": 24232,
+          "episodes": 10
+        },
+        {
+          "step": 70000,
+          "mean": 7515,
+          "episodes": 10
+        },
+        {
+          "step": 80000,
+          "mean": 29119,
+          "episodes": 10
+        },
+        {
+          "step": 90000,
+          "mean": 46049,
+          "episodes": 10
+        },
+        {
+          "step": 100000,
+          "mean": 12748.7,
+          "episodes": 100
+        }
+      ],
+      "final": {
+        "game": "up_n_down",
+        "checkpoint": 100000,
+        "episodes": 100,
+        "mean": 12748.7,
+        "checkpoint_hash": "e224ee0a4206c1b01b140ab34bd510c8b3a2b83a8aec408f9b03936174641d5b",
+        "training_seed": 0,
+        "evaluation_seed": 0
+      },
+      "episode_sd": 7292.725122138549,
+      "last_logged_metrics": {},
+      "train_seconds": 3651.523916721344,
+      "diagnostic": {
+        "mu_participation_rank": [
+          7.0317661217448775,
+          9.073320366885147,
+          7.086706326469745,
+          7.227293182844006,
+          6.449052460280094
+        ],
+        "mu_block_variance": [
+          1.6755993977322523,
+          0.9821869242645287,
+          0.6880344097216949,
+          0.5825883475668017,
+          0.608762290182106
+        ],
+        "band_mse": [
+          0.00006946297168421248,
+          0.00008706053001030037,
+          0.00015905619754145542,
+          0.00028830404108804136,
+          0.0003843980485625151
+        ],
+        "band_removed_mse": [
+          0.0024957795886115896,
+          0.00017381842772010714,
+          0.00024314623119102584,
+          0.0004325613767529527,
+          0.00045919035845953555
+        ],
+        "sf_mse": [
+          0.00011899349014533476,
+          0.0001984242915770867,
+          0.00037340103493382535,
+          0.000856043320770065,
+          0.0011806139256805182
+        ],
+        "sf_zero_mse": [
+          0.06724916050831477,
+          0.07658360219664044,
+          0.08073882957299551,
+          0.08241218080123265,
+          0.08453289932674832
+        ],
+        "q_mae": [
+          54.488061396280926,
+          28.783195718129477,
+          15.915440766016642,
+          9.954323077201844,
+          6.473657461007436
+        ],
+        "q_zero_mae": [
+          70.06443977355957,
+          33.675366973876955,
+          16.651380411783855,
+          9.205371503035227,
+          5.563298487663269
+        ]
+      },
+      "diagnostic_episode_count": 30,
+      "complete_critic_episodes": 2,
+      "audit_source": "production_runs/reborn_harmony_2ew6wt0w/full/up_n_down/actor_audit_own/audit.json",
+      "audit_rows": 6,
+      "projection_gradient_norms": {
+        "rec": 0.0008837627149963131,
+        "rate": 0.0021705526936178408,
+        "sf": 0.0002135000249836594,
+        "q": 0.03707573935389519,
+        "reward": 0.11175448819994926,
+        "continuation": 0.0008824714022921398,
+        "actor": 0.01643623427177469,
+        "critic": 0.18009299784898758,
+        "replay_critic": 0.09464097147186597
+      },
+      "projection_cosine_with_ac": {
+        "rec": 0.11069749012315971,
+        "rate": 0.15805751579443247,
+        "sf": 0.08437055257963769,
+        "q": 0.07967649545812293,
+        "reward": -0.023335473272732596,
+        "continuation": 0.06419699802588621,
+        "actor": 0.07881474546403776,
+        "critic": 0.9649711207315926,
+        "replay_critic": 0.8421802022709999
+      }
+    },
+    {
+      "arm": "full",
+      "game": "frostbite",
+      "curve": [
+        {
+          "step": 10000,
+          "mean": 13,
+          "episodes": 10
+        },
+        {
+          "step": 20000,
+          "mean": 171,
+          "episodes": 10
+        },
+        {
+          "step": 30000,
+          "mean": 194,
+          "episodes": 10
+        },
+        {
+          "step": 40000,
+          "mean": 146,
+          "episodes": 10
+        },
+        {
+          "step": 50000,
+          "mean": 2082,
+          "episodes": 10
+        },
+        {
+          "step": 60000,
+          "mean": 2568,
+          "episodes": 10
+        },
+        {
+          "step": 70000,
+          "mean": 2274,
+          "episodes": 10
+        },
+        {
+          "step": 80000,
+          "mean": 2095,
+          "episodes": 10
+        },
+        {
+          "step": 90000,
+          "mean": 2241,
+          "episodes": 10
+        },
+        {
+          "step": 100000,
+          "mean": 2793.3,
+          "episodes": 100
+        }
+      ],
+      "final": {
+        "game": "frostbite",
+        "checkpoint": 100000,
+        "episodes": 100,
+        "mean": 2793.3,
+        "checkpoint_hash": "7f5615f70ffeef9a50822ba794a19307ef884534cbcbe13c67e4d38189c5cf5a",
+        "training_seed": 0,
+        "evaluation_seed": 0
+      },
+      "episode_sd": 616.3595549759093,
+      "last_logged_metrics": {},
+      "train_seconds": 3750.4728207588196,
+      "diagnostic": {
+        "mu_participation_rank": [
+          7.3854215747028,
+          10.653125894325662,
+          11.282732657267134,
+          8.504630205489844,
+          7.531067669678757
+        ],
+        "mu_block_variance": [
+          2.2226622313958933,
+          1.203974883008437,
+          0.8382239100562954,
+          0.7920286148028375,
+          0.8495094170575141
+        ],
+        "band_mse": [
+          0.00007755526263887683,
+          0.00011238667454260091,
+          0.0002749420715392464,
+          0.0003448583819489512,
+          0.0004965623142197728
+        ],
+        "band_removed_mse": [
+          0.02234419857462247,
+          0.000234495863939325,
+          0.0005492927972227335,
+          0.0006113963990679218,
+          0.0015570304356515407
+        ],
+        "sf_mse": [
+          0.0002556635490489296,
+          0.000303022243315354,
+          0.0006292528058919642,
+          0.001097908835961587,
+          0.001569755965222915
+        ],
+        "sf_zero_mse": [
+          0.13584570321771833,
+          0.1639388899008433,
+          0.17380944159295825,
+          0.180699665678872,
+          0.1863504125012292
+        ],
+        "q_mae": [
+          15.54481315612793,
+          8.568971077601114,
+          4.462589112917582,
+          2.0623119016488394,
+          1.1237565169731776
+        ],
+        "q_zero_mae": [
+          35.68807156880697,
+          18.06197032928467,
+          9.339000558853149,
+          4.861373273531596,
+          2.415079345305761
+        ]
+      },
+      "diagnostic_episode_count": 30,
+      "complete_critic_episodes": 2,
+      "audit_source": "production_runs/reborn_harmony_2ew6wt0w/full/frostbite/actor_audit_own/audit.json",
+      "audit_rows": 6,
+      "projection_gradient_norms": {
+        "rec": 0.00036768072459381074,
+        "rate": 0.002067243796773255,
+        "sf": 0.00015090219919026518,
+        "q": 0.0304909764478604,
+        "reward": 0.009350282237088928,
+        "continuation": 0.00009544682567745137,
+        "actor": 0.003232290813078483,
+        "critic": 0.13315571347872415,
+        "replay_critic": 0.04839986997346083
+      },
+      "projection_cosine_with_ac": {
+        "rec": -0.005729293799515543,
+        "rate": -0.06980960399344963,
+        "sf": 0.014959405937414686,
+        "q": 0.010590118277573706,
+        "reward": 0.033335981149775956,
+        "continuation": -0.0005773464834923841,
+        "actor": 0.07889377208436654,
+        "critic": 0.9506698429603744,
+        "replay_critic": 0.50193808923403
+      }
+    },
+    {
+      "arm": "full",
+      "game": "road_runner",
+      "curve": [
+        {
+          "step": 10000,
+          "mean": 870,
+          "episodes": 10
+        },
+        {
+          "step": 20000,
+          "mean": 3800,
+          "episodes": 10
+        },
+        {
+          "step": 30000,
+          "mean": 9740,
+          "episodes": 10
+        },
+        {
+          "step": 40000,
+          "mean": 11320,
+          "episodes": 10
+        },
+        {
+          "step": 50000,
+          "mean": 12930,
+          "episodes": 10
+        },
+        {
+          "step": 60000,
+          "mean": 13970,
+          "episodes": 10
+        },
+        {
+          "step": 70000,
+          "mean": 13840,
+          "episodes": 10
+        },
+        {
+          "step": 80000,
+          "mean": 13800,
+          "episodes": 10
+        },
+        {
+          "step": 90000,
+          "mean": 14710,
+          "episodes": 10
+        },
+        {
+          "step": 100000,
+          "mean": 14050,
+          "episodes": 100
+        }
+      ],
+      "final": {
+        "game": "road_runner",
+        "checkpoint": 100000,
+        "episodes": 100,
+        "mean": 14050,
+        "checkpoint_hash": "d46c6afcbbc40ca7480f0cb1c9da3cde53545acc921a64b5ff062f21558550f6",
+        "training_seed": 0,
+        "evaluation_seed": 0
+      },
+      "episode_sd": 1558.1976119798792,
+      "last_logged_metrics": {},
+      "train_seconds": 3752.0845296382904,
+      "diagnostic": {
+        "mu_participation_rank": [
+          7.2695842521578315,
+          9.542678197781495,
+          8.664991150275618,
+          6.577976212529031,
+          5.436943805864524
+        ],
+        "mu_block_variance": [
+          1.9429352916773919,
+          0.9460921693201741,
+          0.6552457739062872,
+          0.558891039758446,
+          0.6209605480105823
+        ],
+        "band_mse": [
+          0.00010511943934640536,
+          0.00010248475316782585,
+          0.00019594709932183225,
+          0.000314461501289366,
+          0.0003376106233594732
+        ],
+        "band_removed_mse": [
+          0.021751256121529474,
+          0.00030938609981805913,
+          0.00037193033818362485,
+          0.0006455649932225545,
+          0.0009711225995690458
+        ],
+        "sf_mse": [
+          0.0018597449525259435,
+          0.0011109147783524046,
+          0.000786193640023056,
+          0.0009466907604494029,
+          0.001379239372909069
+        ],
+        "sf_zero_mse": [
+          0.16886949406729804,
+          0.18533951772583857,
+          0.19913799497816298,
+          0.21033703088760375,
+          0.21822446319792005
+        ],
+        "q_mae": [
+          87.53654950459799,
+          40.23715006510417,
+          21.787584622701008,
+          13.08503828048706,
+          7.186496114730835
+        ],
+        "q_zero_mae": [
+          263.05918884277344,
+          133.44695103963215,
+          65.94406916300456,
+          29.84196392695109,
+          12.588477516174317
+        ]
+      },
+      "diagnostic_episode_count": 30,
+      "complete_critic_episodes": 5,
+      "audit_source": "production_runs/reborn_harmony_2ew6wt0w/full/road_runner/actor_audit_own/audit.json",
+      "audit_rows": 6,
+      "projection_gradient_norms": {
+        "rec": 0.0002936927533786123,
+        "rate": 0.0016931506106629968,
+        "sf": 0.00015820146897264445,
+        "q": 0.04267459580053886,
+        "reward": 0.050348634365946054,
+        "continuation": 0.00009172658368091409,
+        "actor": 0.003619406217088302,
+        "critic": 0.05800259175399939,
+        "replay_critic": 0.07854004918287198
+      },
+      "projection_cosine_with_ac": {
+        "rec": -0.06898797967008367,
+        "rate": -0.06370476016231376,
+        "sf": -0.08910082416336959,
+        "q": -0.13993801839991535,
+        "reward": -0.04216220723047399,
+        "continuation": -0.0600385938366511,
+        "actor": -0.03306583729612311,
+        "critic": 0.9014578684416745,
+        "replay_critic": 0.8459078045974148
+      }
+    },
+    {
+      "arm": "harmony",
+      "game": "boxing",
+      "curve": [
+        {
+          "step": 10000,
+          "mean": -86.4,
+          "episodes": 10
+        },
+        {
+          "step": 20000,
+          "mean": -4.3,
+          "episodes": 10
+        },
+        {
+          "step": 30000,
+          "mean": -16.4,
+          "episodes": 10
+        },
+        {
+          "step": 40000,
+          "mean": 4.1,
+          "episodes": 10
+        },
+        {
+          "step": 50000,
+          "mean": 3.8,
+          "episodes": 10
+        },
+        {
+          "step": 60000,
+          "mean": -25.5,
+          "episodes": 10
+        },
+        {
+          "step": 70000,
+          "mean": 9.7,
+          "episodes": 10
+        },
+        {
+          "step": 80000,
+          "mean": 28.9,
+          "episodes": 10
+        },
+        {
+          "step": 90000,
+          "mean": 42.8,
+          "episodes": 10
+        },
+        {
+          "step": 100000,
+          "mean": 41.39,
+          "episodes": 100
+        }
+      ],
+      "final": {
+        "game": "boxing",
+        "checkpoint": 100000,
+        "episodes": 100,
+        "mean": 41.39,
+        "checkpoint_hash": "5f4aa1d955f50480c783e9aefd0d218f3a939f056b0ad69fe1a56e95f60276af",
+        "training_seed": 0,
+        "evaluation_seed": 0
+      },
+      "episode_sd": 13.247370617704794,
+      "last_logged_metrics": {
+        "train/harmony/actual_q": 0.18275057410366796,
+        "train/harmony/actual_rec": 0.006051858864238922,
+        "train/harmony/actual_reward": 0.08378343121482852,
+        "train/harmony/actual_sf": 0.0022154350178238253,
+        "train/harmony/effective_beta_observation": 0.0000034657891853132683,
+        "train/harmony/observation/log_scale": -1.0596886693575736,
+        "train/harmony/observation/raw": 0.00286508973829368,
+        "train/harmony/observation/scalar_gradient": 0.2491057394651705,
+        "train/harmony/observation/stationary_weight_batch": 18.198761276080848,
+        "train/harmony/observation/weight": 2.8855994432166434,
+        "train/harmony/observation/weighted": 0.008267293856857994,
+        "train/harmony/task/log_scale": -0.9184347759023237,
+        "train/harmony/task/raw": 0.10638117915883874,
+        "train/harmony/task/scalar_gradient": 0.018743791149563767,
+        "train/harmony/task/stationary_weight_batch": 2.6211796645342447,
+        "train/harmony/task/weight": 2.5053908049204705,
+        "train/harmony/task/weighted": 0.26653400566161534
+      },
+      "train_seconds": 3635.8094024658203,
+      "diagnostic": {
+        "mu_participation_rank": [
+          7.525510535311767,
+          8.811237259646616,
+          9.711266408331639,
+          9.438981774317627,
+          9.129157734940243
+        ],
+        "mu_block_variance": [
+          0.7277072485351834,
+          0.43434554304469936,
+          0.2729771741618314,
+          0.23904949600425934,
+          0.25254292538514844
+        ],
+        "band_mse": [
+          0.00006318177620414644,
+          0.00016251112004586805,
+          0.000522495991188205,
+          0.0007864751439127657,
+          0.0005242868934551047
+        ],
+        "band_removed_mse": [
+          0.0646900991598765,
+          0.0002716474648978975,
+          0.0006200560032286578,
+          0.0008098113040129344,
+          0.0005273208164403008
+        ],
+        "sf_mse": [
+          0.0000974335971275448,
+          0.0002727079528590871,
+          0.0006575675409597655,
+          0.0013977927362753286,
+          0.0024515726448347173
+        ],
+        "sf_zero_mse": [
+          0.19454135166274178,
+          0.19800725181897483,
+          0.2032399230533176,
+          0.2052512182129754,
+          0.20812404221958583
+        ],
+        "q_mae": [
+          0.6871395250161488,
+          0.42982837359110515,
+          0.2486139585574468,
+          0.13544482613603273,
+          0.07666363812362155
+        ],
+        "q_zero_mae": [
+          0.7200805167357127,
+          0.427333257595698,
+          0.22847521901130677,
+          0.11322335178653399,
+          0.05416666803260644
+        ]
+      },
+      "diagnostic_episode_count": 30,
+      "complete_critic_episodes": 0,
+      "audit_source": "production_runs/reborn_harmony_2ew6wt0w/harmony/boxing/actor_audit_shared/audit.json",
+      "audit_rows": 6,
+      "projection_gradient_norms": {
+        "rec": 0.0012136700679548085,
+        "rate": 0.0015195447097842891,
+        "sf": 0.00028518933201363933,
+        "q": 0.09855344519019127,
+        "reward": 1.0987416605154674,
+        "continuation": 0.0002168670883596254,
+        "actor": 0.024101477737228077,
+        "critic": 0.17510133609175682,
+        "replay_critic": 0.1626496079067389
+      },
+      "projection_cosine_with_ac": {
+        "rec": -0.033936129605316195,
+        "rate": -0.10876539779403516,
+        "sf": -0.07667759158308199,
+        "q": 0.08161175328924017,
+        "reward": 0.06452008357238985,
+        "continuation": -0.045668907091657523,
+        "actor": 0.12627585397762997,
+        "critic": 0.9430009727366707,
+        "replay_critic": 0.6270205832805299
+      }
+    },
+    {
+      "arm": "harmony",
+      "game": "up_n_down",
+      "curve": [
+        {
+          "step": 10000,
+          "mean": 1695,
+          "episodes": 10
+        },
+        {
+          "step": 20000,
+          "mean": 3804,
+          "episodes": 10
+        },
+        {
+          "step": 30000,
+          "mean": 3554,
+          "episodes": 10
+        },
+        {
+          "step": 40000,
+          "mean": 5727,
+          "episodes": 10
+        },
+        {
+          "step": 50000,
+          "mean": 2979,
+          "episodes": 10
+        },
+        {
+          "step": 60000,
+          "mean": 49392,
+          "episodes": 10
+        },
+        {
+          "step": 70000,
+          "mean": 120389,
+          "episodes": 10
+        },
+        {
+          "step": 80000,
+          "mean": 219651,
+          "episodes": 10
+        },
+        {
+          "step": 90000,
+          "mean": 220352,
+          "episodes": 10
+        },
+        {
+          "step": 100000,
+          "mean": 196432.5,
+          "episodes": 100
+        }
+      ],
+      "final": {
+        "game": "up_n_down",
+        "checkpoint": 100000,
+        "episodes": 100,
+        "mean": 196432.5,
+        "checkpoint_hash": "3689389846cac13778e71d888cfe4d4c85ba5a4777a6f5305c5f1d6fe0896a3d",
+        "training_seed": 0,
+        "evaluation_seed": 0
+      },
+      "episode_sd": 61712.55178018668,
+      "last_logged_metrics": {
+        "train/harmony/actual_q": 0.17510110767611908,
+        "train/harmony/actual_rec": 0.004083063214926458,
+        "train/harmony/actual_reward": 0.28429428367419146,
+        "train/harmony/actual_sf": 0.0016455524510697785,
+        "train/harmony/effective_beta_observation": 0.0000033997681718035877,
+        "train/harmony/observation/log_scale": -1.0789290601821273,
+        "train/harmony/observation/raw": 0.001947762976357189,
+        "train/harmony/observation/scalar_gradient": 0.24798489951770217,
+        "train/harmony/observation/stationary_weight_batch": 22.38880331077491,
+        "train/harmony/observation/weight": 2.941678374146675,
+        "train/harmony/observation/weighted": 0.005728615656445534,
+        "train/harmony/task/log_scale": -0.20604189876838694,
+        "train/harmony/task/raw": 0.373856859137108,
+        "train/harmony/task/scalar_gradient": -0.010724297615218321,
+        "train/harmony/task/stationary_weight_batch": 1.2142215742504519,
+        "train/harmony/task/weight": 1.2288099115016455,
+        "train/harmony/task/weighted": 0.4593953915155119
+      },
+      "train_seconds": 3668.323160648346,
+      "diagnostic": {
+        "mu_participation_rank": [
+          5.596858554137565,
+          5.556344990376617,
+          8.123838443381773,
+          9.035449651453161,
+          10.008522621669723
+        ],
+        "mu_block_variance": [
+          0.9080183260684844,
+          0.5414361322668928,
+          0.29011171259701696,
+          0.23160597193353877,
+          0.2048901087445319
+        ],
+        "band_mse": [
+          0.00005076444051357814,
+          0.00008760424906439665,
+          0.00017914315168228415,
+          0.000290288225773515,
+          0.00038495648704055284
+        ],
+        "band_removed_mse": [
+          0.002325317289473282,
+          0.0001253308505207921,
+          0.00024762334715988904,
+          0.0004191479244683352,
+          0.00044829177333869866
+        ],
+        "sf_mse": [
+          0.00007263716009523098,
+          0.00014932614059135732,
+          0.000317844956751085,
+          0.0007160034522207247,
+          0.0010816828839273916
+        ],
+        "sf_zero_mse": [
+          0.06616564492384593,
+          0.07400523076454799,
+          0.07826705475648245,
+          0.07988847427897983,
+          0.08187501811318927
+        ],
+        "q_mae": [
+          91.46261189778646,
+          60.5200990041097,
+          34.826883188883464,
+          19.416239388783772,
+          11.441086840629577
+        ],
+        "q_zero_mae": [
+          145.8246805826823,
+          72.20085233052572,
+          36.01791871388753,
+          18.62341291507085,
+          9.523809480667115
+        ]
+      },
+      "diagnostic_episode_count": 30,
+      "complete_critic_episodes": 0,
+      "audit_source": "production_runs/reborn_harmony_2ew6wt0w/harmony/up_n_down/actor_audit_shared/audit.json",
+      "audit_rows": 6,
+      "projection_gradient_norms": {
+        "rec": 0.0029973978719984493,
+        "rate": 0.0022505036322399974,
+        "sf": 0.0009143459319602698,
+        "q": 0.0684931290646394,
+        "reward": 0.37276460727055866,
+        "continuation": 0.0005294857934738199,
+        "actor": 0.02203196380287409,
+        "critic": 0.3140616367260615,
+        "replay_critic": 0.16763385633627573
+      },
+      "projection_cosine_with_ac": {
+        "rec": 0.14901135030879306,
+        "rate": -0.12408775242640155,
+        "sf": 0.16696189651566584,
+        "q": 0.010414083391334915,
+        "reward": -0.07481115636827122,
+        "continuation": 0.061053343928276105,
+        "actor": 0.02197959480336593,
+        "critic": 0.8731632186008341,
+        "replay_critic": 0.43377363814549386
+      }
+    },
+    {
+      "arm": "harmony",
+      "game": "frostbite",
+      "curve": [
+        {
+          "step": 10000,
+          "mean": 177,
+          "episodes": 10
+        },
+        {
+          "step": 20000,
+          "mean": 214,
+          "episodes": 10
+        },
+        {
+          "step": 30000,
+          "mean": 241,
+          "episodes": 10
+        },
+        {
+          "step": 40000,
+          "mean": 371,
+          "episodes": 10
+        },
+        {
+          "step": 50000,
+          "mean": 258,
+          "episodes": 10
+        },
+        {
+          "step": 60000,
+          "mean": 276,
+          "episodes": 10
+        },
+        {
+          "step": 70000,
+          "mean": 445,
+          "episodes": 10
+        },
+        {
+          "step": 80000,
+          "mean": 2660,
+          "episodes": 10
+        },
+        {
+          "step": 90000,
+          "mean": 1737,
+          "episodes": 10
+        },
+        {
+          "step": 100000,
+          "mean": 2921.4,
+          "episodes": 100
+        }
+      ],
+      "final": {
+        "game": "frostbite",
+        "checkpoint": 100000,
+        "episodes": 100,
+        "mean": 2921.4,
+        "checkpoint_hash": "02a644ae42fba413683ef1539095cf46d32962db116257e720a4d87a731bc433",
+        "training_seed": 0,
+        "evaluation_seed": 0
+      },
+      "episode_sd": 562.3579865623899,
+      "last_logged_metrics": {
+        "train/harmony/actual_q": 0.1784618132520671,
+        "train/harmony/actual_rec": 0.0032565148645173295,
+        "train/harmony/actual_reward": 0.15083985490983917,
+        "train/harmony/actual_sf": 0.0016994079634598202,
+        "train/harmony/effective_beta_observation": 0.0000034284250395062576,
+        "train/harmony/observation/log_scale": -1.070524766818801,
+        "train/harmony/observation/raw": 0.0016989523500889837,
+        "train/harmony/observation/scalar_gradient": 0.25035116506453176,
+        "train/harmony/observation/stationary_weight_batch": 23.989535412385095,
+        "train/harmony/observation/weight": 2.9170285083761263,
+        "train/harmony/observation/weighted": 0.004955922827687559,
+        "train/harmony/task/log_scale": -0.8070672541411955,
+        "train/harmony/task/raw": 0.14692416814948195,
+        "train/harmony/task/scalar_gradient": -0.02078576621353923,
+        "train/harmony/task/stationary_weight_batch": 2.252505234076609,
+        "train/harmony/task/weight": 2.2413277249431136,
+        "train/harmony/task/weighted": 0.32930166713559805
+      },
+      "train_seconds": 3726.2877118587494,
+      "diagnostic": {
+        "mu_participation_rank": [
+          8.806545287508758,
+          9.144688840541612,
+          9.384782259063371,
+          8.728505110802068,
+          7.859800081757298
+        ],
+        "mu_block_variance": [
+          2.463546534665518,
+          1.3463895948099913,
+          0.8340107766175673,
+          0.6776267335834256,
+          0.71664541284214
+        ],
+        "band_mse": [
+          0.00007940527219842705,
+          0.00012062486041233772,
+          0.0003323198431947579,
+          0.000402606974562837,
+          0.0006979560570067002
+        ],
+        "band_removed_mse": [
+          0.026910542158616914,
+          0.0002442416702655868,
+          0.000534764378486822,
+          0.0005784390390747124,
+          0.000992030460232248
+        ],
+        "sf_mse": [
+          0.0007978857882941763,
+          0.000980714039825317,
+          0.0008878660621121526,
+          0.0014041191018703911,
+          0.0019792813937076262
+        ],
+        "sf_zero_mse": [
+          0.1355188763803906,
+          0.16381862660249075,
+          0.17395281460550097,
+          0.18093623055352104,
+          0.18694429463810391
+        ],
+        "q_mae": [
+          23.45079495112101,
+          10.129747796058655,
+          4.607572011152903,
+          2.36449953019619,
+          1.5665099173784256
+        ],
+        "q_zero_mae": [
+          40.350549634297685,
+          19.720404370625815,
+          9.760404682159423,
+          4.892384425799052,
+          2.445691196123759
+        ]
+      },
+      "diagnostic_episode_count": 30,
+      "complete_critic_episodes": 24,
+      "audit_source": "production_runs/reborn_harmony_2ew6wt0w/harmony/frostbite/actor_audit_shared/audit.json",
+      "audit_rows": 6,
+      "projection_gradient_norms": {
+        "rec": 0.0010143546969629824,
+        "rate": 0.002156276178235809,
+        "sf": 0.00047504654503427446,
+        "q": 0.10520007958014806,
+        "reward": 0.1882610657873253,
+        "continuation": 0.00016792105452623218,
+        "actor": 0.0032433150336146355,
+        "critic": 0.11884964257478714,
+        "replay_critic": 0.15225951001048088
+      },
+      "projection_cosine_with_ac": {
+        "rec": 0.03284910194950492,
+        "rate": -0.0006445898906200209,
+        "sf": 0.09111153782663169,
+        "q": 0.00553467966694706,
+        "reward": -0.06145019763138924,
+        "continuation": 0.03613976063642994,
+        "actor": 0.03885495831364091,
+        "critic": 0.9590362170651128,
+        "replay_critic": 0.9683782595044697
+      }
+    },
+    {
+      "arm": "harmony",
+      "game": "road_runner",
+      "curve": [
+        {
+          "step": 10000,
+          "mean": 1250,
+          "episodes": 10
+        },
+        {
+          "step": 20000,
+          "mean": 960,
+          "episodes": 10
+        },
+        {
+          "step": 30000,
+          "mean": 970,
+          "episodes": 10
+        },
+        {
+          "step": 40000,
+          "mean": 920,
+          "episodes": 10
+        },
+        {
+          "step": 50000,
+          "mean": 1180,
+          "episodes": 10
+        },
+        {
+          "step": 60000,
+          "mean": 1420,
+          "episodes": 10
+        },
+        {
+          "step": 70000,
+          "mean": 5320,
+          "episodes": 10
+        },
+        {
+          "step": 80000,
+          "mean": 12440,
+          "episodes": 10
+        },
+        {
+          "step": 90000,
+          "mean": 11310,
+          "episodes": 10
+        },
+        {
+          "step": 100000,
+          "mean": 14620,
+          "episodes": 100
+        }
+      ],
+      "final": {
+        "game": "road_runner",
+        "checkpoint": 100000,
+        "episodes": 100,
+        "mean": 14620,
+        "checkpoint_hash": "447da9b495cff18868dc47bf745950f278db254eaa7e7c727731c894f0377ff8",
+        "training_seed": 0,
+        "evaluation_seed": 0
+      },
+      "episode_sd": 1201.9344677004917,
+      "last_logged_metrics": {
+        "train/harmony/actual_q": 0.25821789784461074,
+        "train/harmony/actual_rec": 0.0028437325328889286,
+        "train/harmony/actual_reward": 0.06515102490366245,
+        "train/harmony/actual_sf": 0.0019775378170729793,
+        "train/harmony/effective_beta_observation": 0.0000034284192939334647,
+        "train/harmony/observation/log_scale": -1.0705265744132284,
+        "train/harmony/observation/raw": 0.001653179243027655,
+        "train/harmony/observation/scalar_gradient": 0.2504854869028056,
+        "train/harmony/observation/stationary_weight_batch": 24.261961812558383,
+        "train/harmony/observation/weight": 2.917034161609152,
+        "train/harmony/observation/weighted": 0.004821270342152681,
+        "train/harmony/task/log_scale": -0.7257776563211998,
+        "train/harmony/task/raw": 0.15649308504895393,
+        "train/harmony/task/scalar_gradient": 0.00275307027449519,
+        "train/harmony/task/stationary_weight_batch": 2.0900934690274067,
+        "train/harmony/task/weight": 2.0663376722276583,
+        "train/harmony/task/weighted": 0.3233689228570239
+      },
+      "train_seconds": 3726.092544555664,
+      "diagnostic": {
+        "mu_participation_rank": [
+          5.665592010424608,
+          8.498536316991267,
+          9.39193741279335,
+          8.826772800045001,
+          7.758546350807621
+        ],
+        "mu_block_variance": [
+          2.014112148433466,
+          1.1194834546124686,
+          0.6156587554299715,
+          0.480457835407636,
+          0.4844747056209037
+        ],
+        "band_mse": [
+          0.00012558566749147656,
+          0.00010079614310396008,
+          0.00017809155914518568,
+          0.00026120448019355534,
+          0.0003001751067737738
+        ],
+        "band_removed_mse": [
+          0.027228559719191657,
+          0.0002714233725176503,
+          0.00030778318954010806,
+          0.00039514158852398394,
+          0.0005060659643883506
+        ],
+        "sf_mse": [
+          0.001582029381663435,
+          0.001412249673416631,
+          0.0009715524346878131,
+          0.0010668156694413886,
+          0.0013663216261193157
+        ],
+        "sf_zero_mse": [
+          0.16860811478561827,
+          0.18432913621266683,
+          0.19803778860304092,
+          0.20920381016201442,
+          0.21733026372061837
+        ],
+        "q_mae": [
+          124.98646621704101,
+          53.26263084411621,
+          23.987414201100666,
+          14.38490686416626,
+          10.508523670832316
+        ],
+        "q_zero_mae": [
+          280.5384699503581,
+          143.56525700887045,
+          73.01634318033854,
+          36.34897273381551,
+          18.414321835835775
+        ]
+      },
+      "diagnostic_episode_count": 30,
+      "complete_critic_episodes": 21,
+      "audit_source": "production_runs/reborn_harmony_2ew6wt0w/harmony/road_runner/actor_audit_shared/audit.json",
+      "audit_rows": 6,
+      "projection_gradient_norms": {
+        "rec": 0.0014850811179106433,
+        "rate": 0.002413156248318652,
+        "sf": 0.0006506535379836956,
+        "q": 0.10147528847058614,
+        "reward": 0.00019040807637793478,
+        "continuation": 0.0012640178514023621,
+        "actor": 0.0033248443699752292,
+        "critic": 0.1806119903922081,
+        "replay_critic": 0.18354247758785883
+      },
+      "projection_cosine_with_ac": {
+        "rec": 0.16100891918296092,
+        "rate": -0.007914489591848067,
+        "sf": 0.24028203148703509,
+        "q": 0.1788764814624867,
+        "reward": 0.05905282514113524,
+        "continuation": 0.12507386629867892,
+        "actor": 0.008856604338451188,
+        "critic": 0.9511428753998803,
+        "replay_critic": 0.9522517350567402
+      }
+    }
+  ],
+  "remaining22_status": {
+    "status": "RUNNING",
+    "games": [
+      "alien",
+      "amidar",
+      "assault",
+      "asterix",
+      "bank_heist",
+      "battle_zone",
+      "breakout",
+      "chopper_command",
+      "crazy_climber",
+      "demon_attack",
+      "freeway",
+      "gopher",
+      "hero",
+      "jamesbond",
+      "kangaroo",
+      "krull",
+      "kung_fu_master",
+      "ms_pacman",
+      "pong",
+      "private_eye",
+      "qbert",
+      "seaquest"
+    ]
+  },
+  "remaining22_stages": {
+    "asterix": {
+      "stage": "train",
+      "status": "RUNNING",
+      "started": 1789239259.2323532
+    },
+    "amidar": {
+      "stage": "train",
+      "status": "RUNNING",
+      "started": 1789239259.2318149
+    },
+    "alien": {
+      "stage": "train",
+      "status": "RUNNING",
+      "started": 1789239259.2312126
+    },
+    "assault": {
+      "stage": "train",
+      "status": "RUNNING",
+      "started": 1789239259.2317393
+    }
+  },
+  "source_sha256": {
+    "dreamerv3/agent_reborn.py": "1bccac6adcb9362afd94fc10cf962475abf055842b85171ca2d8c08b16a02792",
+    "dreamerv3/reborn.py": "fc6e8a048fb2061b2f260e5291195531cb72331b6b0f974d6bfed067ccfe3bf7"
+  }
+}
