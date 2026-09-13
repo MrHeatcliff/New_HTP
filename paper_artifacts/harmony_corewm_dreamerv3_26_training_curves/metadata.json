@@ -1,0 +1,929 @@
+{
+  "job": "4091",
+  "corewm_sources": [
+    {
+      "game": "alien",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/alien/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "df689bcf0d495bb0f4c1877ed02c5591047d7b5471058ba6d283d18081f7f1fd",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/alien/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "alien",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/alien/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "2c7f91cae45c25644cf68a38ec80a3deb777c3d1a07620949b93b60778f51b54",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/alien/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "alien",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/alien/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "0db3bfaa8e27fd9d3c08f5e40edd84649dcc93cb2910ceb9d391b8a1bf76cfe4",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/alien/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "alien",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/alien/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "6aee2daaadbf13ecbdc6eddee4fd15b86ad62f4834a415e26cccba93f44500eb",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/alien/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "amidar",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "39f349c0fbcac351e8767447770ab2cdafbc7edc8fd6f36054bc9677aa4b4e45",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "amidar",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "f2cde5a15b4e7144981ebf752a729fedf09709d04d0163bcff79decec5b632e3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "amidar",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "4e4bd7f039091e7ac7ddfb90057ba7e0f2a7e10bf1e662f269bd6d4602ab56da",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "amidar",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "56a0f286b7b486bf4defbb3108df05b260c1112fef2221da850a93eb09def709",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "amidar",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "c4d981e99198128db3eb89da7ab26eabd2fe91fb49caa173b12a584a81e26592",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/amidar/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "assault",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "09f8e672c22908a89717758f32335c804a6d9f83e9f7b202535f23c62746d6c4",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "assault",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "a0f01d8260eb3f6e7256559c95b7e62c986254ca733dfa65f6239f871939b4e9",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "assault",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "093ab784b2d1c6a1a91da41c3ec03d6c1a2251ed5765bf707fa4e48215594f7a",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "assault",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "1be4b7e9106767e144375430092567e558735deffb41f641a8297fb0563406c7",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "assault",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "68a8283d03e128455d30a9510f279a895ae39e8beb1caa698c2d74ed03e1ca1e",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/assault/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "asterix",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "bb0883f188b91891045333b41954bf2bd6d777de6397d03fd829c99935481188",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "asterix",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "99a3ab4bbd6e4e965d2e1c8b4660736ba5643c62cb1ea780a85e57d7643df6c3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "asterix",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "0ba5cd098e68bee267eff5a11e445578a8e59fa22837dfe2b1154293390833e3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "asterix",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "c998c68306b29d9b94833a5cc904a0463d60c248bc31f7cb4db056b5c94465bc",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "asterix",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "67e73a592a85c0cb1b64623440a5733683e38a26cae054e2c1dd7340f976cde4",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/asterix/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "bank_heist",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_0/attempt_002/paper_artifacts/episode_scores.jsonl",
+      "sha256": "a06cca5479cca71f624ca3492ccd3b8ace44dbf0c60d46e8fecd135c465b855d",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_0/attempt_002/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "bank_heist",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "cc440954fb7c21efec35bab5bfc69f627fdcb5c89ed8751544246c6a4161d029",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "bank_heist",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b1ab19d2485025e2f0bf35240b5d6dc48b0cd525c90c566b30725b67bfe1d730",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "bank_heist",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "503f60937f883d2a472153c502febcd5cae8968d055da1fa22e928753aee717a",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "bank_heist",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "32d15ff39d41d10d81f0e11d08d674edf7a5cb40dfed2af0d4ffcff5c206b405",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/bank_heist/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "battle_zone",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "55ed325daaf2606ac748e77b4284f12c52d212c53863b2499659de1017537043",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "battle_zone",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "d93d2360ba6f0d29fb83d5212f2ead4563daf6dc341202c0280d30c54af107f3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "battle_zone",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "89cc5fcbb588ee97039c92a595335ea46a1c68a7c38de974b8ef5fae169ef15e",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "battle_zone",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "8ef2a31582222bb3a5032533ad103c7955f73af8b9295e22580ecb17c117cb18",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "battle_zone",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "a2d44e6f4db4375f216ff40d886e5c102691a2b8ac1acb3bde2c2fb8fccb11d7",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/battle_zone/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "boxing",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b5d964bc0b0e8aecf8c6cf65839c9b7f38d4fff3cceb3cfb79cc9e74b32a39ba",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "boxing",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "a3cc810f134bf551e8fe034c9a2574a06d13b5f9b53bbe8a880956314071d8e1",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "boxing",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "142549e74083262a45a629d314d330836c1d425d4253069f1ccb6ee6c284495e",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "boxing",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "aec2e3d1be8c365f6d9b97329079101359b3958678fa56e32126bc503a9097b6",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "boxing",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "588eb4068e0e6403445952237df43668a63dc4d6d681eb26bfff5e68dc5533c3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/boxing/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "breakout",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "6cdbc6b15cd877866b775e490ca5eedc79306c31e5b6ab735beeb99c61568461",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "breakout",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "eddb76b963b0180501954826c8b86ae02b7233d657dc828fe23b51a95d077705",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "breakout",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "7ae1b5215cd31976d5b7bc38306832e0a2b6266596c33b704678e380d0806fd8",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "breakout",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "7d361974e2a063d0a4c55031ba77338ea7776bbd96de5ebd20a3679788fb5e31",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "breakout",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "02d1b7876e5e79c03569f405d37bdd7bfc4f50e05c626cd408b487b9eb2e8651",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/breakout/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "chopper_command",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "416ba7b37f5f1c555a810c45338abd994a83f9d347dbda92d9b464a8acc63ec0",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "chopper_command",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "983aed30e08303648eac5c550bd7ce833377971f95daccf1d803d9d4b9bc4d69",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "chopper_command",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "6c9e2fe339472768a37cbd203cc176524d453ec2e03f6076a0f03c890c88e8e0",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "chopper_command",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "4880a7addc6b4548ff042564b79759f3f865c5b8ce95cb3e57738e8114e65b33",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "chopper_command",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "c2da85305f4724025b1f983e4bd9ceb5750bf19f233e868a2da82f4e1a6df1fc",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/chopper_command/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "crazy_climber",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "6e0fc96cc63e62ad5f27dbc32dc0a684c519c037f0f34b3cdcbf8bbd39e5fc14",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "crazy_climber",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "54a75529c1cb58e2a8c1012fc9e62d7f6fb371d0788061e3f70dc1c04cc85363",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "crazy_climber",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "abf3e3ccc13ce01364378cf1c72bfb0201920d9c1875a026bcb6982ba44f6510",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "crazy_climber",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "77860c1188c6b614214cd526c2dcc28a6fb18dec4bda1af4f0ac21944e5f8a52",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "crazy_climber",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "a7c51d535c9cd89fee6bc5a6593e11f4b55d7d7b0f288aab4b71a8ce1b973488",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/crazy_climber/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "demon_attack",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "bfe6c8ca2d3eff3df54481517b7b3cbde237a49e444269e4ba57323362eb32b9",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "demon_attack",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "c2a83793d8a84ae6f5d3da7e46bdb924296c498f1f09695b892fc0272b055aba",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "demon_attack",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "043d38150ddfd314119cb0ca135e4578a2c33221c4a7585241f14fe74753fad3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "demon_attack",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "59e6bb2af8728050345046a454419872e60c80d4e831f842635e923269f6e073",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "demon_attack",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "a1b4d7398cf969558899123daca3562735d381179f70730a23697cef15ae8641",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/demon_attack/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "freeway",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "a726a7235b61cca561ed13429211c71c3b4f2702ac0d685c5c4e117d3c2ce235",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "freeway",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "c1edaf5475d42d6cfa1b0ac5cdbe169c46d29cb94b28ae23226e2a6f3a2bf0d4",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "freeway",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "bd732fcb34c2c23d5cf7ac0c96d6a4ed567acb2267b52325e88cac3e54236a62",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "freeway",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "d182a6be3ece31ce4401a08e6afb61dde78c69b8357049506f196833b521d80a",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "freeway",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "2846d6b4e9bb6bd8717f540f6978f5279e50f519032ede175b05171be9705369",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/freeway/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "frostbite",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_0/attempt_002/paper_artifacts/episode_scores.jsonl",
+      "sha256": "cafd8d884e058ffc2c8bb969b4203687ca8bf68595eaccf4803d5ba3edba7683",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_0/attempt_002/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "frostbite",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "95e42f54bf3f19223461c6bac190a879b69350fd9f03262130a78fff7a54aac0",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "frostbite",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "6a3d1fb8ea665da85a15e579bcaf458e3f78e0ea8a8dcc05f20a9e7085b24510",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "frostbite",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "0f9475e15eac836f094d98f75977affd33ad948b04e131313c4e445ae990c0bc",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "frostbite",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "fcfbc41f0926970c586447c05562d7ceeb2b29c42cd8253f0e4403c87c2576a5",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/frostbite/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "gopher",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "619b44d60c0752c0f0bd856918148e8a1856ea436c5d0b3e4cc285611996ea0e",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "gopher",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "cefa237e1bc2142973f94f96e164bb3cb4976afa3939ca023f147f2cbe441e6e",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "gopher",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "9b20e81a9f734a073c168b8354a05a60baacc009cc8e77b3bb76aa8e1f8a0334",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "gopher",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b60ae367b18d8f7da9882ed9eb7513297e008c35b73717c315cefbe119eb4d98",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "gopher",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "33b87508d4624898f795bb2f9b6692e10624c748a89f23330d6e3392d1075b6a",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/gopher/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "hero",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "069415efd0f4fbed10e5d34441bb6e78f03ceb99b9e7b6dcb4ac21f79ab8a148",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "hero",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "0b9738e71d12ce015a854bb1e4e5911c48a75a8f2e13e5d757c1079735e31d75",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "hero",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "5b85c274de8319073675ca8caf383b126907ac338411d5f69d160aa94161f957",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "hero",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "be29f8495947b262c4c50a309ce0c35ff592df72645f9a53c6fdaaeed4b6fc55",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "hero",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "d45dbb2dd00e77a6fedf77d1da90b6fa20c920070fa9988d1a274b93b26a6bfc",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/hero/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "jamesbond",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "754cbe68450f31b7926d378b57cfdce99a373b12dbd0be9f13a286cbe0a79010",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "jamesbond",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "6f86d60b3213ff7c6664c8bf45e06c7145a3adbc6e2d006b60ad9d96dec916fd",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "jamesbond",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "5809a3603ded2eb37aaf6fb4204f59780c33ba76d6e4979e5768c114b362e6a4",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "jamesbond",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "15560ef2126e526c31b7e606fa0d9df537cc0273370945290dda9e375f6e06e4",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "jamesbond",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "dd7d8e93248bf2ff60dc1654c9ab49e513d0bef92b04b50730e7fcc1e2037c59",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/jamesbond/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kangaroo",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_0/attempt_002/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b855f897c025bb0b8e54137cffd11706ef3842ee03a67eeb2952bc621e01a279",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_0/attempt_002/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kangaroo",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "5e6486eff0dd51a2f1e1af1973d833bbf2f05233201adabdd0068ace2e9beb05",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kangaroo",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "f50449ff9b97cec728bb8ad07f39a73ef186a0b3772b4e27455d52bae2860944",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kangaroo",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "1f3e1a0dcee3b508b3b3034fc9d5594f56444a5ff18db0c61f70d80773dba7a3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kangaroo",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "17b326b02ff437f7934a7ad208600176583fd47a1fec18c9ce1cc440b69e7e37",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kangaroo/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "krull",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b593b78473e376ddc1da1ee32cf840a8bdf4baa7debe142ab2de5dde1046c205",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "krull",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "fd45e6335d5a3ff64f3c2d82cbc8c6705b2251ceaf848e1b8a518cee67118715",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "krull",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "d621ba3ec12bcd3b2b8e5d6556a121af1b13e5f8c57faad7cc2b49a5875a404d",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "krull",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "0cfb5fb4736d231aac18f4ba3ffae4782525a550b4d468d13dee1c093cbc69c3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "krull",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "47720597634a73339da25124093450f7d9a020661fae3a1492d0905e75bfaf45",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/krull/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kung_fu_master",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "6de526d9b3909afb0c562c68d2f67dae18d73f617fe14eb37f269ed10fe3cd63",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kung_fu_master",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "52edfe8f1e31e1ff4f6aec26adcdf7cb723ce048b23757824b626598c8b03b2c",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kung_fu_master",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b92a1738d16d938f8851217b2404e7f889c969b34228e9c80b8b794a04ff089e",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kung_fu_master",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b201661536c423913f3be1f20832effe1b157f117544f53d1f6d9c4a4e6f86ef",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "kung_fu_master",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "0d61c9e0951c41b798e71afd6a17b17886c795fba86e0a39695c84f573558ea2",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/kung_fu_master/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "ms_pacman",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_0/attempt_002/paper_artifacts/episode_scores.jsonl",
+      "sha256": "4dbb587afda234e5957b17ede3f55a5f117414a7286b260ece3cfe2080a8077b",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_0/attempt_002/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "ms_pacman",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "aad98e43204b19c48885a322ba37f7b7e4c704b045bccf6d4afa8b8b8dcd2ac6",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "ms_pacman",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "86be5a5fb8cb92e56c9436397910931917a9c2c7bfbc082b78ad6737d7698ca4",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "ms_pacman",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "3f95830d24a75f5cd63c3e8334336924f08d795a45978e4b206ddb9a4cd2da9d",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "ms_pacman",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "e3e19157e1c57cd56f6948a2bbe17aefa271d2a0127473f35c0e08c4a7c82462",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/ms_pacman/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "pong",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "c8aac9cb40eb02f5dc210d31dc8a3e1a6c9512f2067d14a694b8cb02d6005507",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "pong",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "29d8c8964f8ad11c75398feb3bf1893862f3cc562033bec923e69eed4f8d71d3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "pong",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "e515a064b949b2e632ed0ca0367cce8fe3833dd4f9ae266e754901dd13ae8258",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "pong",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b4d79e7e9344205d5c3c9e4b8ddcfafa6bf9ce1a183df74e14388f0739e61180",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "pong",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "0c3cced56831165a7a0f1865334340ffbeef43c152af70fe3962f6a3b82ca20f",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/pong/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "private_eye",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "01a4345ae84fa3d78adc9a786de54880ae16f95df3d3309690c542327699a80a",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "private_eye",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "fafeb69a78c490f2c5c678977c6ee8df3d61a6bb0949cdfacc5a54cfb13b0b67",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "private_eye",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "7bbaa5f02b9ad9eab262687a7de7e2a29d6030802ba413a8ba17a07ad97d3c3c",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "private_eye",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "43b6adcfaa83a379c74841b5522ab80161480cb1fc691f8f2a122c784aa45b83",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "private_eye",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "d587f83af1cad6e5c2d5625140f58db9a6286a4a213cc38a4596551cfaa18d21",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/private_eye/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "qbert",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "f34a3aff071bd0c8e0450154b38e962d01da9e1709401207f298f7cf3152e860",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "qbert",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "483ed482345d9a6e9392f7c476329f9765e2be60bc87b97be7cd8525863c48ec",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "qbert",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "63c3baeaa48069bd646512530b4a0eaea5ca89eaf1494f6b92041fd58ba31b47",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "qbert",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "32d3c6d77969166759c3ffc04b0de0d54ecace64dcc3d387814f97501fcc019b",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "qbert",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "ea74fc93700d4419374739b2a3629515330c6bc310c2b326f3b4e730323df679",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/qbert/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "road_runner",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b227fdd045f90f1fade18fdbe8858dcc19c82b28190241e0cf84042d5be4a3f2",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "road_runner",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "f7e845ba734f5d48f937cf839e56aa9b339fb2112eccc0cd6fa420e6d15500ba",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "road_runner",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "983cc66b693622a3fc7a957d65cae0838e3f605ad94a5d3b769ba077d625a0ee",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "road_runner",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "19cb43fbf70698cd6eff46a5e6e4c37c19eaddd585fe19528ddc28b1714f7c9e",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "road_runner",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "77b12eae8e888f52342ee4e446059de0cef3fa726840a115ebe895d48647998a",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/road_runner/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "seaquest",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_0/attempt_002/paper_artifacts/episode_scores.jsonl",
+      "sha256": "bc4e82b8f4a32e173cf7eb4a3d100ffc6814ea2e78283162b2a981e7b6a73019",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_0/attempt_002/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "seaquest",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "7a30723feabb9c4236d3b415ec1f3749e3003461bbb751bd2c82091d47718841",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "seaquest",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "f2b1ecb42a8c8243099abe9a8d1456bbc5a6c0654af174bd4cf2c9bc59de2cdd",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "seaquest",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "693e24254440a2dc5be1d15599c9cf514156996fe4690eaff4724f1e7c674fb3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "seaquest",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "f89fbde655fadbf528255b65d73f82be36d26f210858d8190d380693a2beea38",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/seaquest/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "up_n_down",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_0/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "e3da0e5602059df1631c97778c8446275b96d5f3fa39b61377c6f6ce7b7dd3a3",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_0/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "up_n_down",
+      "seed": 1,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_1/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "6d475721579eff96410cadd15118446265eebbb6c6cef9ad5295868a2f0dfd64",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_1/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "up_n_down",
+      "seed": 2,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_2/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "d343b394f425163cae74e295d3515a57b31baa802a6c9d74c712463f722cc822",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_2/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "up_n_down",
+      "seed": 3,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_3/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "6c052ca134250e3bb3cdf0435372312f3bf646c00fe5eedf99d67b91821d9fb1",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_3/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "up_n_down",
+      "seed": 4,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_4/attempt_001/paper_artifacts/episode_scores.jsonl",
+      "sha256": "d5069ad40ca13ea9d07563f92721f66270a9a1962c57f2132c7ed9aff31b7bb2",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/stage1_full/up_n_down/seed_4/attempt_001/ckpt/env_action_steps_000100000"
+    },
+    {
+      "game": "alien",
+      "seed": 0,
+      "path": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/wave1/full/alien/seed_0/attempt_002/paper_artifacts/episode_scores.jsonl",
+      "sha256": "a792d6a457541c9f73ffe7d824491a5b9b58d1d7d22f1b1d53146b8bdbb20405",
+      "evaluated_checkpoint": "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/corewm_atari100k_v1/training/wave1/full/alien/seed_0/attempt_002/ckpt/env_action_steps_000100000"
+    }
+  ],
+  "cached_harmony_dreamer": "paper_artifacts/harmony_vs_dreamerv3_26_training_curves/aggregate.csv",
+  "cached_sha256": "096964bba25ea6c5b1be904b49c7c123540eee23d9588421bb57731da99f9edf",
+  "measurement": "training episode returns only",
+  "corewm_runs": 130,
+  "corewm_episodes": 17111,
+  "bin_width": 5000,
+  "band": "\u00b1SEM across available seeds; omitted with fewer than two seeds",
+  "missing_bins": "NaN, no interpolation",
+  "new_harmony_seeds_excluded": [
+    1,
+    2,
+    3,
+    4
+  ]
+}
