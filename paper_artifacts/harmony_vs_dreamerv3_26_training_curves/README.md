@@ -1,5 +1,7 @@
 # Harmony vs DreamerV3 — training curves, 26 game
 
+**Up N Down:** [Timeline episode dài và phân tích evaluation](../upndown_long_episode_report/README.md) giải thích các bin trống và phân rã return thành độ dài × reward/action.
+
 ![Overview](all_games_overview.png)
 
 [PDF tổng quan](all_games_overview.pdf)

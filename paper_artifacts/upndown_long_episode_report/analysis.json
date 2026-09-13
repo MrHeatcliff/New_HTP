@@ -1,0 +1,852 @@
+{
+  "summary": {
+    "full": {
+      "step": 100000,
+      "episodes": 100,
+      "mean_return": 12748.7,
+      "mean_actions": 2940.28,
+      "reward_per_action": 4.3358795760947935,
+      "median_return": 11130.0,
+      "return_p10": 5340.0,
+      "return_p90": 23585.00000000001,
+      "median_actions": 2776.0,
+      "cap_length_count": 0
+    },
+    "harmony": {
+      "step": 100000,
+      "episodes": 100,
+      "mean_return": 196432.5,
+      "mean_actions": 21152.46,
+      "reward_per_action": 9.286508519576447,
+      "median_return": 211230.0,
+      "return_p10": 94411.0,
+      "return_p90": 255604.0,
+      "median_actions": 22793.0,
+      "cap_length_count": 29
+    }
+  },
+  "ratios": {
+    "mean_return": 15.408041604242,
+    "mean_actions": 7.194029140081896,
+    "reward_per_action": 2.1417819283487916
+  },
+  "curves": {
+    "full": [
+      {
+        "step": 10000,
+        "episodes": 10,
+        "mean_return": 1922.0,
+        "mean_actions": 743.9,
+        "reward_per_action": 2.5836806022314827
+      },
+      {
+        "step": 20000,
+        "episodes": 10,
+        "mean_return": 6407.0,
+        "mean_actions": 2226.3,
+        "reward_per_action": 2.8778691101828144
+      },
+      {
+        "step": 30000,
+        "episodes": 10,
+        "mean_return": 57499.0,
+        "mean_actions": 18496.7,
+        "reward_per_action": 3.1086085626084654
+      },
+      {
+        "step": 40000,
+        "episodes": 10,
+        "mean_return": 8603.0,
+        "mean_actions": 2494.8,
+        "reward_per_action": 3.4483726150392817
+      },
+      {
+        "step": 50000,
+        "episodes": 10,
+        "mean_return": 29888.0,
+        "mean_actions": 7922.7,
+        "reward_per_action": 3.7724513107905135
+      },
+      {
+        "step": 60000,
+        "episodes": 10,
+        "mean_return": 24232.0,
+        "mean_actions": 6604.3,
+        "reward_per_action": 3.6691246612055783
+      },
+      {
+        "step": 70000,
+        "episodes": 10,
+        "mean_return": 7515.0,
+        "mean_actions": 2015.9,
+        "reward_per_action": 3.727863485291929
+      },
+      {
+        "step": 80000,
+        "episodes": 10,
+        "mean_return": 29119.0,
+        "mean_actions": 6885.7,
+        "reward_per_action": 4.2289091886082755
+      },
+      {
+        "step": 90000,
+        "episodes": 10,
+        "mean_return": 46049.0,
+        "mean_actions": 10568.6,
+        "reward_per_action": 4.357152319134038
+      },
+      {
+        "step": 100000,
+        "episodes": 100,
+        "mean_return": 12748.7,
+        "mean_actions": 2940.28,
+        "reward_per_action": 4.3358795760947935
+      }
+    ],
+    "harmony": [
+      {
+        "step": 10000,
+        "episodes": 10,
+        "mean_return": 1695.0,
+        "mean_actions": 685.1,
+        "reward_per_action": 2.4740913735221137
+      },
+      {
+        "step": 20000,
+        "episodes": 10,
+        "mean_return": 3804.0,
+        "mean_actions": 696.7,
+        "reward_per_action": 5.460025836084398
+      },
+      {
+        "step": 30000,
+        "episodes": 10,
+        "mean_return": 3554.0,
+        "mean_actions": 663.8,
+        "reward_per_action": 5.354022295872251
+      },
+      {
+        "step": 40000,
+        "episodes": 10,
+        "mean_return": 5727.0,
+        "mean_actions": 1058.8,
+        "reward_per_action": 5.408953532300718
+      },
+      {
+        "step": 50000,
+        "episodes": 10,
+        "mean_return": 2979.0,
+        "mean_actions": 609.5,
+        "reward_per_action": 4.8876127973748975
+      },
+      {
+        "step": 60000,
+        "episodes": 10,
+        "mean_return": 49392.0,
+        "mean_actions": 6385.6,
+        "reward_per_action": 7.734903532949136
+      },
+      {
+        "step": 70000,
+        "episodes": 10,
+        "mean_return": 120389.0,
+        "mean_actions": 14367.1,
+        "reward_per_action": 8.379492033882968
+      },
+      {
+        "step": 80000,
+        "episodes": 10,
+        "mean_return": 219651.0,
+        "mean_actions": 23987.8,
+        "reward_per_action": 9.156779696345643
+      },
+      {
+        "step": 90000,
+        "episodes": 10,
+        "mean_return": 220352.0,
+        "mean_actions": 23342.6,
+        "reward_per_action": 9.439908150762983
+      },
+      {
+        "step": 100000,
+        "episodes": 100,
+        "mean_return": 196432.5,
+        "mean_actions": 21152.46,
+        "reward_per_action": 9.286508519576447
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "episode": 1,
+      "start": 0,
+      "end": 481,
+      "actions": 481,
+      "score": 230.0
+    },
+    {
+      "episode": 2,
+      "start": 481,
+      "end": 865,
+      "actions": 384,
+      "score": 70.0
+    },
+    {
+      "episode": 3,
+      "start": 865,
+      "end": 1377,
+      "actions": 512,
+      "score": 150.0
+    },
+    {
+      "episode": 4,
+      "start": 1377,
+      "end": 1939,
+      "actions": 562,
+      "score": 190.0
+    },
+    {
+      "episode": 5,
+      "start": 1939,
+      "end": 2392,
+      "actions": 453,
+      "score": 510.0
+    },
+    {
+      "episode": 6,
+      "start": 2392,
+      "end": 2787,
+      "actions": 395,
+      "score": 470.0
+    },
+    {
+      "episode": 7,
+      "start": 2787,
+      "end": 3255,
+      "actions": 468,
+      "score": 520.0
+    },
+    {
+      "episode": 8,
+      "start": 3255,
+      "end": 3893,
+      "actions": 638,
+      "score": 930.0
+    },
+    {
+      "episode": 9,
+      "start": 3893,
+      "end": 4521,
+      "actions": 628,
+      "score": 1020.0
+    },
+    {
+      "episode": 10,
+      "start": 4521,
+      "end": 5223,
+      "actions": 702,
+      "score": 770.0
+    },
+    {
+      "episode": 11,
+      "start": 5223,
+      "end": 5800,
+      "actions": 577,
+      "score": 990.0
+    },
+    {
+      "episode": 12,
+      "start": 5800,
+      "end": 6399,
+      "actions": 599,
+      "score": 3900.0
+    },
+    {
+      "episode": 13,
+      "start": 6399,
+      "end": 6900,
+      "actions": 501,
+      "score": 1740.0
+    },
+    {
+      "episode": 14,
+      "start": 6900,
+      "end": 7588,
+      "actions": 688,
+      "score": 760.0
+    },
+    {
+      "episode": 15,
+      "start": 7588,
+      "end": 8219,
+      "actions": 631,
+      "score": 1520.0
+    },
+    {
+      "episode": 16,
+      "start": 8219,
+      "end": 8763,
+      "actions": 544,
+      "score": 2070.0
+    },
+    {
+      "episode": 17,
+      "start": 8763,
+      "end": 9509,
+      "actions": 746,
+      "score": 1110.0
+    },
+    {
+      "episode": 18,
+      "start": 9509,
+      "end": 10159,
+      "actions": 650,
+      "score": 1030.0
+    },
+    {
+      "episode": 19,
+      "start": 10159,
+      "end": 11229,
+      "actions": 1070,
+      "score": 1700.0
+    },
+    {
+      "episode": 20,
+      "start": 11229,
+      "end": 11850,
+      "actions": 621,
+      "score": 620.0
+    },
+    {
+      "episode": 21,
+      "start": 11850,
+      "end": 12599,
+      "actions": 749,
+      "score": 700.0
+    },
+    {
+      "episode": 22,
+      "start": 12599,
+      "end": 13429,
+      "actions": 830,
+      "score": 1550.0
+    },
+    {
+      "episode": 23,
+      "start": 13429,
+      "end": 14749,
+      "actions": 1320,
+      "score": 2650.0
+    },
+    {
+      "episode": 24,
+      "start": 14749,
+      "end": 15353,
+      "actions": 604,
+      "score": 610.0
+    },
+    {
+      "episode": 25,
+      "start": 15353,
+      "end": 16059,
+      "actions": 706,
+      "score": 2070.0
+    },
+    {
+      "episode": 26,
+      "start": 16059,
+      "end": 16487,
+      "actions": 428,
+      "score": 1690.0
+    },
+    {
+      "episode": 27,
+      "start": 16487,
+      "end": 16933,
+      "actions": 446,
+      "score": 2110.0
+    },
+    {
+      "episode": 28,
+      "start": 16933,
+      "end": 17494,
+      "actions": 561,
+      "score": 3580.0
+    },
+    {
+      "episode": 29,
+      "start": 17494,
+      "end": 18053,
+      "actions": 559,
+      "score": 1780.0
+    },
+    {
+      "episode": 30,
+      "start": 18053,
+      "end": 18435,
+      "actions": 382,
+      "score": 870.0
+    },
+    {
+      "episode": 31,
+      "start": 18435,
+      "end": 19201,
+      "actions": 766,
+      "score": 3110.0
+    },
+    {
+      "episode": 32,
+      "start": 19201,
+      "end": 19664,
+      "actions": 463,
+      "score": 1420.0
+    },
+    {
+      "episode": 33,
+      "start": 19664,
+      "end": 20317,
+      "actions": 653,
+      "score": 2450.0
+    },
+    {
+      "episode": 34,
+      "start": 20317,
+      "end": 21002,
+      "actions": 685,
+      "score": 3360.0
+    },
+    {
+      "episode": 35,
+      "start": 21002,
+      "end": 21551,
+      "actions": 549,
+      "score": 2570.0
+    },
+    {
+      "episode": 36,
+      "start": 21551,
+      "end": 22113,
+      "actions": 562,
+      "score": 1480.0
+    },
+    {
+      "episode": 37,
+      "start": 22113,
+      "end": 22730,
+      "actions": 617,
+      "score": 2010.0
+    },
+    {
+      "episode": 38,
+      "start": 22730,
+      "end": 23292,
+      "actions": 562,
+      "score": 3280.0
+    },
+    {
+      "episode": 39,
+      "start": 23292,
+      "end": 23901,
+      "actions": 609,
+      "score": 3010.0
+    },
+    {
+      "episode": 40,
+      "start": 23901,
+      "end": 24419,
+      "actions": 518,
+      "score": 1550.0
+    },
+    {
+      "episode": 41,
+      "start": 24419,
+      "end": 24953,
+      "actions": 534,
+      "score": 2660.0
+    },
+    {
+      "episode": 42,
+      "start": 24953,
+      "end": 25532,
+      "actions": 579,
+      "score": 2490.0
+    },
+    {
+      "episode": 43,
+      "start": 25532,
+      "end": 26194,
+      "actions": 662,
+      "score": 3140.0
+    },
+    {
+      "episode": 44,
+      "start": 26194,
+      "end": 26776,
+      "actions": 582,
+      "score": 1690.0
+    },
+    {
+      "episode": 45,
+      "start": 26776,
+      "end": 27321,
+      "actions": 545,
+      "score": 2670.0
+    },
+    {
+      "episode": 46,
+      "start": 27321,
+      "end": 27819,
+      "actions": 498,
+      "score": 3340.0
+    },
+    {
+      "episode": 47,
+      "start": 27819,
+      "end": 28349,
+      "actions": 530,
+      "score": 2870.0
+    },
+    {
+      "episode": 48,
+      "start": 28349,
+      "end": 28930,
+      "actions": 581,
+      "score": 2590.0
+    },
+    {
+      "episode": 49,
+      "start": 28930,
+      "end": 29549,
+      "actions": 619,
+      "score": 2720.0
+    },
+    {
+      "episode": 50,
+      "start": 29549,
+      "end": 30322,
+      "actions": 773,
+      "score": 4610.0
+    },
+    {
+      "episode": 51,
+      "start": 30322,
+      "end": 31231,
+      "actions": 909,
+      "score": 2710.0
+    },
+    {
+      "episode": 52,
+      "start": 31231,
+      "end": 31855,
+      "actions": 624,
+      "score": 2020.0
+    },
+    {
+      "episode": 53,
+      "start": 31855,
+      "end": 32485,
+      "actions": 630,
+      "score": 3320.0
+    },
+    {
+      "episode": 54,
+      "start": 32485,
+      "end": 33274,
+      "actions": 789,
+      "score": 4420.0
+    },
+    {
+      "episode": 55,
+      "start": 33274,
+      "end": 33929,
+      "actions": 655,
+      "score": 1940.0
+    },
+    {
+      "episode": 56,
+      "start": 33929,
+      "end": 34566,
+      "actions": 637,
+      "score": 1930.0
+    },
+    {
+      "episode": 57,
+      "start": 34566,
+      "end": 35067,
+      "actions": 501,
+      "score": 2040.0
+    },
+    {
+      "episode": 58,
+      "start": 35067,
+      "end": 35557,
+      "actions": 490,
+      "score": 2430.0
+    },
+    {
+      "episode": 59,
+      "start": 35557,
+      "end": 36219,
+      "actions": 662,
+      "score": 2240.0
+    },
+    {
+      "episode": 60,
+      "start": 36219,
+      "end": 36855,
+      "actions": 636,
+      "score": 3930.0
+    },
+    {
+      "episode": 61,
+      "start": 36855,
+      "end": 37416,
+      "actions": 561,
+      "score": 2580.0
+    },
+    {
+      "episode": 62,
+      "start": 37416,
+      "end": 38290,
+      "actions": 874,
+      "score": 2870.0
+    },
+    {
+      "episode": 63,
+      "start": 38290,
+      "end": 39092,
+      "actions": 802,
+      "score": 3240.0
+    },
+    {
+      "episode": 64,
+      "start": 39092,
+      "end": 40132,
+      "actions": 1040,
+      "score": 6080.0
+    },
+    {
+      "episode": 65,
+      "start": 40132,
+      "end": 42154,
+      "actions": 2022,
+      "score": 7890.0
+    },
+    {
+      "episode": 66,
+      "start": 42154,
+      "end": 43447,
+      "actions": 1293,
+      "score": 5540.0
+    },
+    {
+      "episode": 67,
+      "start": 43447,
+      "end": 44661,
+      "actions": 1214,
+      "score": 3790.0
+    },
+    {
+      "episode": 68,
+      "start": 44661,
+      "end": 45361,
+      "actions": 700,
+      "score": 2370.0
+    },
+    {
+      "episode": 69,
+      "start": 45361,
+      "end": 46113,
+      "actions": 752,
+      "score": 3600.0
+    },
+    {
+      "episode": 70,
+      "start": 46113,
+      "end": 47077,
+      "actions": 964,
+      "score": 3030.0
+    },
+    {
+      "episode": 71,
+      "start": 47077,
+      "end": 48812,
+      "actions": 1735,
+      "score": 6910.0
+    },
+    {
+      "episode": 72,
+      "start": 48812,
+      "end": 49657,
+      "actions": 845,
+      "score": 3260.0
+    },
+    {
+      "episode": 73,
+      "start": 49657,
+      "end": 50463,
+      "actions": 806,
+      "score": 4230.0
+    },
+    {
+      "episode": 74,
+      "start": 50463,
+      "end": 51323,
+      "actions": 860,
+      "score": 2860.0
+    },
+    {
+      "episode": 75,
+      "start": 51323,
+      "end": 52071,
+      "actions": 748,
+      "score": 3800.0
+    },
+    {
+      "episode": 76,
+      "start": 52071,
+      "end": 52678,
+      "actions": 607,
+      "score": 2710.0
+    },
+    {
+      "episode": 77,
+      "start": 52678,
+      "end": 53199,
+      "actions": 521,
+      "score": 3660.0
+    },
+    {
+      "episode": 78,
+      "start": 53199,
+      "end": 54031,
+      "actions": 832,
+      "score": 5450.0
+    },
+    {
+      "episode": 79,
+      "start": 54031,
+      "end": 55136,
+      "actions": 1105,
+      "score": 5220.0
+    },
+    {
+      "episode": 80,
+      "start": 55136,
+      "end": 61029,
+      "actions": 5893,
+      "score": 45830.0
+    },
+    {
+      "episode": 81,
+      "start": 61029,
+      "end": 64548,
+      "actions": 3519,
+      "score": 23990.0
+    },
+    {
+      "episode": 82,
+      "start": 64548,
+      "end": 72274,
+      "actions": 7726,
+      "score": 60540.0
+    },
+    {
+      "episode": 83,
+      "start": 72274,
+      "end": 97236,
+      "actions": 24962,
+      "score": 242470.0
+    }
+  ],
+  "sources": [
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/up_n_down/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "8b51d9175e3f0b6bcbe61d829fb958a9ea72ac975acb82412c482ebde0f69f38"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/010000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "6748874ac0171a23471dd916cecc029cbb25423f8bd0b1e8bb584342a3ddc736"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/020000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "01109c52bcd49513fd283991bb953b9effd3a57cda50f91542bd0e92359cc6ea"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/030000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "196a7515bf77988c136a5cff1a0a382bfe09d16be7fcb82d27f546bc9764edf4"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/040000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "8a3bee59b245afb17b3da197b9ffab1328f2a1ea53de6de07d8ca42e96f42371"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/050000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "151ac58ae0a4e34301bc1197b470260cf15b89363f2fc19846d425b9fedf08b5"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/060000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "e97876280c5c4c533ac6574bf35782bef72544c34969df05f78b81151a385398"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/070000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "b1c68915d15dcc56d48d555cab0082a39536eaca0c586f9079245b56613a5b36"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/080000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "ad730f50310f19fad10d38e448580a6d4f6ca460cbd29455aa551167a17fc354"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/090000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "f7b935f3acfc3090fdc771e2b0c6151b85ba4bc74b59a9dd5b40a20921443337"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/full/evaluation/up_n_down/100000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "a1a9916ed913fd76cdf54674113698d2644761e5eff5977e7aacca831da64ea4"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/010000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "15b05b023f2a1e880fd146981443c4e36c0db9e21bb235fe06fb631f1339c638"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/020000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "080de92d6d92f0aac403cd788481443731c9fa39067d81847dcd1eb766b9ce92"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/030000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "d42a944fb2ce96b41178dcedf487e7795915719ac1d1434b97837a0220b7b3ee"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/040000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "3d5e6780f8b35657457b5dc99d7e51ae1a7252d6c9ff3e151bf8cea13b44811b"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/050000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "07efd09bbd865ae686add820036d0160efb4a7fc5fb1701aefb893d6cfa14ed9"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/060000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "1e78b5d4a59a1bd625697a340b3d39749321d6d02a30685d7e2a2b6d8326a6c0"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/070000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "497a7bf970cac60a92e8fb834e6ea69db576ad6a44579eb41ea9c4e81587d5f4"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/080000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "22d704730f87eb94aad365639b5c53b4202973c1cdd8d35d62346466d51c8bbc"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/090000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "6d6a91c97affcd7752e06a826fdc277d97d92c9c883e48b1e34aa8156236e065"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/100000/paper_artifacts/eval_metrics.jsonl",
+      "sha256": "e1e826f0473c49003bbad8b57954532eb194f6d861651130e11b2674581c2884"
+    }
+  ],
+  "length_definition": "episode_length minus one reset callback",
+  "cap_caveat": "27000-action length is a cap-hit proxy, not independently logged termination cause",
+  "training_seed": 0,
+  "job": "4077"
+}

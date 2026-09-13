@@ -88,7 +88,7 @@ def main():
         harmony_training_seeds=[0],dreamerv3_training_seeds=[0,1,2,3,4],band='DreamerV3 ±SEM',
         x_source='Harmony episode_scores.jsonl agent_actions; baseline cached agent_steps',
         evaluation_used=False,smoothing=None),indent=2)+'\n')
-    text = '# Harmony vs DreamerV3 — training curves, 26 game\n\n![Overview](all_games_overview.png)\n\n[PDF tổng quan](all_games_overview.pdf)\n\n'
+    text = '# Harmony vs DreamerV3 — training curves, 26 game\n\n**Up N Down:** [Timeline episode dài và phân tích evaluation](../upndown_long_episode_report/README.md) giải thích các bin trống và phân rã return thành độ dài × reward/action.\n\n![Overview](all_games_overview.png)\n\n[PDF tổng quan](all_games_overview.pdf)\n\n'
     text += ('**Cả hai đường đều là training episode return**, gom bin 5K actions theo đúng hàm binning của hình DreamerV3 trước đó. '
              'Lấy trung bình episode trong từng bin/từng seed, rồi trung bình giữa seed. DreamerV3: 5 seed, dải ±1 SEM; '
              'Harmony: seed 0, không vẽ dải bất định giữa seed. Không EMA smoothing, không dùng evaluation để điền dữ liệu.\n\n'
