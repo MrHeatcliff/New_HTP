@@ -1,5 +1,12 @@
 # HTS-WM DreamerV3 Port
 
+## Reproduce the current Reborn + Harmony experiment
+
+See [the frozen-source package and launch guide](reproduction/harmony/README.md)
+for the exact 26-game × seeds 1–4 Harmony replication, environment versions,
+portable Slurm submission, evaluation protocol, and logs. This package does not
+depend on the author's local `production_runs` directory.
+
 This directory is the active codebase for the current HTS-WM experiments. It is a local fork of the official DreamerV3 implementation with additional HTS modules, logging, artifact extraction, and Atari100K comparison scripts.
 
 The parent XuanCe repository is currently used mostly as a workspace and experiment tracker. The DreamerV3 baseline and HTS-WM implementation both run from this directory:
