@@ -1,0 +1,118 @@
+{
+  "job": "4067",
+  "games": 26,
+  "evaluation_points": 260,
+  "evaluation_episodes": 4940,
+  "training_seed": 0,
+  "sources": [
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/alien/summary.json",
+      "sha256": "cf129f52c5f7c1a461ffa4bfd1df2352726bd76fd1890f5520085bf772f76986"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/amidar/summary.json",
+      "sha256": "4992825abfbea0f7e2090a692e480b49894fe3a9a3089dc300c05fbf10e6905b"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/assault/summary.json",
+      "sha256": "eeed735d64f700a608f3f4454c0d19ab0cbc297f1c4085c0f6442695a946552c"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/asterix/summary.json",
+      "sha256": "0f0cb45205512e4dcc5f03f3f5b51c1b0d85450efec4c9a6eb757887ddaf7d0a"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/bank_heist/summary.json",
+      "sha256": "d1fdbd01298ff43039a3f6e49a4ae425e4a0b00f625ed0d9ae445f10e55affe6"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/battle_zone/summary.json",
+      "sha256": "ab4cb62af62bd4af566cc2da1662891096be2b0233388eb13472f567dc4f9233"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/boxing/summary.json",
+      "sha256": "d026c5341d2cf23f389541e31bc063cfd392d8f40e2bd48f15eb8a9b8390c424"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/breakout/summary.json",
+      "sha256": "c87a44b55fd2d31e3adfee85c57388fd50e48efa09b5215bb622e129bf0fcb09"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/chopper_command/summary.json",
+      "sha256": "b87dd711fea944ce7057dc1dc8adc921e439aa8bc23de633ecc41bf5f170efc4"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/crazy_climber/summary.json",
+      "sha256": "87e54581e38cc6d03b4d8686f6035808c7baffc698bf7b30ba68a1502781b869"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/demon_attack/summary.json",
+      "sha256": "2d67cda15e39578374f40b1a061eb98d9856bf2d10111894a1dbefa1848b4fa1"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/freeway/summary.json",
+      "sha256": "337637425635d35d9617b2fdb1ed6c36d21b56f9d7fe633bb2dfd46d610a40e7"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/frostbite/summary.json",
+      "sha256": "50dae6037745a69c434e84cac625abd7d595978f2e00bf381e145f6b4ab48916"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/gopher/summary.json",
+      "sha256": "e38f58298e41ec05506d9025801cf4fe57fd24eff45591c37dd4ad35a461f510"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/hero/summary.json",
+      "sha256": "019235826432a5097ab0b1c87342bb2c831180f2564ad10853209596405f8847"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/jamesbond/summary.json",
+      "sha256": "9ea759d474df83692acdd23adeb633792ab6c161b4a8c0fe4c2b8f45c02cb55f"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/kangaroo/summary.json",
+      "sha256": "0a682c4ac28a8bfc6cf68fa571214decc37d6111bcb1b380eeabcb2892e94bcd"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/krull/summary.json",
+      "sha256": "7f59191b4d594bff7608a626e8524a2ffeccb843b86ebb9bf99c746f0dcaa5e3"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/kung_fu_master/summary.json",
+      "sha256": "53e3cace894a8c8d01505648594ae0b65727653711df25f56449118463e26f37"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/ms_pacman/summary.json",
+      "sha256": "a6639f4a3eebf72f1dbc79dbd87db937b4e1a29f8b36888c389c33156cb599af"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/pong/summary.json",
+      "sha256": "585f6250f98c27d2ba56553391f39f43c19106f46a1fd13cfd1b9c1132f70b7d"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/private_eye/summary.json",
+      "sha256": "597d4574d8fa8edeab76ad2b0a9433b513462448bf2afe562bd0176be3b6269a"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/qbert/summary.json",
+      "sha256": "3b9851bd136226224c657e60451268c9d9d1219eab6bd473e3c87e01b91fdf52"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/road_runner/summary.json",
+      "sha256": "b722f90e5bda55b60e3f12884b68cd1be2ddfa681caa0f222c5de6150a60f901"
+    },
+    {
+      "path": "production_runs/harmony_remaining22_zvn1urx5/evaluation/seaquest/summary.json",
+      "sha256": "20dbae248979e7aca3756df5d8257de1c525f1365eff2687de730d4ad5586f6b"
+    },
+    {
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/evaluation/up_n_down/summary.json",
+      "sha256": "66f82dd2a4ce1b8ff4060219d803d4d3e40e83e286438fc31bdf4927f0a46397"
+    }
+  ],
+  "baseline_source": "paper_artifacts/full_vs_dreamerv3_constraint_suite_learning_curves/aggregate.csv",
+  "baseline_sha256": "bad9c6772c7df2935e78a9eaf4b0762ace21903685ed7844bef6bd0e0c5ad40d",
+  "caveat": "Harmony isolated evaluation vs DreamerV3 training reference; not matched evaluation.",
+  "smoothing": null,
+  "band": "DreamerV3 \u00b11 SEM; no Harmony seed-uncertainty band"
+}
