@@ -1,0 +1,187 @@
+{
+  "job": "4070",
+  "sources": [
+    {
+      "game": "alien",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/alien/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "a0c4eaf87e65a2e632c3989249c18ff3aec086a346739933b0caf3c5f4968698"
+    },
+    {
+      "game": "amidar",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/amidar/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "469a34bedc349ce75ba11408800efd3429a4a4b0ae49d008c688a6c70097cd6a"
+    },
+    {
+      "game": "assault",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/assault/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "5889bf02fe32d0e73c50a92352cb33d0c33b417c4daa78cd1fab7b4010e484af"
+    },
+    {
+      "game": "asterix",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/asterix/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "b072e53ce72394959574e7dfd92192f32298c73d97d3e2655e3b4daa238afd4f"
+    },
+    {
+      "game": "bank_heist",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/bank_heist/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "d8c00301ac5fcddd03a121726af26900752d53c9c481eec05dcd65e02907228b"
+    },
+    {
+      "game": "battle_zone",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/battle_zone/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "1ea4c5ac0dcdfd082ccb35aa45bd47540ee209e4522fb174509b9723ed332b5f"
+    },
+    {
+      "game": "boxing",
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/boxing/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "f97a3dd3c47d388eed6cb434faf96580237be996f8fc73f38b826e0277c0cffc"
+    },
+    {
+      "game": "breakout",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/breakout/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "41c0fbe7f4d411821ea1a788f8f2bb8c87edb6572083c4a71d688fa12b40fa36"
+    },
+    {
+      "game": "chopper_command",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/chopper_command/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "c56024affcc35216b6d6d8ed77b1103cca92dac2a901503f2095b46ea0dce912"
+    },
+    {
+      "game": "crazy_climber",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/crazy_climber/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "8e3cf2eb983b71aef47bcbb0f70fcfdc267086368c7287735b814bd050d0466b"
+    },
+    {
+      "game": "demon_attack",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/demon_attack/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "3f76bbe8501b9780d3e71b2fbf983794a76d135161a2c4bd3387c91b1b3d7e6a"
+    },
+    {
+      "game": "freeway",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/freeway/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "10aca163a539d9944158f6d480e63f39d30757ce1e1a1a0bbb46ef28cf4ebf4e"
+    },
+    {
+      "game": "frostbite",
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/frostbite/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "59e7427a261d2ef7c399261379810b04045472efe185b3ff8d5a8b0afecd3f62"
+    },
+    {
+      "game": "gopher",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/gopher/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "9ca34604e5ae4fd703558fe719a1f7dd87a313a3bd06045bdef75ca52ce69f29"
+    },
+    {
+      "game": "hero",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/hero/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "0548c629d10e62125e00d57d901cffb3c2b51f93f34641fa6386d85fd1f4a78f"
+    },
+    {
+      "game": "jamesbond",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/jamesbond/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "cab8d2a210d94cdfeee7b6f043b7b2b4030701789c5f34e999ab3a1d888d7ad2"
+    },
+    {
+      "game": "kangaroo",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/kangaroo/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "7d5fafcf1478758d227794fe2c5260fd073f08d6df5906ff3d46b38012b1f675"
+    },
+    {
+      "game": "krull",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/krull/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "63eba5e3720f4e80bdb5081a162e462968d4b16ef37f5c7fdc7544468a0279cd"
+    },
+    {
+      "game": "kung_fu_master",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/kung_fu_master/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "69d13129a4a91c975ec4db1bd1f77fcdd9558932748f66837d4d71e799da7545"
+    },
+    {
+      "game": "ms_pacman",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/ms_pacman/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "48c52e904d5751030f04c3072f7b34287b6fe541a2dda0176cbbae1e4c43ebf0"
+    },
+    {
+      "game": "pong",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/pong/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "efa9a9b15cf96131c2b82dd652dee915c69bb7325eba330235a06d3d63fd96d9"
+    },
+    {
+      "game": "private_eye",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/private_eye/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "3a68ccaf2c8811cf16ba56f29d8d93a1f7ea92f5a6f8710b938c95906fb10211"
+    },
+    {
+      "game": "qbert",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/qbert/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "db4ada1a116c6b961ac8714605a59ffb52123213cbea3485913dc744703e3835"
+    },
+    {
+      "game": "road_runner",
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/road_runner/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "57797fbfd83321bb41253cc759703098a64822235b7c602ccda0723090f50d3a"
+    },
+    {
+      "game": "seaquest",
+      "path": "production_runs/harmony_remaining22_zvn1urx5/seaquest/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "7efdda1e51c9cf1a58714a8898ca225e493f6a84ae785c1ff9911cfa463d3ce5"
+    },
+    {
+      "game": "up_n_down",
+      "path": "production_runs/reborn_harmony_2ew6wt0w/harmony/up_n_down/full/paper_artifacts/episode_scores.jsonl",
+      "sha256": "8b51d9175e3f0b6bcbe61d829fb958a9ea72ac975acb82412c482ebde0f69f38"
+    }
+  ],
+  "reference": "paper_artifacts/full_vs_dreamerv3_constraint_suite_learning_curves/aggregate.csv",
+  "reference_sha256": "bad9c6772c7df2935e78a9eaf4b0762ace21903685ed7844bef6bd0e0c5ad40d",
+  "measurement": "training returns for both methods",
+  "bin_width": 5000,
+  "missing_harmony_bins": {
+    "alien": [],
+    "amidar": [],
+    "assault": [],
+    "asterix": [],
+    "bank_heist": [],
+    "battle_zone": [],
+    "boxing": [],
+    "breakout": [],
+    "chopper_command": [],
+    "crazy_climber": [],
+    "demon_attack": [],
+    "freeway": [],
+    "frostbite": [],
+    "gopher": [],
+    "hero": [],
+    "jamesbond": [],
+    "kangaroo": [],
+    "krull": [],
+    "kung_fu_master": [],
+    "ms_pacman": [],
+    "pong": [],
+    "private_eye": [],
+    "qbert": [],
+    "road_runner": [],
+    "seaquest": [],
+    "up_n_down": [
+      13,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "harmony_training_seeds": [
+    0
+  ],
+  "dreamerv3_training_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "band": "DreamerV3 \u00b1SEM",
+  "x_source": "Harmony episode_scores.jsonl agent_actions; baseline cached agent_steps",
+  "evaluation_used": false,
+  "smoothing": null
+}
