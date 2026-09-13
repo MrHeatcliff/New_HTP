@@ -1,0 +1,19 @@
+{
+  "metrics": {
+    "mean_hns": 1.5647222275893673,
+    "median_hns": 0.2112546064965514,
+    "iqm_hns": 0.2992817018703503,
+    "optimality_gap_human": 0.6040626707319731,
+    "superhuman_games": 6,
+    "games": 26,
+    "training_seeds": 1,
+    "final_episodes_per_game": 100
+  },
+  "source": "paper_artifacts/harmony_vs_dreamerv3_26_learning_curves/evaluation_results.json",
+  "reference": "baselines.yaml",
+  "reference_section": "atari57_gamer",
+  "source_sha256": "a374606396e86d0bbc05eaefb54e3c5388f56c3e29a281cc48c94ac739d522fb",
+  "reference_sha256": "a791b089f2276cc9583c14342c5408e11135b01f8f18be2d23f2a397da0c83e7",
+  "iqm_implementation": "scipy.stats.trim_mean(hns, 0.25); floor(26*0.25)=6 per tail",
+  "uncertainty": "Not estimated: one training seed; no episode-as-seed bootstrap."
+}
