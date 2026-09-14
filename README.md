@@ -2,6 +2,8 @@
 
 ## Reproduce the current Reborn + Harmony experiment
 
+**Completed results:** [26 games × 5 seeds, metrics with bootstrap CIs and learning curves](paper_artifacts/harmony_five_seed_results/README.md).
+
 See [the frozen-source package and launch guide](reproduction/harmony/README.md)
 for the exact 26-game × seeds 1–4 Harmony replication, environment versions,
 portable Slurm submission, evaluation protocol, and logs. This package does not

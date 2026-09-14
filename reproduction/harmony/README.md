@@ -1,5 +1,7 @@
 # Tái chạy Reborn + Harmony (bản job 4080)
 
+**Job 4080 đã hoàn tất:** 104/104 runs vào 21:20 ngày 14/09/2026 (UTC+7), khoảng 32h57m. Kết hợp seed 0: [kết quả 26 game × 5 seeds](../../paper_artifacts/harmony_five_seed_results/README.md). Các hướng dẫn bên dưới vẫn dùng để tái chạy, không phải tiếp tục job đang hoạt động.
+
 Đây là gói source **đúng bản Harmony đang chạy 26 game × training seeds 1–4**,
 để bổ sung seed 0 đã report. Không phải source nghiên cứu mới nhất trong workspace.
 Không chứa checkpoint, replay, ROM Atari, token hoặc kết quả train mới.

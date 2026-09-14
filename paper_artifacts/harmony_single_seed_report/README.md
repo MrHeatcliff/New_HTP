@@ -1,5 +1,7 @@
 # Reborn + Harmony — Atari 100K, một training seed
 
+**Cập nhật:** [Kết quả đầy đủ 5 seeds đã hoàn tất](../harmony_five_seed_results/README.md). Bản dưới đây được giữ làm snapshot lịch sử seed 0, không phải kết quả tổng hợp mới nhất.
+
 **Kết quả sơ bộ, không phải kết quả đa training seed.** 26 game, training seed 0;
 mỗi game lấy trung bình 100 evaluation episodes riêng tại checkpoint cuối 100.000
 agent actions (400.000 frames với action repeat 4). Tổng cộng 2.600 final episodes.

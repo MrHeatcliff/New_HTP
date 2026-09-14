@@ -1,5 +1,7 @@
 # Cả ba phương pháp theo training return — 26 game
 
+**Bản mới nhất:** [Cả ba phương pháp đủ 5 seeds](../harmony_five_seed_results/README.md). Bộ hình dưới đây giữ nguyên snapshot Harmony chỉ có seed 0.
+
 ![Tổng quan](all_games_overview.png)
 
 [PDF tổng quan](all_games_overview.pdf)

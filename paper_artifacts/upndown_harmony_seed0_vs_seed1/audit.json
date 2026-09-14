@@ -1,0 +1,44 @@
+{
+  "config_differences": {
+    "logdir": [
+      "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/reborn_harmony_2ew6wt0w/harmony/up_n_down/full",
+      "/home/vn-user0101/Dat/HTS-Dreamer/production_runs/harmony_seeds1to4_mi8h6pay/seed_1/up_n_down/full"
+    ],
+    "seed": [
+      0,
+      1
+    ]
+  },
+  "source_hashes": {
+    "dreamerv3/reborn.py": [
+      "fc6e8a048fb2061b2f260e5291195531cb72331b6b0f974d6bfed067ccfe3bf7",
+      "fc6e8a048fb2061b2f260e5291195531cb72331b6b0f974d6bfed067ccfe3bf7"
+    ],
+    "dreamerv3/agent_reborn.py": [
+      "1bccac6adcb9362afd94fc10cf962475abf055842b85171ca2d8c08b16a02792",
+      "1bccac6adcb9362afd94fc10cf962475abf055842b85171ca2d8c08b16a02792"
+    ],
+    "dreamerv3/agent_htp.py": [
+      "7d0fd968f14238746ecb974a211402caa83007d971ad321f59bd89ea9ec61395",
+      "7d0fd968f14238746ecb974a211402caa83007d971ad321f59bd89ea9ec61395"
+    ],
+    "dreamerv3/configs.yaml": [
+      "2eb33b83ed580e951dae285c732beeb9ea48f302417d856c213bbfc29d1d99f2",
+      "2eb33b83ed580e951dae285c732beeb9ea48f302417d856c213bbfc29d1d99f2"
+    ],
+    "embodied/envs/atari.py": [
+      "b6a0e5664f0088e952dabd27953e6f8eaf062e9b5bff5c02769542966430556b",
+      "b6a0e5664f0088e952dabd27953e6f8eaf062e9b5bff5c02769542966430556b"
+    ]
+  },
+  "final_ratios_seed0_over_seed1": {
+    "mean": 37.20805788646222,
+    "mean_actions": 21.25085144217728,
+    "density": 1.7508972752317178
+  },
+  "metric_timestamp": "interpolated exact-action anchors from driver_callbacks*4; only within anchor range",
+  "training_episode_counts": [
+    83,
+    141
+  ]
+}
