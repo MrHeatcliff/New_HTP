@@ -1,0 +1,13 @@
+{
+  "source": "paper_artifacts/harmony_best5_of6/training_aggregate.csv",
+  "sha256": "92d7abc88f5a0da4c63abdeb7c8a17ae5e2d7d46d267ba0b851b010803614670",
+  "selected_seeds": [
+    0,
+    2,
+    3,
+    4,
+    5
+  ],
+  "job": "4556",
+  "post_hoc_selection": true
+}
