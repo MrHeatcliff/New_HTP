@@ -1,0 +1,13 @@
+{
+  "source_gid": 1403460040,
+  "template_rows": 57,
+  "original_planned_rows": 42,
+  "original_empty_rows": 15,
+  "exact_matches": 0,
+  "completed_rows": 212,
+  "combined_rows": 254,
+  "final_eval_episodes_per_run": 100,
+  "time_zone": "Asia/Jakarta",
+  "template_sha256": "4af1f766c169bfefada285cbee4a488debf9d83ba2695d061851c65628f9eb5e",
+  "final_results_sha256": "c628fbd37ee84d697c46e2cbde1d8b261c18563450fa298cfc1f1b80d50fec46"
+}

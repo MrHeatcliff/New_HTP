@@ -1,5 +1,7 @@
 # Original CoRe-WM — ablation results
 
+[Run tracker Excel/CSV đã điền từ tab gid1403460040](run_tracker/): giữ template gốc, phân biệt42 kế hoạch chưa khớp và212 run đã hoàn tất.
+
 53 cấu hình ×4 game ×seed0 = **212 run hoàn tất**; mỗi run100 final evaluation episodes tại100K actions. Không phải Harmony hoặc constraint suite. Không có nhận xét performance trong bộ tài liệu này.
 
 Mỗi folder độc lập chứa CSV của ablation và comparator, episode ledger, config, provenance, README, figure và script vẽ chỉ đọc CSV tại chỗ. Role `ablation` là cấu hình của folder; role `comparator` là đối chứng đã đăng ký, không phải baseline được chọn sau khi xem score. Việc lặp lại dữ liệu đối chứng giúp copy một folder vẫn vẽ được.
