@@ -1,0 +1,54 @@
+arm,group,comparator,origin
+baseline,backbone,full,Có trong Excel: `baseline`.
+full,factorial,flat,Có trong Excel: `htp_full`.
+flat,factorial,baseline,Có trong Excel: `htp_empty_projection`.
+rec_only,factorial,flat,Có trong Excel: `htp_recon_only`.
+pdyn_only,factorial,flat,Có trong Excel: `htp_pdyn_only`.
+flat_pruned,pruning,flat,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+rec_pruned,pruning,rec_only,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+pdyn_pruned,pruning,pdyn_only,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+joint_full,joint_factorial,full,Có trong Excel: `htp_joint`.
+joint_flat,joint_factorial,flat,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+joint_rec_only,joint_factorial,rec_only,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+joint_pdyn_only,joint_factorial,pdyn_only,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+separable_full,projection,full,Có trong Excel: `htp_separable`.
+separable_flat,projection,flat,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+reverse,timescale,full,Có trong Excel: `htp_reverse_strides`.
+all1,timescale,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+all16,timescale,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+permuted,timescale,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+full_validnorm,normalization,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+reverse_validnorm,normalization,reverse,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+all1_validnorm,normalization,all1,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+all16_validnorm,normalization,all16,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+reset_mask,boundaries,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+reset_mask_validnorm,boundaries,full_validnorm,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+recon_no_sg,reconstruction,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+recon_final_only,reconstruction,recon_no_sg,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+pdyn_no_sg,prediction,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+online_target,target,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+no_actions,conditioning,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+ema_slow,target,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+ema_fast,target,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+rec_weak,loss_scale,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+rec_strong,loss_scale,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+pdyn_weak,loss_scale,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+pdyn_strong,loss_scale,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+wide_trunk,capacity,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+compact_code,capacity,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+level1_short,levels,all1,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+level1_long,levels,all16,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+level3,levels,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+slim,slim,slim_zero,Có trong Excel: `htp_slim`.
+slim_zero,slim,baseline,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+slim_posthoc,slim,slim_zero,Có trong Excel: `htp_slim_postHoc`.
+slim_variance,slim,slim,Có trong Excel: `htp_slim_vicreg`.
+slim_variance_only,slim,slim_zero,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+warmup_40000,timing,full,Mốc warmup có trong Excel; áp dụng cho full.
+early_60000,timing,warmup_40000,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+warmup_60000,timing,full,Mốc warmup có trong Excel; áp dụng cho full.
+early_40000,timing,warmup_60000,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+warmup_80000,timing,full,Mốc warmup có trong Excel; áp dụng cho full.
+early_20000,timing,warmup_80000,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+raw_readout_full,readout,full,Đối chứng bổ sung ngoài các dòng gốc trong Excel.
+raw_readout_flat,readout,flat,Đối chứng bổ sung ngoài các dòng gốc trong Excel.

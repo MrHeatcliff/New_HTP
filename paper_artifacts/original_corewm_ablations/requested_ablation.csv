@@ -1,0 +1,24 @@
+Arm,Config chain (--configs ...),htp.enabled,L_rec (progressive recon),L_pdyn (multi-stride),Projection: separable,grad_to_backbone,Strides,Warmup supported?,Purpose
+baseline,atari100k,false,—,—,—,—,—,n/a,Pure DreamerV3 — reference for every HTP arm
+htp_empty_projection,htp_atari100k + htp_empty_projection,true,off (scale=0),off (scale=0),off,off,—,yes,"HTP scaffold ONLY — projection exists, no aux supervision"
+htp_full,htp_atari100k,true,on,on,off,off,16→1 (decreasing),yes,Full HTP-WM as proposed
+htp_recon_only,htp_atari100k + htp_matryoshka_only,true,on,off,off,off,16→1 (decreasing),yes,Does progressive recon alone suffice?
+htp_pdyn_only,htp_atari100k + htp_pdyn_only,true,off,on,off,off,16→1 (decreasing),yes,Does multi-stride pdyn alone suffice?
+htp_separable,htp_atari100k + htp_separable,true,on,on,on,off,16→1 (decreasing),yes,Parameter-level isolation (App. A.2)
+htp_joint,htp_atari100k + htp_joint,true,on,on,off,on,16→1 (decreasing),yes,HTP grads flow to RSSM (App. A.3)
+htp_reverse_strides,htp_atari100k + htp_reverse_strides,true,on,on,off,off,1→16 (INCREASING),yes,Sanity check — inverts stride assignment
+htp_slim,htp_atari100k + htp_slim,true,—,on,n/a,on,16→1 on h_t prefixes,yes,"Slim-HTP: drop projection + recon, pdyn on h_t, grad to RSSM"
+htp_slim_vicreg,htp_atari100k + htp_slim_vicreg,true,—,on,n/a,on,16→1 on h_t prefixes,yes,Slim-HTP + variance regularizer (anti-collapse insurance)
+htp_slim_postHoc,htp_atari100k + htp_slim_postHoc,true,—,on,n/a,off,16→1 on h_t prefixes,n/a,SANITY: Slim-HTP without backbone grads (should ≈ baseline)
+,,,,,,,,,
+,,,,,,,,,
+Warmup ablation,,,,,,,,,
+• Phase 1: HTP scaffold with both auxiliary loss scales = 0 (htp_empty_projection).,,,,,,,,,
+•          The projection S_ψ is trained only via gradients from downstream heads.,,,,,,,,,
+"• Phase 2: Same architecture, HTP auxiliary losses turned ON (the chosen arm).",,,,,,,,,
+• This matches App. A.3 of the paper: architecture is fixed from the start; aux supervision is switched on later.,,,,,,,,,
+• IMPORTANT: warmup is NOT pure naive DreamerV3 in phase 1 — the head input dimensions,,,,,,,,,
+• (feat_dim vs proj.dims[-1]) would mismatch and phase 2 would crash on the first forward pass.,,,,,,,,,
+"• To warm up from pure Dreamer, you'd need a code change to rebuild the heads at phase 2.",,,,,,,,,
+• Set the Warmup column of a row to 40000 / 60000 / 80000 to enable this two-phase run.,,,,,,,,,
+• Baseline is not warmup-compatible because there is no HTP to turn on in phase 2.,,,,,,,,,

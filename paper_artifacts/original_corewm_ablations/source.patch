@@ -1,0 +1,317 @@
+diff --git a/dreamerv3/agent_htp.py b/dreamerv3/agent_htp.py
+index 88991ad..b7fd657 100644
+--- a/dreamerv3/agent_htp.py
++++ b/dreamerv3/agent_htp.py
+@@ -125,7 +125,7 @@ class Agent_HTP(embodied.jax.Agent):
+       # ---- Progressive reconstruction (optional) ----
+       if self.htp_use_recon:
+         self.htp_recon = htp_mod.ProgressiveRecon(
+-            feat_dim=self.feat_dim, **htp_cfg.recon, name='htp_recon')
++            feat_dim=self.feat_dim, dims=tuple(htp_cfg.proj.dims), **htp_cfg.recon, name='htp_recon')
+       else:
+         self.htp_recon = None
+ 
+@@ -227,7 +227,7 @@ class Agent_HTP(embodied.jax.Agent):
+       * htp.enabled=true, use_proj=false:  returns h_t (Slim-HTP)
+     """
+     h = self.feat2h(feat)
+-    if self.htp_enabled and self.htp_use_proj:
++    if self.htp_enabled and self.htp_use_proj and not self.config.htp.ablation_raw_readout:
+       return self.htp_proj(h)
+     return h
+ 
+@@ -288,9 +288,10 @@ class Agent_HTP(embodied.jax.Agent):
+     return carry, act, out
+ 
+   def train(self, carry, data):
++    aux_clock = data.get('ablation_clock', jnp.zeros_like(data['is_first'], dtype=jnp.int32)).max()
+     carry, obs, prevact, stepid = self._apply_replay_context(carry, data)
+     metrics, (carry, entries, outs, mets) = self.opt(
+-        self.loss, carry, obs, prevact, training=True, has_aux=True)
++        self.loss, carry, obs, prevact, training=True, aux_clock=aux_clock, has_aux=True)
+     metrics.update(mets)
+     self.slowval.update()
+     if self.htp_enabled and self.htp_use_proj:
+@@ -306,7 +307,7 @@ class Agent_HTP(embodied.jax.Agent):
+     carry = (*carry, {k: data[k][:, -1] for k in self.act_space})
+     return carry, outs, metrics
+ 
+-  def loss(self, carry, obs, prevact, training):
++  def loss(self, carry, obs, prevact, training, aux_clock=0):
+     enc_carry, dyn_carry, dec_carry = carry
+     reset = obs['is_first']
+     B, T = reset.shape
+@@ -342,6 +343,8 @@ class Agent_HTP(embodied.jax.Agent):
+       if self.htp_use_proj:
+         z_t     = self.htp_proj(h_for_z)               # (B, T, D)
+         z_slow  = self.slow_htp_proj(sg(h_t))          # (B, T, D)
++        if self.config.htp.ablation_online_target:
++          z_slow = sg(z_t)
+       else:
+         z_t     = h_for_z                              # z_t IS h_t
+         z_slow  = sg(h_t)                              # target: RSSM's own output
+@@ -359,10 +362,20 @@ class Agent_HTP(embodied.jax.Agent):
+         pad_last = jnp.zeros_like(act_flat_full[:, :1])
+         act_seq_full = jnp.concatenate(
+             [act_flat_full[:, 1:], pad_last], axis=1)    # (B, T, A)
+-        pdyn_loss, pdyn_per_level = self.htp_pdyn(z_t, z_slow, act_seq_full)
++        pdyn_loss, pdyn_per_level = self.htp_pdyn(z_t, z_slow, act_seq_full, reset)
+         losses['htp_pdyn'] = pdyn_loss
+-        for info in pdyn_per_level:
++        for ell, info in enumerate(pdyn_per_level):
+           metrics[f'htp_pdyn_delta{int(info["stride"])}'] = info['err_mean']
++          metrics[f'ablation/pdyn_level{ell}_mse'] = info['err_mean']
++          metrics[f'ablation/pdyn_level{ell}_valid_fraction'] = info.get('valid_fraction', 0.)
++          metrics[f'ablation/pdyn_level{ell}_target_variance'] = info.get('target_variance', 0.)
++      dims = self.config.htp.proj.dims if self.htp_use_proj else self.config.htp.pdyn.dims
++      lo = 0
++      for ell, hi in enumerate(dims):
++        block = z_t[..., lo:hi].astype(f32)
++        metrics[f'ablation/block{ell}_variance'] = jnp.var(block, axis=(0,1)).mean()
++        metrics[f'ablation/block{ell}_rms'] = jnp.sqrt(jnp.mean(block**2))
++        lo = hi
+ 
+       # ---- VICReg-style variance regularizer (Slim-HTP anti-collapse) ----
+       if self.htp_use_vicreg:
+@@ -457,8 +470,19 @@ class Agent_HTP(embodied.jax.Agent):
+     # Keep coefficients, raw losses, and weighted contributions distinct in
+     # installation-smoke logs. Disabled branches are not executed and report
+     # an exact zero contribution rather than a fabricated raw loss.
+-    rec_lambda = float(self.scales.get('htp_rec', 0.0))
+-    pdyn_lambda = float(self.scales.get('htp_pdyn', 0.0))
++    aux_gate = jnp.asarray(1., f32)
++    if self.config.htp.ablation_warmup_actions:
++      aux_gate *= jnp.asarray(aux_clock >= self.config.htp.ablation_warmup_actions, f32)
++    if self.config.htp.ablation_stop_actions:
++      aux_gate *= jnp.asarray(aux_clock < self.config.htp.ablation_stop_actions, f32)
++    if self.config.htp.ablation_warmup_actions or self.config.htp.ablation_stop_actions:
++      effective_scales = {k: (v*aux_gate if k.startswith('htp_') else v) for k,v in self.scales.items()}
++    else:
++      effective_scales = self.scales
++    metrics['ablation/aux_gate'] = aux_gate
++    metrics['ablation/action_clock'] = jnp.asarray(aux_clock)
++    rec_lambda = effective_scales.get('htp_rec', 0.0)
++    pdyn_lambda = effective_scales.get('htp_pdyn', 0.0)
+     rec_raw = losses['htp_rec'].mean() if 'htp_rec' in losses else jnp.array(0.0)
+     pdyn_raw = losses['htp_pdyn'].mean() if 'htp_pdyn' in losses else jnp.array(0.0)
+     rec_weighted = rec_lambda * rec_raw
+@@ -474,7 +498,7 @@ class Agent_HTP(embodied.jax.Agent):
+         'htp/pdyn_branch_executed': jnp.asarray('htp_pdyn' in losses),
+         'htp/weighted_total': rec_weighted + pdyn_weighted,
+     })
+-    loss = sum([v.mean() * self.scales[k] for k, v in losses.items()])
++    loss = sum([v.mean() * effective_scales[k] for k, v in losses.items()])
+ 
+     carry = (enc_carry, dyn_carry, dec_carry)
+     entries = (enc_entries, dyn_entries, dec_entries)
+diff --git a/dreamerv3/configs.yaml b/dreamerv3/configs.yaml
+index c36893f..39ab0a8 100644
+--- a/dreamerv3/configs.yaml
++++ b/dreamerv3/configs.yaml
+@@ -75,6 +75,7 @@ defaults:
+     action_milestones: [10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000]
+ 
+   jax:
++    precompile: True
+     platform: cuda
+     compute_dtype: bfloat16
+     policy_devices: [0]
+@@ -203,6 +204,10 @@ defaults:
+       use_vicreg: false         # NEW: true → add per-prefix variance regularizer
+       vicreg_gamma: 1.0         # NEW: VICReg std threshold per coordinate
+       vicreg_scale: 1.0         # NEW: VICReg loss scale
++      ablation_warmup_actions: 0
++      ablation_stop_actions: 0
++      ablation_online_target: false
++      ablation_raw_readout: false
+       proj:
+         dims: [ 128, 256, 512, 1024, 2048 ]
+         hidden: 512
+@@ -212,12 +217,18 @@ defaults:
+         separable: false
+         outscale: 1.0
+       recon:
++        stop_previous: true
++        final_only: false
+         hidden: 512
+         layers: 1
+         norm: rms
+         act: silu
+         outscale: 1.0
+       pdyn:
++        isolate_previous: true
++        zero_actions: false
++        normalize_valid: false
++        mask_resets: false
+         dims: [ 128, 256, 512, 1024, 2048 ]   # NEW: must be declared for Slim-HTP overrides
+         strides: [ 16, 8, 4, 2, 1 ]           # non-increasing: compact prefix → longer stride
+         enforce_coarse_to_fine: true
+diff --git a/dreamerv3/htp.py b/dreamerv3/htp.py
+index 4d7814b..6016883 100644
+--- a/dreamerv3/htp.py
++++ b/dreamerv3/htp.py
+@@ -207,6 +207,8 @@ class ProgressiveRecon(nj.Module):
+     """
+ 
+     dims: tuple = (128, 256, 512, 1024, 2048)
++    stop_previous: bool = True
++    final_only: bool = False
+     hidden: int = 512
+     layers: int = 1
+     norm: str = 'rms'
+@@ -242,7 +244,14 @@ class ProgressiveRecon(nj.Module):
+                 layers=self.layers, norm=self.norm, act=self.act,
+                 outscale=self.outscale, **self.kw)
+             residuals.append(head(block))
+-        return cumulative_residual_reconstruction(residuals, h_template)
++        if self.stop_previous:
++            return cumulative_residual_reconstruction(residuals, h_template)
++        current = jnp.zeros_like(h_template)
++        outputs = []
++        for residual in residuals:
++            current = current + residual
++            outputs.append(current)
++        return tuple(outputs)
+ 
+     def __call__(self, z, h_target):
+         """
+@@ -258,7 +267,7 @@ class ProgressiveRecon(nj.Module):
+             err = ((h_target - h_recon) ** 2).mean(-1)  # (B, T); ||·||^2 / d_h
+             per_level.append(err)
+             total = total + beta * err
+-        return total, per_level
++        return (per_level[-1] if self.final_only else total), per_level
+ 
+ 
+ class MultiStridePDyn(nj.Module):
+@@ -289,6 +298,10 @@ class MultiStridePDyn(nj.Module):
+     act: str = 'gelu'
+     outscale: float = 1.0
+     enforce_coarse_to_fine: bool = True
++    isolate_previous: bool = True
++    zero_actions: bool = False
++    normalize_valid: bool = False
++    mask_resets: bool = False
+ 
+     def __init__(self, **kw):
+         assert len(self.dims) == len(self.strides), (
+@@ -310,8 +323,8 @@ class MultiStridePDyn(nj.Module):
+ 
+     def _gi_prefix(self, z, ell):
+         """z̃^(1:d_ℓ)_t with activation-level gradient isolation (Eq. 5/29)."""
+-        if ell == 0:
+-            return z[..., :self.dims[0]]
++        if ell == 0 or not self.isolate_previous:
++            return z[..., :self.dims[ell]]
+         prev = sg(z[..., :self.dims[ell - 1]])
+         curr = z[..., self.dims[ell - 1]:self.dims[ell]]
+         return jnp.concatenate([prev, curr], -1)
+@@ -332,7 +345,7 @@ class MultiStridePDyn(nj.Module):
+         targets = source + int(stride)
+         return source, actions, targets
+ 
+-    def __call__(self, z_online, z_target_slow, action_seq_full):
++    def __call__(self, z_online, z_target_slow, action_seq_full, resets=None):
+         """
+         Args:
+           z_online         : (B, T, D)                  online ordered representation
+@@ -365,6 +378,8 @@ class MultiStridePDyn(nj.Module):
+             # Sliding action windows a_{t:t+Δ-1}.
+             t_idx, gather, target_idx = self.temporal_indices(T, Delta)
+             actions_windowed = action_seq_full[:, gather]                # (B, T_valid, Δ, act_flat_dim)
++            if self.zero_actions:
++                actions_windowed = jnp.zeros_like(actions_windowed)
+ 
+             predictor = self.sub(
+                 f'head{ell}', PrefixDynamics,
+@@ -376,7 +391,16 @@ class MultiStridePDyn(nj.Module):
+             target = sg(z_target_slow[:, target_idx, :d_ell])             # (B, T_valid, d_ell)
+ 
+             err = ((pred - target) ** 2).mean(-1)                          # (B, T_valid)
+-            per_level.append({'stride': Delta, 'err_mean': err.mean()})
++            valid = jnp.ones_like(err)
++            if self.mask_resets:
++                assert resets is not None
++                valid = (~jnp.any(resets[:, gather + 1], axis=-1)).astype(err.dtype)
++                err = err * valid
++            per_level.append({'stride': Delta, 'err_mean': err.sum()/jnp.maximum(valid.sum(), 1),
++                              'valid_fraction': valid.sum()/(B*T),
++                              'target_variance': jnp.var(target.astype(f32), axis=(0,1)).mean()})
++            if self.normalize_valid:
++                err = err * (B*T)/jnp.maximum(valid.sum(), 1)
+ 
+             # Zero-pad the last Δ positions so the returned loss is (B, T).
+             pad = jnp.zeros((B, Delta), dtype=err.dtype)
+diff --git a/embodied/jax/agent.py b/embodied/jax/agent.py
+index e8ee378..6f6c0d8 100644
+--- a/embodied/jax/agent.py
++++ b/embodied/jax/agent.py
+@@ -267,6 +267,10 @@ class Agent(embodied.Agent):
+     seed = data.pop('seed')
+     assert sorted(data.keys()) == sorted(self.spaces.keys()), (
+         sorted(data.keys()), sorted(self.spaces.keys()))
++    if (self.config.htp.ablation_warmup_actions or
++        self.config.htp.ablation_stop_actions):
++      clock = np.full(data['is_first'].shape, getattr(self, 'ablation_action_steps', 0), np.int32)
++      data['ablation_clock'] = internal.device_put(clock, self.train_sharded)
+     allo = {k: v for k, v in self.params.items() if k in self.policy_keys}
+     dona = {k: v for k, v in self.params.items() if k not in self.policy_keys}
+     with self.train_lock:
+@@ -469,6 +473,9 @@ class Agent(embodied.Agent):
+     T = self.config.batch_length
+     C = self.config.replay_context
+     data = self._zeros(self.spaces, (B, T + C))
++    if (self.config.htp.ablation_warmup_actions or
++        self.config.htp.ablation_stop_actions):
++      data['ablation_clock'] = np.zeros((B, T + C), np.int32)
+     data = internal.device_put(data, self.train_sharded)
+     seed = self._seeds(0, self.train_mirrored)
+     carry = self.init_train(B)
+diff --git a/embodied/run/eval_only.py b/embodied/run/eval_only.py
+index c0ae00f..c0af79e 100644
+--- a/embodied/run/eval_only.py
++++ b/embodied/run/eval_only.py
+@@ -37,7 +37,7 @@ def eval_only(make_agent, make_env, make_logger, args):
+     episode.add('rewards', tran['reward'], agg='stack')
+     for key, value in tran.items():
+       isimage = (value.dtype == np.uint8) and (value.ndim == 3)
+-      if isimage and worker == 0:
++      if isimage and worker == 0 and args.log_policy_video:
+         episode.add(f'policy_{key}', value, agg='stack')
+       elif key.startswith('log/'):
+         assert value.ndim == 0, (key, value.shape, value.dtype)
+diff --git a/embodied/run/train.py b/embodied/run/train.py
+index cf11087..cfdd13e 100644
+--- a/embodied/run/train.py
++++ b/embodied/run/train.py
+@@ -140,6 +140,7 @@ def train(make_agent, make_replay, make_env, make_stream, make_logger, args):
+   carry_train = [agent.init_train(args.batch_size)]
+   carry_report = agent.init_report(args.batch_size)
+   updates_before_event = [0 for _ in range(args.envs)]
++  aux_exposure = dict(on_updates=0, off_updates=0, first_on_action=None, last_on_action=None)
+ 
+   def trainfn(tran, worker):
+     updates_before_event[worker] = int(getattr(agent, 'n_updates', 0))
+@@ -158,7 +159,16 @@ def train(make_agent, make_replay, make_env, make_stream, make_logger, args):
+         batch = next(stream_train)
+       before = int(getattr(agent, 'n_updates', 0))
+       paper.write_batch_trace(step, executed, batch, before)
++      agent.ablation_action_steps = int(env_action_steps)
+       carry_train[0], outs, mets = agent.train(carry_train[0], batch)
++      cfg = agent.config.htp
++      clock = int(env_action_steps)
++      active = ((not cfg.ablation_warmup_actions or clock >= cfg.ablation_warmup_actions) and
++                (not cfg.ablation_stop_actions or clock < cfg.ablation_stop_actions))
++      aux_exposure['on_updates' if active else 'off_updates'] += 1
++      if active:
++        if aux_exposure['first_on_action'] is None: aux_exposure['first_on_action'] = clock
++        aux_exposure['last_on_action'] = clock
+       executed += 1
+       paper.write_batch_trace(
+           step, executed - 1, batch, before,
+@@ -307,4 +317,5 @@ def train(make_agent, make_replay, make_env, make_stream, make_logger, args):
+       step, checkpoint_path=(
+           logdir / 'ckpt' / f'env_action_steps_{int(env_action_steps):09d}'
+           if exact_action_budget else logdir / 'ckpt'))
++  Path(str(logdir / 'ablation_exposure.json')).write_text(json.dumps(aux_exposure, indent=2))
+   logger.close()

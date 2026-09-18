@@ -1,0 +1,11 @@
+{
+  "runs": 212,
+  "arms": 53,
+  "seed": 0,
+  "final_episodes_per_run": 100,
+  "episode_rows_unique": 40280,
+  "final_means_sd_hns_verified": true,
+  "all_checkpoint_means_verified": true,
+  "exact_action_checkpoint_manifests_verified": true,
+  "standalone_csv_only_plot_tests": 53
+}
